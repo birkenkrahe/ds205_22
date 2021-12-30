@@ -61,7 +61,7 @@
      | ~:results raw~      | insert output directly in org format into org file     |
 
      #+name: first_program
-     #+begin_src C :exports both :main yes :includes stdio.h :tangle first.c :results raw
+     #+begin_src C :exports both :main yes :includes stdio.h :tangle first.c :results raw :comments both
 
        puts("My first printout.");
 
