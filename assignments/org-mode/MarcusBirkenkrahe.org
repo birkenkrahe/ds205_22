@@ -1,0 +1,66 @@
+#+options: toc:nil
+#+options: num:nil
+* Sample solution (C)
+
+  When you look at this solution as a PDF or on GitHub, you will not
+  see the *Org-mode* commands delimited by ~#+~. Org-mode files are
+  meant to be edited/viewed in GNU Emacs.
+
+*** My first Org-mode file
+
+    * The function ~puts()~ prints out a string (text in quotes) to
+      the screen.
+
+    * In the code block, the syntax is highlighted (which colors are
+      used exactly depends on the Emacs theme used).
+
+    * The code block header has the following arguments:
+
+    | HEADER ARGUMENT     | MEANING                                                |
+    |---------------------+--------------------------------------------------------|
+    | ~:main yes~         | wrap ~puts~ statement in ~int main(void) { }~ function |
+    | ~:includes stdio.h~ | include standard input/output header file              |
+    | ~:tangle first.c~   | export source code as C file ~first.c~  ("tangle")     |
+    | ~:exports both~     | both result and source code will be exported           |
+    | ~:comments both~    | link source code and org files, add comments to source |
+    | ~:results raw~      | insert output directly in org format into org file     |
+
+    #+name: hello_world_program
+    #+begin_src C :exports both :main yes :includes stdio.h :tangle first.c :results raw :comments both
+      // print a string
+      puts("hello world");
+    #+end_src
+
+    #+RESULTS: hello_world_program
+    hello world
+
+*** Executing the program on the command line
+
+    In Emacs (provided the C compiler ~gcc~ is available and in the ~PATH~):
+    #+begin_example
+    M-x eshell
+    gcc -o first first.c
+    ./first.exe
+    #+end_example
+
+    #+attr_html: :width 500px
+    [[./img/gcclight.png]]
+
+*** References
+    * GCC, the GNU Compiler Collection. [[https://gcc.gnu.org][URL: gcc.gnu.org.]]
+    * GitHub: software hosting platform. [[https://github.com][URL: github.com]].
+    * Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The C
+      Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
+      Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
+    * Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
+      stanford.edu]].
+    * ~mtcars~: Motor Trend Car Road Tests. [[https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars][URL: rdocumentation.org]].
+    * R Core Team (2021). R: A language and environment for statistical
+      computing. R Foundation for Statistical Computing, Vienna, Austria.
+      [[https://r-project.org][URL: r-project.org]].
+    * ~str~: Compactly Display the Structure of an Arbitrary R
+      Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
+    * tecosaur (n.d.). The Org Manual: 16 Working with Source Code
+      [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+
+  

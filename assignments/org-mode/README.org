@@ -16,16 +16,14 @@
 
    * A headline: ~* My first Org-mode file~.
    * A paragraph that explains what the following code block does.
-   * A R source code block. The block should contain one line of code
-     only. It should have the name ~mtcars~:
-
+   * A R source code block:
    #+begin_example
    #+name: [name]
    #+begin_src [header]
      [statements]
    #+end_src
    #+end_example
-
+   * In the source block, replace ~[name]~ by ~mtcars~.
    * In the header of the source block, replace ~[header]~ by these arguments:
    #+begin_example
    :session *R*
@@ -44,39 +42,23 @@
    #+end_example
 
    * Save the file as ~YourName.org~ (e.g. ~MarcusBirkenkrahe.org~)
-   * Upload the file to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/org-mode][this GitHub repo]]: ~/birkenkrahe/ds205/assignments/org-mode~
+   * Upload the file to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/org-mode][this GitHub repo]]:
+     ~/birkenkrahe/ds205/assignments/org-mode~
 
-** Glossary
+** [[https://github.com/birkenkrahe/ds205/blob/main/assignments/org-mode/MarcusBirkenkrahe.org][Example solution in C (not R)]]
 
-   Your org files and notebooks do not always have to have glossaries,
-   but if you have non-trivial information ready to be summarized or
-   visualized, you should use tables and graphs to do so.
-
-   | TERM                       | EXPLANATION                                      |
-   |----------------------------+--------------------------------------------------|
-   | Org-mode headline          | Starts with one ore more ~*~ characters          |
-   | Org-mode code block        | An executable (in some language) block of text   |
-   | Org-mode code block header | Language and optional arguments                  |
-   | Argument                   | Some data passed on for further processing       |
-   | Function                   | Algorithm f(x) expecting an argument x           |
-   | String                     | Data type representing text                      |
-   | Begin/End statement        | Symbol to signal the start/end of a command      |
-   | File                       | Storage unit in a computer                       |
-   | GitHub repo                | Cloud storage platform                           |
-   | Uploading                  | Sending so that file exists locally and remotely |
-
-** [[https://github.com/birkenkrahe/cc100/blob/main/2_installation/org_mode_assignment/MarcusBirkenkrahe.org][Example solution in C (not R)]]
-
-   Note: when you look at this as a PDF or on GitHub, you will not see
-   the Org commands delimited by ~#+~. Org-mode files need to be
+   When you look at this as a PDF or on GitHub, you will not see
+   the *Org-mode* commands delimited by ~#+~. Org-mode files are meant to be
    edited/viewed in Emacs.
 
 **** My first Org-mode file
 
      * The function ~puts()~ prints out a string (text in quotes) to
        the screen.
+
      * In the code block, the syntax is highlighted (which colors are
        used exactly depends on the Emacs theme used).
+
      * The code block header has the following arguments:
 
      | HEADER ARGUMENT     | MEANING                                                |
@@ -103,12 +85,11 @@
     #+begin_example
     M-x eshell
     gcc -o first first.c
+    ./first.exe
     #+end_example
 
-    See screenshot: buffer 1 shows folder with ~first.c~ file, buffer
-    2 shows shell compilation and execution of ~first.exe~.
-    #+attr_html: :width 600px
-    [[./img/gcc.png]]
+    #+attr_html: :width 500px
+    [[./img/gcclight.png]]
 
 *** References
     * GCC, the GNU Compiler Collection. [[https://gcc.gnu.org][URL: gcc.gnu.org.]]
@@ -126,6 +107,25 @@
       Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
     * tecosaur (n.d.). The Org Manual: 16 Working with Source Code
       [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+
+** Glossary
+
+   Your org files and notebooks do not always have to have glossaries,
+   but if you have non-trivial information ready to be summarized or
+   visualized, you should use tables and graphs to do so.
+
+   | TERM                       | EXPLANATION                                      |
+   |----------------------------+--------------------------------------------------|
+   | Org-mode headline          | Starts with one ore more ~*~ characters          |
+   | Org-mode code block        | An executable (in some language) block of text   |
+   | Org-mode code block header | Language and optional arguments                  |
+   | Argument                   | Some data passed on for further processing       |
+   | Function                   | Algorithm f(x) expecting an argument x           |
+   | String                     | Data type representing text                      |
+   | Begin/End statement        | Symbol to signal the start/end of a command      |
+   | File                       | Storage unit in a computer                       |
+   | GitHub repo                | Cloud storage platform                           |
+   | Uploading                  | Sending so that file exists locally and remotely |
 
 * Footnotes
 
