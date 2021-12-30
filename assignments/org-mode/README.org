@@ -2,51 +2,74 @@
 #+options: num:nil
 * Org-mode coding assignment
 
-  This file contains the first ~Org-mode~ assignment, a glossary of
-  terms, and a sample solution in the programming language C instead
-  of R. The main challenge is not the programming language but
-  managing the complexity of writing a "literate" program, which
-  includes layout, documentation, source code and result
+  This file contains the first ~Org-mode~ assignment, and a sample
+  solution in the programming language C instead of R. The main
+  challenge is not the programming language but managing the
+  complexity of writing a "literate" program, which includes layout
+  like headlines, links, documentation, source code and result
   elements. Note that the sample solution also lists relevant
-  references at the end.
+  references at the end[fn:1].
 
 ** Assignment
 
    Create an Org-mode file with the following characteristics:
 
-   1) A headline with the text ~My first Org-mode file~.
-   2) A paragraph that explains what the following code block does.
-   3) A R source code block. The block should contain one line of code
-      only. It should have the name ~first_program~:
+   * A headline (~*~) with the text ~My first Org-mode file~.
+   * A paragraph that explains what the following code block does.
+   * A R source code block. The block should contain one line of code
+     only. It should have the name ~first_program~:
    #+begin_example
    #+name: first_program
    #+begin_src [header]
      [statements]
    #+end_src
    #+end_example
-      
-   4) For the source code block header, use the following arguments:
-      #+begin_example
-      :session *R*
-      :results output
-      :tangle first.R
-      :exports both
-      :comments both
-      :var DATA="mtcars"
-      #+end_example
 
-   5) Inside the block, put the R statement:
-      #+begin_example
-       str(DATA)
-      #+end_example
+   * In the header of the source block, replace ~[header]~ by these arguments:
+   #+begin_example
+   :session *R*
+   :results output
+   :tangle first.R
+   :exports both
+   :comments both
+   :var DATA="mtcars"
+   #+end_example
 
-   6) Save the file as ~YourName.org~ (e.g. ~MarcusBirkenkrahe.org~)
-   7) Upload the file to [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][this GitHub repo]]: ~birkenkrahe/ds205/assignments/org-mode~
+   * In the body of the code block, replace the ~[statements]~ by the command:
+   #+begin_example
+   str(DATA)
+   #+end_example
+
+   * Save the file as ~YourName.org~ (e.g. ~MarcusBirkenkrahe.org~)
+   * Upload the file to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/org-mode][this GitHub repo]]: ~birkenkrahe/ds205/assignments/org-mode~
 
 ** [[https://github.com/birkenkrahe/cc100/blob/main/2_installation/org_mode_assignment/MarcusBirkenkrahe.org][Example solution in C (not R)]]
 
-   
-   
+**** My first Org-mode file
+
+     * The function ~puts()~ prints out a string (text in quotes) to
+       the screen.
+     * In the code block, the syntax is highlighted (which colors are
+       used exactly depends on the Emacs theme used).
+     * The code block header says:
+
+     | ~:main yes~         | wrap ~puts~ statement in ~int main(void) { }~ function |
+     | ~:includes stdio.h~ | include standard input/output header file              |
+     | ~:tangle first.c~   | export source code as C file ~first.c~  ("tangle")     |
+     | ~:exports both~     | both result and source code will be exported           |
+     | ~:comments both~    | link source code and org files, add comments to source |
+     | ~:results raw~      | insert output directly in org format into org file     |
+
+     #+name: first_program
+     #+begin_src C :exports both :main yes :includes stdio.h :tangle first.c :results raw
+
+       puts("My first printout.");
+
+     #+end_src
+
+     #+RESULTS: first_program
+     My first printout.
+
 *** Executing the program on the command line
 
     In Emacs (provided the C compiler ~gcc~ is available and in the ~PATH~):
@@ -55,19 +78,28 @@
     gcc -o first first.c
     #+end_example
 
-    See screenshot:
+    See screenshot: buffer 1 shows folder with ~first.c~ file, buffer
+    2 shows shell compilation and execution of ~first.exe~.
     #+attr_html: :width 600px
-    [[../img/gcc.png]]
+    [[./img/gcc.png]]
 
 *** References
+    * GCC, the GNU Compiler Collection. [[https://gcc.gnu.org][URL: gcc.gnu.org.]]
+    * GitHub: software hosting platform. [[https://github.com][URL: github.com]].
+    * Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The C
+      Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
+      Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
     * ~mtcars~: Motor Trend Car Road Tests. [[https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars][URL: rdocumentation.org]].
-
-    * tecosaur (n.d.). The Org Manual: 16 Working with Source Code
-      [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
-
     * R Core Team (2021). R: A language and environment for statistical
       computing. R Foundation for Statistical Computing, Vienna, Austria.
       [[https://r-project.org][URL: r-project.org]].
-
     * ~str~: Compactly Display the Structure of an Arbitrary R
       Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
+    * tecosaur (n.d.). The Org Manual: 16 Working with Source Code
+      [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+
+* Footnotes
+
+[fn:1]The references have URLs, and these URLs have inline links. To
+add a link in GNU Emacs Org-mode, use the key sequence ~C-x C-l [link]
+RET~ (~org-insert-link).
