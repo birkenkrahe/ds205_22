@@ -1,0 +1,73 @@
+#+options: toc:nil
+#+options: num:nil
+* Org-mode coding assignment
+
+  This file contains the first ~Org-mode~ assignment, a glossary of
+  terms, and a sample solution in the programming language C instead
+  of R. The main challenge is not the programming language but
+  managing the complexity of writing a "literate" program, which
+  includes layout, documentation, source code and result
+  elements. Note that the sample solution also lists relevant
+  references at the end.
+
+** Assignment
+
+   Create an Org-mode file with the following characteristics:
+
+   1) A headline with the text ~My first Org-mode file~.
+   2) A paragraph that explains what the following code block does.
+   3) A R source code block. The block should contain one line of code
+      only. It should have the name ~first_program~:
+   #+begin_example
+   #+name: first_program
+   #+begin_src [header]
+     [statements]
+   #+end_src
+   #+end_example
+      
+   4) For the source code block header, use the following arguments:
+      #+begin_example
+      :session *R*
+      :results output
+      :tangle first.R
+      :exports both
+      :comments both
+      :var DATA="mtcars"
+      #+end_example
+
+   5) Inside the block, put the R statement:
+      #+begin_example
+       str(DATA)
+      #+end_example
+
+   6) Save the file as ~YourName.org~ (e.g. ~MarcusBirkenkrahe.org~)
+   7) Upload the file to [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][this GitHub repo]]: ~birkenkrahe/ds205/assignments/org-mode~
+
+** [[https://github.com/birkenkrahe/cc100/blob/main/2_installation/org_mode_assignment/MarcusBirkenkrahe.org][Example solution in C (not R)]]
+
+   
+   
+*** Executing the program on the command line
+
+    In Emacs (provided the C compiler ~gcc~ is available and in the ~PATH~):
+    #+begin_example
+    M-x eshell
+    gcc -o first first.c
+    #+end_example
+
+    See screenshot:
+    #+attr_html: :width 600px
+    [[../img/gcc.png]]
+
+*** References
+    * ~mtcars~: Motor Trend Car Road Tests. [[https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars][URL: rdocumentation.org]].
+
+    * tecosaur (n.d.). The Org Manual: 16 Working with Source Code
+      [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+
+    * R Core Team (2021). R: A language and environment for statistical
+      computing. R Foundation for Statistical Computing, Vienna, Austria.
+      [[https://r-project.org][URL: r-project.org]].
+
+    * ~str~: Compactly Display the Structure of an Arbitrary R
+      Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
