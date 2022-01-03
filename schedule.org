@@ -2,74 +2,75 @@
 #+startup: hideblocks overview
 * Schedule
 
-  Updated schedule in GitHub
+  [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][Updated schedule in GitHub.]]
 
-   | DATE       | R4DS[fn:2] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:1] | NO | TOPIC         | WEEK | PURPOSE        | GITHUB          |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Wed-12-Jan | 1 Introduction                       | Intermediate R: Conditionals and Control Flow             | Entry Quiz |  1 | Course        |    1 | Orientation    | org/systems     |
-   | Fri-14-Jan | 1 Introduction                       |                                                           | Quiz 1     |  2 | Introducing C |      | Motivation     | 1_introduction  |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Wed-19-Jan | Explore: 2 Introduction              | Intermediate R: Loops                                     |            |  3 | Installation  |    2 | Infrastructure | 2_installation  |
-   | Fri-21-Jan | Explore: 3 Data visualization        |                                                           | Quiz 2     |  4 | Emacs, GCC    |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-24-Jan | Explore: 3 Data visualization        | Intermediate R: Functions                                 |            |  4 |               |    3 |                | 3_first_program |
-   | Wed-26-Jan | Explore: 3 Data visualization        |                                                           |            |  5 |               |      |                |                 |
-   | Fri-28-Jan | Explore: 4 Workflow: basics          |                                                           | Quiz 3     |  6 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-31-Jan | Explore: 5 Data transformation       | Introduction to the Tidyverse: Data Wrangling             |            |  7 |               |    4 |                |                 |
-   | Wed-02-Feb | Explore: 5 Data transformation       |                                                           |            |  8 |               |      |                |                 |
-   | Fri-04-Feb | Explore: 5 Data transformation       |                                                           | Test 1     |  9 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-07-Feb | Explore: 6 Workflow: scripts         | Introduction to the Tidyverse: Data Visualization         |            | 10 |               |    5 |                |                 |
-   | Wed-09-Feb | Explore: 7 Exploratory Data Analysis |                                                           |            | 11 |               |      |                |                 |
-   | Fri-11-Feb | Explore: 7 Exploratory Data Analysis |                                                           | Quiz 4     | 12 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-14-Feb | Explore: 8 Workflow: projects        | Introduction to the Tidyverse: Grouping and Summarizing   |            | 13 |               |    6 |                |                 |
-   | Wed-16-Feb | Wrangle: 9 Introduction              |                                                           |            | 14 |               |      |                |                 |
-   | Fri-18-Feb | Wrangle: 10 Tibbles                  |                                                           | Quiz 5     | 15 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-21-Feb | Wrangle: 11 Data import              | Introduction to the Tidyverse: Types of Visualizations    |            | 16 |               |    7 |                |                 |
-   | Wed-23-Feb | Wrangle: 12 Tidy data                |                                                           |            | 17 |               |      |                |                 |
-   | Fri-25-Feb | Wrangle: 13 Relational data          |                                                           | Quiz 6     | 18 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-28-Feb | Wrangle: 14 Strings                  | Data manipulation with ~dplyr~: Transforming data         |            | 19 |               |    8 |                |                 |
-   | Wed-02-Mar |                                      |                                                           |            | 20 |               |      |                |                 |
-   | Fri-04-Mar | Wrangle: 15 Factors                  |                                                           | Test 2     | 21 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-07-Mar | Wrangle: 16 Dates and times          | Data manipulation with ~dplyr~: Aggregating data          |            | 22 |               |    9 |                |                 |
-   | Wed-09-Mar | Program: 17 Introduction             |                                                           |            | 23 |               |      |                |                 |
-   | Fri-11-Mar | Program: 18 Pipes                    |                                                           | Quiz 7     | 24 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-14-Mar | Program: 19 Functions                | Data manipulation with ~dplyr~: Selecting data            |            | 25 |               |   10 |                |                 |
-   | Wed-16-Mar |                                      |                                                           |            | 26 |               |      |                |                 |
-   | Fri-18-Mar | Program: 20 Vectors                  |                                                           | Quiz 8     | 27 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-28-Mar |                                      | Data manipulation with ~dplyr~: Case Study - ~babynames~  |            | 28 |               |   11 |                |                 |
-   | Wed-30-Mar | Program: 21 Iteration                |                                                           |            | 29 |               |      |                |                 |
-   | Fri-01-Apr |                                      |                                                           | Quiz 9     | 30 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-04-Apr | Model: 22 Introduction               | Exploratory Data Analysis in R: Categorical Data          |            | 31 |               |   12 |                |                 |
-   | Wed-06-Apr | Model: 23 Model basics               |                                                           |            | 32 |               |      |                |                 |
-   | Fri-08-Apr |                             |                                                           | Test 3     | 33 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-11-Apr | Model: 24 Model building                                  | Exploratory Data Analysis in R: Numerical Data            |            | 34 |               |   13 |                |                 |
-   | Wed-13-Apr |                                      |                                                           | Quiz 10    | 35 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Wed-20-Apr | Model: 25 Many models                | Exploratory Data Analysis in R: Numerical Summaries       |            | 36 |               |   14 |                |                 |
-   | Fri-22-Apr |                                      |                                                           | Quiz 11    | 37 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-25-Apr | Communicate: 26 Introduction         | Exploratory Data Analysis in R: Case Study Spam Detection |            | 38 |               |   15 |                |                 |
-   | Wed-27-Apr | Communicate: 27 R Markdown           |                                                           |            | 39 |               |      |                |                 |
-   | Fri-29-Apr | Communicate: 28 Graphics             |                                                           | Quiz 12    | 40 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
-   | Mon-02-May | Communicate: 29 R Markdown formats   |                                                           |            | 41 |               |   16 |                |                 |
-   | Wed-04-May | Communicate: 30 R Markdown workflow  |                                                           | Test 4     | 42 |               |      |                |                 |
-   |------------+--------------------------------------+-----------------------------------------------------------+------------+----+---------------+------+----------------+-----------------|
+   | NO | WEEK | DATE       | R4DS[fn:2] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:1] |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   |  1 |    1 | Wed-12-Jan | 1 Introduction                       | Intermediate R: Conditionals and Control Flow             | Entry Quiz |
+   |  2 |      | Fri-14-Jan | 1 Introduction                       |                                                           | Quiz 1     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   |  3 |    2 | Wed-19-Jan | Explore: 2 Introduction              | Intermediate R: Loops                                     |            |
+   |  4 |      | Fri-21-Jan | Explore: 3 Data visualization        |                                                           | Quiz 2     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   |  4 |    3 | Mon-24-Jan | Explore: 3 Data visualization        | Intermediate R: Functions                                 |            |
+   |  5 |      | Wed-26-Jan | Explore: 3 Data visualization        |                                                           |            |
+   |  6 |      | Fri-28-Jan | Explore: 4 Workflow: basics          |                                                           | Quiz 3     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   |  7 |    4 | Mon-31-Jan | Explore: 5 Data transformation       | Introduction to the Tidyverse: Data Wrangling             |            |
+   |  8 |      | Wed-02-Feb | Explore: 5 Data transformation       |                                                           |            |
+   |  9 |      | Fri-04-Feb | Explore: 5 Data transformation       |                                                           | Test 1     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 10 |    5 | Mon-07-Feb | Explore: 6 Workflow: scripts         | Introduction to the Tidyverse: Data Visualization         |            |
+   | 11 |      | Wed-09-Feb | Explore: 7 Exploratory Data Analysis |                                                           |            |
+   | 12 |      | Fri-11-Feb | Explore: 7 Exploratory Data Analysis |                                                           | Quiz 4     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 13 |    6 | Mon-14-Feb | Explore: 8 Workflow: projects        | Introduction to the Tidyverse: Grouping and Summarizing   |            |
+   | 14 |      | Wed-16-Feb | Wrangle: 9 Introduction              |                                                           |            |
+   | 15 |      | Fri-18-Feb | Wrangle: 10 Tibbles                  |                                                           | Quiz 5     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 16 |    7 | Mon-21-Feb | Wrangle: 11 Data import              | Introduction to the Tidyverse: Types of Visualizations    |            |
+   | 17 |      | Wed-23-Feb | Wrangle: 12 Tidy data                |                                                           |            |
+   | 18 |      | Fri-25-Feb | Wrangle: 13 Relational data          |                                                           | Quiz 6     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 19 |    8 | Mon-28-Feb | Wrangle: 14 Strings                  | Data manipulation with ~dplyr~: Transforming data         |            |
+   | 20 |      | Wed-02-Mar |                                      |                                                           |            |
+   | 21 |      | Fri-04-Mar | Wrangle: 15 Factors                  |                                                           | Test 2     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 22 |    9 | Mon-07-Mar | Wrangle: 16 Dates and times          | Data manipulation with ~dplyr~: Aggregating data          |            |
+   | 23 |      | Wed-09-Mar | Program: 17 Introduction             |                                                           |            |
+   | 24 |      | Fri-11-Mar | Program: 18 Pipes                    |                                                           | Quiz 7     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 25 |   10 | Mon-14-Mar | Program: 19 Functions                | Data manipulation with ~dplyr~: Selecting data            |            |
+   | 26 |      | Wed-16-Mar |                                      |                                                           |            |
+   | 27 |      | Fri-18-Mar | Program: 20 Vectors                  |                                                           | Quiz 8     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 28 |   11 | Mon-28-Mar |                                      | Data manipulation with ~dplyr~: Case Study - ~babynames~  |            |
+   | 29 |      | Wed-30-Mar | Program: 21 Iteration                |                                                           |            |
+   | 30 |      | Fri-01-Apr |                                      |                                                           | Quiz 9     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 31 |   12 | Mon-04-Apr | Model: 22 Introduction               | Exploratory Data Analysis in R: Categorical Data          |            |
+   | 32 |      | Wed-06-Apr | Model: 23 Model basics               |                                                           |            |
+   | 33 |      | Fri-08-Apr |                                      |                                                           | Test 3     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 34 |   13 | Mon-11-Apr | Model: 24 Model building             | Exploratory Data Analysis in R: Numerical Data            |            |
+   | 35 |      | Wed-13-Apr |                                      |                                                           | Quiz 10    |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 36 |   14 | Wed-20-Apr | Model: 25 Many models                | Exploratory Data Analysis in R: Numerical Summaries       |            |
+   | 37 |      | Fri-22-Apr |                                      |                                                           | Quiz 11    |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 38 |   15 | Mon-25-Apr | Communicate: 26 Introduction         | Exploratory Data Analysis in R: Case Study Spam Detection |            |
+   | 39 |      | Wed-27-Apr | Communicate: 27 R Markdown           |                                                           |            |
+   | 40 |      | Fri-29-Apr | Communicate: 28 Graphics             |                                                           | Quiz 12    |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | 41 |   16 | Mon-02-May | Communicate: 29 R Markdown formats   |                                                           |            |
+   | 42 |      | Wed-04-May | Communicate: 30 R Markdown workflow  |                                                           | Test 4     |
+   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
 
 * Footnotes
 
 [fn:2]Chapter or subchapter in Grolemund/Wickham, R for Data Science
-(r4ds), O'Reilly 2017.
+(r4ds) - the chapter ordering follows [[https://r4ds.had.co.nz/introduction.html][the online version]], not the 2017
+print version.
 
 [fn:1]Quiz: covers the material of the past week. Usually 5 min at the
 beginning of class, multiple choice. Test: in class exercises.
