@@ -280,9 +280,9 @@
 
 ** Schedule and session content
 
-   Changes are possible - an [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][updated schedule is available on GitHub]].
+   Changes are possible - an [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][updated schedule is available on GitHub]].
 
-   | DATE       | R4DS[fn:2] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:1] |
+   | DATE       | R4DS[fn:7] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:8] |
    |------------+--------------------------------------+-----------------------------------------------------------+------------|
    | Wed-12-Jan | 1 Introduction                       | Intermediate R: Conditionals and Control Flow             | Entry Quiz |
    | Fri-14-Jan | 1 Introduction                       |                                                           | Quiz 1     |
@@ -345,6 +345,13 @@
    |------------+--------------------------------------+-----------------------------------------------------------+------------|
    
 * Footnotes
+
+[fn:8]Quiz: covers the material of the past week. Usually 5 min at the
+beginning of class, multiple choice. Test: in class exercises.
+
+[fn:7]Chapter or subchapter in Grolemund/Wickham, R for Data Science
+(R4DS) - the chapter ordering follows [[https://r4ds.had.co.nz/introduction.html][the online version]], not the 2017
+print version. 
 
 [fn:6]The course covers (almost) the entire "Data Scientist with R"
 career (!)  track in DataCamp (only the last course is missing), which
