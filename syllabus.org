@@ -19,45 +19,57 @@
 
 ** Objectives
 
-   We will endeavour to cover
-   most of chapters 1-15 of the textbook by King.
+   For those who took DSC 101 in Fall 2021 (Data Science Tools and
+   Methods), this course continues the journey into data science using
+   the functional programming language R. The focus of this advanced
+   introduction is data exploration, with excursions into data
+   wrangling, programming, and modeling using R. However, this is not
+   an R course, but a course on exploring data using the "tidyverse"
+   methodology and the RStudio IDE. We will endeavour to cover much of
+   the material in chapters 2-7, 10-16, 18-21, 22-25[fn:5]. You will
+   practice using classroom assignments and weekly programming
+   assignments in DataCamp[fn:6].
 
    #+attr_html: :width 600px
-   [[./img/power1.png]]
+   [[./img/workflow.png]]
 
-   /Image: Computer landscape - modified after Steinhart, 2019/
+   /Image: Data exploration workflow. Source: Grolemund/Wickham 2017/
 
 ** Student Learning Outcomes
 
-   Students who complete CSC 100.01 "Introduction to programming in
-   C/C++", will be able to:
+   Students who complete DSC 205, "Advanced Introduction to data
+   science", will be able to:
 
-   * Master basic sequential programming skills (conditional
-     statements, loops, functions, input/output, use of data types)
-   * Explain the basic components of a procedural programming language
-   * Apply the basics of programming to solve a variety of
-     quantitative problems
-   * Master computing infrastructure (compiler, editor, shell)
+   * Import data into R, store them, and transform them for analysis
+   * Visualize data as part of advanced explorative data analysis
+   * Understand basic predictive modeling strategies and methods
+   * Master statistical programming in R using the tidyverse package
+   * Master the infrastructure for advanced statistical computing
    * Know how to effectively present assignment results
 
 ** Course requirements
 
-   No prior knowledge required. Some knowledge of, and experience with
-   computers is useful but not critical. Curiosity is essential. You
-   will gain data literacy skills by taking this course. The course
-   will prepare you for further studies in computer and data science,
-   or in other disciplines that use modern computing, i.e. every
-   discipline, from accounting to zoology).
+   To join this course without having completed DSC 101, work through
+   Norman Matloff's free online course "fasteR:Fast Lane to Learning
+   R!" on GitHub, and through the DataCamp course “Introduction to R”,
+   and pass the entry quiz in week 1 of the course (with > 50%) .
+
+   Some knowledge of, and experience with computers is useful but not
+   critical. Curiosity is essential. You will gain data literacy
+   skills by taking this course. The course will prepare you for
+   further studies in computer and data science, or in other
+   disciplines that use modern computing, i.e. every discipline, from
+   accounting to zoology).
 
 ** Grading system
 
-   | WHEN[fn:1]    | DESCRIPTION       | IMPACT |
-   |---------------+-------------------+--------|
-   | Every session | Class assignments |    10% |
-   | Weekly        | Quizzes           |    10% |
-   | Monthly       | Tests             |    30% |
-   | Biweekly      | Lab projects      |    30% |
-   | End of term   | Final exam        |    20% |
+   | WHEN[fn:1]    | DESCRIPTION          | IMPACT |
+   |---------------+----------------------+--------|
+   | Every session | Class assignments    |    10% |
+   | Weekly        | Quizzes              |    10% |
+   | Weekly        | DataCamp assignments |    30% |
+   | Monthly       | Tests                |    30% |
+   | End of term   | Final exam           |    20% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -91,26 +103,31 @@
     |--------+-----------------+---------------|
 
 *** Class assignments (10%)
+
     - Complete small assignments in class (participation)
     - Complete assignments outside of class (homework)
-    - Be ready to present your results
+    - Be ready to present your results at any time
 
 *** Weekly Quizzes (10%)
+    
     - Answer multiple choice questions
-    - Complete quiz online outside of class
-    - Use for drills thereafter
+    - Complete online quiz in or outside of class
+    - Use quiz for drills to prepare final exam
+
+*** Weekly DataCamp assignments (30%)
+
+    - Complete weekly chapters of DataCamp assignments
+    - Spend 30-45 min per week on an assignment
+    - Bring questions and comments to class for discussion
 
 *** Monthly tests (30%)
+
     - Complete 45 min online test in class
     - Recall last month of lectures and labs
     - Read relevant textbook chapters
 
-*** Biweekly lab projects (30%)
-    - Solve programming problems in class
-    - Complete assignments outside of class if necessary
-    - Be ready to present your solutions
-
 *** Final exam (20%)
+
     - 120 min multiple choice exam
     - Online in Schoology in the classroom
     - Sourced from the weekly quiz questions
@@ -263,81 +280,85 @@
 
 ** Schedule and session content
 
-   Changes are possible - an [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][updated schedule with is available]].
+   Changes are possible - an [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][updated schedule is available on GitHub]].
 
-   | NO | WEEK | DATE       | ASSIGNMENT            | TEXTBOOK CHAPTER          | TEST    |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   |  1 |    1 | Wed-12-Jan |                       |                           |         |
-   |  2 |      | Fri-14-Jan |                       | 1 Introducing C           | Quiz 1  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   |  3 |    2 | Wed-19-Jan | GitHub Hello World    |                           |         |
-   |  4 |      | Fri-21-Jan | Emacs online tutorial |                           | Quiz 2  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   |  4 |    3 | Mon-24-Jan | Program  1            | 2 C Fundamentals          |         |
-   |  5 |      | Wed-26-Jan |                       |                           |         |
-   |  6 |      | Fri-28-Jan |                       |                           | Quiz 3  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   |  7 |    4 | Mon-31-Jan | Program 2             | 3 Input/Output            |         |
-   |  8 |      | Wed-02-Feb |                       |                           |         |
-   |  9 |      | Fri-04-Feb |                       |                           | Test 1  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 10 |    5 | Mon-07-Feb | Program 3             | 4 Expressions             |         |
-   | 11 |      | Wed-09-Feb |                       |                           |         |
-   | 12 |      | Fri-11-Feb |                       |                           | Quiz 4  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 13 |    6 | Mon-14-Feb | Program 4             | 5 Selection Statements    |         |
-   | 14 |      | Wed-16-Feb |                       |                           |         |
-   | 15 |      | Fri-18-Feb |                       |                           | Quiz 5  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 16 |    7 | Mon-21-Feb | Program 5             | 6 Loops                   |         |
-   | 17 |      | Wed-23-Feb |                       |                           |         |
-   | 18 |      | Fri-25-Feb |                       |                           | Test 2  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 19 |    8 | Mon-28-Feb | Program 6             | 7 Basic types             |         |
-   | 20 |      | Wed-02-Mar |                       |                           |         |
-   | 21 |      | Fri-04-Mar |                       |                           | Quiz 6  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 22 |    9 | Mon-07-Mar | Program 7             | 8 Arrays                  |         |
-   | 23 |      | Wed-09-Mar |                       |                           |         |
-   | 24 |      | Fri-11-Mar |                       |                           | Quiz 7  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 25 |   10 | Mon-14-Mar | Program 8             | 9 Functions               |         |
-   | 26 |      | Wed-16-Mar |                       |                           |         |
-   | 27 |      | Fri-18-Mar |                       |                           | Quiz 8  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 28 |   11 | Mon-28-Mar | Program 9             | 10 Program Organization   |         |
-   | 29 |      | Wed-30-Mar |                       |                           |         |
-   | 30 |      | Fri-01-Apr |                       |                           | Test 3  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 31 |   12 | Mon-04-Apr | Program 10            | 11 Pointers               |         |
-   | 32 |      | Wed-06-Apr |                       |                           |         |
-   | 33 |      | Fri-08-Apr |                       |                           | Quiz 9  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 34 |   13 | Mon-11-Apr | Program 11            | 12 Pointers and Arrays    |         |
-   | 35 |      | Wed-13-Apr |                       |                           | Quiz 10 |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 36 |   14 | Wed-20-Apr | Program 12            | 13 Strings                |         |
-   | 37 |      | Fri-22-Apr |                       |                           | Quiz 11 |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 38 |   15 | Mon-25-Apr | Program 13            | 14 The Preprocessor       |         |
-   | 39 |      | Wed-27-Apr |                       |                           |         |
-   | 40 |      | Fri-29-Apr |                       |                           | Test 4  |
-   |----+------+------------+-----------------------+---------------------------+---------|
-   | 41 |   16 | Mon-02-May |                       | 15 Writing Large Programs |         |
-   | 42 |      | Wed-04-May |                       |                           | Quiz 12 |
-   |----+------+------------+-----------------------+---------------------------+---------|
-
-* References
-
-  King (2008). C Programming (2nd ed). Norton.
-
-  Steinhart (2019). The Secret Life of Programs. NoStarch.
-
+   | DATE       | R4DS[fn:2] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:1] |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Wed-12-Jan | 1 Introduction                       | Intermediate R: Conditionals and Control Flow             | Entry Quiz |
+   | Fri-14-Jan | 1 Introduction                       |                                                           | Quiz 1     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Wed-19-Jan | Explore: 2 Introduction              | Intermediate R: Loops                                     |            |
+   | Fri-21-Jan | Explore: 3 Data visualization        |                                                           | Quiz 2     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-24-Jan | Explore: 3 Data visualization        | Intermediate R: Functions                                 |            |
+   | Wed-26-Jan | Explore: 3 Data visualization        |                                                           |            |
+   | Fri-28-Jan | Explore: 4 Workflow: basics          |                                                           | Quiz 3     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-31-Jan | Explore: 5 Data transformation       | Introduction to the Tidyverse: Data Wrangling             |            |
+   | Wed-02-Feb | Explore: 5 Data transformation       |                                                           |            |
+   | Fri-04-Feb | Explore: 5 Data transformation       |                                                           | Test 1     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-07-Feb | Explore: 6 Workflow: scripts         | Introduction to the Tidyverse: Data Visualization         |            |
+   | Wed-09-Feb | Explore: 7 Exploratory Data Analysis |                                                           |            |
+   | Fri-11-Feb | Explore: 7 Exploratory Data Analysis |                                                           | Quiz 4     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-14-Feb | Explore: 8 Workflow: projects        | Introduction to the Tidyverse: Grouping and Summarizing   |            |
+   | Wed-16-Feb | Wrangle: 9 Introduction              |                                                           |            |
+   | Fri-18-Feb | Wrangle: 10 Tibbles                  |                                                           | Quiz 5     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-21-Feb | Wrangle: 11 Data import              | Introduction to the Tidyverse: Types of Visualizations    |            |
+   | Wed-23-Feb | Wrangle: 12 Tidy data                |                                                           |            |
+   | Fri-25-Feb | Wrangle: 13 Relational data          |                                                           | Quiz 6     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-28-Feb | Wrangle: 14 Strings                  | Data manipulation with ~dplyr~: Transforming data         |            |
+   | Wed-02-Mar |                                      |                                                           |            |
+   | Fri-04-Mar | Wrangle: 15 Factors                  |                                                           | Test 2     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-07-Mar | Wrangle: 16 Dates and times          | Data manipulation with ~dplyr~: Aggregating data          |            |
+   | Wed-09-Mar | Program: 17 Introduction             |                                                           |            |
+   | Fri-11-Mar | Program: 18 Pipes                    |                                                           | Quiz 7     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-14-Mar | Program: 19 Functions                | Data manipulation with ~dplyr~: Selecting data            |            |
+   | Wed-16-Mar |                                      |                                                           |            |
+   | Fri-18-Mar | Program: 20 Vectors                  |                                                           | Quiz 8     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-28-Mar |                                      | Data manipulation with ~dplyr~: Case Study - ~babynames~  |            |
+   | Wed-30-Mar | Program: 21 Iteration                |                                                           |            |
+   | Fri-01-Apr |                                      |                                                           | Quiz 9     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-04-Apr | Model: 22 Introduction               | Exploratory Data Analysis in R: Categorical Data          |            |
+   | Wed-06-Apr | Model: 23 Model basics               |                                                           |            |
+   | Fri-08-Apr |                                      |                                                           | Test 3     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-11-Apr | Model: 24 Model building             | Exploratory Data Analysis in R: Numerical Data            |            |
+   | Wed-13-Apr |                                      |                                                           | Quiz 10    |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Wed-20-Apr | Model: 25 Many models                | Exploratory Data Analysis in R: Numerical Summaries       |            |
+   | Fri-22-Apr |                                      |                                                           | Quiz 11    |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-25-Apr | Communicate: 26 Introduction         | Exploratory Data Analysis in R: Case Study Spam Detection |            |
+   | Wed-27-Apr | Communicate: 27 R Markdown           |                                                           |            |
+   | Fri-29-Apr | Communicate: 28 Graphics             |                                                           | Quiz 12    |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   | Mon-02-May | Communicate: 29 R Markdown formats   |                                                           |            |
+   | Wed-04-May | Communicate: 30 R Markdown workflow  |                                                           | Test 4     |
+   |------------+--------------------------------------+-----------------------------------------------------------+------------|
+   
 * Footnotes
+
+[fn:6]The course covers (almost) the entire "Data Scientist with R"
+career (!)  track in DataCamp (only the last course is missing), which
+includes the four courses "Introduction to R" (already completed in
+DSC 101 or as part of the preparation for DSC 205), "Intermediate R",
+"Introduction to the Tidyverse", and "Data manipulation with ~dplyr~".
+
+[fn:5]"R for Data Science" (r4ds) is not an easy book to read - it is
+very condensed in some, and too expansive (for my taste) in other
+places. 
 
 [fn:4]Academic calendar sent by the Provost, Melissa Taverner.
 
-[fn:3]Sent by the Interim Provost, Anthony Grafton. Updated
+[fn:3]Sent by the Interim Provost, Anthony Grafton. Updated Jan 2022.
 
 [fn:2]Taken from David Sonnier with minor modifications.
 
