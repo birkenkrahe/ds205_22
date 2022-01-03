@@ -12,7 +12,7 @@
   * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
   * Textbook: R for Data Science, by Hadley Wickham & Garrett
-    Grolemund. O'Reilly (2017-2020). URL: [[https://r4ds.had.co.nz/index.html][URL: r4ds.had.co.nz]].
+    Grolemund. O'Reilly (2017-2020). [[https://r4ds.had.co.nz/index.html][URL: r4ds.had.co.nz]].
 
     #+attr_html: :width 200px
     [[./img/r4ds.png]]
