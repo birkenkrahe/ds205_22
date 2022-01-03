@@ -69,7 +69,7 @@
 * Footnotes
 
 [fn:2]Chapter or subchapter in Grolemund/Wickham, R for Data Science
-(r4ds) - the chapter ordering follows [[https://r4ds.had.co.nz/introduction.html][the online version]], not the 2017
+(R4DS) - the chapter ordering follows [[https://r4ds.had.co.nz/introduction.html][the online version]], not the 2017
 print version.
 
 [fn:1]Quiz: covers the material of the past week. Usually 5 min at the
