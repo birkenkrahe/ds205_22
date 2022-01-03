@@ -33,7 +33,7 @@
    | 18 |      | Fri-25-Feb | Wrangle: 13 Relational data          |                                                           | Quiz 6     |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 19 |    8 | Mon-28-Feb | Wrangle: 14 Strings                  | Data manipulation with ~dplyr~: Transforming data         |            |
-   | 20 |      | Wed-02-Mar |                                      |                                                           |            |
+   | 20 |      | Wed-02-Mar | Wrangle: 14 Strings                  |                                                           |            |
    | 21 |      | Fri-04-Mar | Wrangle: 15 Factors                  |                                                           | Test 2     |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 22 |    9 | Mon-07-Mar | Wrangle: 16 Dates and times          | Data manipulation with ~dplyr~: Aggregating data          |            |
@@ -41,22 +41,22 @@
    | 24 |      | Fri-11-Mar | Program: 18 Pipes                    |                                                           | Quiz 7     |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 25 |   10 | Mon-14-Mar | Program: 19 Functions                | Data manipulation with ~dplyr~: Selecting data            |            |
-   | 26 |      | Wed-16-Mar |                                      |                                                           |            |
+   | 26 |      | Wed-16-Mar | Program: 19 Functions                |                                                           |            |
    | 27 |      | Fri-18-Mar | Program: 20 Vectors                  |                                                           | Quiz 8     |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 28 |   11 | Mon-28-Mar |                                      | Data manipulation with ~dplyr~: Case Study - ~babynames~  |            |
+   | 28 |   11 | Mon-28-Mar | Program: 20 Vectors                  | Data manipulation with ~dplyr~: Case Study - ~babynames~  |            |
    | 29 |      | Wed-30-Mar | Program: 21 Iteration                |                                                           |            |
-   | 30 |      | Fri-01-Apr |                                      |                                                           | Quiz 9     |
+   | 30 |      | Fri-01-Apr | Program: 21 Iteration                |                                                           | Quiz 9     |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 31 |   12 | Mon-04-Apr | Model: 22 Introduction               | Exploratory Data Analysis in R: Categorical Data          |            |
    | 32 |      | Wed-06-Apr | Model: 23 Model basics               |                                                           |            |
-   | 33 |      | Fri-08-Apr |                                      |                                                           | Test 3     |
+   | 33 |      | Fri-08-Apr | Model: 23 Model basics               |                                                           | Test 3     |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 34 |   13 | Mon-11-Apr | Model: 24 Model building             | Exploratory Data Analysis in R: Numerical Data            |            |
-   | 35 |      | Wed-13-Apr |                                      |                                                           | Quiz 10    |
+   | 35 |      | Wed-13-Apr | Model: 24 Model building             |                                                           | Quiz 10    |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 36 |   14 | Wed-20-Apr | Model: 25 Many models                | Exploratory Data Analysis in R: Numerical Summaries       |            |
-   | 37 |      | Fri-22-Apr |                                      |                                                           | Quiz 11    |
+   | 37 |      | Fri-22-Apr | Model: 25 Many models                |                                                           | Quiz 11    |
    |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
    | 38 |   15 | Mon-25-Apr | Communicate: 26 Introduction         | Exploratory Data Analysis in R: Case Study Spam Detection |            |
    | 39 |      | Wed-27-Apr | Communicate: 27 R Markdown           |                                                           |            |

@@ -25,10 +25,9 @@
    introduction is data exploration, with excursions into data
    wrangling, programming, and modeling using R. However, this is not
    an R course, but a course on exploring data using the "tidyverse"
-   methodology and the RStudio IDE. We will endeavour to cover much of
-   the material in chapters 2-7, 10-16, 18-21, 22-25[fn:5]. You will
-   practice using classroom assignments and weekly programming
-   assignments in DataCamp[fn:6].
+   methodology and the RStudio IDE. We will endeavour to cover all of
+   the chapters of the book[fn:5]. You will practice using classroom
+   assignments and weekly programming assignments in DataCamp[fn:6].
 
    #+attr_html: :width 600px
    [[./img/workflow.png]]
@@ -359,9 +358,9 @@ includes the four courses "Introduction to R" (already completed in
 DSC 101 or as part of the preparation for DSC 205), "Intermediate R",
 "Introduction to the Tidyverse", and "Data manipulation with ~dplyr~".
 
-[fn:5]"R for Data Science" (r4ds) is not an easy book to read - it is
+[fn:5]However, "R for Data Science" (r4ds) is not an easy book to read - it is
 very condensed in some, and too expansive (for my taste) in other
-places. 
+places. But we'll try!
 
 [fn:4]Academic calendar sent by the Provost, Melissa Taverner.
 
