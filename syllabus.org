@@ -1,50 +1,43 @@
-#+TITLE:CSC 330 Spring 2022 Syllabus
+#+TITLE:DSC 205/CSC 482 Spring 2022 Syllabus
 #+AUTHOR: Marcus Birkenkrahe
-#+SUBTITLE: Database Theory and Applications (CSC 330) Spring 2022
+#+SUBTITLE: Introduction to Advanced Data Science (DSC 205/CSC 482) Spring 2022
 #+options: toc:nil
+#+startup: overview
 * General Course Information
 
-  * Meeting Times: Tuesday/Thursday, 13:00-14:15 hrs
-  * Meeting place: Lyon Building Room 104
+  * Meeting Times: Monday/Wednesday/Friday, 15:00-15:50 hrs
+  * Meeting place: Derby Science Building 209 (Computer Lab)
   * Professor: Marcus Birkenkrahe
   * Office: Derby Science Building 210
-  * Phone: (870) 307-7254
+  * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
-  * Textbook: Lemahieu/Vanden Broucke/Baesens (2021). Principles of
-    Database Management. Cambridge: Cambridge University Press. URL:
+  * Textbook: R for Data Science, by Hadley Wickham & Garrett
+    Grolemund. O'Reilly (2017-2020). URL: [[https://r4ds.had.co.nz/index.html][URL: r4ds.had.co.nz]].
 
-    #+attr_html: :width 300px
-    [[./img/cover.png]]
+    #+attr_html: :width 200px
+    [[./img/r4ds.png]]
 
 ** Objectives
 
-   You will learn a fair amount about SQL, the (by far) dominant data
-   science language in the real world (for relational databases), and
-   one of the oldest languages in use. You will practice SQL and work
-   with relational databases as part of your weekly assignments in
-   DataCamp. We also work with SQLite, the world's most common
-   database, and we model databases with UML and Entity-Relationship
-   diagrams. We cover XML and NoSQL databases, Big Data, and aspects
-   of physical database organization. You learn to access databases
-   with your programming language of choice - C, C++, Java, Python, R,
-   or whatever you like. We will endeavour to cover most of chapters
-   1-11, 17-19 of the textbook by Lemahieu et al (2021).
+   We will endeavour to cover
+   most of chapters 1-15 of the textbook by King.
 
    #+attr_html: :width 600px
-   [[./img/landscape.png]]
+   [[./img/power1.png]]
 
    /Image: Computer landscape - modified after Steinhart, 2019/
 
 ** Student Learning Outcomes
 
-   Students who complete CSC 330 "Database Theory and Applications",
-   will be able to:
+   Students who complete CSC 100.01 "Introduction to programming in
+   C/C++", will be able to:
 
-   * Understand the design principles of non/relational databases
-   * Know existing types of databases and their applications
-   * Master relational DB query languages like SQL and SQLite
-   * Design database applications using Entity Relationship Models
-   * Master computing infrastructure (editor, shell)
+   * Master basic sequential programming skills (conditional
+     statements, loops, functions, input/output, use of data types)
+   * Explain the basic components of a procedural programming language
+   * Apply the basics of programming to solve a variety of
+     quantitative problems
+   * Master computing infrastructure (compiler, editor, shell)
    * Know how to effectively present assignment results
 
 ** Course requirements
@@ -58,13 +51,13 @@
 
 ** Grading system
 
-   | WHEN[fn:1]    | DESCRIPTION              | IMPACT |
-   |---------------+--------------------------+--------|
-   | Weekly        | Quizzes                  |    10% |
-   | Every session | Class assignments        |    10% |
-   | Weekly        | DataCamp/H5P assignments |    30% |
-   | Monthly       | Tests                    |    30% |
-   | End of term   | Final exam               |    20% |
+   | WHEN[fn:1]    | DESCRIPTION       | IMPACT |
+   |---------------+-------------------+--------|
+   | Every session | Class assignments |    10% |
+   | Weekly        | Quizzes           |    10% |
+   | Monthly       | Tests             |    30% |
+   | Biweekly      | Lab projects      |    30% |
+   | End of term   | Final exam        |    20% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -97,25 +90,25 @@
     |   49-0 | F               | F (failed)    |
     |--------+-----------------+---------------|
 
-*** Weekly Quizzes (10%)
-    - Answer multiple choice questions
-    - Complete quiz online outside of class
-    - Use for drills thereafter
-
 *** Class assignments (10%)
     - Complete small assignments in class (participation)
     - Complete assignments outside of class (homework)
     - Be ready to present your results
 
-*** Weekly DataCamp/H5P assignments (30%)
-    - Complete weekly chapters of DataCamp assignments
-    - Spend 30-45 min per week on an assignment
-    - Bring questions and comments to class for discussion
+*** Weekly Quizzes (10%)
+    - Answer multiple choice questions
+    - Complete quiz online outside of class
+    - Use for drills thereafter
 
 *** Monthly tests (30%)
     - Complete 45 min online test in class
     - Recall last month of lectures and labs
     - Read relevant textbook chapters
+
+*** Biweekly lab projects (30%)
+    - Solve programming problems in class
+    - Complete assignments outside of class if necessary
+    - Be ready to present your solutions
 
 *** Final exam (20%)
     - 120 min multiple choice exam
@@ -181,6 +174,7 @@
      students. Vaccines are NOT MANDATED for Lyon College community
      members.
 
+     #+begin_quote
    Details specific to this course may be found in the subsequent
    pages of this syllabus. Those details will include at least the
    following:
@@ -191,6 +185,7 @@
    - Any course-specific attendance policies that go beyond the College policy.
    - Details about what constitutes acceptable and unacceptable
      student collaboration on graded work.
+     #+end_quote
 
 * Course specific information
 ** Assignments and Honor Code[fn:2]
@@ -268,57 +263,69 @@
 
 ** Schedule and session content
 
-   Changes are possible - an [[https://github.com/birkenkrahe/db330/blob/main/schedule.org][updated schedule with is available]].
+   Changes are possible - an [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][updated schedule with is available]].
 
-   | NO | WEEK | DATE       | DATACAMP/H5P ASSIGNMENTS                                                                  | TEXTBOOK CHAPTER            | TEST       |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   |  1 |    1 | Tue-11-Jan | Registration                                                                              | 1 Fundamental Concepts      | Entry quiz |
-   |  2 |      | Thu-13-Jan |                                                                                           |                             |            |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   |  3 |    2 | Tue-18-Jan | Cloud Computing for Everyone: Introduction to Cloud Computing                             |                             |            |
-   |  4 |      | Thu-20-Jan |                                                                                           |                             | Quiz 1     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   |  5 |    3 | Tue-25-Jan | Cloud Computing for Everyone: Cloud Deployment                                            | 2 Architecture of DBMS      |            |
-   |  6 |      | Thu-27-Jan |                                                                                           |                             | Quiz 2     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   |  7 |    4 | Tue-01-Feb | Cloud Computing for Everyone: Cloud Providers and Case Studies                            |                             |            |
-   |  8 |      | Thu-03-Feb |                                                                                           |                             | Quiz 3     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   |  9 |    5 | Tue-08-Feb | H5P: Entity Relationship Diagram (ERD) Part 1                                             | 3 Data Modeling             |            |
-   | 10 |      | Thu-10-Feb |                                                                                           |                             | Test 1     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 11 |    6 | Tue-15-Feb | H5P: Entity Relationship Diagram (ERD) Part 2                                             |                             |            |
-   | 12 |      | Thu-17-Feb |                                                                                           |                             | Quiz 4     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 13 |    7 | Tue-22-Feb | Introduction to SQL: Selecting columns                                                    | 4 Organizational Aspects    |            |
-   | 14 |      | Thu-24-Feb |                                                                                           |                             | Quiz 5     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 15 |    8 | Tue-01-Feb | Introduction to SQL: Filtering rows                                                       | 5 Legacy Databases          |            |
-   | 16 |      | Thu-03-Mar |                                                                                           |                             | Quiz 6     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 17 |    9 | Tue-08-Mar | Introduction to SQL: Aggregate functions                                                  | 6 Relational Databases      |            |
-   | 18 |      | Thu-10-Mar |                                                                                           |                             | Quiz 7     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 19 |   10 | Tue-15-Mar | Introduction to SQL: Sorting/Grouping                                                     |                             |            |
-   | 20 |      | Thu-17-Mar |                                                                                           |                             | Test 2     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 21 |   11 | Tue-29-Mar | Introduction to Relational DB in SQL: Your first database                                 | 8 Object-oriented Databases |            |
-   | 22 |      | Thu-31-Mar |                                                                                           |                             | Quiz 8     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 23 |   12 | Tue-05-Apr | Introduction to Relational DB in SQL: Enforce data consistency with attribute constraints | 10 XML Databases            |            |
-   | 24 |      | Thu-07-Apr |                                                                                           |                             | Quiz 9     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 25 |   13 | Tue-12-Apr | Introduction to Relational DB in SQL: Uniquely identify records with key constraints      | 11 NoSQL Databases          |            |
-   | 26 |      | Thu-14-Apr |                                                                                           |                             | Quiz 10    |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 27 |   14 | Thu-19-Apr | Introduction to Relational DB in SQL: Glue together tables with foreign keys              | 17 Data Warehouses and BI   |            |
-   | 28 |      | Fri-21-Apr |                                                                                           |                             | Quiz 11    |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 29 |   15 | Tue-26-Apr | Introduction to Tableau: Getting started with Tableau                                     | 19 Big Data                 |            |
-   | 30 |      | Thu-28-Apr |                                                                                           |                             | Test 3     |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
-   | 31 |   16 | Tue-03-May |                                                                                           |                             | Exit Quiz  |
-   |----+------+------------+-------------------------------------------------------------------------------------------+-----------------------------+------------|
+   | NO | WEEK | DATE       | ASSIGNMENT            | TEXTBOOK CHAPTER          | TEST    |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   |  1 |    1 | Wed-12-Jan |                       |                           |         |
+   |  2 |      | Fri-14-Jan |                       | 1 Introducing C           | Quiz 1  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   |  3 |    2 | Wed-19-Jan | GitHub Hello World    |                           |         |
+   |  4 |      | Fri-21-Jan | Emacs online tutorial |                           | Quiz 2  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   |  4 |    3 | Mon-24-Jan | Program  1            | 2 C Fundamentals          |         |
+   |  5 |      | Wed-26-Jan |                       |                           |         |
+   |  6 |      | Fri-28-Jan |                       |                           | Quiz 3  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   |  7 |    4 | Mon-31-Jan | Program 2             | 3 Input/Output            |         |
+   |  8 |      | Wed-02-Feb |                       |                           |         |
+   |  9 |      | Fri-04-Feb |                       |                           | Test 1  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 10 |    5 | Mon-07-Feb | Program 3             | 4 Expressions             |         |
+   | 11 |      | Wed-09-Feb |                       |                           |         |
+   | 12 |      | Fri-11-Feb |                       |                           | Quiz 4  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 13 |    6 | Mon-14-Feb | Program 4             | 5 Selection Statements    |         |
+   | 14 |      | Wed-16-Feb |                       |                           |         |
+   | 15 |      | Fri-18-Feb |                       |                           | Quiz 5  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 16 |    7 | Mon-21-Feb | Program 5             | 6 Loops                   |         |
+   | 17 |      | Wed-23-Feb |                       |                           |         |
+   | 18 |      | Fri-25-Feb |                       |                           | Test 2  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 19 |    8 | Mon-28-Feb | Program 6             | 7 Basic types             |         |
+   | 20 |      | Wed-02-Mar |                       |                           |         |
+   | 21 |      | Fri-04-Mar |                       |                           | Quiz 6  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 22 |    9 | Mon-07-Mar | Program 7             | 8 Arrays                  |         |
+   | 23 |      | Wed-09-Mar |                       |                           |         |
+   | 24 |      | Fri-11-Mar |                       |                           | Quiz 7  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 25 |   10 | Mon-14-Mar | Program 8             | 9 Functions               |         |
+   | 26 |      | Wed-16-Mar |                       |                           |         |
+   | 27 |      | Fri-18-Mar |                       |                           | Quiz 8  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 28 |   11 | Mon-28-Mar | Program 9             | 10 Program Organization   |         |
+   | 29 |      | Wed-30-Mar |                       |                           |         |
+   | 30 |      | Fri-01-Apr |                       |                           | Test 3  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 31 |   12 | Mon-04-Apr | Program 10            | 11 Pointers               |         |
+   | 32 |      | Wed-06-Apr |                       |                           |         |
+   | 33 |      | Fri-08-Apr |                       |                           | Quiz 9  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 34 |   13 | Mon-11-Apr | Program 11            | 12 Pointers and Arrays    |         |
+   | 35 |      | Wed-13-Apr |                       |                           | Quiz 10 |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 36 |   14 | Wed-20-Apr | Program 12            | 13 Strings                |         |
+   | 37 |      | Fri-22-Apr |                       |                           | Quiz 11 |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 38 |   15 | Mon-25-Apr | Program 13            | 14 The Preprocessor       |         |
+   | 39 |      | Wed-27-Apr |                       |                           |         |
+   | 40 |      | Fri-29-Apr |                       |                           | Test 4  |
+   |----+------+------------+-----------------------+---------------------------+---------|
+   | 41 |   16 | Mon-02-May |                       | 15 Writing Large Programs |         |
+   | 42 |      | Wed-04-May |                       |                           | Quiz 12 |
+   |----+------+------------+-----------------------+---------------------------+---------|
 
 * References
 
@@ -330,7 +337,7 @@
 
 [fn:4]Academic calendar sent by the Provost, Melissa Taverner.
 
-[fn:3]Sent by the Interim Provost, Anthony Grafton.
+[fn:3]Sent by the Interim Provost, Anthony Grafton. Updated
 
 [fn:2]Taken from David Sonnier with minor modifications.
 
