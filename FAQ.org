@@ -1,0 +1,9 @@
+#+TITLE:FAQ
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:Frequently Asked Questions
+#+STARTUP:overview
+#+OPTIONS:hideblocks
+* What is this?
+
+  This is a Frequently Asked Questions (FAQ) file for this course. For
+  the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
