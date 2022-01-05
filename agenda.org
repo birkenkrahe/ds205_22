@@ -16,16 +16,16 @@
 
    Cp. [[https://github.com/birkenkrahe/dsc101/blob/main/diary.md#good-bye-12-17-2021][Good-bye fall 2021]]
 
-   | FALL 2021                                               | SPRINT 2021                  |
-   |---------------------------------------------------------+------------------------------|
-   | Base R (stick shift) instead of "TidyVerse" (automatic) | "Tidy" all the way           |
-   | Use of interactive notebooks (literate programming!)    | RStudio IDE                  |
-   | Use GitHub as a code and materials repository           | GitHub repo                  |
-   | Create lots of (ungraded) tests                         | Graded quizzes and tests     |
-   | Use of DataCamp assignments                             | DataCamp assignments         |
-   | Avoid mathematics as much as possible                   | No math                      |
-   | Reuse tests for the final exam                          | Reuse quizzes for final exam |
-   | Let students pick their own projects                    | No projects (only optional)  |
+   | FALL 2021                                               | SPRINT 2021                    |
+   |---------------------------------------------------------+--------------------------------|
+   | Base R (stick shift) instead of "TidyVerse" (automatic) | Adding the "Tidyverse"         |
+   | Use of interactive notebooks (literate programming!)    | Intro to RStudio IDE and Emacs |
+   | Use GitHub as a code and materials repository           | GitHub repo                    |
+   | Create lots of (ungraded) tests                         | Graded quizzes and tests       |
+   | Use of DataCamp assignments                             | DataCamp assignments           |
+   | Avoid mathematics as much as possible                   | No math                        |
+   | Reuse tests for the final exam                          | Reuse quizzes for final exam   |
+   | Let students pick their own projects                    | No projects (only optional)    |
 
 ** Ambitions (DS program 2021-2023)
 

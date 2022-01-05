@@ -11,11 +11,11 @@
   * Office: Derby Science Building 210
   * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
-  * Textbook: R for Data Science, by Hadley Wickham & Garrett
-    Grolemund. O'Reilly (2017-2020). [[https://r4ds.had.co.nz/index.html][URL: r4ds.had.co.nz]].
-
+  * Textbook: Exploratory Data Analysis Using R, by Ronald
+    K. Pearson. CRC Press, 2019.
+    
     #+attr_html: :width 200px
-    [[./img/r4ds.png]]
+    [[./img/edar.jpg]]
 
 ** Objectives
 
@@ -26,8 +26,8 @@
    wrangling, programming, and modeling using R. However, this is not
    an R course, but a course on exploring data using the "tidyverse"
    methodology and the RStudio IDE. We will endeavour to cover all of
-   the chapters of the book[fn:5]. You will practice using classroom
-   assignments and weekly programming assignments in DataCamp[fn:6].
+   the chapters of the book[fn:1]. You will practice using classroom
+   assignments and weekly programming assignments in DataCamp[fn:2].
 
    #+attr_html: :width 600px
    [[./img/workflow.png]]
@@ -62,7 +62,7 @@
 
 ** Grading system
 
-   | WHEN[fn:1]    | DESCRIPTION          | IMPACT |
+   | WHEN[fn:3]    | DESCRIPTION          | IMPACT |
    |---------------+----------------------+--------|
    | Every session | Class assignments    |    10% |
    | Weekly        | Quizzes              |    10% |
@@ -131,7 +131,7 @@
     - Online in Schoology in the classroom
     - Sourced from the weekly quiz questions
 
-* Standard Policies[fn:3]
+* Standard Policies[fn:4]
 ** Honor Code
 
    All graded work in this class is to be pledged in accordance with
@@ -204,7 +204,7 @@
      #+end_quote
 
 * Course specific information
-** Assignments and Honor Code[fn:2]
+** Assignments and Honor Code[fn:5]
 
    There will be numerous assignments during the semester - e.g.
    programming, lessons, tests, and sprint reviews. They are due at
@@ -259,7 +259,7 @@
    test, please e-mail me or leave a message on my phone before the
    scheduled time, and we can make arrangements when you return.
 
-** Important Dates[fn:4]:
+** Important Dates[fn:6]:
 
    | DATE        | DAY              | DESCRIPTION                                  |
    |-------------+------------------+----------------------------------------------|
@@ -281,7 +281,7 @@
 
    Changes are possible - an [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][updated schedule is available on GitHub]].
 
-   | DATE       | R4DS[fn:7] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:8] |
+   | DATE       | EDAR[fn:7] LECTURE/LAB               | DATACAMP ASSIGNMENT[fn:8]                                       | TEST[fn:9] |
    |------------+--------------------------------------+-----------------------------------------------------------+------------|
    | Wed-12-Jan | 1 Introduction                       | Intermediate R: Conditionals and Control Flow             | Entry Quiz |
    | Fri-14-Jan | 1 Introduction                       |                                                           | Quiz 1     |
@@ -342,30 +342,37 @@
    | Mon-02-May | Communicate: 29 R Markdown formats   |                                                           |            |
    | Wed-04-May | Communicate: 30 R Markdown workflow  |                                                           | Test 4     |
    |------------+--------------------------------------+-----------------------------------------------------------+------------|
-   
+
 * Footnotes
 
-[fn:8]Quiz: covers the material of the past week. Usually 5 min at the
-beginning of class, multiple choice. Test: in class exercises.
+[fn:1]However, "R for Data Science" (r4ds) is not an easy book to read - it is
+very condensed in some, and too expansive (for my taste) in other
+places. But we'll try!
 
-[fn:7]Chapter or subchapter in Grolemund/Wickham, R for Data Science
-(R4DS) - the chapter ordering follows [[https://r4ds.had.co.nz/introduction.html][the online version]], not the 2017
-print version. 
-
-[fn:6]The course covers (almost) the entire "Data Scientist with R"
+[fn:2]The course covers (almost) the entire "Data Scientist with R"
 career (!)  track in DataCamp (only the last course is missing), which
 includes the four courses "Introduction to R" (already completed in
 DSC 101 or as part of the preparation for DSC 205), "Intermediate R",
 "Introduction to the Tidyverse", and "Data manipulation with ~dplyr~".
 
-[fn:5]However, "R for Data Science" (r4ds) is not an easy book to read - it is
-very condensed in some, and too expansive (for my taste) in other
-places. But we'll try!
+[fn:3]Schedule may change depending on course load and progress.
 
-[fn:4]Academic calendar sent by the Provost, Melissa Taverner.
+[fn:4]Sent by the Interim Provost, Anthony Grafton. Updated Jan 2022.
 
-[fn:3]Sent by the Interim Provost, Anthony Grafton. Updated Jan 2022.
+[fn:5]Taken from David Sonnier with minor modifications.
 
-[fn:2]Taken from David Sonnier with minor modifications.
+[fn:6]Academic calendar sent by the Provost, Melissa Taverner.
 
-[fn:1]Schedule may change depending on course load and progress.
+[fn:7]Chapter or subchapter in "Exploratory Data Analysis Using R" by
+Pearson (CRC Press, 2019), includes classroom assignments in the form
+of interactive notebooks.
+
+[fn:8]The DataCamp assignments are heavily influenced by the
+"Tidyverse" approach to data science with R as explained in "R for
+Data Science" (r4ds) by [[https://r4ds.had.co.nz/introduction.html][Grolemund/Wickham (2017)]]. By contrast, the
+classroom sessions will deal with Exploratory Data Analysis using base
+R exclusively, as explained in the book with the same title by Pearson
+(2019).
+
+[fn:9]Quiz: covers the material of the past week. Usually 5 min at the
+beginning of class, multiple choice. Test: in class exercises.
