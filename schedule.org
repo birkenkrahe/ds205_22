@@ -4,73 +4,76 @@
 
   [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][Updated schedule in GitHub.]]
 
-   | NO | WEEK | DATE       | R4DS[fn:2] LECTURE/LAB               | DATACAMP ASSIGNMENT                                       | TEST[fn:1] |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   |  1 |    1 | Wed-12-Jan | 1 Introduction                       | Intermediate R: Conditionals and Control Flow             | Entry Quiz |
-   |  2 |      | Fri-14-Jan | 1 Introduction                       |                                                           | Quiz 1     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   |  3 |    2 | Wed-19-Jan | Explore: 2 Introduction              | Intermediate R: Loops                                     |            |
-   |  4 |      | Fri-21-Jan | Explore: 3 Data visualization        |                                                           | Quiz 2     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   |  4 |    3 | Mon-24-Jan | Explore: 3 Data visualization        | Intermediate R: Functions                                 |            |
-   |  5 |      | Wed-26-Jan | Explore: 3 Data visualization        |                                                           |            |
-   |  6 |      | Fri-28-Jan | Explore: 4 Workflow: basics          |                                                           | Quiz 3     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   |  7 |    4 | Mon-31-Jan | Explore: 5 Data transformation       | Introduction to the Tidyverse: Data Wrangling             |            |
-   |  8 |      | Wed-02-Feb | Explore: 5 Data transformation       |                                                           |            |
-   |  9 |      | Fri-04-Feb | Explore: 5 Data transformation       |                                                           | Test 1     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 10 |    5 | Mon-07-Feb | Explore: 6 Workflow: scripts         | Introduction to the Tidyverse: Data Visualization         |            |
-   | 11 |      | Wed-09-Feb | Explore: 7 Exploratory Data Analysis |                                                           |            |
-   | 12 |      | Fri-11-Feb | Explore: 7 Exploratory Data Analysis |                                                           | Quiz 4     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 13 |    6 | Mon-14-Feb | Explore: 8 Workflow: projects        | Introduction to the Tidyverse: Grouping and Summarizing   |            |
-   | 14 |      | Wed-16-Feb | Wrangle: 9 Introduction              |                                                           |            |
-   | 15 |      | Fri-18-Feb | Wrangle: 10 Tibbles                  |                                                           | Quiz 5     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 16 |    7 | Mon-21-Feb | Wrangle: 11 Data import              | Introduction to the Tidyverse: Types of Visualizations    |            |
-   | 17 |      | Wed-23-Feb | Wrangle: 12 Tidy data                |                                                           |            |
-   | 18 |      | Fri-25-Feb | Wrangle: 13 Relational data          |                                                           | Quiz 6     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 19 |    8 | Mon-28-Feb | Wrangle: 14 Strings                  | Data manipulation with ~dplyr~: Transforming data         |            |
-   | 20 |      | Wed-02-Mar | Wrangle: 14 Strings                  |                                                           |            |
-   | 21 |      | Fri-04-Mar | Wrangle: 15 Factors                  |                                                           | Test 2     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 22 |    9 | Mon-07-Mar | Wrangle: 16 Dates and times          | Data manipulation with ~dplyr~: Aggregating data          |            |
-   | 23 |      | Wed-09-Mar | Program: 17 Introduction             |                                                           |            |
-   | 24 |      | Fri-11-Mar | Program: 18 Pipes                    |                                                           | Quiz 7     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 25 |   10 | Mon-14-Mar | Program: 19 Functions                | Data manipulation with ~dplyr~: Selecting data            |            |
-   | 26 |      | Wed-16-Mar | Program: 19 Functions                |                                                           |            |
-   | 27 |      | Fri-18-Mar | Program: 20 Vectors                  |                                                           | Quiz 8     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 28 |   11 | Mon-28-Mar | Program: 20 Vectors                  | Data manipulation with ~dplyr~: Case Study - ~babynames~  |            |
-   | 29 |      | Wed-30-Mar | Program: 21 Iteration                |                                                           |            |
-   | 30 |      | Fri-01-Apr | Program: 21 Iteration                |                                                           | Quiz 9     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 31 |   12 | Mon-04-Apr | Model: 22 Introduction               | Exploratory Data Analysis in R: Categorical Data          |            |
-   | 32 |      | Wed-06-Apr | Model: 23 Model basics               |                                                           |            |
-   | 33 |      | Fri-08-Apr | Model: 23 Model basics               |                                                           | Test 3     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 34 |   13 | Mon-11-Apr | Model: 24 Model building             | Exploratory Data Analysis in R: Numerical Data            |            |
-   | 35 |      | Wed-13-Apr | Model: 24 Model building             |                                                           | Quiz 10    |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 36 |   14 | Wed-20-Apr | Model: 25 Many models                | Exploratory Data Analysis in R: Numerical Summaries       |            |
-   | 37 |      | Fri-22-Apr | Model: 25 Many models                |                                                           | Quiz 11    |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 38 |   15 | Mon-25-Apr | Communicate: 26 Introduction         | Exploratory Data Analysis in R: Case Study Spam Detection |            |
-   | 39 |      | Wed-27-Apr | Communicate: 27 R Markdown           |                                                           |            |
-   | 40 |      | Fri-29-Apr | Communicate: 28 Graphics             |                                                           | Quiz 12    |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
-   | 41 |   16 | Mon-02-May | Communicate: 29 R Markdown formats   |                                                           |            |
-   | 42 |      | Wed-04-May | Communicate: 30 R Markdown workflow  |                                                           | Test 4     |
-   |----+------+------------+--------------------------------------+-----------------------------------------------------------+------------|
+  | LECTURE/LAB[fn:1]          | DATE       | ASSIGNMENT[fn:2]                                          | TEST[fn:3] |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Introduction               | Wed-12-Jan | GitHub Hello World                                        | Entry Quiz |
+  |                            | Fri-14-Jan |                                                           | Quiz 1     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Emacs IDE                  | Wed-19-Jan | Emacs Tutorial                                            |            |
+  |                            | Fri-21-Jan |                                                           | Quiz 2     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Writing your own functions | Mon-24-Jan | Intermediate R: Conditionals and Control Flow             |            |
+  |                            | Wed-26-Jan |                                                           |            |
+  |                            | Fri-28-Jan |                                                           | Quiz 3     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | If, Else, Ifelse           | Mon-31-Jan | Intermediate R: Loops                                     |            |
+  |                            | Wed-02-Feb |                                                           |            |
+  |                            | Fri-04-Feb |                                                           | Test 1     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | 'For' loops                | Mon-07-Feb | Intermediate R: Functions                                 |            |
+  |                            | Wed-09-Feb |                                                           |            |
+  |                            | Fri-11-Feb |                                                           | Quiz 4     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | The ~tapply~ function      | Mon-14-Feb | Intermediate R: apply family                              |            |
+  |                            | Wed-16-Feb |                                                           |            |
+  |                            | Fri-18-Feb |                                                           | Quiz 5     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Time and date              | Mon-21-Feb | Intermediate R: Utilities                                 |            |
+  |                            | Wed-23-Feb |                                                           |            |
+  |                            | Fri-25-Feb |                                                           | Quiz 6     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Gapminder and ~dplyr~      | Mon-28-Feb | Introduction to the Tidyverse: Data Wrangling             |            |
+  |                            | Wed-02-Mar |                                                           |            |
+  |                            | Fri-04-Mar |                                                           | Test 2     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Graphics with ~ggplot2~    | Mon-07-Mar | Introduction to the Tidyverse: Data Visualization         |            |
+  |                            | Wed-09-Mar |                                                           |            |
+  |                            | Fri-11-Mar |                                                           | Quiz 7     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Row operations             | Mon-14-Mar | Introduction to the Tidyverse: Grouping and Summarizing   |            |
+  |                            | Wed-16-Mar |                                                           |            |
+  |                            | Fri-18-Mar |                                                           | Quiz 8     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Different types of plots   | Mon-28-Mar | Introduction to the Tidyverse: Types of Visualizations    |            |
+  |                            | Wed-30-Mar |                                                           |            |
+  |                            | Fri-01-Apr |                                                           | Quiz 9     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Text processing            | Mon-04-Apr | Exploratory Data Analysis in R: Categorical Data          |            |
+  |                            | Wed-06-Apr |                                                           |            |
+  |                            | Fri-08-Apr |                                                           | Test 3     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Linear regression          | Mon-11-Apr | Exploratory Data Analysis in R: Numerical Data            |            |
+  |                            | Wed-13-Apr |                                                           | Quiz 10    |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Logistic regression        | Wed-20-Apr | Exploratory Data Analysis in R: Numerical Summaries       |            |
+  |                            | Fri-22-Apr |                                                           | Quiz 11    |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  | Functional programming     | Mon-25-Apr | Exploratory Data Analysis in R: Case Study Spam Detection |            |
+  |                            | Wed-27-Apr |                                                           |            |
+  |                            | Fri-29-Apr |                                                           | Quiz 12    |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
+  |                            | Mon-02-May |                                                           |            |
+  |                            | Wed-04-May |                                                           | Test 4     |
+  |----------------------------+------------+-----------------------------------------------------------+------------|
 
 * Footnotes
 
-[fn:2]Chapter or subchapter in Grolemund/Wickham, R for Data Science
-(R4DS) - the chapter ordering follows [[https://r4ds.had.co.nz/introduction.html][the online version]], not the 2017
-print version.
+[fn:1]Lab work includes classroom assignments in the form of
+interactive notebooks, and deepening of the DataCamp material.
 
-[fn:1]Quiz: covers the material of the past week. Usually 5 min at the
+[fn:2]Some of the DataCamp assignments are heavily influenced by the
+"Tidyverse" approach to data science with R as explained in "R for
+Data Science" (r4ds) by [[https://r4ds.had.co.nz/introduction.html][Grolemund/Wickham (2017)]].
+
+[fn:3]Quiz: covers the material of the past week. Usually 5 min at the
 beginning of class, multiple choice. Test: in class exercises.
