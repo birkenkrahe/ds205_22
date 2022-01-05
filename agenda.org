@@ -38,3 +38,7 @@
    | Data Visualization                    | DSC 302 | Fall 2022   | D3, Processing, Javascript          |
    | Machine Learning                      | DSC 305 | Spring 2023 | Predictive algorithms, neural nets  |
    | Digital Humanities                    | CSC 105 | Spring 2023 | Data science applications           |
+
+** Antagonization
+
+   [[https://github.com/birkenkrahe/ds205#credo][A new credo.]]

@@ -35,20 +35,47 @@
 
   | "Getting it right is crucial when people's lives are affected." -Jonathan Steinhart |
 
-   
+
   #+begin_quote
   "It is clear from the rising interest in statistics over calculus
   that 'data wrangling' is a growing field. But what happens when
   people just feed giant piles of data into fancy programs that those
   same people don't intimately understand? One possibility is that
   they generate interesting-looking but meaningless or incorrect
-  results. For example, a recent study ("Gene Name Errors Are
-  Widespread in the Scientific Literature" by Mark Ziemann, Yotam
-  Eren, and Assam El-Osta) showed that one-fifth of published
-  genetics papers have errors due to improper spreadsheet
+  results. For example, a recent study [...] showed that one-fifth of
+  published genetics papers have errors due to improper spreadsheet
   usage. Getting it right is crucial when people's lives are
-  affected." .(Steinhart, 2019).
+  affected."[fn:2] (Steinhard, 2019).
   #+end_quote
+
+* References
+
+  How Many Scientists Fabricate and Falsify Research? A Systematic
+  Review and Meta-Analysis of Survey Data Daniele Fanelli PLoS
+  One. 2009; 4(5): e5738. Published online 2009
+  May 29. doi:10.1371/journal.pone.0005738
 
   Steinhart (2019). The Secret Life of Programs. NoStarch Press. [[https://nostarch.com/foundationsofcomp][URL:
   nostarch.com.]]
+
+  "[[https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7][Gene Name Errors Are Widespread in the Scientific Literature]]" by
+  Mark Ziemann, Yotam Eren, and Assam El-Osta, Genome Biol 17, 177
+  (2016). [[https://doi.org/10.1186/s13059-016-1044-7][doi:10.1186/s13059-016-1044-7]]
+
+* Footnotes
+
+[fn:2]A timely comment! The problem could be systemic:
+#+begin_quote
+"The image of scientists as objective seekers of truth is periodically
+jeopardized by the discovery of a major scientific fraud. [...]
+Scientific results can be distorted in several ways, which can often
+be very subtle and/or elude researchers' conscious control. Data, for
+example, can be “cooked” (a process which mathematician Charles
+Babbage in 1830 defined as “an art of various forms, the object of
+which is to give to ordinary observations the appearance and character
+of those of the highest degree of accuracy”[12]); it can be “mined” to
+find a statistically significant relationship that is then presented
+as the original target of the study; it can be selectively published
+only when it supports one's expectations; it can conceal conflicts of
+interest, etc." (Fanelli, 2009).
+#+end_quote
