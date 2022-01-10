@@ -126,7 +126,7 @@
     - ONLINE IN SCHOOLOGY IN THE CLASSROOM
     - SOURCED FROM THE WEEKLY QUIZ QUESTIONS
 
-* STANDARD POLICIES[FN:4]
+* STANDARD POLICIES[fn:4]
 ** HONOR CODE
 
    ALL GRADED WORK IN THIS CLASS IS TO BE PLEDGED IN ACCORDANCE WITH
@@ -199,7 +199,7 @@
      #+END_QUOTE
 
 * COURSE SPECIFIC INFORMATION
-** ASSIGNMENTS AND HONOR CODE[FN:5]
+** ASSIGNMENTS AND HONOR CODE[fn:5]
 
    THERE WILL BE NUMEROUS ASSIGNMENTS DURING THE SEMESTER - E.G.
    PROGRAMMING, LESSONS, TESTS, AND SPRINT REVIEWS. THEY ARE DUE AT
@@ -254,90 +254,90 @@
    TEST, PLEASE E-MAIL ME OR LEAVE A MESSAGE ON MY PHONE BEFORE THE
    SCHEDULED TIME, AND WE CAN MAKE ARRANGEMENTS WHEN YOU RETURN.
 
-** IMPORTANT DATES[FN:6]:
+** Important dates
 
    | DATE        | DAY              | DESCRIPTION                                  |
    |-------------+------------------+----------------------------------------------|
-   | 4 JANUARY   | TUESDAY          | LAST DAY TO DEPOSIT FOR 2022 SPRING SEMESTER |
-   | 11 JANUARY  | TUESDAY          | CLASSES BEGIN                                |
-   | 17 JANUARY  | MONDAY           | MLK DAY - NO CLASSES                         |
-   | 18 JANUARY  | TUESDAY          | LAST DAY TO ADD A CLASS                      |
-   | 25 JANUARY  | TUESDAY          | LAST DAY TO DROP WITHOUT RECORD OF A COURSE  |
-   |             |                  | LAST DAY TO DECLARE A COURSE PASS-FAIL       |
-   |             |                  | DEADLINE FOR REMOVAL OF INCOMPLETES          |
-   | 19-27 MARCH | SATURDAY-SUNDAY  | SPRING BREAK                                 |
-   | 15-18 APRIL | FRIDAY-MONDAY    | EASTER BREAK                                 |
-   | 4 MAY       | WEDNESDAY        | LAST DAY OF CLASSES                          |
-   | 5-10 MAY    | THURSDAY-TUESDAY | FINAL EXAMS                                  |
-   | 10 MAY      | TUESDAY          | SENIOR GRADES DUE BY NOON                    |
-   | 18 MAY      | WEDNESDAY        | ALL GRADES DUE BY NOON                       |
+   | 4 January   | Tuesday          | Last day to deposit for 2022 spring semester |
+   | 11 January  | Tuesday          | Classes begin                                |
+   | 17 January  | Monday           | MLK Day - no classes                         |
+   | 18 January  | Tuesday          | Last day to add a class                      |
+   | 25 January  | Tuesday          | Last day to drop without record of a course  |
+   |             |                  | Last day to declare a course pass-fail       |
+   |             |                  | Deadline for removal of incompletes          |
+   | 19-27 March | Saturday-Sunday  | Spring break                                 |
+   | 15-18 April | Friday-Monday    | Easter break                                 |
+   | 4 May       | Wednesday        | Last day of classes                          |
+   | 5-10 May    | Thursday-Tuesday | Final exams                                  |
+   | 10 May      | Tuesday          | Senior grades due by noon                    |
+   | 18 May      | Wednesday        | All grades due by noon                       |
 
 ** SCHEDULE AND SESSION CONTENT
 
-   CHANGES ARE POSSIBLE - AN [[HTTPS://GITHUB.COM/BIRKENKRAHE/DS205/BLOB/MAIN/SCHEDULE.ORG][UPDATED SCHEDULE IS AVAILABLE ON GITHUB]].
+   Changes are possible - an [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][updated schedule is available on GitHub]].
 
-   | DATE       | LECTURE/LAB[FN:7]          | ASSIGNMENT[FN:8]                                          | TEST[FN:9] |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | WED-12-JAN | INTRODUCTION               | GITHUB HELLO WORLD                                        | ENTRY QUIZ |
-   | FRI-14-JAN |                            |                                                           | QUIZ 1     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | WED-19-JAN | EMACS IDE                  | EMACS TUTORIAL                                            |            |
-   | FRI-21-JAN |                            |                                                           | QUIZ 2     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-24-JAN | WRITING YOUR OWN FUNCTIONS | INTERMEDIATE R: CONDITIONALS AND CONTROL FLOW             |            |
-   | WED-26-JAN |                            |                                                           |            |
-   | FRI-28-JAN |                            |                                                           | QUIZ 3     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-31-JAN | IF, ELSE, IFELSE           | INTERMEDIATE R: LOOPS                                     |            |
-   | WED-02-FEB |                            |                                                           |            |
-   | FRI-04-FEB |                            |                                                           | TEST 1     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-07-FEB | 'FOR' LOOPS                | INTERMEDIATE R: FUNCTIONS                                 |            |
-   | WED-09-FEB |                            |                                                           |            |
-   | FRI-11-FEB |                            |                                                           | QUIZ 4     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-14-FEB | THE ~TAPPLY~ FUNCTION      | INTERMEDIATE R: APPLY FAMILY                              |            |
-   | WED-16-FEB |                            |                                                           |            |
-   | FRI-18-FEB |                            |                                                           | QUIZ 5     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-21-FEB | TIME AND DATE              | INTERMEDIATE R: UTILITIES                                 |            |
-   | WED-23-FEB |                            |                                                           |            |
-   | FRI-25-FEB |                            |                                                           | QUIZ 6     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-28-FEB | GAPMINDER AND ~DPLYR~      | INTRODUCTION TO THE TIDYVERSE: DATA WRANGLING             |            |
-   | WED-02-MAR |                            |                                                           |            |
-   | FRI-04-MAR |                            |                                                           | TEST 2     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-07-MAR | GRAPHICS WITH ~GGPLOT2~    | INTRODUCTION TO THE TIDYVERSE: DATA VISUALIZATION         |            |
-   | WED-09-MAR |                            |                                                           |            |
-   | FRI-11-MAR |                            |                                                           | QUIZ 7     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-14-MAR | ROW OPERATIONS             | INTRODUCTION TO THE TIDYVERSE: GROUPING AND SUMMARIZING   |            |
-   | WED-16-MAR |                            |                                                           |            |
-   | FRI-18-MAR |                            |                                                           | QUIZ 8     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-28-MAR | DIFFERENT TYPES OF PLOTS   | INTRODUCTION TO THE TIDYVERSE: TYPES OF VISUALIZATIONS    |            |
-   | WED-30-MAR |                            |                                                           |            |
-   | FRI-01-APR |                            |                                                           | QUIZ 9     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-04-APR | TEXT PROCESSING            | EXPLORATORY DATA ANALYSIS IN R: CATEGORICAL DATA          |            |
-   | WED-06-APR |                            |                                                           |            |
-   | FRI-08-APR |                            |                                                           | TEST 3     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-11-APR | LINEAR REGRESSION          | EXPLORATORY DATA ANALYSIS IN R: NUMERICAL DATA            |            |
-   | WED-13-APR |                            |                                                           | QUIZ 10    |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | WED-20-APR | LOGISTIC REGRESSION        | EXPLORATORY DATA ANALYSIS IN R: NUMERICAL SUMMARIES       |            |
-   | FRI-22-APR |                            |                                                           | QUIZ 11    |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-25-APR | FUNCTIONAL PROGRAMMING     | EXPLORATORY DATA ANALYSIS IN R: CASE STUDY SPAM DETECTION |            |
-   | WED-27-APR |                            |                                                           |            |
-   | FRI-29-APR |                            |                                                           | QUIZ 12    |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-   | MON-02-MAY |                            |                                                           |            |
-   | WED-04-MAY |                            |                                                           | TEST 4     |
-   |------------+----------------------------+-----------------------------------------------------------+------------|
-
+  | NO | WEEK | DATE       | LECTURE/LAB[fn:7]          | ASSIGNMENT[fn:8]                                          | TESTS[fn:9] |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  |  1 |    1 | Wed-12-Jan | Introduction               | GitHub Hello World                                        | Entry Quiz  |
+  |  2 |      | Fri-14-Jan |                            |                                                           | Quiz 1      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  |  3 |    2 | Wed-19-Jan | Emacs IDE                  | Emacs Tutorial                                            |             |
+  |  4 |      | Fri-21-Jan |                            |                                                           | Quiz 2      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  |  5 |    3 | Mon-24-Jan | Writing your own functions | Intermediate R: Conditionals and Control Flow             |             |
+  |  6 |      | Wed-26-Jan |                            |                                                           |             |
+  |  7 |      | Fri-28-Jan |                            |                                                           | Quiz 3      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  |  8 |    4 | Mon-31-Jan | If, Else, Ifelse           | Intermediate R: Loops                                     |             |
+  |  9 |      | Wed-02-Feb |                            |                                                           |             |
+  | 10 |      | Fri-04-Feb |                            |                                                           | Test 1      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 11 |    5 | Mon-07-Feb | 'For' loops                | Intermediate R: Functions                                 |             |
+  | 12 |      | Wed-09-Feb |                            |                                                           |             |
+  | 13 |      | Fri-11-Feb |                            |                                                           | Quiz 4      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 14 |    6 | Mon-14-Feb | The ~tapply~ function      | Intermediate R: apply family                              |             |
+  | 15 |      | Wed-16-Feb |                            |                                                           |             |
+  | 16 |      | Fri-18-Feb |                            |                                                           | Quiz 5      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 17 |    7 | Mon-21-Feb | Time and date              | Intermediate R: Utilities                                 |             |
+  | 18 |      | Wed-23-Feb |                            |                                                           |             |
+  | 19 |      | Fri-25-Feb |                            |                                                           | Quiz 6      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 20 |    8 | Mon-28-Feb | Gapminder and ~dplyr~      | Introduction to the Tidyverse: Data Wrangling             |             |
+  | 21 |      | Wed-02-Mar |                            |                                                           |             |
+  | 22 |      | Fri-04-Mar |                            |                                                           | Test 2      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 23 |    9 | Mon-07-Mar | Graphics with ~ggplot2~    | Introduction to the Tidyverse: Data Visualization         |             |
+  | 24 |      | Wed-09-Mar |                            |                                                           |             |
+  | 25 |      | Fri-11-Mar |                            |                                                           | Quiz 7      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 26 |   10 | Mon-14-Mar | Row operations             | Introduction to the Tidyverse: Grouping and Summarizing   |             |
+  | 27 |      | Wed-16-Mar |                            |                                                           |             |
+  | 28 |      | Fri-18-Mar |                            |                                                           | Quiz 8      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 29 |   11 | Mon-28-Mar | Different types of plots   | Introduction to the Tidyverse: Types of Visualizations    |             |
+  | 30 |      | Wed-30-Mar |                            |                                                           |             |
+  | 31 |      | Fri-01-Apr |                            |                                                           | Quiz 9      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 32 |   12 | Mon-04-Apr | Text processing            | Exploratory Data Analysis in R: Categorical Data          |             |
+  | 33 |      | Wed-06-Apr |                            |                                                           |             |
+  | 34 |      | Fri-08-Apr |                            |                                                           | Test 3      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 35 |   13 | Mon-11-Apr | Linear regression          | Exploratory Data Analysis in R: Numerical Data            |             |
+  | 36 |      | Wed-13-Apr |                            |                                                           | Quiz 10     |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 37 |   14 | Wed-20-Apr | Logistic regression        | Exploratory Data Analysis in R: Numerical Summaries       |             |
+  | 38 |      | Fri-22-Apr |                            |                                                           | Quiz 11     |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 39 |   15 | Mon-25-Apr | Functional programming     | Exploratory Data Analysis in R: Case Study Spam Detection |             |
+  | 40 |      | Wed-27-Apr |                            |                                                           |             |
+  | 41 |      | Fri-29-Apr |                            |                                                           | Quiz 12     |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+  | 42 |   16 | Mon-02-May | Summary and Outlook        |                                                           |             |
+  | 43 |      | Wed-04-May |                            |                                                           | Test 4      |
+  |----+------+------------+----------------------------+-----------------------------------------------------------+-------------|
+   
 * FOOTNOTES
 
 [fn:1]I could not settle on any particular textbook. I considered
