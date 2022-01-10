@@ -23,7 +23,8 @@
    an R course, but a course on exploring data. In contrast to DSC
    101, we will be using both the "Tidyverse" methodology, and IDEs
    (Rstudio, Emacs). You will practice using classroom assignments and
-   weekly programming assignments in DataCamp[fn:2].
+   weekly programming assignments in DataCamp[fn:2]. See prerequisites
+   below.
 
    #+Attr_Html: :Width 600px
    [[./img/datacamp.png]]
@@ -362,7 +363,8 @@ you can readily add to your resume!
 [fn:6]Academic calendar sent by the Provost, Melissa Taverner.
 
 [fn:7]Lab work includes classroom assignments in the form of
-interactive notebooks, and deepening of the DataCamp material.
+interactive notebooks, and deepening of the advanced DataCamp
+material.
 
 [fn:8]Some of the DataCamp assignments are heavily influenced by the
 "Tidyverse" approach to data science with R as explained in "R for
