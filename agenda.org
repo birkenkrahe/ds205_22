@@ -12,6 +12,12 @@
   * Ambitions - program
   * Syllabus - this course
 
+
+  #+begin_quote
+  "After a course is launched, we don't consider it to be complete: the
+  launch is just the start of data collection." Richie Cotton, DataCamp
+  #+end_quote
+  
 ** Aspirations (Changes in Spring 2022)
 
    Cp. [[https://github.com/birkenkrahe/dsc101/blob/main/diary.md#good-bye-12-17-2021][Good-bye fall 2021]]
