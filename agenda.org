@@ -109,7 +109,9 @@
    #+attr_html: :width 400px
    [[./img/sunflowers.jpg]]
    
-   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]] - install R / Emacs IDE
+   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]]:
+     - install R / Emacs IDE - may do this together
+     - Entry quiz (by Tue 18 Jan) - you should get > 50%
    * Watch online lecture on "Systems" (to be published)
    * Online followup (~followup.org~ in GitHub)
    * See you Friday online, hopefully Monday in class!
