@@ -93,16 +93,23 @@
      - check out my [[https://youtu.be/8HJGz3IYoHI][screencast demo video]] (Birkenkrahe, 2022)
 
    * How are we using it?
+     - Integrated Development Environment (IDE) for R projects
+     - Interactive notebook environment
+     - Anything you like!
 
-   * What will you have to do?
+   * What will you have to do? ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-emacs-as-a-data-science-ide-on-windows-10][See FAQ]])
+     - Install the modified "[[https://ess.r-project.org/index.php?Section=download][ESS for MS Windows and macOS]]" (ESS)
+     - Install R from [[https://cloud.r-project.org/][CRAN]]
+     - Fix your PATH variable
 
-
+   Watch this: [[https://youtu.be/1YOrd7NCGkg][First Steps With Emacs]] (Eddelbuettel, 2021).
+   
 ** What's next?
 
    #+attr_html: :width 400px
    [[./img/sunflowers.jpg]]
    
-   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]]
+   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]] - install R / Emacs IDE
    * Watch online lecture on "Systems" (to be published)
    * Online followup (~followup.org~ in GitHub)
    * See you Friday online, hopefully Monday in class!
@@ -111,3 +118,19 @@
    #+attr_html: :width 600px
    [[./img/victor.png]]
 
+
+* References
+ 
+  ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
+
+  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+  
+  GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
+  
+  R Core Team (2021). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  URL https://www.R-project.org/.
+
+  
+  
