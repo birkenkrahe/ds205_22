@@ -1,0 +1,134 @@
+#+TITLE:Followup
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:Followup for CSC330 Database Theory & Applications Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* What is this?
+
+  Instead of bugging you with emails, I opt to summarize my course
+  observations regarding content, process, in this file. These often
+  contain additional links, articles, and musings.
+
+  I usually update it after each class - it also contains the homework
+  (if any). The first point of call for any questions should be the
+  FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
+  [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
+
+* Week 1 - first session (Wed 12-Jan-2022)
+** Homework (until Friday, 14 Jan)
+
+   (See [[https://lyon.schoology.com/assignment/5555682785][Schoology assignment]])
+
+   * [[https://github.com][Create a GitHub account]]
+   * [[https://docs.github.com/en/get-started/quickstart/hello-world][Complete the GitHub Hello World exercise]]
+   * [[https://github.com/birkenkrahe/cc100/issues][Submit an issue to the ~cc100~ GitHub repo to confirm completion.]]
+
+   Let me know if you encounter any problems. This shouldn't take more
+   than 20 minutes of your time. Bring any questions that you may have
+   with you to class!
+
+   If you are in another one of my courses, you don't have to do the
+   exercise again, but you should submit an issue for every course that
+   you attend. When I receive the issue, I will close it and give you
+   the points!
+
+   Purpose of this exercise:
+   * Engage with the GitHub software development platform
+   * Understand how to submit issues (aka corrections, suggestions etc.)
+   * Understand how software developers work in the cloud using the Git
+     version control software
+
+** Stuff
+
+*** Finding your operating system
+
+    Victor: On Windows, search for ~dxdiag~ ("DirectX Diagnostic
+    Tool"). This is actually quite a large hammer for a small nail. On
+    any computer, you should be able to enter ~About~ in the search
+    field and get at least some information about your operating
+    system (OS).
+
+    The operating system is software on your computer that enables it
+    to run other programs. You may imagine it as a system of roads to
+    get you where you want to go.
+
+*** Books
+
+    I showed a few books that explain different aspects of C - because
+    so many devices contain C! All of these are interesting, none are
+    necessary (or even recommended) for beginners, and all are brand
+    new - demonstrating the continued interest in C.
+
+    #+attr_html: :width 200px
+    #+caption: Numerical C by Philip Joyce (Apress, 2019)
+    [[./img/joyce.png]]
+
+    #+attr_html: :width 200px
+    #+caption: Effective C by Robert C Seacord (NoStarch, 2020)
+    [[./img/seacord.png]]
+
+    #+attr_html: :width 200px
+    #+caption: Modern C by Jens Gustedt (Manning, 2020)
+    [[./img/gustedt.jpg]]
+
+    #+attr_html: :width 200px
+    #+caption: Raspberry Pi IoT in C by Henry Fairhead (I/O Press, 2016)
+    [[./img/fairhead.jpg]]
+
+*** Wrapper
+
+    This term refers to the fact that not all software runs on all
+    operating systems (OS). One way of running "alien" software on
+    your OS is to "wrap" it - same thing that a (bacterial) vaccine
+    does: your OS then thinks it deals with something it knows.
+
+    My examples (for Windows only) were:
+    1) "cygwin", which is a bundle of Linux services, wrapped up to
+       run under Windows. Cool app, actually. [[https://cygwin.com/install.html][See here for the easy
+       download and installation]] (just download and run the file
+       ~setup-x86_64.exe~. It's one quick way of getting a C
+       compiler - a program that can translate your C programs so that
+       they run on your computer.
+    2) "ubuntu linux app" - This is a wrapper for a complete Linux
+       system for Windows. [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-linux-under-windows-10][See this FAQ]] for how to install it on your
+       computer (worth doing). It's another way to get a C compiler.
+
+*** [[https://en.wikipedia.org/wiki/Library_(computing)][(Software) library of functions]]
+
+    #+attr_html: :width 500px
+    #+caption: Library (Source: Unsplash)
+    [[./img/library.jpg]]
+
+*** Command-line interface
+
+    Aka CLI, terminal, command line, or shell. Linux nerds and hackers
+    thrive on the command line, and so will you, via this course.
+
+    Some live "[[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][entirely in a terminal]]" (Lunduke, 2019).
+
+    #+attr_html: :width 500px
+    #+caption: the other kind of shell (Source: Unsplash)
+    [[./img/shell.jpg]]
+
+*** Literate programming = doc + code + output
+
+    There isn't that much more to it. We'll use GNU Emacs Org-mode as
+    interactive notebook environment, and also to develop, run and
+    debug C code.
+
+    You can find more information about literate programming, and
+    plenty of links [[https://en.wikipedia.org/wiki/Literate_programming][at Wikipedia]].
+
+    I have just made a screencast to show the difference between shell
+    and notebooks, not using C but the database query language SQLite
+    instead (Birkenkrahe, 2022). [[https://youtu.be/8HJGz3IYoHI][Check it out]].
+
+* References
+
+  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  
+  Cotton (...2018)...
+
+  Edelbuettel (
+  
