@@ -35,7 +35,6 @@
 
   | "Getting it right is crucial when people's lives are affected." -Jonathan Steinhart |
 
-
   #+begin_quote
   "It is clear from the rising interest in statistics over calculus
   that 'data wrangling' is a growing field. But what happens when
@@ -45,7 +44,7 @@
   results. For example, a recent study [...] showed that one-fifth of
   published genetics papers have errors due to improper spreadsheet
   usage. Getting it right is crucial when people's lives are
-  affected."[fn:2] (Steinhard, 2019).
+  affected."[fn:2] (Steinhart, 2019).
   #+end_quote
 
 * References

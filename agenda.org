@@ -8,10 +8,10 @@
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
 
-  * Aspirations - changes
-  * Ambitions - program
+  * Aspirations - changes spring 2022
+  * Ambitions - program 2021-2023
+  * Antagonization - new data science credo
   * Syllabus - this course
-
 
   #+begin_quote
   "After a course is launched, we don't consider it to be complete: the
@@ -48,3 +48,5 @@
 ** Antagonization
 
    [[https://github.com/birkenkrahe/ds205#credo][A new credo.]]
+
+** Syllabus
