@@ -3,8 +3,8 @@
 #+SUBTITLE:Agenda DSC205 Intro to Advanced Data Science
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Week 1 - Jan 12 + 14
-
+* Week 1 - Jan 12, 2022
+** Welcome
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
 
@@ -12,12 +12,14 @@
   * Ambitions - program 2021-2023
   * Antagonization - new data science credo
   * Syllabus - this course
+  * DataCamp assignments
+  * GNU Emacs Org-mode
 
   #+begin_quote
   "After a course is launched, we don't consider it to be complete: the
   launch is just the start of data collection." Richie Cotton, DataCamp
   #+end_quote
-  
+
 ** Aspirations (Changes in Spring 2022)
 
    Cp. [[https://github.com/birkenkrahe/dsc101/blob/main/diary.md#good-bye-12-17-2021][Good-bye fall 2021]]
@@ -35,6 +37,8 @@
 
 ** Ambitions (DS program 2021-2023)
 
+
+
    | CLASS                                 | CODE    | TERM        | Topics                              |
    |---------------------------------------+---------+-------------+-------------------------------------|
    | Data Science Tools and Methods        | DSC 101 | Fall 2021   | R, Basic EDA, Base R                |
@@ -49,4 +53,61 @@
 
    [[https://github.com/birkenkrahe/ds205#credo][A new credo.]]
 
+   #+begin_quote
+   “Getting it right is crucial when people’s lives are affected.”
+   -Jonathan Steinhart
+   #+end_quote
+
+   #+attr_html: :width 400px
+   #+caption: Lego fencing (Source: Unsplash)
+   [[./img/fight.jpg]]
+
 ** Syllabus
+
+   #+attr_html: :width 400px
+   [[./img/syllabus.png]]
+
+   * [[https://lyon.schoology.com/course/5516221047/materials/gp/5548463829][Syllabus in Schoology]]
+   * [[https://github.com/birkenkrahe/ds205/blob/main/syllabus.org][Syllabus in GitHub]]
+   * [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][Schedule in GitHub]]
+
+** DataCamp
+
+   #+attr_html: :width 400px
+   [[./img/datacamp.png]]
+
+   * Why are we using it?
+   * How are we using it?
+   * What will you have to do?
+
+** GNU Emacs (1976...1985)
+
+   #+attr_html: :width 400px
+   [[./img/emacs.png]]
+
+   * Why are we using it?
+     - To mix documentation + code + output = literate programming
+       (1984)
+     - It's the same thing as an interactive computing notebook
+       (Jupyter) ... except open to ALL languages and outputs
+     - check out my [[https://youtu.be/8HJGz3IYoHI][screencast demo video]] (Birkenkrahe, 2022)
+
+   * How are we using it?
+
+   * What will you have to do?
+
+
+** What's next?
+
+   #+attr_html: :width 400px
+   [[./img/sunflowers.jpg]]
+   
+   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]]
+   * Watch online lecture on "Systems" (to be published)
+   * Online followup (~followup.org~ in GitHub)
+   * See you Friday online, hopefully Monday in class!
+
+   #+caption: Victor N. installs Emacs @10:50 AM
+   #+attr_html: :width 600px
+   [[./img/victor.png]]
+
