@@ -52,12 +52,21 @@
    | CLASS                                 | CODE    | TERM        | Topics                              |
    |---------------------------------------+---------+-------------+-------------------------------------|
    | Data Science Tools and Methods        | DSC 101 | Fall 2021   | R, Basic EDA, Base R                |
-   | Introduction to Advanced Data Science | DSC 205 | Spring 2022 | R, Advanced EDA, Tidyverse          |
+   | Introduction to Advanced Data Science | DSC 205 | Spring 2022 | R, Advanced EDA, Tidyverse, shell   |
    | Database Theory and Applications      | CSC 330 | Spring 2022 | SQL, SQLite                         |
    | Operating Systems                     | CSC 420 | Spring 2022 | Bash, awk, sed, regular expressions |
    | Data Visualization                    | DSC 302 | Fall 2022   | D3, Processing, Javascript          |
    | Machine Learning                      | DSC 305 | Spring 2023 | Predictive algorithms, neural nets  |
    | Digital Humanities                    | CSC 105 | Spring 2023 | Data science applications           |
+
+** DataCamp
+
+   #+attr_html: :width 400px
+   [[./img/datacamp.png]]
+
+   * Why are we using it?
+   * How are we using it?
+   * What will you have to do?
 
 ** Antagonization
 
@@ -71,15 +80,6 @@
    #+attr_html: :width 400px
    #+caption: Lego fencing (Source: Unsplash)
    [[./img/fight.jpg]]
-
-** DataCamp
-
-   #+attr_html: :width 400px
-   [[./img/datacamp.png]]
-
-   * Why are we using it?
-   * How are we using it?
-   * What will you have to do?
 
 ** GNU Emacs (1976...1985)
 
