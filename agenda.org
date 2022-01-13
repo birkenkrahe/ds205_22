@@ -6,20 +6,20 @@
 * Week 1 - Jan 12, 2022
 ** Welcome
 
-  #+attr_html: :width 500px
-  [[./img/fivearmies.jpg]]
+   #+attr_html: :width 500px
+   [[./img/fivearmies.jpg]]
 
-  * Aspirations - changes spring 2022
-  * Ambitions - program 2021-2023
-  * Antagonization - new data science credo
-  * Syllabus - this course
-  * DataCamp assignments
-  * GNU Emacs Org-mode
+   * Aspirations - changes spring 2022
+   * Ambitions - program 2021-2023
+   * Antagonization - new data science credo
+   * Syllabus - this course
+   * DataCamp assignments
+   * GNU Emacs Org-mode
 
-  #+begin_quote
-  "After a course is launched, we don't consider it to be complete: the
-  launch is just the start of data collection." Richie Cotton, DataCamp
-  #+end_quote
+   #+begin_quote
+   "After a course is launched, we don't consider it to be complete: the
+   launch is just the start of data collection." Richie Cotton, DataCamp
+   #+end_quote
 
 ** Syllabus
 
@@ -83,7 +83,7 @@
 
    #+attr_html: :width 400px
    [[./img/sunflowers.jpg]]
-   
+
    * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]]:
      - install R / Emacs IDE - may do this together
      - Entry quiz (by Tue 18 Jan) - you should get > 50%
@@ -125,7 +125,7 @@
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
   notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
-  
+
   Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
   [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
 
@@ -133,12 +133,9 @@
 
   Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
   [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
-  
+
   GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
-  
+
   R Core Team (2021). R: A language and environment for statistical
   computing. R Foundation for Statistical Computing, Vienna, Austria.
   URL https://www.R-project.org/.
-
-  
-  

@@ -27,6 +27,12 @@
    | Pass the Entry Quiz (Schoology) > 50%           | Complete the Entry quiz (Schoology) |
 
 ** Stuff
+*** Data science pipeline
+
+    #+attr_html: :width 600px
+    #+caption: Data science pipeline (Source: Wickham/Grolemund 2017)
+    [[./img/pipeline.png]]
+    
 *** Books
 
     None of which will be an exclusive, but I may use stuff from these
