@@ -125,10 +125,5 @@
 
 * References
 
-  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
   
-  Cotton (...2018)...
-
-  Edelbuettel (
   

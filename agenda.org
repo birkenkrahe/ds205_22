@@ -81,6 +81,19 @@
    #+caption: Lego fencing (Source: Unsplash)
    [[./img/fight.jpg]]
 
+** What's next?
+
+   #+attr_html: :width 400px
+   [[./img/sunflowers.jpg]]
+   
+   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]]:
+     - install R / Emacs IDE - may do this together
+     - Entry quiz (by Tue 18 Jan) - you should get > 50%
+   * Watch online lecture on "Systems" (to be published)
+   * Online followup (~followup.org~ in GitHub)
+   * See you Friday online, hopefully Monday in class!
+
+* Week 1 - Jan 14, 2022
 ** GNU Emacs (1976...1985)
 
    #+attr_html: :width 400px
@@ -103,33 +116,20 @@
      - Install R from [[https://cloud.r-project.org/][CRAN]]
      - Fix your PATH variable
 
-   Watch this: [[https://youtu.be/1YOrd7NCGkg][First Steps With Emacs]] (Edelbuettel, 2021).
-   
-** What's next?
-
-   #+attr_html: :width 400px
-   [[./img/sunflowers.jpg]]
-   
-   * See [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][schedule]]:
-     - install R / Emacs IDE - may do this together
-     - Entry quiz (by Tue 18 Jan) - you should get > 50%
-   * Watch online lecture on "Systems" (to be published)
-   * Online followup (~followup.org~ in GitHub)
-   * See you Friday online, hopefully Monday in class!
+   Watch this: [[https://youtu.be/1YOrd7NCGkg][First Steps With Emacs]] (Emacs Speaks Statistics, 2021).
 
    #+caption: Victor N. installs Emacs @10:50 AM
    #+attr_html: :width 600px
    [[./img/victor.png]]
 
+* References
 
-* TODO References
-
-  Birkenkrahe(...
+  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
   
-  Cotton (...2018)...
+  Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
+  [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
 
-  Edelbuettel (
-  
   ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
 
   Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
