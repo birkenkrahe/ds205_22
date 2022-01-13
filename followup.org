@@ -27,10 +27,24 @@
    | Pass the Entry Quiz (Schoology) > 50%           | Complete the Entry quiz (Schoology) |
 
 ** Stuff
-
 *** Books
-    
-   
+
+    None of which will be an exclusive, but I may use stuff from these
+    books. They're all good in their own way but a little hard on
+    one's own.
+
+    #+attr_html: :width 250px
+    #+caption: Data Science at the Command Line by Jeroen Janssens
+    [[./img/cmd.png]]
+
+    #+attr_html: :width 250px
+    #+caption: R for Data Science by Wickham/Grolemund
+    [[./img/r4ds.png]]
+
+    #+attr_html: :width 250px
+    #+caption: Exploratory Data Science Using R by Ron Pearson
+    [[./img/edar.png]]
+
 *** Regular expressions
 
     Important for efficient text mining and string manipulation,
@@ -38,13 +52,95 @@
     search patterns. Here is a [[https://regexone.com/][complete, free, online tutorial]]
     (RegexOne, 2021), and here is a [[https://nostarch.com/download/automate2e_SampleCh7.pdf][free book chapter]] explaining
     regexp as part of automating stuff with Python (Sweigart, 2019).
-    
-*** 
 
+    Examples for such regular expressions are the ~*~ in an SQL
+    command like ~SELECT * FROM t~ to query all columns of the table
+    ~t~, or ~^x~ that matches any string starting with ~x~ etc.
+
+    #+attr_html: :width 500px
+    #+caption: Perl problems (Source: xkcd).
+    [[./img/perl.png]]
+
+    ~Perl~ from the cartoon title, is another powerful language whose
+    strength is pattern matching and manipulation. It's more high
+    level than ~awk~ or ~sed~ though and lives on all operating
+    systems.
+    
+*** ~awk~ (and ~sed~)
+
+    This is an "awkward" language on GNU/Linux. They're natural
+    languages for regexp use. Makes data wrangling on the command line
+    reall easy. Not hard to learn, and we might take a look at it - I
+    plan to present it in another class (operating systems) as part of
+    the Linux layout. [[https://www.tutorialspoint.com/awk/index.htm][Here's a tutorial]] for ~awk~, and an opinion
+    piece (Hughes, 2015). Something else for a rainy afternoon.
+
+    #+attr_html: :width 500px
+    [[./img/sedawk.jpg]]
+    
+*** Getting started with GNU Emacs
+
+    GNU Emacs is going to be our IDE and our environment for literate
+    programming. This is an experiment that I'm running this term in
+    all my courses - but this course (R) and the intro class on C/C++
+    are the two classes where Emacs should really pay off.
+
+    I suggested two short videos to get started while
+    munching a bagel:
+    * [[https://youtu.be/1YOrd7NCGkg][First Steps With Emacs]] (Eddelbuettel, 2021). This is especially
+      for RStats people (like you), with a focus on ESS ('Emacs Speaks
+      Statistics').
+    * [[https://youtu.be/8HJGz3IYoHI][Literate programming demo]] (Birkenkrahe, 2022). Here I
+      contrast Emacs Org-mode with an interactive shell using SQLite,
+      an RDBMS.
+
+    We'll get deeply into this soon as we set up our infrastructure.
+    
+*** Notebooks and notebook platforms
+
+    There are many interactive notebooks and notebook platforms -
+    they're especially popular in data science (and perhaps data
+    science is so popular, and easier to learn because of them).
+
+    Some examples: [[https://jupyter.org/][Jupyter]] (originally only for Python), Google
+    [[https://colab.research.google.com/?utm_source=scs-index][Colaboratory]] (for Python and R - though with "magic" commands, one
+    can use other languages, but it's not straightforward), and [[https://www.kaggle.com/][Kaggle]]
+    (owned by Google). Kaggle serves notebooks, datasets and (most
+    importantly) data science competitions (strong focus on machine
+    learning). These are often quite ideological ("Save the whales
+    with data science") but what isn't these days? Which is why data
+    science needs strong bias monitoring[fn:1].
+    
 * References
+
+  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+
+  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+
+  Hughes (Oct 30, 2015). Every Linux Geek Needs To Know Sed and
+  Awk. Here's Why...[blog]. [[https://www.makeuseof.com/tag/sed-awk-learn/][URL: www.makeuseof.com]].
+  
+  Pearson (2019). Exploratory Data Analysis Using R. CRC Press. [[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][URL:
+  routledge.com]].
 
   RegexOne (2021). Lesson 1: An Introduction, and the ABCs
   [tutorial]. [[https://regexone.com/][URL: regexone.com]].
 
   Sweigart (2019). Automating the boring stuff with
   Python. NoStarch. [[https://nostarch.com/automatestuff2][URL: nostarch.com/automatestuff2]].
+
+  Wickham/Grolemund (2017). R for Data Science. O'Reilly. [[https://r4ds.had.co.nz/][URL:
+  r4ds.had.co.nz.]]
+
+  xkcd (n.d.). Perl Problems [cartoon]. [[https://xkcd.com/1171/][URL: xkcd.com]].
+  
+* Footnotes
+
+[fn:1]Who wouldn't want to save the whales! Still, even a seeminly
+harmless ideological thrust can lead to conflict. E.g. what if you
+only have enough project budget to either save the whales or starving
+children? That used to be a question for philosophy class - in data
+science, it's everybody's task - because data science is decision
+science.
