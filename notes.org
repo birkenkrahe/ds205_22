@@ -120,27 +120,38 @@
 * Week 1 - Fri 14-Jan-2022
 ** R
 
-   | TO DO                     | WINDOWS                            | MACOS       |
-   |---------------------------+------------------------------------+-------------|
-   | Download base R from [[https://cran.r-project.org/][CRAN]] | R 4.1.2 "base"                     | R 4.1.2.pkg |
-   | Run installer             |                                    |             |
-   | Check files               | [[file:c:/Program Files/R][C:/Program Files/R]]                 |             |
-   | Go to the binary folder   | [[file:c:/Program Files/R/R-4.1.2/bin/x64][c:/Program Files/R/R-4.1.2/bin/x64]] |             |
-   | Open R GUI                | Rgui.exe                           |             |
-   | Open R terminal           | Rterm.exe                          |             |
-   | Check Rscript             | Rscript test.R                     |             |
+   | TO DO                     | WINDOWS                            |
+   |---------------------------+------------------------------------|
+   | Download base R from [[https://cran.r-project.org/][CRAN]] | R 4.1.2 "base"                     |
+   | Run installer             |                                    |
+   | Check files               | [[file:c:/Program Files/R][C:/Program Files/R]]                 |
+   | Go to the binary folder   | [[file:c:/Program Files/R/R-4.1.2/bin/x64][c:/Program Files/R/R-4.1.2/bin/x64]] |
+   | Open R GUI                | Rgui.exe                           |
+   | Open R terminal           | Rterm.exe                          |
+   | Check Rscript             | Rscript test.R                     |
+   | Check PATH                |                                    |
 
 ** Emacs+ESS
 
-   | TO DO              | WINDOWS            | MACOS              |
-   |--------------------+--------------------+--------------------|
-   | Download Emacs+ESS | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]] | [[https://vigou3.gitlab.io/emacs-modified-macos/][Download Installer]] |
-   | Run installer      | Standard config    | Standard config    |
-   |                    | Desktop shortcut   |                    |
-   |                    |                    |                    |
+   | TO DO               | WINDOWS            |
+   |---------------------+--------------------|
+   | Download Emacs+ESS  | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]] |
+   | Run installer       | Standard config    |
+   |                     | Desktop shortcut   |
+   | Check README        |                    |
+   | Check Emacs         |                    |
+   | Set PATH            |                    |
+   | Start R shell       |                    |
+   | Add init file       |                    |
+   | Create test.org     |                    |
+   | Create R code block |                    |
+   | Run R code block    |                    |
 
+** Log
 
-
+   * Showed R console and Rscript in DataCamp
+   * Showed you R in a terminal
+   * Showed you R inside Emacs in a terminal
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
