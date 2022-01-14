@@ -93,33 +93,30 @@
    * Hopefully Wednesday 19-Jan in class!
 
 * Week 1 - Jan 14, 2022
-** GNU Emacs (1976...1985)
 
-   #+attr_html: :width 400px
-   [[./img/emacs.png]]
+** Overview
 
-   * Why are we using it?
-     - To mix documentation + code + output = literate programming
-       (1984)
-     - It's the same thing as an interactive computing notebook
-       (Jupyter) ... except open to ALL languages and outputs
-     - check out my [[https://youtu.be/8HJGz3IYoHI][screencast demo video]] (Birkenkrahe, 2022)
+   | HOW      | WHAT                             |
+   |----------+----------------------------------|
+   | Practice | Install R from CRAN              |
+   |          | Set PATH environment variable    |
+   |          | Test R in terminal and GUI       |
+   |----------+----------------------------------|
+   |          | Install GNU Emacs + ESS ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-emacs-as-a-data-science-ide-on-windows-10][FAQ]])    |
+   |          | Set PATH environment variable    |
+   |          | Test R in Emacs                  |
+   |          | Set .emacs init file             |
+   |          | Create Org file                  |
+   |          | Run R code blocks in an Org file |
 
-   * How are we using it?
-     - Integrated Development Environment (IDE) for R projects
-     - Interactive notebook environment
-     - Anything you like!
+** Objectives
 
-   * What will you have to do? ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-emacs-as-a-data-science-ide-on-windows-10][See FAQ]])
-     - Install the modified "[[https://ess.r-project.org/index.php?Section=download][ESS for MS Windows and macOS]]" (ESS)
-     - Install R from [[https://cloud.r-project.org/][CRAN]]
-     - Fix your PATH variable
+   * [ ] Install R
+   * [ ] Install GNU Emacs
+   * [ ] Set PATH environment
+   * [ ] Test R in terminal and GUI
+   * [ ] Test R in Emacs
 
-   Watch this: [[https://youtu.be/1YOrd7NCGkg][First Steps With Emacs]] (Emacs Speaks Statistics, 2021).
-
-   #+caption: Victor N. installs Emacs @10:50 AM
-   #+attr_html: :width 600px
-   [[./img/victor.png]]
 
 * References
 

@@ -117,6 +117,30 @@
     with data science") but what isn't these days? Which is why data
     science needs strong bias monitoring[fn:1].
     
+* Week 1 - Fri 14-Jan-2022
+** R
+
+   | TO DO                     | WINDOWS                            | MACOS       |
+   |---------------------------+------------------------------------+-------------|
+   | Download base R from [[https://cran.r-project.org/][CRAN]] | R 4.1.2 "base"                     | R 4.1.2.pkg |
+   | Run installer             |                                    |             |
+   | Check files               | [[file:c:/Program Files/R][C:/Program Files/R]]                 |             |
+   | Go to the binary folder   | [[file:c:/Program Files/R/R-4.1.2/bin/x64][c:/Program Files/R/R-4.1.2/bin/x64]] |             |
+   | Open R GUI                | Rgui.exe                           |             |
+   | Open R terminal           | Rterm.exe                          |             |
+   | Check Rscript             | Rscript test.R                     |             |
+
+** Emacs+ESS
+
+   | TO DO              | WINDOWS            | MACOS              |
+   |--------------------+--------------------+--------------------|
+   | Download Emacs+ESS | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]] | [[https://vigou3.gitlab.io/emacs-modified-macos/][Download Installer]] |
+   | Run installer      | Standard config    | Standard config    |
+   |                    | Desktop shortcut   |                    |
+   |                    |                    |                    |
+
+
+
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

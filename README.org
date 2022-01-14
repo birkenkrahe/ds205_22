@@ -11,7 +11,7 @@
 
 ** [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][Schedule]] of the course (up to date)
 ** [[https://github.com/birkenkrahe/ds205/blob/main/agenda.org][Agenda]] for every session
-** Notes after sessions
+** [[https://github.com/birkenkrahe/ds205/blob/main/notes.org][Notes]] after sessions
 ** [[https://github.com/birkenkrahe/ds205/blob/main/diary.org][Course diary]] for further reading
 ** [[https://github.com/birkenkrahe/ds205/discussions][Discussion forums]] for sharing and discussion
 ** [[https://github.com/birkenkrahe/ds205/blob/main/FAQ.org][Frequently Asked Questions (FAQ)]]
