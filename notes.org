@@ -138,7 +138,8 @@
    * Showed R inside Emacs in a terminal (no syntax highlighting)
    * At CRAN, we want "[[https://www.r-project.org/about.html][base R]]" (without [[https://cran.r-project.org/web/packages/available_packages_by_date.html][packages]])
    * The current version of R (Jan'22) is 4.1.2 "Bird Hippie"
-   * Normally, before running executables: check the "checksum"
+   * Normally, before running executables: check the "[[https://www.howtogeek.com/363735/what-is-a-checksum-and-why-should-you-care/][checksum]]"
+     (Hoffman,2019)
    * Run the installer, accept standard suggestions
    * Start the launcher from the desktop
    * GUI appears (~Rgui.exe~)
@@ -152,9 +153,8 @@
    * Open a Windows terminal ("CMD")
    * Start R (enter R)
    * Test R with some commands like in the [[Rtest]] code block.
-
    #+name: Rtest
-   #+begin_src
+   #+begin_src R :session :results output :exports both
     plot(rnorm(100))
     3 + 4
     x <- rnorm(100)
@@ -162,9 +162,7 @@
     plot(x)
     q()     # you can save your workspace image (don't)
    #+end_src
-     
-     
-   * Issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
+   * If you have any installation issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
 
 * NEXT 2.1 (01/19/22)
 ** Emacs+ESS
@@ -196,6 +194,9 @@
   Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
   [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
 
+  Hoffman (Sep 30, 2019). What is a checksum (and why should you
+  care)? [blog]. [[https://www.howtogeek.com/363735/what-is-a-checksum-and-why-should-you-care/][URL: www.howtogeek.com.]]
+  
   Hughes (Oct 30, 2015). Every Linux Geek Needs To Know Sed and
   Awk. Here's Why...[blog]. [[https://www.makeuseof.com/tag/sed-awk-learn/][URL: www.makeuseof.com]].
   
