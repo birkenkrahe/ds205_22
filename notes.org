@@ -133,6 +133,7 @@
 
 ** Log
 
+   * Short rant about Python vs R and why you learn R ([[https://blog.ephorie.de/why-r-for-data-science-and-not-python][vonjd]])
    * Showed R console and Rscript [[https://campus.datacamp.com/courses/free-introduction-to-r/chapter-1-intro-to-basics-1?ex=1][in DataCamp]]
    * Showed R in a Windows (CMD) terminal
    * Showed R inside Emacs in a terminal (no syntax highlighting)
@@ -167,19 +168,19 @@
 * NEXT 2.1 (01/19/22)
 ** Emacs+ESS
 
-   | TO DO               | WINDOWS            |
-   |---------------------+--------------------|
-   | Download Emacs+ESS  | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]] |
-   | Run installer       | Standard config    |
-   |                     | Desktop shortcut   |
-   | Check README        |                    |
-   | Check Emacs         |                    |
-   | Set PATH            |                    |
-   | Start R shell       | M-x R              |
-   | Add init file       | .emacs sample file |
-   | Create test.org     |                    |
-   | Create R code block |                    |
-   | Run R code block    |                    |
+   | TO DO               | WINDOWS                     |
+   |---------------------+-----------------------------|
+   | Download Emacs+ESS  | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]]          |
+   | Run installer       | Standard config             |
+   |                     | Desktop shortcut            |
+   | Check README        |                             |
+   | Check Emacs         |                             |
+   | Set PATH            |                             |
+   | Start R shell       | M-x R                       |
+   | Add init file       | [[file:~/Documents/GitHub/org/emacs/.emacs::emacs sample file][.emacs]] sample file ([[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][GitHub]]) |
+   | Create test.org     |                             |
+   | Create R code block |                             |
+   | Run R code block    |                             |
 
 ** Log
 
@@ -209,6 +210,9 @@
   Sweigart (2019). Automating the boring stuff with
   Python. NoStarch. [[https://nostarch.com/automatestuff2][URL: nostarch.com/automatestuff2]].
 
+  vonjd (n.d). Why R for Data Science – and /Not/ Python! [blog]. [[https://blog.ephorie.de/why-r-for-data-science-and-not-python][URL:
+  blog.ephorie.de.]]
+  
   Wickham/Grolemund (2017). R for Data Science. O'Reilly. [[https://r4ds.had.co.nz/][URL:
   r4ds.had.co.nz.]]
 
