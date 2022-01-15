@@ -111,12 +111,11 @@
 
 ** Objectives
 
-   * [ ] Install R
+   * [X] Install R
+   * [X] Set PATH environment
+   * [X] Test R in terminal and GUI
    * [ ] Install GNU Emacs
-   * [ ] Set PATH environment
-   * [ ] Test R in terminal and GUI
    * [ ] Test R in Emacs
-
 
 * References
 

@@ -14,7 +14,7 @@
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
-* Week 1 - first session (Wed 12-Jan-2022)
+* 1.1 (01/12/22)
 
   See also: [[https://drive.google.com/file/d/1etLNSYGIkmw1lFksiOVkAW1HsPGageDC/view?usp=sharing][Google Meet chat]]
 
@@ -117,7 +117,7 @@
     with data science") but what isn't these days? Which is why data
     science needs strong bias monitoring[fn:1].
     
-* Week 1 - Fri 14-Jan-2022
+* 1.2 (01/14/22)
 ** R
 
    | TO DO                     | WINDOWS                            |
@@ -131,6 +131,35 @@
    | Check Rscript             | Rscript test.R                     |
    | Check PATH                |                                    |
 
+** Log
+
+   * Showed R console and Rscript in DataCamp
+   * Showed R in a Windows (CMD) terminal
+   * Showed R inside Emacs in a terminal (no syntax highlighting)
+   * At CRAN, we want "[[https://www.r-project.org/about.html][base R]]" (without [[https://cran.r-project.org/web/packages/available_packages_by_date.html][packages]])
+   * The current version of R (Jan'22) is 4.1.2 "Bird Hippie"
+   * Normally, before running executables: check the "checksum"
+   * Run the installer, accept standard suggestions
+   * Start the launcher from the desktop
+   * GUI appears (~Rgui.exe~)
+
+   #+begin_src
+    plot(rnorm(100))
+    3 + 4
+    x <- rnorm(100)
+    str(x) 
+    plot(x)
+    q()     # don't save the workspace image
+   #+end_src
+
+   * Saving the workspace image stores ~.RData~, ~.Rhistory~ files
+   * Update the ~PATH~ variable (search for PATH) using the string
+     from the file explorer that contains the path to ~bin/~
+   * Open a Windows terminal ("CMD")
+   * Start R (enter R)
+   * Test R with some commands
+   * Issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
+* NEXT 2.1 (01/19/22)
 ** Emacs+ESS
 
    | TO DO               | WINDOWS            |
@@ -141,17 +170,17 @@
    | Check README        |                    |
    | Check Emacs         |                    |
    | Set PATH            |                    |
-   | Start R shell       |                    |
-   | Add init file       |                    |
+   | Start R shell       | M-x R              |
+   | Add init file       | .emacs sample file |
    | Create test.org     |                    |
    | Create R code block |                    |
    | Run R code block    |                    |
 
 ** Log
 
-   * Showed R console and Rscript in DataCamp
-   * Showed you R in a terminal
-   * Showed you R inside Emacs in a terminal
+   * If you don't have the modified GNU Emacs (with ESS already
+     installed), you need to install and load the ~ess~ package
+     
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
