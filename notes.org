@@ -142,23 +142,30 @@
    * Run the installer, accept standard suggestions
    * Start the launcher from the desktop
    * GUI appears (~Rgui.exe~)
+   * Saving the workspace image stores ~.RData~, ~.Rhistory~, and
+     ~.Rplots~ files containing (binary) data, command history, and
+     PDF plots, respectively
+   * Update the ~PATH~ variable (search for PATH) using the string
+     from the file explorer that contains the path to ~bin/~
+   * Apparently, you don't have to do this in Windows 11 (but don't
+     rely on it - better find out how to drive with stick shift!)
+   * Open a Windows terminal ("CMD")
+   * Start R (enter R)
+   * Test R with some commands like in the [[Rtest]] code block.
 
+   #+name: Rtest
    #+begin_src
     plot(rnorm(100))
     3 + 4
     x <- rnorm(100)
     str(x) 
     plot(x)
-    q()     # don't save the workspace image
+    q()     # you can save your workspace image (don't)
    #+end_src
-
-   * Saving the workspace image stores ~.RData~, ~.Rhistory~ files
-   * Update the ~PATH~ variable (search for PATH) using the string
-     from the file explorer that contains the path to ~bin/~
-   * Open a Windows terminal ("CMD")
-   * Start R (enter R)
-   * Test R with some commands
+     
+     
    * Issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
+
 * NEXT 2.1 (01/19/22)
 ** Emacs+ESS
 
