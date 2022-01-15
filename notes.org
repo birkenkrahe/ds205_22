@@ -133,7 +133,7 @@
 
 ** Log
 
-   * Showed R console and Rscript in DataCamp
+   * Showed R console and Rscript [[https://campus.datacamp.com/courses/free-introduction-to-r/chapter-1-intro-to-basics-1?ex=1][in DataCamp]]
    * Showed R in a Windows (CMD) terminal
    * Showed R inside Emacs in a terminal (no syntax highlighting)
    * At CRAN, we want "[[https://www.r-project.org/about.html][base R]]" (without [[https://cran.r-project.org/web/packages/available_packages_by_date.html][packages]])
