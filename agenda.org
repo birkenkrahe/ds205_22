@@ -3,7 +3,7 @@
 #+SUBTITLE:Agenda DSC205 Intro to Advanced Data Science
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Week 1 - Jan 12, 2022
+* 1.1 (01/12/22)
 ** Welcome
 
    #+attr_html: :width 500px
@@ -92,7 +92,7 @@
    * See you Friday 14-Jan online!
    * Hopefully Wednesday 19-Jan in class!
 
-* Week 1 - Jan 14, 2022
+* 1.2 (01/14/22)
 
 ** Overview
 
@@ -117,6 +117,13 @@
    * [ ] Install GNU Emacs
    * [ ] Test R in Emacs
 
+* 2.1 (01/19/22)
+
+** Emacs tip
+
+   Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
+   ~org-timer-stop~ (System Crafters, 2021)
+
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
@@ -135,3 +142,6 @@
   R Core Team (2021). R: A language and environment for statistical
   computing. R Foundation for Statistical Computing, Vienna, Austria.
   URL https://www.R-project.org/.
+
+  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
+  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
