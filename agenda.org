@@ -124,11 +124,6 @@
   #+attr_html: :width 300px
   [[./img/back.jpg]]
 
-** Emacs tip
-
-   Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
-   ~org-timer-stop~ (System Crafters, 2021)
-
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
