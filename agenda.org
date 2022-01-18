@@ -118,11 +118,11 @@
    * [ ] Test R in Emacs
 
 * 2.1 (01/19/22)
+** I'm back
 
-
-  #+caption: "I'm back, baby."
-  #+attr_html: :width 300px
-  [[./img/back.jpg]]
+   #+caption: "I'm back, baby."
+   #+attr_html: :width 300px
+   [[./img/back.jpg]]
 
 * References
 
