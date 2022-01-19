@@ -154,6 +154,7 @@
    * Open a Windows terminal ("CMD")
    * Start R (enter R)
    * Test R with some commands like in the [[Rtest]] code block.
+
    #+name: Rtest
    #+begin_src R :session :results output :exports both
     plot(rnorm(100))
@@ -163,6 +164,7 @@
     plot(x)
     q()     # you can save your workspace image (don't)
    #+end_src
+
    * If you have any installation issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
 
 * NEXT 2.1 (01/19/22)
@@ -186,7 +188,9 @@
 
    * If you don't have the modified GNU Emacs (with ESS already
      installed), you need to install and load the ~ess~ package
-     
+
+   
+   
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
