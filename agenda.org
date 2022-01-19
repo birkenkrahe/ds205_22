@@ -93,7 +93,6 @@
    * Hopefully Wednesday 19-Jan in class!
 
 * 1.2 (01/14/22)
-
 ** Overview
 
    | HOW      | WHAT                             |
@@ -108,7 +107,6 @@
    |          | Set .emacs init file             |
    |          | Create Org file                  |
    |          | Run R code blocks in an Org file |
-
 ** Objectives
 
    * [X] Install R
@@ -123,6 +121,30 @@
    #+caption: "I'm back, baby."
    #+attr_html: :width 300px
    [[./img/back.jpg]]
+
+** Overview
+
+   | HOW      | WHAT                           |
+   |----------+--------------------------------|
+   | Review   | Entry quiz                     |
+   |          | Quiz 1 + feedback + discussion |
+   |----------+--------------------------------|
+   | Practice | Install GNU Emacs + ESS ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-emacs-as-a-data-science-ide-on-windows-10][FAQ]])  |
+   |          | Set PATH environment variable  |
+   |          | Test R in Emacs                |
+   |          | Set .emacs init file           |
+
+** Objectives
+
+   * [ ] Install GNU Emacs + ESS
+   * [ ] Set PATH environment to run R in Emacs
+   * [ ] Test R in Emacs
+
+** Next
+
+      * Create Emacs Org file 
+      * Run R code blocks in an Org file
+      * DataCamp assignments beginning soon
 
 * References
 
