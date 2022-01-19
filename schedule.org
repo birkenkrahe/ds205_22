@@ -75,5 +75,6 @@ interactive notebooks, and deepening of the DataCamp material.
 "Tidyverse" approach to data science with R as explained in "R for
 Data Science" (r4ds) by [[https://r4ds.had.co.nz/introduction.html][Grolemund/Wickham (2017)]].
 
-[fn:3]Quiz: covers the material of the past week. Usually 5 min at the
-beginning of class, multiple choice. Test: in class exercises.
+[fn:3]Quiz: covers the material of the past week. Usually 15 min at
+the beginning of the first class of each week, multiple choice. Test:
+in class exercises.
