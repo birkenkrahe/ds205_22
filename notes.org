@@ -14,7 +14,7 @@
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
-* 1.1 (01/12/22)
+* w1s1 (01/12/22)
 
   See also: [[https://drive.google.com/file/d/1etLNSYGIkmw1lFksiOVkAW1HsPGageDC/view?usp=sharing][Google Meet chat]]
 
@@ -117,7 +117,7 @@
     with data science") but what isn't these days? Which is why data
     science needs strong bias monitoring[fn:1].
     
-* 1.2 (01/14/22)
+* w1s2 (01/14/22)
 ** R
 
    | TO DO                     | WINDOWS                            |
@@ -167,7 +167,7 @@
 
    * If you have any installation issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
 
-* NEXT 2.1 (01/19/22)
+* w2s3 (01/19/22)
 ** Emacs+ESS
 
    | TO DO               | WINDOWS                     |
@@ -189,9 +189,25 @@
    * If you don't have the modified GNU Emacs (with ESS already
      installed), you need to install and load the ~ess~ package
 
-   * See install.org in the org/emacs GitHub repo for a checklist of
+   * See [[https://github.com/birkenkrahe/org/blob/master/emacs/install.org][install.org]] (+ [[https://github.com/birkenkrahe/org/blob/master/emacs/install.pdf][PDF]]) in the org/emacs GitHub repo for
      installation instructions if you want to put this on your own PC
-   
+
+   * GNU Emacs layout: buffer window + modeline + minibuffer
+
+   * Commands begin with C-x (CTRL+x) or M-x (ALT+x)
+
+   * C-g interrupts any process
+
+   * List of open buffers: C-x C-b
+
+   * Change to other buffer: C-x o
+
+   * Close all visible buffers except one: C-x 1
+
+   * Start R (if installed and PATH set correctly): M-x R
+
+   * This opens an R session in the current directory (iESS mode)
+     
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

@@ -3,7 +3,7 @@
 #+SUBTITLE:Agenda DSC205 Intro to Advanced Data Science
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* 1.1 (01/12/22)
+* w1s1 (01/12/22)
 ** Welcome
 
    #+attr_html: :width 500px
@@ -92,7 +92,7 @@
    * See you Friday 14-Jan online!
    * Hopefully Wednesday 19-Jan in class!
 
-* 1.2 (01/14/22)
+* w1s2 (01/14/22)
 ** Overview
 
    | HOW      | WHAT                             |
@@ -115,7 +115,7 @@
    * [ ] Install GNU Emacs
    * [ ] Test R in Emacs
 
-* 2.1 (01/19/22)
+* w2s3 (01/19/22)
 ** I'm back
 
    #+caption: "I'm back, baby."
