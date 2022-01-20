@@ -189,7 +189,8 @@
    * If you don't have the modified GNU Emacs (with ESS already
      installed), you need to install and load the ~ess~ package
 
-   * 
+   * See install.org in the org/emacs GitHub repo for a checklist of
+     installation instructions if you want to put this on your own PC
    
 * References
 

@@ -136,9 +136,9 @@
 
 ** Objectives
 
-   * [ ] Install GNU Emacs + ESS
-   * [ ] Set PATH environment to run R in Emacs
-   * [ ] Test R in Emacs
+   * [X] Install GNU Emacs + ESS
+   * [X] Set PATH environment to run R in Emacs
+   * [X] Test R in Emacs
 
 ** Next
 
