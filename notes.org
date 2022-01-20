@@ -189,7 +189,7 @@
    * If you don't have the modified GNU Emacs (with ESS already
      installed), you need to install and load the ~ess~ package
 
-   
+   * 
    
 * References
 
