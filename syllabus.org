@@ -61,10 +61,9 @@
    | WHEN[fn:3]    | DESCRIPTION          | IMPACT |
    |---------------+----------------------+--------|
    | EVERY SESSION | CLASS ASSIGNMENTS    |    10% |
-   | WEEKLY        | QUIZZES              |    10% |
    | WEEKLY        | DATACAMP ASSIGNMENTS |    30% |
    | MONTHLY       | TESTS                |    30% |
-   | END OF TERM   | FINAL EXAM           |    20% |
+   | END OF TERM   | FINAL EXAM           |    30% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -103,12 +102,6 @@
     - COMPLETE ASSIGNMENTS OUTSIDE OF CLASS (HOMEWORK)
     - BE READY TO PRESENT YOUR RESULTS AT ANY TIME
 
-*** WEEKLY QUIZZES (10%)
-    
-    - ANSWER MULTIPLE CHOICE QUESTIONS
-    - COMPLETE ONLINE QUIZ IN OR OUTSIDE OF CLASS
-    - USE QUIZ FOR DRILLS TO PREPARE FINAL EXAM
-
 *** WEEKLY DATACAMP ASSIGNMENTS (30%)
 
     - COMPLETE WEEKLY CHAPTERS OF DATACAMP ASSIGNMENTS
@@ -121,7 +114,7 @@
     - RECALL LAST MONTH OF LECTURES AND LABS
     - READ RELEVANT TEXTBOOK CHAPTERS
 
-*** FINAL EXAM (20%)
+*** FINAL EXAM (30%)
 
     - 120 MIN MULTIPLE CHOICE EXAM
     - ONLINE IN SCHOOLOGY IN THE CLASSROOM

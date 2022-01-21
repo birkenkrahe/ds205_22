@@ -7,3 +7,14 @@
 
   This is a Frequently Asked Questions (FAQ) file for this course. For
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
+
+* Setting the path to R for Emacs
+
+  If you cannot set the path to R using the ~PATH~ variable, you can
+  give the explicit location of the R executable by putting this code
+  into your ~.emacs~ file:
+
+  #+begin_src emacs-lisp
+  ;; set the path to R for ESS
+  (setq inferior-ess-r-program "c:/Program Files/R/R-4.1.2/bin/R.exe")
+  #+end_src
