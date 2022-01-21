@@ -138,8 +138,42 @@
 
    * [X] Install GNU Emacs + ESS
    * [X] Set PATH environment to run R in Emacs
+   * [X] Test R in Emacs (however, see [[https://github.com/birkenkrahe/ds205/blob/main/FAQ.org#setting-the-path-to-r-for-emacs][course FAQ]])
+   * [ ] Configure Emacs
+
+** Next
+
+      * Create Emacs Org file 
+      * Run R code blocks in an Org file
+      * DataCamp assignments beginning soon!
+
+* w2s4 (01/21/22)
+** Overview
+
+   | HOW          | WHAT                    |
+   |--------------+-------------------------|
+   | Lecture/Demo | GNU Emacs [[https://orgmode.org/][Org-mode]]      |
+   |--------------+-------------------------|
+   | Practice     | GNU Emacs Tutorial ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]]) |
+   |              | Set ~emacs~ init file   |
+   |              | Create ~.org~ file      |
+   |              |                         |
+
+** Objectives
+
+   * [X] Install GNU Emacs + ESS
+   * [X] Set PATH environment to run R in Emacs
    * [X] Test R in Emacs
 
+** Reading assignment
+
+   * Read "2022 Data trends and predictions" (DataCamp, 2022).
+   * Prepare for discussion:
+     - Distinguish quantitative and qualitative predictions
+     - Try to get a (validated) feeling for the validity
+     - Write a short summary in the form of an Org-mode file
+     - Upload your Org-mode file to the assignment folder here
+   
 ** Next
 
       * Create Emacs Org file 
@@ -154,6 +188,9 @@
   Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
   [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
 
+  DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
+  datacamp.com.]]
+  
   ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
 
   Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
