@@ -150,29 +150,31 @@
 * w2s4 (01/21/22)
 ** Overview
 
-   | HOW          | WHAT                    |
-   |--------------+-------------------------|
-   | Lecture/Demo | GNU Emacs [[https://orgmode.org/][Org-mode]]      |
-   |--------------+-------------------------|
-   | Practice     | GNU Emacs Tutorial ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]]) |
-   |              | Set ~emacs~ init file   |
-   |              | Create ~.org~ file      |
-   |              |                         |
+   | HOW          | WHAT                       |
+   |--------------+----------------------------|
+   | Lecture/Demo | GNU Emacs [[https://orgmode.org/][Org-mode]]         |
+   |--------------+----------------------------|
+   | Practice     | GNU Emacs Tutorial ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])    |
+   |              | Set ~emacs~ init file      |
+   |              | Create ~.org~ file         |
+   |              | Run code in an ~.org~ file |
 
 ** Objectives
 
-   * [X] Install GNU Emacs + ESS
-   * [X] Set PATH environment to run R in Emacs
-   * [X] Test R in Emacs
+   * [ ] Understand what Org-mode is and what it's for
+   * [ ] Create an ~.emacs~ init file for GNU Emacs
+   * [ ] Create an Org file
+   * [ ] Run a code block in your Org file
 
 ** Reading assignment
+   DEADLINE: <2022-01-24 Mon>
 
    * Read "2022 Data trends and predictions" (DataCamp, 2022).
    * Prepare for discussion:
      - Distinguish quantitative and qualitative predictions
      - Try to get a (validated) feeling for the validity
      - Write a short summary in the form of an Org-mode file
-     - Upload your Org-mode file to the assignment folder here
+     - Upload your submission to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/2022_predictions][assignment/2022_predictions]] on GitHub
    
 ** Next
 

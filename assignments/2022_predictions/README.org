@@ -9,7 +9,7 @@
   predictions" (Datacamp, 2022) into an Org-mode file and upload it here.
 
   To identify yourself, use the ~#+AUTHOR:~ option. You can see how
-  this works from the options in the header of this .org file.
+  this works from the options in the header of this ~README.org~ file.
 
 * References
 
