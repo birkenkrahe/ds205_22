@@ -14,6 +14,8 @@
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
+  You find the whiteboard photos [[https://drive.google.com/drive/folders/18w1MVUQpaNV650kM-h6W7FHHza7XREiM?usp=sharing][here in GDrive]].
+  
 * w1s1 (01/12/22)
 
   See also: [[https://drive.google.com/file/d/1etLNSYGIkmw1lFksiOVkAW1HsPGageDC/view?usp=sharing][Google Meet chat]]
