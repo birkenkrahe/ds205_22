@@ -143,9 +143,9 @@
 
 ** Next
 
-      * Create Emacs Org file 
-      * Run R code blocks in an Org file
-      * DataCamp assignments beginning soon!
+   * Create Emacs Org file
+   * Run R code blocks in an Org file
+   * DataCamp assignments beginning soon!
 
 * w2s4 (01/21/22)
 ** Overview
@@ -168,9 +168,9 @@
 
 ** Next
 
-      * Create Emacs Org file 
-      * Run R code blocks in an Org file
-      * DataCamp assignments beginning soon
+   * Create Emacs Org file
+   * Run R code blocks in an Org file
+   * DataCamp assignments beginning soon
 * w3s5 (01/24/22)
 ** Overview
 
@@ -193,26 +193,28 @@
    * [ ] Run a code block in your Org file
 
 ** Reading assignment
-   DEADLINE: <2022-01-26 Wed>
+   DEADLINE: <2022-01-28 Fri>
 
-'  * [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][Read "2022 Data trends and predictions"]] (DataCamp, 2022).
+   * [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][Read "2022 Data trends and predictions"]] (DataCamp, 2022).
    * Prepare for discussion in class:
      - Which quantitative and which qualitative predictions were made?
      - What do you think how valid these predictions are?
-     - Put your thoughts in an Org-mode file
+     - Put your thoughts in an Org-mode file (filename =
+       ~YourName.org~)
      - Upload your submission to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/2022_predictions][assignment/2022_predictions]] on GitHub
 
-  To identify yourself, use the ~#+AUTHOR:~ option. You can see how
-  this works from the options in the header of this ~README.org~ file.
+   To identify yourself, use the ~#+AUTHOR:~ option. You can see how
 
-  There is no upper or lower limit on the number of words. The main
-  point is to create a proper Org-mode file.
+   this works from the options in the header of this ~README.org~ file.
+
+   There is no upper or lower limit on the number of words. The main
+   point is to create a proper Org-mode file.
 
 ** Next
 
-      * Create Emacs Org file 
-      * Run R code blocks in an Org file
-      * DataCamp assignments beginning soon
+   * Create Emacs Org file
+   * Run R code blocks in an Org file
+   * DataCamp assignments beginning soon
 
 * References
 
@@ -224,7 +226,7 @@
 
   DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
   datacamp.com.]]
-  
+
   ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
 
   Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
