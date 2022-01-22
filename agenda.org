@@ -155,14 +155,40 @@
    | Lecture/Demo | GNU Emacs [[https://orgmode.org/][Org-mode]]         |
    |--------------+----------------------------|
    | Practice     | GNU Emacs Tutorial ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])    |
-   |              | Set ~emacs~ init file      |
+   | Homework     | Set ~emacs~ init file      |
    |              | Create ~.org~ file         |
    |              | Run code in an ~.org~ file |
 
 ** Objectives
 
-   * [ ] Understand what Org-mode is and what it's for
+   * [X] Understand what Org-mode is and what it's for
    * [ ] Create an ~.emacs~ init file for GNU Emacs
+   * [ ] Create an Org file
+   * [ ] Run a code block in your Org file
+
+** Next
+
+      * Create Emacs Org file 
+      * Run R code blocks in an Org file
+      * DataCamp assignments beginning soon
+* w3s5 (01/24/22)
+** Overview
+
+   | HOW          | WHAT                                            |
+   |--------------+-------------------------------------------------|
+   | Lecture/Demo | GNU Emacs [[https://orgmode.org/][Org-mode]] (Part 2)                     |
+   |--------------+-------------------------------------------------|
+   | Practice     | GNU Emacs Tutorial cont'd ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])                  |
+   | Assignment   | Set ~emacs~ init file                           |
+   |              | Create ~.org~ file                              |
+   |              | Run code in an ~.org~ file                      |
+   | Assignment   | Reading ~2022 Data trends and predictions       |
+   |              | Putting your summary thoughts in an ~.org~ file |
+
+** Objectives
+
+   * [X] Understand what Org-mode is and what it's for
+   * [X] Create an ~.emacs~ init file for GNU Emacs
    * [ ] Create an Org file
    * [ ] Run a code block in your Org file
 

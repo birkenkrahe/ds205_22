@@ -208,36 +208,64 @@
 
    * This opens an R session in the current directory (iESS mode)
      
+* w2s4 (01/21/22
+
+  This class will get the most intense exposure and training for GNU
+  Emacs, because of the need to work with interactive notebooks in
+  data science. Getting to play around in Emacs in other courses
+  (Databases, Operating Systems) will only improve your editor skills.
+
+  What we did using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
+  
+  * Downloaded GitHub directory with ~.org~ files
+
+  * Opened ~.org~ files permanently with GNU Emacs
+
+  * We covered:
+    - header options in Org-mode
+    - moving around in Emacs buffers
+    - opening/closing/suspending Emacs (also from the cmd line)
+    - reading a file into Emacs, and saving it
+    - opening buffer list and directory
+    - switching buffers
+    - creating a region, killing and yanking it
+    - changing the font
+    - opening the onboard tutorial
+    - aborting commands
+
+  * We'll rehearse these in our weekly quiz on Monday!
+
+  * To get better, work through the tutorial (C-h t)
+
+   See also the article "[[https://opensource.com/article/20/3/getting-started-emacs][Getting started with Emacs"]] (Kenlon, 2020),
+   and the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
+   Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
+
 * References
 
-  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
-
-  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
-  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
-
-  Hoffman (Sep 30, 2019). What is a checksum (and why should you
-  care)? [blog]. [[https://www.howtogeek.com/363735/what-is-a-checksum-and-why-should-you-care/][URL: www.howtogeek.com.]]
-  
-  Hughes (Oct 30, 2015). Every Linux Geek Needs To Know Sed and
-  Awk. Here's Why...[blog]. [[https://www.makeuseof.com/tag/sed-awk-learn/][URL: www.makeuseof.com]].
-  
-  Pearson (2019). Exploratory Data Analysis Using R. CRC Press. [[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][URL:
-  routledge.com]].
-
-  RegexOne (2021). Lesson 1: An Introduction, and the ABCs
-  [tutorial]. [[https://regexone.com/][URL: regexone.com]].
-
-  Sweigart (2019). Automating the boring stuff with
-  Python. NoStarch. [[https://nostarch.com/automatestuff2][URL: nostarch.com/automatestuff2]].
-
-  vonjd (n.d). Why R for Data Science – and /Not/ Python! [blog]. [[https://blog.ephorie.de/why-r-for-data-science-and-not-python][URL:
-  blog.ephorie.de.]]
-  
-  Wickham/Grolemund (2017). R for Data Science. O'Reilly. [[https://r4ds.had.co.nz/][URL:
-  r4ds.had.co.nz.]]
-
-  xkcd (n.d.). Perl Problems [cartoon]. [[https://xkcd.com/1171/][URL: xkcd.com]].
+  * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+    notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  * Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+    [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+  * Hoffman (Sep 30, 2019). What is a checksum (and why should you
+    care)? [blog]. [[https://www.howtogeek.com/363735/what-is-a-checksum-and-why-should-you-care/][URL: www.howtogeek.com.]]
+  * Hughes (Oct 30, 2015). Every Linux Geek Needs To Know Sed and
+    Awk. Here's Why...[blog]. [[https://www.makeuseof.com/tag/sed-awk-learn/][URL: www.makeuseof.com]].
+  * Kenlon (March 10, 2020). Getting started with Emacs [blog]. [[https://opensource.com/article/20/3/getting-started-emacs][URL:
+    opensource.com.]]
+  * Pearson (2019). Exploratory Data Analysis Using R. CRC Press. [[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][URL:
+    routledge.com]].
+  * RegexOne (2021). Lesson 1: An Introduction, and the ABCs
+    [tutorial]. [[https://regexone.com/][URL: regexone.com]].
+  * Sweigart (2019). Automating the boring stuff with
+    Python. NoStarch. [[https://nostarch.com/automatestuff2][URL: nostarch.com/automatestuff2]].
+  * System Crafters (March 8, 2021). The Absolute Beginner's Guide to
+    Emacs [video]. [[https://youtu.be/48JlgiBpw_I][URL: youtu.be/48JlgiBpw_I]].
+  * vonjd (n.d). Why R for Data Science – and /Not/ Python!
+    [blog]. [[https://blog.ephorie.de/why-r-for-data-science-and-not-python][URL: blog.ephorie.de.]]
+  * Wickham/Grolemund (2017). R for Data Science. O'Reilly. [[https://r4ds.had.co.nz/][URL:
+    r4ds.had.co.nz.]]
+  * xkcd (n.d.). Perl Problems [cartoon]. [[https://xkcd.com/1171/][URL: xkcd.com]].
   
 * Footnotes
 
