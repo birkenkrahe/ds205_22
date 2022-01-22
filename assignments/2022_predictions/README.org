@@ -3,15 +3,20 @@
 #+SUBTITLE:Assignment folder for DSC205 (CSC482) Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Writing assignment
+* Emacs writing assignment
 
-  Put your (optional) summary of the paper "2022 Data trends and
-  predictions" (Datacamp, 2022) into an Org-mode file and upload it here.
+   * [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][Read "2022 Data trends and predictions"]] (DataCamp, 2022).
+   * Prepare for discussion in class:
+     - Which quantitative and which qualitative predictions were made?
+     - What do you think how valid these predictions are?
+     - Put your thoughts in an Org-mode file
+     - Upload your submission to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/2022_predictions][assignment/2022_predictions]] on GitHub
 
   To identify yourself, use the ~#+AUTHOR:~ option. You can see how
   this works from the options in the header of this ~README.org~ file.
 
-  There is no upper or lower limit on the number of words.
+  There is no upper or lower limit on the number of words. The main
+  point is to create a proper Org-mode file.
   
 * References
 
