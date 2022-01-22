@@ -3,7 +3,7 @@
 #+SUBTITLE:Assignment folder for DSC205 (CSC482) Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* 2022 Data trends and predictions
+* Writing assignment
 
   Put your (optional) summary of the paper "2022 Data trends and
   predictions" (Datacamp, 2022) into an Org-mode file and upload it here.
@@ -11,6 +11,8 @@
   To identify yourself, use the ~#+AUTHOR:~ option. You can see how
   this works from the options in the header of this ~README.org~ file.
 
+  There is no upper or lower limit on the number of words.
+  
 * References
 
   DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
