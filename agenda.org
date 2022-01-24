@@ -223,10 +223,13 @@
 
 ** Next
 
-   * Create Emacs Org file
-   * Run R code blocks in an Org file
-   * DataCamp assignments beginning soon
+   * Org-mode assignment
+   * DataCamp assignments beginning soon (due Jan 31)
 
+   #+caption: DataCamp assignments
+   #+attr_html: :width 500px
+   [[./img/datacamp1.png]]
+   
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
