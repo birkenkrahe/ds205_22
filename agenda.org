@@ -198,8 +198,7 @@
 
 ** Objectives
 
-   * [X] Understand what Org-mode is and what it's for
-   * [X] Create an ~.emacs~ init file for GNU Emacs
+   * [ ] Create an ~.emacs~ init file for GNU Emacs
    * [ ] Create an Org file
    * [ ] Run am R code block in your Org file
 
