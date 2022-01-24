@@ -174,23 +174,34 @@
 * w3s5 (01/24/22)
 ** Overview
 
-   | HOW              | WHAT                                        |
-   |------------------+---------------------------------------------|
-   | Lecture/Demo     | GNU Emacs [[https://orgmode.org/][Org-mode]] (Part 2)                 |
-   |------------------+---------------------------------------------|
-   | Practice         | GNU Emacs Tutorial cont'd ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])              |
-   | [[https://lyon.schoology.com/assignment/5590403530][Assignment]][fn:1] | Set ~emacs~ init file                       |
-   |                  | Create ~.org~ file                          |
-   |                  | Run code in an ~.org~ file                  |
-   | Assignment       | Read ~2022 Data trends and predictions      |
-   |                  | Put your summary thoughts in an ~.org~ file |
+   |------------------------+---------------------------------------------|
+   | HOW                    | WHAT                                        |
+   |------------------------+---------------------------------------------|
+   | Review                 | Quiz 2                                      |
+   | Lecture/Demo           | GNU Emacs [[https://orgmode.org/][Org-mode]] (Part 2)                 |
+   |------------------------+---------------------------------------------|
+   | Practice               | GNU Emacs Tutorial cont'd ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])              |
+   | Start R shell in Emacs | ~M-x R~ (R must be in the ~PATH~)           |
+   | Add init file          | [[file:~/Documents/GitHub/org/emacs/.emacs::emacs sample file][.emacs]] sample file ([[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][GitHub]])                 |
+   | Create test.org        |                                             |
+   | Create R code block    |                                             |
+   | Run R code block       |                                             |
+   |------------------------+---------------------------------------------|
+   | [[https://lyon.schoology.com/assignment/5590403530][Assignment]][fn:1]       | Set ~emacs~ init file                       |
+   |                        | Create ~.org~ file                          |
+   |                        | Run code in an ~.org~ file                  |
+   |------------------------+---------------------------------------------|
+   | Assignment             | Read ~2022 Data trends and predictions      |
+   |                        | Put your summary thoughts in an ~.org~ file |
+   |                        | Check the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-you-read][FAQ "How should you read?"]]        |
+   |------------------------+---------------------------------------------|
 
 ** Objectives
 
    * [X] Understand what Org-mode is and what it's for
    * [X] Create an ~.emacs~ init file for GNU Emacs
    * [ ] Create an Org file
-   * [ ] Run a code block in your Org file
+   * [ ] Run am R code block in your Org file
 
 ** Reading assignment
    DEADLINE: <2022-01-28 Fri>

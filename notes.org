@@ -172,19 +172,14 @@
 * w2s3 (01/19/22)
 ** Emacs+ESS
 
-   | TO DO               | WINDOWS                     |
-   |---------------------+-----------------------------|
-   | Download Emacs+ESS  | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]]          |
-   | Run installer       | Standard config             |
-   |                     | Desktop shortcut            |
-   | Check README        |                             |
-   | Check Emacs         |                             |
-   | Set PATH            |                             |
-   | Start R shell       | M-x R                       |
-   | Add init file       | [[file:~/Documents/GitHub/org/emacs/.emacs::emacs sample file][.emacs]] sample file ([[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][GitHub]]) |
-   | Create test.org     |                             |
-   | Create R code block |                             |
-   | Run R code block    |                             |
+   | TO DO                  | WINDOWS                                    |
+   |------------------------+--------------------------------------------|
+   | Download Emacs+ESS     | [[https://vigou3.gitlab.io/emacs-modified-windows/][Download Installer]]                         |
+   | Run installer          | Standard config                            |
+   |                        | Desktop shortcut                           |
+   | Check README           | /Opens after installation/                 |
+   | Check Emacs            | ~emacs -nw~ in terminal / desktop shortcut |
+   | Set PATH               | /requires admin privileges/                |
 
 ** Log
 
@@ -210,7 +205,8 @@
 
    * This opens an R session in the current directory (iESS mode)
      
-* w2s4 (01/21/22
+
+* w2s4 (01/21/22)
 
   This class will get the most intense exposure and training for GNU
   Emacs, because of the need to work with interactive notebooks in
