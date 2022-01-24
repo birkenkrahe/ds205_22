@@ -191,7 +191,7 @@
    |                        | Create ~.org~ file                          |
    |                        | Run code in an ~.org~ file                  |
    |------------------------+---------------------------------------------|
-   | Assignment             | Read ~2022 Data trends and predictions      |
+   | Assignment             | Read 2022 Data trends and predictions       |
    |                        | Put your summary thoughts in an ~.org~ file |
    |                        | Check the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-you-read][FAQ "How should you read?"]]        |
    |------------------------+---------------------------------------------|

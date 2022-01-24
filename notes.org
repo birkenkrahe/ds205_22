@@ -204,7 +204,6 @@
    * Start R (if installed and PATH set correctly): M-x R
 
    * This opens an R session in the current directory (iESS mode)
-     
 
 * w2s4 (01/21/22)
 
@@ -238,6 +237,8 @@
    See also the article "[[https://opensource.com/article/20/3/getting-started-emacs][Getting started with Emacs"]] (Kenlon, 2020),
    and the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
    Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
+
+* TODO w3s5 (01/24/22)
 
 * References
 
