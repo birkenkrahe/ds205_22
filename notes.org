@@ -15,7 +15,7 @@
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
   You find the whiteboard photos [[https://drive.google.com/drive/folders/18w1MVUQpaNV650kM-h6W7FHHza7XREiM?usp=sharing][here in GDrive]].
-  
+
 * w1s1 (01/12/22)
 
   See also: [[https://drive.google.com/file/d/1etLNSYGIkmw1lFksiOVkAW1HsPGageDC/view?usp=sharing][Google Meet chat]]
@@ -34,7 +34,7 @@
     #+attr_html: :width 600px
     #+caption: Data science pipeline (Source: Wickham/Grolemund 2017)
     [[./img/pipeline.png]]
-    
+
 *** Books
 
     None of which will be an exclusive, but I may use stuff from these
@@ -73,7 +73,7 @@
     strength is pattern matching and manipulation. It's more high
     level than ~awk~ or ~sed~ though and lives on all operating
     systems.
-    
+
 *** ~awk~ (and ~sed~)
 
     This is an "awkward" language on GNU/Linux. They're natural
@@ -85,7 +85,7 @@
 
     #+attr_html: :width 500px
     [[./img/sedawk.jpg]]
-    
+
 *** Getting started with GNU Emacs
 
     GNU Emacs is going to be our IDE and our environment for literate
@@ -103,7 +103,7 @@
       an RDBMS.
 
     We'll get deeply into this soon as we set up our infrastructure.
-    
+
 *** Notebooks and notebook platforms
 
     There are many interactive notebooks and notebook platforms -
@@ -118,7 +118,7 @@
     learning). These are often quite ideological ("Save the whales
     with data science") but what isn't these days? Which is why data
     science needs strong bias monitoring[fn:1].
-    
+
 * w1s2 (01/14/22)
 ** R
 
@@ -159,12 +159,12 @@
 
    #+name: Rtest
    #+begin_src R :session :results output :exports both
-    plot(rnorm(100))
-    3 + 4
-    x <- rnorm(100)
-    str(x) 
-    plot(x)
-    q()     # you can save your workspace image (don't)
+     plot(rnorm(100))
+     3 + 4
+     x <- rnorm(100)
+     str(x)
+     plot(x)
+     q()     # you can save your workspace image (don't)
    #+end_src
 
    * If you have any installation issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
@@ -213,7 +213,7 @@
   (Databases, Operating Systems) will only improve your editor skills.
 
   What we did using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
-  
+
   * Downloaded GitHub directory with ~.org~ files
 
   * Opened ~.org~ files permanently with GNU Emacs
@@ -234,12 +234,25 @@
 
   * To get better, work through the tutorial (C-h t)
 
-   See also the article "[[https://opensource.com/article/20/3/getting-started-emacs][Getting started with Emacs"]] (Kenlon, 2020),
-   and the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
-   Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
+    See also the article "[[https://opensource.com/article/20/3/getting-started-emacs][Getting started with Emacs"]] (Kenlon, 2020),
+    and the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
+    Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
 
-* TODO w3s5 (01/24/22)
+* w3s5 (01/24/22)
 
+  Planned:
+  |--------------------------+-------------------------------------------------------|
+  | Practice                 | GNU Emacs Tutorial cont'd ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])                        |
+  | - Package manager        | ~M-x package-list-packages RET~                       |
+  | - Start R shell in Emacs | ~M-x R~ (R must be installed & in the ~PATH~)         |
+  | - Add init file          | [[file:~/Documents/GitHub/org/emacs/.emacs::emacs sample file][.emacs]] sample file ([[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][GitHub]])                           |
+  | - Create ~ob.org~ file   | ~C-x C-f ob.org RET~                                  |
+  | - Create R code block    | ~#+begin_src R :session :results output ...#+end_src~ |
+  | - Run R code block       | ~C-c C-c~                                             |
+  |--------------------------+-------------------------------------------------------|
+
+* NEXT Captain's Log
+  
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
@@ -265,7 +278,7 @@
   * Wickham/Grolemund (2017). R for Data Science. O'Reilly. [[https://r4ds.had.co.nz/][URL:
     r4ds.had.co.nz.]]
   * xkcd (n.d.). Perl Problems [cartoon]. [[https://xkcd.com/1171/][URL: xkcd.com]].
-  
+
 * Footnotes
 
 [fn:1]Who wouldn't want to save the whales! Still, even a seeminly
