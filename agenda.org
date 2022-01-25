@@ -185,9 +185,6 @@
    | - Package manager        | ~M-x package-list-packages RET~                       |
    | - Start R shell in Emacs | ~M-x R~ (R must be installed & in the ~PATH~)         |
    | - Add init file          | [[file:~/Documents/GitHub/org/emacs/.emacs::emacs sample file][.emacs]] sample file ([[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][GitHub]])                           |
-   | - Create ~ob.org~ file   | ~C-x C-f ob.org RET~                                  |
-   | - Create R code block    | ~#+begin_src R :session :results output ...#+end_src~ |
-   | - Run R code block       | ~C-c C-c~                                             |
    |--------------------------+-------------------------------------------------------|
    | [[https://lyon.schoology.com/assignment/5590403530][Assignment]][fn:1]         | Set ~emacs~ init file                                 |
    |--------------------------+-------------------------------------------------------|
@@ -198,7 +195,7 @@
 
 ** Objectives
 
-   * [ ] Create an ~.emacs~ init file for GNU Emacs
+   * [X] Create an ~.emacs~ init file for GNU Emacs
    * [ ] Create an Org file
    * [ ] Run am R code block in your Org file
 
@@ -222,8 +219,37 @@
 
 ** Next
 
+   * Create Org-mode file with R code in it and run it
    * Org-mode assignment
    * DataCamp assignments beginning soon (due Jan 31)
+
+   #+caption: DataCamp assignments
+   #+attr_html: :width 500px
+   [[./img/datacamp1.png]]
+   
+* w3s6 (01/26/22)
+** Overview
+
+   |----------+------------------------------------------------------+--------------|
+   | HOW      | WHAT                                                 | Link         |
+   |----------+------------------------------------------------------+--------------|
+   | Preview  | DataCamp course "Intermediate R"                     | [[https://app.datacamp.com/learn/courses/intermediate-r][datacamp.com]] |
+   |----------+------------------------------------------------------+--------------|
+   | Demo     | Creating an Emacs Org-mode file with code and run it | [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org#create-an-org-mode-file][tutor.org]]    |
+   |----------+------------------------------------------------------+--------------|
+   | Practice | Create Org-mode file with an R code block            |              |
+   |----------+------------------------------------------------------+--------------|
+
+** Objectives
+
+   * [ ] Understand DataCamp assignment
+   * [ ] Create an Org file
+   * [ ] Run am R code block in your Org file
+
+** Next
+
+   * Org-mode assignment
+   * DataCamp assignments due Jan 31
 
    #+caption: DataCamp assignments
    #+attr_html: :width 500px
