@@ -251,7 +251,9 @@
   | - Run R code block       | ~C-c C-c~                                             |
   |--------------------------+-------------------------------------------------------|
 
-* NEXT Captain's Log
+* Captain's Log
+
+  * We added ~~/.emacs~ file
   
 * References
 
