@@ -226,8 +226,9 @@
    #+caption: DataCamp assignments
    #+attr_html: :width 500px
    [[./img/datacamp1.png]]
-   
+
 * w3s6 (01/26/22)
+** News - internships and scholarships
 ** Overview
 
    |----------+------------------------------------------------------+--------------|
@@ -254,7 +255,7 @@
    #+caption: DataCamp assignments
    #+attr_html: :width 500px
    [[./img/datacamp1.png]]
-   
+
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
