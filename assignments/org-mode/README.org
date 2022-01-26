@@ -1,112 +1,167 @@
-#+options: toc:nil
-#+options: num:nil
-* Org-mode coding assignment
+#+TITLE: Org-Mode Coding Assignment
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: For DSC205 / Introduction to Advanced Data Science
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* Creating and running R inside an Org-mode file
 
-  This file contains the first ~Org-mode~ assignment, a glossary of
-  terms, and a sample solution in the programming language C instead
-  of R. The main challenge is not the programming language but
-  managing the complexity of writing a "literate" program, which
-  includes layout like headlines, links, documentation, source code
-  and result elements. Note that the sample solution also lists
-  relevant references at the end[fn:1].
+  This file contains the first ~Org-mode~ *class assignment*, and a
+  *glossary* of terms. The main challenge is not the programming
+  language but managing the complexity of writing a "literate" program
+  ([[KN92][Knuth, 1992]]), which includes layout like headlines, links,
+  documentation, source code and result elements. Note that the sample
+  solution also lists relevant references at the end[fn:1].
 
-** Assignment
+** Create a working directory
 
-   Create an Org-mode file with the following characteristics:
+   - Open Emacs and go to your ~$HOME~ directory (with ~C-x C-f~)
+   - In the ~Dired~ buffer, type ~+~, type the name of the new
+     directory ~org-mode~ after the ~/ and press ENTER (aka RET).
+   - Go to the new directory (with ~C-x C-f~)
+   - This is now your ~default-directory~, which you can find out by
+     typing ~C-h v default-directory~
 
-   * A headline: ~* My first Org-mode file~.
-   * A paragraph that explains what the following code block does.
-   * A R source code block:
+** Create an Org-mode file
+
+   Create an Org-mode file named ~first.org~ with ~C-x C-f~ in your
+   ~default-directory~ with the following characteristics:
+
+   - Two lines with meta information:
+
+     #+begin_example
+     #+TITLE: First Org-file
+     #+AUTHOR: [yourname]
+     #+end_example
+
+   - A paragraph of *text* that explains what the following code block
+     does, starting with a headline. Here is an example text that you
+     may copy:
+
    #+begin_example
-   #+name: [name]
-   #+begin_src [header]
-     [statements]
-   #+end_src
+    * My first Org-mode file
+
+    This Org-mode file prints the structure of the data frame ~mtcars~
+    and creates a source code file ~first.R~ that can be executed on
+    the command line.
    #+end_example
-   * In the source block, replace ~[name]~ by ~mtcars~.
-   * In the header of the source block, replace ~[header]~ by these arguments:
+
+   (To align text in a buffer, type ~C-M-\~ and ~M-q~.)
+
+   - An [[R][R]] source *code block*, which looks like this:
+
    #+begin_example
-   :session *R*
-   :results output
-   :tangle first.R
-   :exports both
-   :comments both
-   :var DATA="mtcars"
-   #+end_example
-
-   * In the body of the code block, replace the ~[statements]~ by a single
-     command preceded by a comment:
-   #+begin_example
-   ## print structure of mtcars data frame
-   str(DATA)
-   #+end_example
-
-   * Save the file as ~YourName.org~ (e.g. ~MarcusBirkenkrahe.org~)
-   * Upload the file to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/org-mode][this GitHub repo]]:
-     ~/birkenkrahe/ds205/assignments/org-mode~
-
-** [[https://github.com/birkenkrahe/ds205/blob/main/assignments/org-mode/MarcusBirkenkrahe.org][Example solution in C (not R)]]
-
-   When you look at this as a PDF or on GitHub, you will not see
-   the *Org-mode* commands delimited by ~#+~. Org-mode files are meant to be
-   edited/viewed in Emacs.
-
-**** My first Org-mode file
-
-     * The function ~puts()~ prints out a string (text in quotes) to
-       the screen.
-
-     * In the code block, the syntax is highlighted (which colors are
-       used exactly depends on the Emacs theme used).
-
-     * The code block header has the following arguments:
-
-     | HEADER ARGUMENT     | MEANING                                                |
-     |---------------------+--------------------------------------------------------|
-     | ~:main yes~         | wrap ~puts~ statement in ~int main(void) { }~ function |
-     | ~:includes stdio.h~ | include standard input/output header file              |
-     | ~:tangle first.c~   | export source code as C file ~first.c~  ("tangle")     |
-     | ~:exports both~     | both result and source code will be exported           |
-     | ~:comments both~    | link source code and org files, add comments to source |
-     | ~:results raw~      | insert output directly in org format into org file     |
-
-     #+name: hello_world_program
-     #+begin_src C :exports both :main yes :includes stdio.h :tangle first.c :results raw :comments both
-       // print a string
-       puts("hello world");
+     #+name: [name]
+     #+begin_src [header]
+       [statements]
      #+end_src
+   #+end_example
 
-     #+RESULTS: hello_world_program
-     hello world
+   - Replace ~[name]~ by ~str_mtcars~
+   - Replace the code block ~[header]~ by the following *arguments*
+     (all on the same line, separated by 1 space):
 
-*** Executing the program on the command line
+   #+begin_example
+     :session *R*
+     :results output
+     :tangle first.R
+     :exports both
+     :comments both
+   #+end_example     
+   
+   - In the body of the code block, replace the ~[statements]~ by the
+     following two lines of R code:
 
-    In Emacs (provided the C compiler ~gcc~ is available and in the ~PATH~):
-    #+begin_example
-    M-x eshell
-    gcc -o first first.c
-    ./first.exe
-    #+end_example
+   #+begin_example
+     ## print structure of mtcars data frame
+     str(mtcars)
+   #+end_example     
 
-    #+attr_html: :width 500px
-    [[./img/gcclight.png]]
+** Run Org-mode code block
 
-*** References
-    * ~gcc~, the GNU Compiler Collection. [[https://gcc.gnu.org][URL: gcc.gnu.org.]]
-    * ~GitHub~: software hosting platform. [[https://github.com][URL: github.com]].
-    * Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~
-      Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
-      Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
-    * Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
-      stanford.edu]].
-    * ~mtcars~: Motor Trend Car Road Tests. [[https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars][URL: rdocumentation.org]].
-    * ~R~ Core Team (2021). R: A language and environment for statistical
-      computing. R Foundation for Statistical Computing, Vienna, Austria.
-      [[https://r-project.org][URL: r-project.org]].
-    * ~str~: Compactly Display the Structure of an Arbitrary R
-      Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
-    * tecosaur (n.d.). The Org Manual: 16 Working with Source Code
-      [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+   - To run the code block, move the cursor anywhere in the block and
+     enter ~C-c C-c~[fn:2]
+      
+   - You should now see this output appear below the code block:
+
+   #+begin_example
+   #+RESULTS: str_mtcars
+
+  'data.frame':	32 obs. of  11 variables:
+   $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+   $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+   $ disp: num  160 160 108 258 360 ...
+   $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+   $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+   $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+   $ qsec: num  16.5 17 18.6 19.4 17 ...
+   $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+   $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+   $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+   $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+   #+end_example
+
+   - Save the file with ~C-x C-s~.
+
+  #+caption: sample solution "first.org"
+  #+attr_html: :width 700px
+  [[./img/firstorg.png]]
+    
+** Create R source code file
+
+   - Move the cursor back into the code block and type ~C-c C-v t~
+     (~org-babel-tangle).
+
+   - In the echo area below, you should see the message:
+   #+begin_example
+   Tangled 1 code block from first.org
+   #+end_example
+
+   - Open the ~Dired~ buffer by typing ~C-x d~ and type ~g~ to
+     refresh the buffer. You should now see the files ~first.R~ and
+     ~first.org~.
+
+  #+caption: sample solution "first.c"
+  #+attr_html: :width 700px
+  [[./img/firstr.png]]
+      
+** Run R source file in the shell
+
+   - Inside Emacs, open a shell with ~C-x eshell RET~
+
+   - At the command prompt (~$~), enter the command ~ls~, and you
+     should see all a list of the files in the directory ~org-mode~.
+
+   - Run the file by typing the following command at the prompt:
+     #+begin_example
+     Rscript first.R
+     #+end_example
+
+   - You should see the same output as before, the ~mtcars~ structure.
+
+  #+caption: sample solution run R file in shell
+  #+attr_html: :width 700px
+  [[./img/eshell.png]]
+
+** Submit your assignment         
+
+   - In the shell, enter the following commands at the prompt to
+     rename your files (replace [YourName] by your actual name
+     without spaces):
+
+   #+begin_example
+   cp first.R [YourName].R
+   cp first.org [YourName].org
+   #+end_example      
+
+   - Check with ~ls~ that all files are there
+      
+   - Upload the files ~[YourName].org~ and ~[YourName].R~ to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/org-mode][this
+     GitHub repo]]: ~/birkenkrahe/ds205/assignments/org-mode~
+
+  #+caption: sample solution "first.c"
+  #+attr_html: :width 700px
+  [[./img/eshell1.png]]
+    
 
 ** Glossary
 
@@ -127,15 +182,33 @@
    | GitHub repo                | Cloud storage platform                           |
    | Uploading                  | Sending so that file exists locally and remotely |
 
+* References
+
+  <<gh>> ~GitHub~: software hosting platform. [[https://github.com][URL: github.com]].
+
+  <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
+  stanford.edu]].
+
+  <<mtcars>> ~mtcars~: Motor Trend Car Road Tests. [[https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars][URL:
+  rdocumentation.org]].
+
+  <<R>> ~R~ Core Team (2021). R: A language and environment for
+    statistical computing. R Foundation for Statistical Computing,
+    Vienna, Austria.  [[https://r-project.org][URL: r-project.org]].
+
+  <<str>> ~str~: Compactly Display the Structure of an Arbitrary R
+    Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
+
+  <<Org>> N.a. (n.d.). The Org Manual: 16 Working with Source Code
+    [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+
 * Footnotes
+
+[fn:2]If you have more than one code block and want to run them all
+from the top, type ~C-c C-v b~. You can find this key sequence with
+~C-h f org-babel-execute-buffer~. 
 
 [fn:1]The references have URLs, and these URLs have inline links. To
 add a link in GNU Emacs Org-mode, use the key sequence ~C-x C-l [link]
-RET~ (~org-insert-link). In published Org files, references should be
-used in the text as inline citations like in the example below, which
-links the first mention of C to a reference.
-#+begin_example
-  Create a C source block in (Kernighan/Ritchie, 1978).
-#+end_example
-This is also why there are so many references - one reference for
-every non-trivial concept or software tool used!
+RET~ (~org-insert-link~). You need to cite all original sources
+authored by others that you use - including software.

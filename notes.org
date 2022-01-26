@@ -246,45 +246,63 @@
   | - Package manager        | ~M-x package-list-packages RET~                       |
   | - Start R shell in Emacs | ~M-x R~ (R must be installed & in the ~PATH~)         |
   | - Add init file          | [[file:~/Documents/GitHub/org/emacs/.emacs::emacs sample file][.emacs]] sample file ([[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][GitHub]])                           |
-  | - Create ~ob.org~ file   | ~C-x C-f ob.org RET~                                  |
+  | - Create ~first.org~ file | ~C-x C-f ob.org RET~                                  |
   | - Create R code block    | ~#+begin_src R :session :results output ...#+end_src~ |
   | - Run R code block       | ~C-c C-c~                                             |
   |--------------------------+-------------------------------------------------------|
 
-* Captain's Log
+** Captain's Log
 
-  See [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]] for details:
-  
-  * We added .emacs file in the ~/ HOME directory and discussed its
-    content and structure (Emacs-Lisp) - especially the Org-babel packages.
+   See [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]] for details:
 
-  * We talked about the Org-mode file [[https://lyon.schoology.com/assignment/5590410225][assignment]].
+   * We added .emacs file in the ~/ HOME directory and discussed its
+     content and structure (Emacs-Lisp) - especially the Org-babel packages.
 
-  * After restarting Emacs (to load the configuration file), we opened
-    the package manager with ~M-x package-list-packages~. If the
-    ~.emacs~ file is in the right location, the package manager should
-    refresh its content.
+   * We talked about the Org-mode file [[https://lyon.schoology.com/assignment/5590410225][assignment]].
 
-  * The package manager lists many downloadable packages. You
-    downloaded the ~org-beautify-theme~ and ~org-bullet~ - both
-    packages to improve the appearance of Emacs.
+   * After restarting Emacs (to load the configuration file), we opened
+     the package manager with ~M-x package-list-packages~. If the
+     ~.emacs~ file is in the right location, the package manager should
+     refresh its content.
 
-  * Here is the Emacs documentation on the initialization file
-    ~.emacs~ in the GNU Emacs manual: "[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Find-Init.html][How Emacs finds your init
-    file]]".
+   * The package manager lists many downloadable packages. You
+     downloaded the ~org-beautify-theme~ and ~org-bullet~ - both
+     packages to improve the appearance of Emacs.
 
-  * By default, Emacs will open to ~default-directory~. This is a
-    variable that you can set in your ~.emacs~ file. Here is an
-    example where the working directory is set to
-    ~C:\Users\birkenkrahe\Emacs~
+   * Here is the Emacs documentation on the initialization file
+     ~.emacs~ in the GNU Emacs manual: "[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Find-Init.html][How Emacs finds your init
+     file]]".
 
-  #+begin_src emacs-lisp
-    (setq default-directory "c:/Users/birkenkrahe/Emacs")
-  #+end_src    
+   * By default, Emacs will open to ~default-directory~. This is a
+     variable that you can set in your ~.emacs~ file. Here is an
+     example where the working directory is set to
+     ~C:\Users\birkenkrahe\Emacs~
 
-  Notice how Windows requires backslashes, while Emacs (and
-  Unix/Linux) use forward slashes.
-  
+   #+begin_src emacs-lisp
+     (setq default-directory "c:/Users/birkenkrahe/Emacs")
+   #+end_src
+
+   Notice how Windows requires backslashes, while Emacs (and
+   Unix/Linux) use forward slashes.
+
+* w3s6 (01/26/22)
+
+  * When you look at an Org file as a PDF or on GitHub, you will not
+    see the meta data starting with ~#+~. Org-mode files are meant to
+    be edited/viewed in Emacs.
+
+  * The code block header has the following arguments:
+
+
+      | HEADER ARGUMENT      | MEANING                                                |
+      |----------------------+--------------------------------------------------------|
+      | ~:session *R*~       | Run R in a session in the Emacs buffer ~*R*~           |
+      | ~:var DATA="mtcars"~ | Assign ~mtcars~ to the variable ~DATA~                 |
+      | ~:results output~    | insert output directly in the org file                 |
+      | ~:tangle first.R~    | export source code as R file ~first.R~  ("tangle")     |
+      | ~:exports both~      | both result and source code will be exported           |
+      | ~:comments both~     | link source code and org files, add comments to source |
+
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
