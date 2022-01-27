@@ -120,7 +120,7 @@
      refresh the buffer. You should now see the files ~first.R~ and
      ~first.org~.
 
-  #+caption: sample solution "first.c"
+  #+caption: sample solution "first.R"
   #+attr_html: :width 700px
   [[./img/firstr.png]]
       
@@ -142,7 +142,7 @@
   #+attr_html: :width 700px
   [[./img/eshell.png]]
 
-** Submit your assignment         
+** Change file names on the shell
 
    - In the shell, enter the following commands at the prompt to
      rename your files (replace [YourName] by your actual name
@@ -154,15 +154,43 @@
    #+end_example      
 
    - Check with ~ls~ that all files are there
-      
-   - Upload the files ~[YourName].org~ and ~[YourName].R~ to [[https://github.com/birkenkrahe/ds205/tree/main/assignments/org-mode][this
-     GitHub repo]]: ~/birkenkrahe/ds205/assignments/org-mode~
 
-  #+caption: sample solution "first.c"
-  #+attr_html: :width 700px
-  [[./img/eshell1.png]]
-    
+** Add an inline image of ~first.R~
 
+   - Create another directory in ~org-mode~ and name it ~img~.
+
+   - Take a screenshot of the file ~first.R~ and put it into ~img~.
+ 
+   - Add the following text and image block at the end of the Org-file.
+
+   #+begin_example
+   The image [[firstR]] shows the tangled file. 
+  
+   #+name: firstR
+   #+caption:first.R screenshot
+   #+attr_html: :width 500px
+   [[./img/firstr.png]]
+   #+end_example     
+
+   - To check that the image is linked correctly, enter ~C-c C-x C-v~,
+     and you should see it in the Org-file[fn:3]. 
+
+   #+caption: inline image
+   #+attr_html: :width 500px
+   [[./img/img.png]]
+
+** Don't forget the references!
+
+   - Add a headline ~References~ at the end of the file
+
+   - Add references for the software packages that you used to
+     complete the assignment.
+
+** Submit your assignment
+
+   - Upload your ~first.org~ file to a GDrive folder (link via Google
+     Meet chat).
+   
 ** Glossary
 
    Your org files and notebooks do not always have to have glossaries,
@@ -184,25 +212,15 @@
 
 * References
 
-  <<gh>> ~GitHub~: software hosting platform. [[https://github.com][URL: github.com]].
+  /This reference section is missing some references - please find them
+  yourself/
 
   <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
   stanford.edu]].
 
-  <<mtcars>> ~mtcars~: Motor Trend Car Road Tests. [[https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars][URL:
-  rdocumentation.org]].
-
-  <<R>> ~R~ Core Team (2021). R: A language and environment for
-    statistical computing. R Foundation for Statistical Computing,
-    Vienna, Austria.  [[https://r-project.org][URL: r-project.org]].
-
-  <<str>> ~str~: Compactly Display the Structure of an Arbitrary R
-    Object. [[https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str][URL: rdocumentation.org]].
-
-  <<Org>> N.a. (n.d.). The Org Manual: 16 Working with Source Code
-    [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
-
 * Footnotes
+
+[fn:3]This is another toggling command (~org-toggle-inline-images~).
 
 [fn:2]If you have more than one code block and want to run them all
 from the top, type ~C-c C-v b~. You can find this key sequence with
