@@ -235,20 +235,20 @@
    |----------+------------------------------------------------------+--------------|
    | Preview  | DataCamp course "Intermediate R"                     | [[https://app.datacamp.com/learn/courses/intermediate-r][datacamp.com]] |
    |----------+------------------------------------------------------+--------------|
-   | Demo     | Creating an Emacs Org-mode file with code and run it | [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org#create-an-org-mode-file][tutor.org]]    |
+   | Demo     | Creating an Emacs Org-mode file with code and run it | [[https://github.com/birkenkrahe/ds205/blob/main/assignments/org-mode/README.org][README.org]] |
    |----------+------------------------------------------------------+--------------|
    | Practice | Create Org-mode file with an R code block            |              |
    |----------+------------------------------------------------------+--------------|
 
 ** Objectives
 
-   * [ ] Understand DataCamp assignment
-   * [ ] Create an Org file
-   * [ ] Run am R code block in your Org file
+   * [X] Understand DataCamp assignment 1
+   * [X] Create an Org file
+   * [X] Run am R code block in your Org file
 
 ** Next
 
-   * Org-mode assignment
+   * Submit Org-mode assignment in Schoology
    * DataCamp assignments due Jan 31
 
    #+caption: DataCamp assignments
