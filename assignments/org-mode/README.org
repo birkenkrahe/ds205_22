@@ -4,6 +4,7 @@
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * Creating and running R inside an Org-mode file
+** Purpose
 
   This file contains the first ~Org-mode~ *class assignment*, and a
   *glossary* of terms. The main challenge is not the programming
@@ -12,6 +13,21 @@
   documentation, source code and result elements. Note that the sample
   solution also lists relevant references at the end[fn:1].
 
+** Challenge: use terminal emacs (no mouse)
+
+   Open Emacs in a terminal (from your ~$HOME~ directory):
+   #+begin_example
+    > emacs -nw -q -l .emacs
+   #+end_example
+
+   If your Emacs app is not found by Windows, you need to put the
+   entire path to the app on the command line, surround it with
+   apostrophs, and add the options afterwards:
+
+   #+begin_example
+    > "c:/Program Files/Emacs/x86_64/bin/emacs.exe" -nw -q -l .emacs
+   #+end_example   
+   
 ** Create a working directory
 
    - Open Emacs and go to your ~$HOME~ directory (with ~C-x C-f~)

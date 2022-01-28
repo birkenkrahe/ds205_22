@@ -259,16 +259,16 @@
 
   1) We continue where we left it [[w3s6 (01/26/22)][on Wednesday]]
     
-  2) [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem][Fixing the .emacs problem]]
+  2) [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem on Windows lab computers][Fixing the .emacs problem]]
     
   3) Change of some deadlines - to finish basic Emacs training
      #+caption: deadline changes in Schoology
      #+attr_html: :width 300px
      [[./img/28012022.png]]
 
-  4) Finish [[file:assignments/org-mode/README.org::Creating and running R inside an Org-mode file][Org-mode assignment]]
+  4) Finish (expanded) [[file:assignments/org-mode/README.org::Creating and running R inside an Org-mode file][Org-mode assignment]]
 
-  5) Submit results to GitHub as issue (ZIP) - by 11.59PM tonight
+  5) Submit results to Schoology as a ZIP file.
   
 * References
 
