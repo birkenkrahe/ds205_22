@@ -63,7 +63,7 @@
 
    (To align text in a buffer, type ~C-M-\~ and ~M-q~.)
 
-   - An [[R][R]] source *code block*, which looks like this:
+   - A named [[R][R]] source *code block*, which looks like this:
 
    #+begin_example
      #+name: [name]
@@ -171,6 +171,9 @@
 
    - Check with ~ls~ that all files are there
 
+   - /Tip: on the command line inside Emacs, ~C-p~ and ~C-n~ work as
+     previous and next history entry - use them to repeat commands/
+
 ** Add an inline image of ~first.R~
 
    - Create another directory in ~org-mode~ and name it ~img~.
@@ -181,7 +184,6 @@
 
    #+begin_example
    The image [[firstR]] shows the tangled file. 
-  
    #+name: firstR
    #+caption:first.R screenshot
    #+attr_html: :width 500px
@@ -204,7 +206,7 @@
 
 ** Submit your assignment
 
-   - Submit your ~first.org~ file to Schoology.
+   - Submit your ~first.org~ file [[https://lyon.schoology.com/assignment/5606406982/info][to Schoology]].
    
 ** Glossary
 
