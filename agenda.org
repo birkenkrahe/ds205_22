@@ -268,7 +268,7 @@
 
   4) Finish (expanded) [[file:assignments/org-mode/README.org::Creating and running R inside an Org-mode file][Org-mode assignment]]
 
-  5) Submit results to Schoology as a ZIP file.
+  5) Submit results to Schoology.
   
 * References
 
