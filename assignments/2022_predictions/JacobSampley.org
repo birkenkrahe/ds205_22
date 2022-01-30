@@ -1,0 +1,39 @@
+#+TITLE: 2022 Datacamp Trend Report
+#+AUTHOR: Jacob Sampley
+
+* Trend Report Thoughts
+** Which quantitative and which qualitative predictions were made?
+     1. Qualitative
+	a. Organizations accelerate culture transformation programs.
+	b. NLP ushers in a new generation of low-code data tools.
+	c. L&D becomes a fabric of company culture.
+	d. MLOps will continue to mature within organizations.
+	e. The talent crunch and flexible work will broaden and
+           improve the search for data talent.
+     2. Quantitative
+	a. Organizations will scale data governance.
+	b. Responsible AI becomes more operationalized. 
+	c. The rise of the data mesh
+	d. New generation of tooling will improve the data team's
+        productivity.
+** How valid do you think these predictions are?
+   Well, to get the obvious out of the way, I do not think that
+   DataCamp would publish this unless they held a great deal of
+   confidence in their predictions.
+
+   That being said, after reviewing the PDF, I believe that most of
+   these predictions are valid. They are all ultimately woven
+   together, each driven by the very-real expansion and proliferation
+   of data science in the business world. The only prediction which I
+   particularly take issue with would be that "L&D will become a part
+   of company culture." This may be the case a few years or so from
+   now, however I personally do not expect business owners and
+   managers to accept this investment so easily. In my own experience,
+   (and I have no data to back up my claim), many of these people
+   would much rather wallow in ignorance and blame their minions than
+   commit to a large upfront investment.
+
+   Other than that, however, I fully buy in to the validity of the
+   other claims, and it seems only natural that these changes would
+   take place with the dramatic emergence of data science.
+   
