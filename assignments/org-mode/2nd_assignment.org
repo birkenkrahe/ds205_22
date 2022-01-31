@@ -1,0 +1,121 @@
+#+TITLE:2nd Org-Mode Coding Practice
+#+AUTHOR:2nd Org-Mode Coding Assignment
+#+SUBTITLE:2nd Org-Mode Coding Assignment
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+
+* Create working directory and file
+
+  * Open Emacs
+
+  * Create a new directory named ~org-mode-2~ in the folder
+    ~c:/Users/[name]~ (replace ~[name]~ by your own user name)[fn:3]
+
+  * Create an Org-mode file called ~second.org~
+
+* Header information
+
+  Add the following meta information in the file header:
+
+  | Title   | My second Org-mode file |
+  | Author  | [Your own name]         |
+  | Options | ~toc:nil~               |
+  | Startup | ~overview hideblocks~   |
+
+  The last two lines mean that no table of contents will be
+  produced, and that, when the file is first opened, all headlines
+  and code blocks will be folded[fn:1].
+
+* Add headlines
+
+  Add three headlines
+  - 1st order headline with the content ~My second Org-mode file~
+  - 2nd order headline with the content ~My second C code block~
+  - 1st order headline with the content ~References~
+
+* Add code block
+
+  Add a C code block below the 2nd order headline. You can expand the
+  predefined expression ~<s~ with ~TAB~. You can use the following
+  text (or write your own) before the code block:
+
+  #+begin_example
+  The following code block prints "hello world" using the C function printf.
+  #+end_example
+
+  Remember that you can indent with ~C-M-\~ and wrap text with ~M-q~.
+
+  Name the code block and give it the name: ~printf~.
+
+** Code block header
+
+   The code block should have the following header information:
+
+   * define a ~main~ function with ~:main yes~
+   * include standard input/output library with ~:includes stdio.h~
+   * include Org-mode file comments with ~:comments org~
+   * allow for source code extraction with ~:tangle second.c~
+
+** Run code block
+
+   Move your cursor anywhere inside the code block and type ~C-c
+   C-c~. The results should appear in the Org-mode file.
+
+   Save the file.
+
+** Extract C source code
+
+   Move your cursor anywhere inside the code block and type ~C-c C-v
+   t~ or ~M-x org-babel-tangle~. You should get a confirmation in the
+   echo area that 1 file was tangled.
+
+   Check the file in your current directory with ~C-x d~ (you may have
+   to refresh the ~Dired~ buffer with ~g~).
+
+** Compile and run the C program in the Emacs shell
+
+   * Open an Emacs shell with ~M-x eshell~
+
+   * At the prompt, enter ~ls -la~ to make sure that the ~second.c~
+     file is there
+     
+   * At the prompt, compile the C source code file with ~gcc -o hello
+     second.c~
+
+   * At the prompt, run the file with ~hello~ or ~hello.exe~
+
+* Add references
+
+  I bet you thought you were done. You're not, because documentation
+  needs references if you used anybody else's material - in this case
+  Org-mode and the C programming language. Find suitable references
+  and put them below the headline ~References~. Use bullet points to
+  separate the two entries.
+
+  If you like, you can add links to the references, too. To to this,
+  use the key sequence ~C-c C-l~ (or ~M-x org-insert-link~).
+
+* Sample solution
+
+  You can compare your results with my [[https://drive.google.com/drive/folders/15LkNbby4ybj0mS11uHLeLjADOgucY4Yh?usp=sharing][sample solutions in GDrive]] - to
+  see all of the code, download the file and open it in Emacs[fn:2].
+  
+* Footnotes
+
+[fn:3]Note that this may not be your ~$HOME~ folder, in which case you
+have to navigate to it inside Emacs (with ~C-x d~).
+
+[fn:2]GitHub does not show most of the Org-mode meta information. 
+
+[fn:1]To add all of this automatically, you can use ~M-x
+org-skeleton~. You need to define this skeleton in your ~.emacs~ file:
+#+begin_src emacs-lisp
+  (define-skeleton org-skeleton
+    "#+TITLE:" str " \n"
+    "#+AUTHOR:" str " \n"
+    "#+SUBTITLE:" str " \n"
+    "#+STARTUP:overview hideblocks\n"
+    "#+OPTIONS: toc:nil num:nil ^:nil\n")
+#+end_src
+Whenever you make changes to ~.emacs~, you need to either restart
+Emacs or evaluate the changed buffer with ~M-x eval-buffer~.
