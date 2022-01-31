@@ -1,6 +1,11 @@
 This file contains the solutions to the Org-mode exercises.
 
 The main file is ~MarcusBirkenkrahe.org~. The PDF, PNG, HTML files are
-all created using GNU (~org-export-dispatch~).
+all created using GNU (~org-export-dispatch~ - [[https://orgmode.org/manual/The-Export-Dispatcher.html][see doc]]).
 
 See [[https://youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][this video tutorial series]] for the solution process.
+
+* References
+
+  Org-mode Manual (n.d.). 13.1 The Export Dispatcher [website]. [[https://orgmode.org/manual/The-Export-Dispatcher.html][URL:
+  orgmode.org]].
