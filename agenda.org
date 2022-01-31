@@ -258,9 +258,9 @@
 * w3s7 (01/28/22)
 
   1) We continue where we left it [[w3s6 (01/26/22)][on Wednesday]]
-    
+
   2) [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem on Windows lab computers][Fixing the .emacs problem]]
-    
+
   3) Change of some deadlines - to finish basic Emacs training
      #+caption: deadline changes in Schoology
      #+attr_html: :width 300px
@@ -269,7 +269,25 @@
   4) Finish (expanded) [[file:assignments/org-mode/README.org::Creating and running R inside an Org-mode file][Org-mode assignment]]
 
   5) Submit results to Schoology.
-  
+
+* NEXT w4s8 (01/31/22)
+
+  We will hold a special lab session tomorrow, Monday 31 January
+  3-3.50 PM, to sort out any issues related to Emacs and R. Bring your
+  own PC to the session, or work on a lab desktop. I will spend the
+  time going round to make sure that you can
+
+  * Install/ open / use the Emacs editor
+  * Create, run and tangle Org-mode files with R code
+  * Install / use the R programming language
+  * Understand the recent program assignments
+
+    The necessary steps are also demonstrated [[https://www.youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][in this tutorial video
+    playlist]].
+
+  We will continue with our regular program on Wednesday, 2nd February
+  at 3 PM - a short quiz will be available before.
+
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
