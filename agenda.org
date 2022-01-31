@@ -272,6 +272,11 @@
 
 * NEXT w4s8 (01/31/22)
 
+  #+caption: Teaching Emacs on Dagobah
+  #+attr_html: :width 400px
+  [[./img/yoda.jpg]]
+
+  #+begin_quote
   We will hold a special lab session tomorrow, Monday 31 January
   3-3.50 PM, to sort out any issues related to Emacs and R. Bring your
   own PC to the session, or work on a lab desktop. I will spend the
@@ -287,6 +292,7 @@
 
   We will continue with our regular program on Wednesday, 2nd February
   at 3 PM - a short quiz will be available before.
+  #+end_quote
 
 * References
 
