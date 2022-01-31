@@ -1,6 +1,6 @@
 #+TITLE: First Org-file
 #+AUTHOR: Marcus Birkenkrahe
-
+#+SUBTITLE: Sample solution
 * My first Org-mode file
 
   This Org-mode file prints the structure of the data frame ~mtcars~
