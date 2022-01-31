@@ -316,6 +316,11 @@
     GitHub]]. Note that submissions of programs as Org-mode files should
     always also be accompanied by references and sources.
 
+  * I told you an inaccuracy in class: when rendering the Org-mode
+    file on GitHub, the ~#+TITLE~ meta information is displayed as the
+    title of the file. If no such header is present, only the ~README~
+    file is displayed (with the file name as title).
+
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
