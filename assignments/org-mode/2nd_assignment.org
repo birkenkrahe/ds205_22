@@ -1,6 +1,6 @@
 #+TITLE:2nd Org-Mode Coding Practice
 #+AUTHOR:2nd Org-Mode Coding Assignment
-#+SUBTITLE:2nd Org-Mode Coding Assignment
+#+SUBTITLE:DS 205 - introduction to advanced data science
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 
@@ -97,7 +97,7 @@
 
 * Sample solution
 
-  You can compare your results with my [[https://drive.google.com/drive/folders/15LkNbby4ybj0mS11uHLeLjADOgucY4Yh?usp=sharing][sample solutions in GDrive]] - to
+  You can compare your results with my [[https://drive.google.com/drive/folders/15Tr8t0_jSMOAfrWrS8a1IpCg1VzGSRMm?usp=sharing][sample solutions in GDrive]] - to
   see all of the code, download the file and open it in Emacs[fn:2].
   
 * Footnotes
