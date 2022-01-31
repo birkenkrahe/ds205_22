@@ -60,8 +60,7 @@ after that, contact me.
    * define output PNG file with ~:file ~/plot.png~
    * define a source code file with ~:tangle second.R~
    * include comments in source code file with ~:comments org~
-
-   Name the code block and give it the name: ~random_plot~.
+   * name the code block and give it the name: ~random_plot~.
    
 ** Code block statements
 
