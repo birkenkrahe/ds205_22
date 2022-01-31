@@ -1,3 +1,5 @@
+#+TITLE: Org-Mode Assignment Solutions
+#+AUTHOR: Marcus Birkenkrahe
 This file contains the solutions to the Org-mode exercises.
 
 The main file is ~MarcusBirkenkrahe.org~. The PDF, PNG, HTML files are
