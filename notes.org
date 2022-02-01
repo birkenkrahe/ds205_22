@@ -332,12 +332,16 @@
 
 * w4s9 (02/02/22)
 
-** Notes from the DataCamp webinar
+** Notes from the DataCamp webinar ([[datacamp][DataCamp, 2022]])
+
+   
 
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  * <<datacamp>> DataCamp (January 2022). Data Trends and Predictions
+    2022 [webinar]. [[https://www.datacamp.com/resources/webinars/webinar-2022-data-trends-and-predictions-1][URL: www.datacamp.com.]]
   * Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
     [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
   * Hoffman (Sep 30, 2019). What is a checksum (and why should you
