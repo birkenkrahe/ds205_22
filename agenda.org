@@ -270,7 +270,7 @@
 
   5) Submit results to Schoology.
 
-* NEXT w4s8 (01/31/22)
+* w4s8 (01/31/22)
 
   #+caption: Teaching Emacs on Dagobah
   #+attr_html: :width 400px
@@ -296,6 +296,17 @@
 
   For those who know or can do all of this already: here's a [[https://github.com/birkenkrahe/ds205/blob/main/assignments/org-mode/2nd_assignment.org][second
   challenge]] (with solution) to practice while I sort others out.
+
+** What's next
+
+   * Deadline for 1st DataCamp assignment is looming ([[https://lyon.schoology.com/assignment/5603333759][Wed 2 Feb 3pm]])
+   * Scenario building for "Data Trends and Predictions 2022" report
+     ([[https://lyon.schoology.com/assignment/5590410225][assignment]]) - think about the 2 most important dimensions &
+     watch this video about [[https://youtu.be/yVgxZnRT54E][scenario planning]]
+   * Complete *quiz 3* including a *poll* on the prediction report
+     before class
+   * Check out the [[https://www.datacamp.com/resources/webinars/webinar-2022-data-trends-and-predictions-1][webinar recording]] with DataCamp luminaries (panel)
+   * Use the breathing space to complete the Emacs tutorial (~C-h t~)
   
 * References
 

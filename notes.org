@@ -303,7 +303,7 @@
 
 * w3s7 (01/28/22)
 
-    * Feel free to bring your own laptop to future sessions. If you want
+  * Feel free to bring your own laptop to future sessions. If you want
     me to check installation because something did not work, come a
     little earlier or stay a little later.
 
@@ -320,6 +320,19 @@
     file on GitHub, the ~#+TITLE~ meta information is displayed as the
     title of the file. If no such header is present, only the ~README~
     file is displayed (with the file name as title).
+
+* w4s8 (01/31/22)
+
+  * Setting the default directory (the folder where Emacs "wakes up"
+    when you open Dired with ~C-x d~):
+    #+begin_src emacs-lisp
+      ;; set default working directory to c:/Documents/GitHub/
+      (setq default-directory "c:\\Users\\birkenkrahe\\Documents\\GitHub\\")
+    #+end_src
+
+* w4s9 (02/02/22)
+
+** Notes from the DataCamp webinar
 
 * References
 
