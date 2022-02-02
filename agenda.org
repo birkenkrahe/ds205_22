@@ -248,7 +248,7 @@
 
 ** Next
 
-   * Submit Org-mode assignment in Schoology
+   * Submit Org-mode assignment in [[https://lyon.schoology.com/assignment/5606406982/info][Schoology]]
    * DataCamp assignments due Jan 31
 
    #+caption: DataCamp assignments
@@ -307,7 +307,39 @@
      before class
    * Check out the [[https://www.datacamp.com/resources/webinars/webinar-2022-data-trends-and-predictions-1][webinar recording]] with DataCamp luminaries (panel)
    * Use the breathing space to complete the Emacs tutorial (~C-h t~)
-  
+
+* w4s9 (02/02/22)
+
+  #+begin_quote
+  We meet today at 3-3.5- PM in the seminar room Lyon 106 - this room
+  is directly adjacent to 104, our usual lab. We'll discuss the
+  DataCamp 2022 trend report. The quiz will be available before end of
+  the week. The planned first test (in class) will take place next
+  Wednesday instead. ([[https://lyon.schoology.com/course/5516221047/updates][Schoology Update]])
+  #+end_quote
+
+** Overview
+
+   |------------+----------------------------------------|
+   | HOW        | WHAT                                   |
+   |------------+----------------------------------------|
+   | Discussion | DataCamp 2022 report on Data Trends    |
+   |------------+----------------------------------------|
+   | Groupwork  | Data science scenario planning ([[https://youtu.be/yVgxZnRT54E][video]]) |
+   |------------+----------------------------------------|
+
+** Objectives
+
+   * [ ] Understand the implications of the 2022 DataCamp trend report
+   * [ ] Understand and apply the scenario planning technique
+   * [ ] Understand how to use Org-mode properly
+
+** Next
+
+   * Quiz 3 (Friday before class)
+   * Test 1 (Wednesday next week)
+   * Interactive R - conditionals and control flow
+
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
