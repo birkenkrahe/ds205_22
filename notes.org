@@ -341,8 +341,8 @@
 
       #+caption: Prediction check 2021-2022
       #+attr_html: :width 500px
-      [[./img/trends.png]] 
-     
+      [[./img/trends.png]]
+
       | "Jupyter ecosystem"?    |
       | "Augmented analytics"?  |
 
@@ -350,14 +350,14 @@
 
     * "Innovations in the data tooling stack" (more and better tools)
 
-     
-     
+
+
 
 *** Trends
 
     1. 100-fold increase prediction in data generated (2021-2025)
        according to Accenture
-    
+
     2. Data mesh vs data lake - Data PaaS - the issue is speed01234
        (infrastructure is complex and slow-moving)
 
@@ -386,11 +386,17 @@
 
        Reverse: replit.com - don't have to read code anymore because
        the platform explains it to you.
-       
+
     8. Culture focus shift intensifies
 
     9. Talent pool and talent generation will expand
-           
+
+** Discussion / Groupwork results
+
+   #+caption: data trend scenarios
+   #+attr_html: :width 600px
+   [[./img/scenarios.jpg]]
+
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
