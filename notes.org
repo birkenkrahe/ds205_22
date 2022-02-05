@@ -1,6 +1,6 @@
-#+TITLE:Followup
+#+TITLE:Notes
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:Followup for CSC330 Database Theory & Applications Spring 2022
+#+SUBTITLE: Notes for CSC330 Database Theory & Applications Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * What is this?
@@ -16,7 +16,7 @@
 
   You find the whiteboard photos [[https://drive.google.com/drive/folders/18w1MVUQpaNV650kM-h6W7FHHza7XREiM?usp=sharing][here in GDrive]].
 
-* w1s1 (01/12/22)
+* Course introduction  - w1s1 (01/12/22)
 
   See also: [[https://drive.google.com/file/d/1etLNSYGIkmw1lFksiOVkAW1HsPGageDC/view?usp=sharing][Google Meet chat]]
 
@@ -119,7 +119,7 @@
     with data science") but what isn't these days? Which is why data
     science needs strong bias monitoring[fn:1].
 
-* w1s2 (01/14/22)
+* Installing R / Windows PATH - w1s2 (01/14/22)
 ** R
 
    | TO DO                     | WINDOWS                            |
@@ -169,7 +169,7 @@
 
    * If you have any installation issues: check the [[https://cran.r-project.org/faqs.html][R FAQ]] first
 
-* w2s3 (01/19/22)
+* Installing and setting up GNU Emacs - w2s3 (01/19/22)
 ** Emacs+ESS
 
    | TO DO                  | WINDOWS                                    |
@@ -205,7 +205,7 @@
 
    * This opens an R session in the current directory (iESS mode)
 
-* w2s4 (01/21/22)
+* Understanding Emacs Org-mode - w2s4 (01/21/22)
 
   This class will get the most intense exposure and training for GNU
   Emacs, because of the need to work with interactive notebooks in
@@ -238,7 +238,7 @@
     and the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
     Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
 
-* w3s5 (01/24/22)
+* Customizing Emacs (init file) - w3s5 (01/24/22)
 
   Planned:
   |--------------------------+-------------------------------------------------------|
@@ -285,7 +285,7 @@
    Notice how Windows requires backslashes, while Emacs (and
    Unix/Linux) use forward slashes.
 
-* w3s6 (01/26/22)
+* Running code in Org-mode 1 - w3s6 (01/26/22)
 
   * When you look at an Org file as a PDF or on GitHub, you will not
     see the meta data starting with ~#+~. Org-mode files are meant to
@@ -301,7 +301,7 @@
   | ~:exports both~      | both result and source code will be exported           |
   | ~:comments both~     | link source code and org files, add comments to source |
 
-* w3s7 (01/28/22)
+* Running code in Org-mode 2 - w3s7 (01/28/22)
 
   * Feel free to bring your own laptop to future sessions. If you want
     me to check installation because something did not work, come a
@@ -321,7 +321,7 @@
     title of the file. If no such header is present, only the ~README~
     file is displayed (with the file name as title).
 
-* w4s8 (01/31/22)
+* Org-mode lab session - w4s8 (01/31/22)
 
   * Setting the default directory (the folder where Emacs "wakes up"
     when you open Dired with ~C-x d~):
@@ -330,8 +330,7 @@
       (setq default-directory "c:\\Users\\birkenkrahe\\Documents\\GitHub\\")
     #+end_src
 
-* w4s9 (02/02/22)
-
+* 2022 Data Trends - w4s9 (02/02/22)
 ** Notes from the DataCamp webinar ([[datacamp][DataCamp, 2022]])
 *** Overview
 
@@ -397,6 +396,7 @@
    #+attr_html: :width 600px
    [[./img/scenarios.jpg]]
 
+* Writing functions - w5s10 (02/07/22)
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

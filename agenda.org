@@ -3,7 +3,7 @@
 #+SUBTITLE:Agenda DSC205 Intro to Advanced Data Science
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* w1s1 (01/12/22)
+* Course introduction - w1s1 (01/12/22)
 ** Welcome
 
    #+attr_html: :width 500px
@@ -92,7 +92,7 @@
    * See you Friday 14-Jan online!
    * Hopefully Wednesday 19-Jan in class!
 
-* w1s2 (01/14/22)
+* Installing R / Windows PATH - w1s2 (01/14/22)
 ** Overview
 
    | HOW      | WHAT                             |
@@ -115,7 +115,7 @@
    * [ ] Install GNU Emacs
    * [ ] Test R in Emacs
 
-* w2s3 (01/19/22)
+* Installing and setting up GNU Emacs - w2s3 (01/19/22)
 ** I'm back
 
    #+caption: "I'm back, baby."
@@ -147,7 +147,7 @@
    * Run R code blocks in an Org file
    * DataCamp assignments beginning soon!
 
-* w2s4 (01/21/22)
+* Understand Emacs Org-mode - w2s4 (01/21/22)
 ** Overview
 
    | HOW          | WHAT                       |
@@ -171,7 +171,7 @@
    * Create Emacs Org file
    * Run R code blocks in an Org file
    * DataCamp assignments beginning soon
-* w3s5 (01/24/22)
+* Customizing Emacs (init file) - w3s5 (01/24/22)
 ** Overview
 
    |--------------------------+-------------------------------------------------------|
@@ -227,7 +227,7 @@
    #+attr_html: :width 500px
    [[./img/datacamp1.png]]
 
-* w3s6 (01/26/22)
+* Running code in Org-mode 1 - w3s6 (01/26/22)
 ** Overview
 
    |----------+------------------------------------------------------+--------------|
@@ -244,7 +244,7 @@
 
    * [X] Understand DataCamp assignment 1
    * [X] Create an Org file
-   * [X] Run am R code block in your Org file
+   * [X] Run an R code block in your Org file
 
 ** Next
 
@@ -255,7 +255,7 @@
    #+attr_html: :width 500px
    [[./img/datacamp1.png]]
 
-* w3s7 (01/28/22)
+* Running code in Org-mode 2 - w3s7 (01/28/22)
 
   1) We continue where we left it [[w3s6 (01/26/22)][on Wednesday]]
 
@@ -270,7 +270,7 @@
 
   5) Submit results to Schoology.
 
-* w4s8 (01/31/22)
+* Org-mode lab session - w4s8 (01/31/22)
 
   #+caption: Teaching Emacs on Dagobah
   #+attr_html: :width 400px
@@ -308,7 +308,7 @@
    * Check out the [[https://www.datacamp.com/resources/webinars/webinar-2022-data-trends-and-predictions-1][webinar recording]] with DataCamp luminaries (panel)
    * Use the breathing space to complete the Emacs tutorial (~C-h t~)
 
-* w4s9 (02/02/22)
+* 2022 Data Trends - w4s9 (02/02/22)
 
   #+begin_quote
   We meet today at 3-3.5- PM in the seminar room Lyon 106 - this room
@@ -330,16 +330,36 @@
 
 ** Objectives
 
-   * [ ] Understand the implications of the 2022 DataCamp trend report
-   * [ ] Understand and apply the scenario planning technique
-   * [ ] Understand how to use Org-mode properly
+   * [X] Understand the implications of the 2022 DataCamp trend report
+   * [X] Understand and apply the scenario planning technique
 
 ** Next
 
-   * Quiz 3 (Friday before class)
-   * Test 1 (Wednesday next week)
-   * Interactive R - conditionals and control flow
+   * Quiz 3 - Conditionals and Control Workflow (DataCamp review)
+   * Test 1 (Friday 11 Feb 3 PM)
+   * Interactive R notebook - Writing functions
+* Writing functions - w5s10 (02/07/22)
+** Overview
 
+   |--------------+-------------------------------------------|
+   | HOW          | WHAT                                      |
+   |--------------+-------------------------------------------|
+   | Review       | Quiz 3 - Relational and logical operators |
+   |--------------+-------------------------------------------|
+   | Lecture      | Writing functions in R                    |
+   |--------------+-------------------------------------------|
+
+** Objectives
+
+   * [ ] Review quiz 3
+   * [ ] Understand test conditions (Friday 11 Feb)
+   * [ ] Understand how to write functions in R (lecture)
+
+** Next
+
+   * Interactive R notebook - Writing functions (problems)
+   * Test 1 (Friday 11 Feb 3 PM)
+  
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

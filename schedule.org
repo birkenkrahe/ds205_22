@@ -18,52 +18,52 @@
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
   |  8 |    4 | Mon-31-Jan | Org-mode lab session         | Intermediate R: Loops                                     |               |
   |  9 |      | Wed-02-Feb | 2022 data trends             |                                                           |               |
-  | 10 |      | Fri-04-Feb | CANCELLED                    |                                                           | Quiz 3        |
+  |    |      | Fri-04-Feb | CANCELLED                    |                                                           | Quiz 3        |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 11 |    5 | Mon-07-Feb | Conditions, loops, functions | Intermediate R: Functions                                 |               |
-  | 12 |      | Wed-09-Feb |                              |                                                           |               |
-  | 13 |      | Fri-11-Feb |                              |                                                           | Test 1        |
+  | 10 |    5 | Mon-07-Feb | Conditions, loops, functions | Intermediate R: Functions                                 |               |
+  | 11 |      | Wed-09-Feb | Problems (lab session)       |                                                           |               |
+  | 12 |      | Fri-11-Feb | Test                         |                                                           | Test 1        |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 14 |    6 | Mon-14-Feb | The ~tapply~ function        | Intermediate R: apply family                              |               |
-  | 15 |      | Wed-16-Feb |                              |                                                           |               |
-  | 16 |      | Fri-18-Feb |                              |                                                           | Guest lecture |
+  |    |    6 | Mon-14-Feb | The ~tapply~ function        | Intermediate R: apply family                              |               |
+  |    |      | Wed-16-Feb | Problems (lab session)       |                                                           |               |
+  |    |      | Fri-18-Feb | Guest talk                   |                                                           | Guest lecture |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 17 |    7 | Mon-21-Feb | Time and date                | Intermediate R: Utilities                                 | Quiz 4        |
-  | 18 |      | Wed-23-Feb |                              |                                                           |               |
-  | 19 |      | Fri-25-Feb |                              |                                                           |               |
+  |    |    7 | Mon-21-Feb | Time and date                | Intermediate R: Utilities                                 | Quiz 4        |
+  |    |      | Wed-23-Feb |                              |                                                           |               |
+  |    |      | Fri-25-Feb |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 20 |    8 | Mon-28-Feb | Gapminder and ~dplyr~        | Introduction to the Tidyverse: Data Wrangling             | Quiz 5        |
-  | 21 |      | Wed-02-Mar |                              |                                                           |               |
-  | 22 |      | Fri-04-Mar |                              |                                                           |               |
+  |    |    8 | Mon-28-Feb | Gapminder and ~dplyr~        | Introduction to the Tidyverse: Data Wrangling             | Quiz 5        |
+  |    |      | Wed-02-Mar |                              |                                                           |               |
+  |    |      | Fri-04-Mar |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 23 |    9 | Mon-07-Mar | Graphics with ~ggplot2~      | Introduction to the Tidyverse: Data Visualization         | Quiz 6        |
-  | 24 |      | Wed-09-Mar |                              |                                                           |               |
-  | 25 |      | Fri-11-Mar |                              |                                                           |               |
+  |    |    9 | Mon-07-Mar | Graphics with ~ggplot2~      | Introduction to the Tidyverse: Data Visualization         | Quiz 6        |
+  |    |      | Wed-09-Mar |                              |                                                           |               |
+  |    |      | Fri-11-Mar |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 26 |   10 | Mon-14-Mar | Row operations               | Introduction to the Tidyverse: Grouping and Summarizing   | Test 2        |
-  | 27 |      | Wed-16-Mar |                              |                                                           |               |
-  | 28 |      | Fri-18-Mar |                              |                                                           |               |
+  |    |   10 | Mon-14-Mar | Row operations               | Introduction to the Tidyverse: Grouping and Summarizing   | Test 2        |
+  |    |      | Wed-16-Mar |                              |                                                           |               |
+  |    |      | Fri-18-Mar |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 29 |   11 | Mon-28-Mar | Different types of plots     | Introduction to the Tidyverse: Types of Visualizations    | Quiz 7        |
-  | 30 |      | Wed-30-Mar |                              |                                                           |               |
-  | 31 |      | Fri-01-Apr |                              |                                                           |               |
+  |    |   11 | Mon-28-Mar | Different types of plots     | Introduction to the Tidyverse: Types of Visualizations    | Quiz 7        |
+  |    |      | Wed-30-Mar |                              |                                                           |               |
+  |    |      | Fri-01-Apr |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 32 |   12 | Mon-04-Apr | Text processing              | Exploratory Data Analysis in R: Categorical Data          | Quiz 8        |
-  | 33 |      | Wed-06-Apr |                              |                                                           |               |
-  | 34 |      | Fri-08-Apr |                              |                                                           |               |
+  |    |   12 | Mon-04-Apr | Text processing              | Exploratory Data Analysis in R: Categorical Data          | Quiz 8        |
+  |    |      | Wed-06-Apr |                              |                                                           |               |
+  |    |      | Fri-08-Apr |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 35 |   13 | Mon-11-Apr | Linear regression            | Exploratory Data Analysis in R: Numerical Data            | Quiz 9        |
-  | 36 |      | Wed-13-Apr |                              |                                                           |               |
+  |    |   13 | Mon-11-Apr | Linear regression            | Exploratory Data Analysis in R: Numerical Data            | Quiz 9        |
+  |    |      | Wed-13-Apr |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 37 |   14 | Wed-20-Apr | Logistic regression          | Exploratory Data Analysis in R: Numerical Summaries       | Test 3        |
-  | 38 |      | Fri-22-Apr |                              |                                                           |               |
+  |    |   14 | Wed-20-Apr | Logistic regression          | Exploratory Data Analysis in R: Numerical Summaries       | Test 3        |
+  |    |      | Fri-22-Apr |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 39 |   15 | Mon-25-Apr | Functional programming       | Exploratory Data Analysis in R: Case Study Spam Detection | Quiz 10       |
-  | 40 |      | Wed-27-Apr |                              |                                                           |               |
-  | 41 |      | Fri-29-Apr |                              |                                                           |               |
+  |    |   15 | Mon-25-Apr | Functional programming       | Exploratory Data Analysis in R: Case Study Spam Detection | Quiz 10       |
+  |    |      | Wed-27-Apr |                              |                                                           |               |
+  |    |      | Fri-29-Apr |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
-  | 42 |   16 | Mon-02-May | Summary and Outlook          |                                                           | Quiz 11       |
-  | 43 |      | Wed-04-May |                              |                                                           |               |
+  |    |   16 | Mon-02-May | Summary and Outlook          |                                                           | Quiz 11       |
+  |    |      | Wed-04-May |                              |                                                           |               |
   |----+------+------------+------------------------------+-----------------------------------------------------------+---------------|
 
 * Footnotes
