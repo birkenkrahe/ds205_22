@@ -350,6 +350,7 @@
    * Test 1 (Friday 11 Feb 3 PM)
    * Interactive R notebook - Writing functions
 * NEXT Writing functions - w5s10 (02/07/22)
+  DEADLINE: <2022-02-07 Mon>
 ** Overview
 
    |--------------+-------------------------------------------|
