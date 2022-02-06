@@ -1,9 +1,9 @@
-#+TITLE:Notes
+#+TITLE:DS Class Notes
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE: Notes for CSC330 Database Theory & Applications Spring 2022
+#+SUBTITLE: Notes for CSC482/DSC205 Introduction to Advanced Data Science Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* What is this?
+* README
 
   Instead of bugging you with emails, I opt to summarize my course
   observations regarding content, process, in this file. These often
@@ -15,6 +15,9 @@
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
   You find the whiteboard photos [[https://drive.google.com/drive/folders/18w1MVUQpaNV650kM-h6W7FHHza7XREiM?usp=sharing][here in GDrive]].
+
+  The companion file to this file, with the agenda and much of the
+  course content, is the [[./agenda.org][agenda.org]] file.
 
 * Course introduction  - w1s1 (01/12/22)
 
@@ -396,7 +399,6 @@
    #+attr_html: :width 600px
    [[./img/scenarios.jpg]]
 
-* Writing functions - w5s10 (02/07/22)
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

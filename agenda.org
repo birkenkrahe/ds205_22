@@ -1,8 +1,19 @@
-#+TITLE:Agenda
+#+TITLE:DS Agenda
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:Agenda DSC205 Intro to Advanced Data Science
+#+SUBTITLE: Agenda for CSC482/DSC205 Introduction to Advanced Data Science Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+* README
+
+  This file contains the agenda overview (what I had planned), the
+  objectives (what we managed to do) and (much of the) content of each
+  taught session of the course. I want to avoid splitting the content
+  up over many files - so that you have to navigate as little as
+  possible (like a book)!
+
+  The companion file to this file, less structured and with the
+  captain's log, is the [[./notes.org][notes.org]] file.
+
 * Course introduction - w1s1 (01/12/22)
 ** Welcome
 
@@ -338,7 +349,7 @@
    * Quiz 3 - Conditionals and Control Workflow (DataCamp review)
    * Test 1 (Friday 11 Feb 3 PM)
    * Interactive R notebook - Writing functions
-* Writing functions - w5s10 (02/07/22)
+* NEXT Writing functions - w5s10 (02/07/22)
 ** Overview
 
    |--------------+-------------------------------------------|
