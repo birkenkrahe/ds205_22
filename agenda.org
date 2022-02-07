@@ -365,7 +365,7 @@
 ** Objectives
 
    * [ ] Review quiz 3 & how to study with DataCamp
-   * [ ] Understand test conditions (Friday 11 Feb)
+   * [X] Understand test conditions (Friday 11 Feb)
    * [ ] Understand how to write functions in R (lecture)
 
 ** Next
