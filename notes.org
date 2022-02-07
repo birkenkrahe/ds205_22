@@ -399,6 +399,26 @@
    #+attr_html: :width 600px
    [[./img/scenarios.jpg]]
 
+* w5s10 (02/07/22)
+
+  * Simplify your Org-mode setup with ~PROPERTY~ settings
+    - Add this at the top of your Org-mode file with code:
+    #+begin_example
+      #+PROPERTY: header-args:R :session
+      #+PROPERTY: header-args:R :results output
+    #+end_example
+    Restart the file or refresh with ~C-c C-c~ on the ~PROPERTY~ line,
+    and now a code chunk like this should work fine:
+    #+begin_src R
+    str(mtcars)
+    #+end_src
+    Try it now! ([[https://www.gnu.org/software/emacs/manual/html_node/org/Using-Header-Arguments.html][Documentation]])
+
+  * Type the DataCamp exercises out as Org-mode files to get
+    practice - both in Emacs Org-mode, but also in R ([[file:~/GitHub/admin/spring22/ds205/datacamp.org::While loop][example]])
+
+
+
 * References
 
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
