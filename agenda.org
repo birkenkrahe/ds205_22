@@ -353,17 +353,18 @@
   DEADLINE: <2022-02-07 Mon>
 ** Overview
 
-   |--------------+-------------------------------------------|
-   | HOW          | WHAT                                      |
-   |--------------+-------------------------------------------|
-   | Review       | Quiz 3 - Relational and logical operators |
-   |--------------+-------------------------------------------|
-   | Lecture      | Writing functions in R                    |
-   |--------------+-------------------------------------------|
+   |---------+-------------------------------------------|
+   | HOW     | WHAT                                      |
+   |---------+-------------------------------------------|
+   | Review  | Quiz 3 - Relational and logical operators |
+   |         | [[file:~/Documents/GitHub/admin/spring22/ds205/datacamp.org::While loop][How to study R with DataCamp]]              |
+   |---------+-------------------------------------------|
+   | Lecture | Writing functions in R                    |
+   |---------+-------------------------------------------|
    
 ** Objectives
 
-   * [ ] Review quiz 3
+   * [ ] Review quiz 3 & how to study with DataCamp
    * [ ] Understand test conditions (Friday 11 Feb)
    * [ ] Understand how to write functions in R (lecture)
 
