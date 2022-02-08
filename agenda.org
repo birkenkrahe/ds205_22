@@ -367,7 +367,11 @@
    
 ** Objectives
 
+<<<<<<< HEAD
    * [X] Review quiz 3 & how to study with DataCamp
+=======
+   * [ ] Review quiz 3 & how to study with DataCamp
+>>>>>>> 522bb368b7dadfa2ce682f3efd67f92e0e23b02c
    * [X] Understand test conditions (Friday 11 Feb)
    * [ ] Understand how to write functions in R (lecture)
 ** Test 1 info
