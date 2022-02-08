@@ -399,7 +399,7 @@
    #+attr_html: :width 600px
    [[./img/scenarios.jpg]]
 
-* w5s10 (02/07/22)
+* Studying with DataCamp - w5s10 (02/07/22)
 
   * Simplify your Org-mode setup with ~PROPERTY~ settings
     - Add this at the top of your Org-mode file with code:
@@ -410,7 +410,7 @@
     Restart the file or refresh with ~C-c C-c~ on the ~PROPERTY~ line,
     and now a code chunk like this should work fine:
     #+begin_src R
-    str(mtcars)
+      str(mtcars)
     #+end_src
     Try it now! ([[https://www.gnu.org/software/emacs/manual/html_node/org/Using-Header-Arguments.html][Documentation]])
 
@@ -418,13 +418,36 @@
     practice - both in Emacs Org-mode, but also in R ([[file:~/GitHub/admin/spring22/ds205/datacamp.org::While loop][example]])
 
 
+** The Anti-IF Campaign
+
+   You may have been mystified by my mentioning Cirillo and the
+   Pomodoro time management technique but also IF-THEN-ELSE as a
+   No-No in software engineering. This last issue was related to the
+   "[[https://francescocirillo.com/products/the-anti-if-campaign][Anti-IF Campaign]]" launched (not tongue-in-cheek) by my friend
+   Francesco Cirillo of Berlin ([[cirillo][Cirillo, 2022]]):
+
+   #+begin_quote
+   "The Campaign is against the use of the IF statement as a regular
+   design strategy to deal with growth, change and complexity ("Let's
+   Put an IF Syndrome") in an evolutionary context. Despite being an
+   "easy," and apparently effective, way of delivering the value
+   requested by the customer, this "design strategy" has negative
+   repercussions when applied regularly as the main strategy to deal
+   with change, growth and complexity. By applying the "IF Strategy"
+   in an evolutionary context, software systems becomes more complex
+   to be read, tested, even debugged. It becomes easier to duplicate
+   code, accumulate technical debt and spend more time fixing
+   bugs. In the result, the software system become more complex. New
+   features and changes will cost more and more."
+   #+end_quote.
 
 * References
-
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
   * <<datacamp>> DataCamp (January 2022). Data Trends and Predictions
     2022 [webinar]. [[https://www.datacamp.com/resources/webinars/webinar-2022-data-trends-and-predictions-1][URL: www.datacamp.com.]]
+  * <<cirillo>> Cirillo (2022). The Anti-IF Campaign [website}. [[https://francescocirillo.com/products/the-anti-if-campaign][URL:
+    francescocirillo.com]].
   * Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
     [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
   * Hoffman (Sep 30, 2019). What is a checksum (and why should you

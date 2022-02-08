@@ -349,30 +349,64 @@
    * Quiz 3 - Conditionals and Control Workflow (DataCamp review)
    * Test 1 (Friday 11 Feb 3 PM)
    * Interactive R notebook - Writing functions
-* NEXT Writing functions - w5s10 (02/07/22)
-  DEADLINE: <2022-02-07 Mon>
+* Studying with DataCamp - w5s10 (02/07/22)
 ** Overview
 
-   |---------+-------------------------------------------|
-   | HOW     | WHAT                                      |
-   |---------+-------------------------------------------|
-   | Review  | Quiz 3 - Relational and logical operators |
-   |         | [[file:~/Documents/GitHub/admin/spring22/ds205/datacamp.org::While loop][How to study R with DataCamp]]              |
-   |---------+-------------------------------------------|
-   | Lecture | Writing functions in R                    |
-   |---------+-------------------------------------------|
+   |-----------+-------------------------------------------|
+   | HOW       | WHAT                                      |
+   |-----------+-------------------------------------------|
+   | Review    | Quiz 3 - Relational and logical operators |
+   |           | [[file:~/Documents/GitHub/admin/spring22/ds205/datacamp.org::While loop][How to study R with DataCamp]]              |
+   |-----------+-------------------------------------------|
+   | Preview   | [[file:~/Documents/GitHub/admin/spring22/ds205/datacamp.org::README][While and For Loops]]                       |
+   |-----------+-------------------------------------------|
+   | Lecture   | [[file:~/Documents/GitHub/admin/spring22/ds205/functions.org::README][Writing functions in R]]                    |
+   |-----------+-------------------------------------------|
+   | Test info | Test 1 on Friday 11 Feb 3.05-3.50 pm      |
+   |-----------+-------------------------------------------|
    
 ** Objectives
 
-   * [ ] Review quiz 3 & how to study with DataCamp
-   * [ ] Understand test conditions (Friday 11 Feb)
+   * [X] Review quiz 3 & how to study with DataCamp
+   * [X] Understand test conditions (Friday 11 Feb)
+   * [ ] Understand how to write functions in R (lecture)
+** Test 1 info
+
+   * Online in Schoology
+   * Entry quiz and Quiz 1-3 are not visible during the test
+   * The 10 hardest questions of entry quiy + quiz 1-3 (< 50%)
+   * 10 new questions
+   * Maximum time = 45 min
+   
+** Next
+
+   * Interactive R notebook - loop problems
+   * Test 1 (Friday 11 Feb 3 PM)
+  
+* NEXT w5s11 (02/09/22)
+** Overview
+
+   |---------+------------------------|
+   | HOW     | WHAT                   |
+   |---------+------------------------|
+   | Review  | [[file:~/Documents/GitHub/admin/spring22/ds205/datacamp.org::README][While and For Loops]]    |
+   |---------+------------------------|
+   | Lecture | [[file:~/Documents/GitHub/admin/spring22/ds205/functions.org::README][Writing functions in R]] |
+   |---------+------------------------|
+   
+** Objectives
+
+   * [ ] Org-mode ~PROPERTY~ "shebang" stuff (meta data)
+
+   * [ ] Learning how to solve problems with loops (assignment)
+
    * [ ] Understand how to write functions in R (lecture)
 
 ** Next
 
-   * Interactive R notebook - Writing functions (problems)
-   * Test 1 (Friday 11 Feb 3 PM)
-  
+   * Test 1 (Friday 11 Feb 3-3.50 PM)
+   * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
+     
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
