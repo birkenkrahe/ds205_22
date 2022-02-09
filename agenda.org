@@ -211,7 +211,6 @@
    * [ ] Run am R code block in your Org file
 
 ** Reading assignment
-   DEADLINE: <2022-01-28 Fri>
 
    * [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][Read "2022 Data trends and predictions"]] (DataCamp, 2022).
    * Prepare for discussion in class:
