@@ -384,24 +384,24 @@
    * Interactive R notebook - loop problems
    * Test 1 (Friday 11 Feb 3 PM)
   
-* NEXT w5s11 (02/09/22)
+* Installing packages, using index vectors - w5s11 (02/09/22)
 ** Overview
 
-   |---------+------------------------|
-   | HOW     | WHAT                   |
-   |---------+------------------------|
-   | Review  | While and For loops    |
-   |---------+------------------------|
-   | Lecture | Writing functions in R |
-   |---------+------------------------|
+   |---------+---------------------------------|
+   | HOW     | WHAT                            |
+   |---------+---------------------------------|
+   | Review  | While and For loops             |
+   |---------+---------------------------------|
+   | Lecture | Writing functions in R (part 1) |
+   |---------+---------------------------------|
    
 ** Objectives
 
-   * [ ] Org-mode ~PROPERTY~ "shebang" stuff (meta data)
+   * [X] Org-mode ~PROPERTY~ "shebang" stuff (meta data)
 
-   * [ ] Learning how to solve problems with loops (assignment)
+   * [X] Review: install packages and loading datasets 
 
-   * [ ] Understand how to write functions in R (lecture)
+   * [X] Understanding and using index vectors
 
 ** Next
 

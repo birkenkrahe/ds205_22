@@ -441,6 +441,23 @@
    features and changes will cost more and more."
    #+end_quote.
 
+* Installing packages, using index vectors - w5s11 (02/09/22)
+
+  * Under Windows, when trying to install a package with
+    ~install.packages()~, you're prompted for a CRAN mirror to use.
+
+  * Put the following lines into a file ~.Rprofile~ in your ~$HOME~
+    directory to avoid having to answer this question every time:
+    #+begin_example
+    options(repos = c("https://cloud.r-project.org/"))
+    #+end_example
+    The installation of packages from within Emacs should also work
+    now. The screenshot shows an example (Emacs 27.2 under Windows
+    10).
+    #+caption: R package "dslabs" installed in Org-mode file
+    #+attr_html: :width 500px
+    [[./img/rprofile.png]]
+    
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
