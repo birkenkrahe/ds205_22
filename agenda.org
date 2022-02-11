@@ -409,6 +409,33 @@
    * Test 1 (Friday 11 Feb 3-3.50 PM)
    * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
      
+* Test 1 - w5s12 (02/11/22)
+* NEXT - w6s13 (02/09/22)
+** Overview
+
+   |---------------------+---------------------------------|
+   | HOW                 | WHAT                            |
+   |---------------------+---------------------------------|
+   | Class assignment    | Installing loading packages     |
+   |                     | .Rprofile configuration file    |
+   |                     |                                 |
+   |---------------------+---------------------------------|
+   | Review              | Writing functions (DataCamp)    |
+   |---------------------+---------------------------------|
+   | Interactive Lecture | Writing functions in R (part 2) |
+   |---------------------+---------------------------------|
+   
+** Objectives
+
+   * [X] Review: install packages and loading datasets 
+
+   * [X] Understanding and using index vectors
+
+** Next
+
+   * Test 1 (Friday 11 Feb 3-3.50 PM)
+   * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
+     
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
