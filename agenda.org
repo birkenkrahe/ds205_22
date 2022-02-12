@@ -409,42 +409,46 @@
    * Test 1 (Friday 11 Feb 3-3.50 PM)
    * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
      
-* Test 1 - w5s12 (02/11/22)
-* TODO - w6s13 - (02/16/22)
+* Writing functions - w6s13 - (02/16/22)
 ** News
 
    * [[https://improvetheworld.net/student-programs/student-innovation-challenge/][2022 Data analytics competition (accounting data)]]
-   * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
-   
+   * Matthew Stewart, Stone Ward (Fri 18 Feb 3-3.50 PM) in Derby 209
+
 ** Overview
 
    |---------------------+---------------------------------|
    | HOW                 | WHAT                            |
    |---------------------+---------------------------------|
-   | Class assignment    | Installing loading packages     |
-   |                     | .Rprofile configuration file    |
-   |                     | TBC                             |
+   | Class assignments   | Installing loading packages     |
+   | [How do they work?] | .Rprofile configuration file    |
    |---------------------+---------------------------------|
    | Review              | Writing functions (DataCamp)    |
    |---------------------+---------------------------------|
    | Interactive Lecture | Writing functions in R (part 2) |
    |---------------------+---------------------------------|
-   
+
 ** Objectives
 
+   * [ ] Understand how "class assignments" work
+     
    * [X] Review: install packages and loading datasets 
 
-   * [X] Understanding and using index vectors
+   * [X] Review DataCamp chapter on writing functions
 
-   * [ ] ~mean~ option ~trim~ and ~fixed~ (regular expressions)
+** How do class assignments work?
 
-   * [ ] 
+   * In-class assignments are 10% of your total grade
+   * In DataCamp 
+   * You get the points if you attend and participate actively
+   * Checking your phone during an assignment is not active
+   * If you could not attend with a good excuse, submit later
 
 ** Next
 
    * Review of test 1
      
-* TODO - w6s14 (02/14/22)
+* Reviewing test 1 - w6s14 (02/14/22)
 ** Overview
 
    |---------------------+---------------------------------|
