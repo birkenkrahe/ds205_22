@@ -364,7 +364,7 @@
    |-----------+-------------------------------------------|
    | Test info | Test 1 on Friday 11 Feb 3.05-3.50 pm      |
    |-----------+-------------------------------------------|
-   
+
 ** Objectives
 
    * [X] Review quiz 3 & how to study with DataCamp
@@ -379,12 +379,12 @@
    * The 10 hardest questions of entry quiy + quiz 1-3 (< 50%)
    * 10 new questions
    * Maximum time = 45 min
-   
+
 ** Next
 
    * Interactive R notebook - loop problems
    * Test 1 (Friday 11 Feb 3 PM)
-  
+
 * Installing packages, using index vectors - w5s11 (02/09/22)
 ** Overview
 
@@ -395,12 +395,12 @@
    |---------+---------------------------------|
    | Lecture | Writing functions in R (part 1) |
    |---------+---------------------------------|
-   
+
 ** Objectives
 
    * [X] Org-mode ~PROPERTY~ "shebang" stuff (meta data)
 
-   * [X] Review: install packages and loading datasets 
+   * [X] Review: install packages and loading datasets
 
    * [X] Understanding and using index vectors
 
@@ -408,7 +408,7 @@
 
    * Test 1 (Friday 11 Feb 3-3.50 PM)
    * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
-     
+
 * Writing functions - w6s13 - (02/16/22)
 ** News
 
@@ -431,15 +431,15 @@
 ** Objectives
 
    * [ ] Understand how "class assignments" work
-     
-   * [X] Review: install packages and loading datasets 
 
-   * [X] Review DataCamp chapter on writing functions
+   * [ ] Practice: install packages and loading datasets
+
+   * [ ] Review DataCamp chapter on writing functions
 
 ** How do class assignments work?
 
    * In-class assignments are 10% of your total grade
-   * In DataCamp 
+   * They are labeled "class assignments" in the Schoology gradebook
    * You get the points if you attend and participate actively
    * Checking your phone during an assignment is not active
    * If you could not attend with a good excuse, submit later
@@ -447,7 +447,7 @@
 ** Next
 
    * Review of test 1
-     
+
 * Reviewing test 1 - w6s14 (02/14/22)
 ** Overview
 
@@ -459,7 +459,8 @@
 
 ** Objectives
 
-   * [X] Review: test 1 (first month of class and entry)
+   * [ ] Review results of test 1
+   * [ ] Learn how to plot a density distribution and the mean
    * [ ] Understand factor vectors
    * [ ] Master Vector element extraction
    * [ ] Understand the difference: Emacs Org-mode, ESS, and Base R
@@ -470,10 +471,44 @@
    * [ ] Understand ~print~ and ~paste~
    * [ ] Understand vectorization
    * [ ] Understand purpose and properties of interactive notebooks
-     
+
+** Test 1 results
+
+   * Preparing such a test on paper and grading it while allowing for
+     partial credit is a nightmare
+   * Future tests will be online in Schoology
+
+   #+caption: Test 1 DSC 205 results according to Schoology (11 Feb only)
+   #+attr_html: :width 500px
+   [[./img/test1_stats.png]]
+
+   * [[test 1 results]] includes important base R code for graphics:
+     - density distribution with ~density~ (smoothened histogram)
+     - line plot with ~plot~
+     - drawing a straight line with ~abline~
+     #+name: test 1 results
+     #+begin_src R :exports both :session :results output graphics file :file test1.png
+       results <- c(8.33, 11.08, 11.91, 13.38, 13.67, 14, 14.16, 14.8, 16.16,
+                    16.41, 16.75)
+       mean(results)
+       sd(results)
+       ave <- mean(results)
+       med <- median(results)
+       d <- density(results)
+       plot(d)
+       abline(v=ave,col="red")
+     #+end_src
+
+     #+RESULTS: test 1 results
+     [[file:test1.png]]
+
+** How should you study for and perform in a test?
+
+   * Share your tips and tricks
+   * I will share mine
+
 ** Next
 
-     
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
