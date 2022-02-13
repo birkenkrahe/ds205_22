@@ -476,8 +476,6 @@
    * There are many different R functions to concatenate and print:
      ~print~, ~paste~, ~cat~, ~message~. Where's the difference?
 
-   *
-
    * ~paste~ converts vectors to characters and concatenates them. It
      will be echoed as a side effect if it is the last statement of a
      function with no explicit return value.
@@ -497,7 +495,9 @@
       methods(print)  # show print methods
      #+end_src
 
-   * 
+   * http://127.0.0.1:25444/library/base/html/message.html
+
+   * http://127.0.0.1:25444/library/base/html/cat.html
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

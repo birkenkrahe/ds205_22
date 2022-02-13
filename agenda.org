@@ -448,7 +448,7 @@
 
    * Review of test 1
 
-* Reviewing test 1 - w6s14 (02/14/22)
+* NEXT Reviewing test 1 - w6s14 (02/14/22)
 ** Overview
 
    |---------------------+---------------------------------|
@@ -486,8 +486,9 @@
      - density distribution with ~density~ (smoothened histogram)
      - line plot with ~plot~
      - drawing a straight line with ~abline~
+     - charting a histogram with ~hist~
      #+name: test 1 results
-     #+begin_src R :exports both :session :results output graphics file :file test1.png
+     #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
        results <- c(8.33, 11.08, 11.91, 13.38, 13.67, 14, 14.16, 14.8, 16.16,
                     16.41, 16.75)
        mean(results)
@@ -495,12 +496,19 @@
        ave <- mean(results)
        med <- median(results)
        d <- density(results)
-       plot(d)
+       plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
        abline(v=ave,col="red")
      #+end_src
 
      #+RESULTS: test 1 results
-     [[file:test1.png]]
+     [[file:./img/test1density.png]]
+
+     #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
+       hist(results)
+     #+end_src
+
+     #+RESULTS:
+     [[file:./img/test1hist.png]]
 
 ** How should you study for and perform in a test?
 
