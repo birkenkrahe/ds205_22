@@ -409,7 +409,7 @@
    * Test 1 (Friday 11 Feb 3-3.50 PM)
    * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
 
-* Writing functions - w6s13 - (02/16/22)
+* Writing functions - w6s13 - (02/14/22)
 ** News
 
    * [[https://improvetheworld.net/student-programs/student-innovation-challenge/][2022 Data analytics competition (accounting data)]]
@@ -417,20 +417,27 @@
 
 ** Overview
 
-   |---------------------+---------------------------------|
-   | HOW                 | WHAT                            |
-   |---------------------+---------------------------------|
-   | Class assignments   | Installing loading packages     |
-   | [How do they work?] | .Rprofile configuration file    |
-   |---------------------+---------------------------------|
-   | Review              | Writing functions (DataCamp)    |
-   |---------------------+---------------------------------|
-   | Interactive Lecture | Writing functions in R (part 2) |
-   |---------------------+---------------------------------|
+   |----------------------------+---------------------------------+---|
+   | HOW                        | WHAT                            |   |
+   |----------------------------+---------------------------------+---|
+   | Class assignments          | How do they work?               |   |
+   |----------------------------+---------------------------------+---|
+   | Practice Class assignments | Installing loading packages     |   |
+   |                            | .Rprofile configuration file    |   |
+   |----------------------------+---------------------------------+---|
+   | Review                     | Writing functions (DataCamp)    |   |
+   |----------------------------+---------------------------------+---|
+   | Interactive Lecture        | Writing functions in R (part 2) |   |
+   |                            | Statistical functions in R      |   |
+   |----------------------------+---------------------------------+---|
 
 ** Objectives
 
+   * [ ] Mark guest talk in your calendar (Fri 18-Feb) Derby 209
+   
    * [ ] Understand how "class assignments" work
+
+   * [ ] Complete a couple of class assignments
 
    * [ ] Practice: install packages and loading datasets
 
@@ -438,24 +445,26 @@
 
 ** How do class assignments work?
 
-   * In-class assignments are 10% of your total grade
-   * They are labeled "class assignments" in the Schoology gradebook
-   * You get the points if you attend and participate actively
-   * Checking your phone during an assignment is not active
-   * If you could not attend with a good excuse, submit later
+   * In-class assignments are *10%* of your total grade
+   * They are labeled *class assignments* in the Schoology gradebook
+   * You get the points if you attend and participate *actively*
+   * If you check your phone instead, you're *not* active
+   * If you could not attend (with a good excuse), submit *late*
 
 ** Next
 
-   * Review of test 1
+   * Wednesday: Review of test 1
 
-* NEXT Reviewing test 1 - w6s14 (02/14/22)
+* NEXT Reviewing test 1 - w6s14 (02/16/22)
 ** Overview
 
-   |---------------------+---------------------------------|
-   | HOW                 | WHAT                            |
-   |---------------------+---------------------------------|
-   | Review              | Test 1 - first month of class   |
-   |---------------------+---------------------------------|
+   |-------------------------------------+-------------------------------|
+   | HOW                                 | WHAT                          |
+   |-------------------------------------+-------------------------------|
+   | Review                              | Test 1 - first month of class |
+   |-------------------------------------+-------------------------------|
+   | How to make up for bad test results | Complete a mini-project       |
+   |-------------------------------------+-------------------------------|
 
 ** Objectives
 
@@ -475,49 +484,17 @@
 ** Test 1 results
 
    * Preparing such a test on paper and grading it while allowing for
-     partial credit is a nightmare
-   * Future tests will be online in Schoology
+     partial credit is a nightmare: future tests will be online in
+     Schoology!
 
-   #+caption: Test 1 DSC 205 results according to Schoology (11 Feb only)
-   #+attr_html: :width 500px
-   [[./img/test1_stats.png]]
-
-   * [[test 1 results]] includes important base R code for graphics:
-     - density distribution with ~density~ (smoothened histogram)
-     - line plot with ~plot~
-     - drawing a straight line with ~abline~
-     - charting a histogram with ~hist~
-     #+name: test 1 results
-     #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
-       results <- c(8.33, 11.08, 11.91, 13.38, 13.67, 14, 14.16, 14.8, 16.16,
-                    16.41, 16.75)
-       mean(results)
-       sd(results)
-       ave <- mean(results)
-       med <- median(results)
-       d <- density(results)
-       plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
-       abline(v=ave,col="red")
-     #+end_src
-
-     #+RESULTS: test 1 results
-     [[file:./img/test1density.png]]
-
-     #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
-       hist(results)
-     #+end_src
-
-     #+RESULTS:
-     [[file:./img/test1hist.png]]
-
-** How should you study for and perform in a test?
-
-   * Share your tips and tricks
-   * I will share mine
+   * Plots: histogram, boxplot, density plot
 
 ** Next
 
-* References
+   * Reading tables with ~read.table~
+     
+* TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
+ * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
   notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
