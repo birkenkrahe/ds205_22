@@ -422,18 +422,19 @@
    |----------------------------+---------------------------------+---|
    | Class assignments          | How do they work?               |   |
    |----------------------------+---------------------------------+---|
-   | Practice Class assignments | Installing loading packages     |   |
+   | Practice Class assignments | Write a hello world function    |   |
+   |                            | Installing loading packages     |   |
    |                            | .Rprofile configuration file    |   |
    |----------------------------+---------------------------------+---|
    | Review                     | Writing functions (DataCamp)    |   |
    |----------------------------+---------------------------------+---|
-   | Interactive Lecture        | Writing functions in R (part 2) |   |
+   | Interactive Lecture        | [[https://github.com/birkenkrahe/ds205/blob/main/functions.org][Writing functions in R]] (part 2) |   |
    |                            | Statistical functions in R      |   |
    |----------------------------+---------------------------------+---|
 
 ** Objectives
 
-   * [ ] Mark guest talk in your calendar (Fri 18-Feb) Derby 209
+   * [X] Mark guest talk in your calendar (Fri 18-Feb) Derby 209
    
    * [ ] Understand how "class assignments" work
 
@@ -454,6 +455,7 @@
 ** Next
 
    * Wednesday: Review of test 1
+   * See some fun plotting techniques
 
 * NEXT Reviewing test 1 - w6s14 (02/16/22)
 ** Overview
