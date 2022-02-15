@@ -61,7 +61,7 @@
    | WHEN[fn:3]    | DESCRIPTION          | IMPACT |
    |---------------+----------------------+--------|
    | EVERY SESSION | CLASS ASSIGNMENTS    |    10% |
-   | WEEKLY        | DATACAMP ASSIGNMENTS |    30% |
+   | BI-/WEEKLY    | DATACAMP ASSIGNMENTS |    30% |
    | MONTHLY       | TESTS                |    30% |
    | END OF TERM   | FINAL EXAM           |    30% |
 
