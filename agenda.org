@@ -414,7 +414,7 @@
 
    * [[https://improvetheworld.net/student-programs/student-innovation-challenge/][2022 Data analytics competition (accounting data)]]
    * Matthew Stewart, Stone Ward (Fri 18 Feb 3-3.50 PM) in Derby 209
-
+ 
 ** Overview
 
    |----------------------------+---------------------------------+---|
