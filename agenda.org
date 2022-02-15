@@ -414,7 +414,7 @@
 
    * [[https://improvetheworld.net/student-programs/student-innovation-challenge/][2022 Data analytics competition (accounting data)]]
    * Matthew Stewart, Stone Ward (Fri 18 Feb 3-3.50 PM) in Derby 209
- 
+
 ** Overview
 
    |----------------------------+---------------------------------+---|
@@ -434,7 +434,7 @@
 ** Objectives
 
    * [X] Mark guest talk in your calendar (Fri 18-Feb) Derby 209
-   
+
    * [X] Understand how "class assignments" work
 
    * [X] Complete a couple of class assignments
@@ -461,7 +461,7 @@
 
    * Eliminated some DataCamp assignments
    * Remaining assignments mostly bi-weekly
-   
+
 ** Overview
 
    |-------------------------------------+-------------------------------|
@@ -516,7 +516,7 @@
      on many data structures and new print methods can easily be added.
      #+name:
      #+begin_src R :exports both :session :results output
-      methods(print)  # show print methods
+       methods(print)  # show print methods
      #+end_src
 
    * http://127.0.0.1:25444/library/base/html/message.html
@@ -527,34 +527,53 @@
    * Writing R system functions
    * Statistical functions
    * Reading tables with ~read.table~
-     
+
 * Guest talk - Stone Ward - w6s15 (02/18/22)
 * TODO Writing functions 2 - w7s16 (02/21/22)
+** Emacs check
+
+   * First thing, when you sit down at your desktop in the computer
+     lab, open Emacs, write a code block in ann Org-mode file
+     (~test.org~), and try to run it:
+     #+begin_src R :session :results output
+       str(mtcars)
+     #+end_src
+   * If it does not work but instead complains about missing
+     ~org-babel~ whatever, you need to install a ~.emacs~ file in the
+     ~$HOME~ directory.
+   * Download the file or its content from
+     ~https://tinyurl.com/lyonemacs~. Make sure the file has the right
+     name, then restart Emacs and run the code block again.
+   * You unfortunately need to do this any time you sit at a computer
+     in the lab you have not sat at before.
+   * To make things easier, you could also put a ~.emacs~ file in your
+     GDrive and download it in one go.
+
 * TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
- * References
+  * References
 
-  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+    Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+    notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
 
-  Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
-  [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
+    Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
+    [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
 
-  DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
-  datacamp.com.]]
+    DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
+    datacamp.com.]]
 
-  ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
+    ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
 
-  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
-  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+    Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+    [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
 
-  GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
+    GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
 
-  R Core Team (2021). R: A language and environment for statistical
-  computing. R Foundation for Statistical Computing, Vienna, Austria.
-  URL https://www.R-project.org/.
+    R Core Team (2021). R: A language and environment for statistical
+    computing. R Foundation for Statistical Computing, Vienna, Austria.
+    URL https://www.R-project.org/.
 
-  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
-  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
+    System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
+    [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 
 * Footnotes
 
