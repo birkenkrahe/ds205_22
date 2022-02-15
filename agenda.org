@@ -409,7 +409,7 @@
    * Test 1 (Friday 11 Feb 3-3.50 PM)
    * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
 
-* Writing functions - w6s13 - (02/14/22)
+* Writing functions 1- w6s13 - (02/14/22)
 ** News
 
    * [[https://improvetheworld.net/student-programs/student-innovation-challenge/][2022 Data analytics competition (accounting data)]]
@@ -431,14 +431,13 @@
    | Interactive Lecture        | [[https://github.com/birkenkrahe/ds205/blob/main/functions.org][Writing functions in R]] (part 2) |   |
    |                            | Statistical functions in R      |   |
    |----------------------------+---------------------------------+---|
-
 ** Objectives
 
    * [X] Mark guest talk in your calendar (Fri 18-Feb) Derby 209
    
-   * [ ] Understand how "class assignments" work
+   * [X] Understand how "class assignments" work
 
-   * [ ] Complete a couple of class assignments
+   * [X] Complete a couple of class assignments
 
    * [ ] Practice: install packages and loading datasets
 
@@ -495,6 +494,8 @@
 
    * Reading tables with ~read.table~
      
+* Guest talk - Stone Ward - w6s15 (02/18/22)
+* TODO Writing functions 2 - w7s16 (02/21/22)
 * TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
  * References
 
