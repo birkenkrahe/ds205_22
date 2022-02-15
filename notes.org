@@ -458,47 +458,6 @@
     #+attr_html: :width 500px
     [[./img/rprofile.png]]
 
-* Reviewing test 1 - w614 (02/14/22)
-** Comments
-
-   * Create an R script (~test.R~)
-   * ~M-;~ inserts an inline, mode-appropriate comment in Emacs. With
-     an active region it'll (un)comment as needed.
-   * ~C-x C-;~ (un)comments out the line point is on.
-   * ~M-x comment-box~ draws a fancy box around a region.
-   * The variable ~comment-styles~ controls the formatting (check with
-     ~C-h v comment-styles RET~).
-
-   (Source: [[https://twitter.com/mickeynp/status/1492251590358622210?t=fOoS_6lvLyRIjwZWCOFhEA&s=09][Twitter]])
-
-** Concatenation and printing
-
-   * There are many different R functions to concatenate and print:
-     ~print~, ~paste~, ~cat~, ~message~. Where's the difference?
-
-   * ~paste~ converts vectors to characters and concatenates them. It
-     will be echoed as a side effect if it is the last statement of a
-     function with no explicit return value.
-     #+name: paste
-     #+begin_src R :exports both :session :results output
-       paste(c(1,2,3))
-     #+end_src
-
-     #+RESULTS: paste
-     : [1] "1" "2" "3"
-     : no methods found
-
-   * ~print~ prints values - it is a generic function, i.e. it works
-     on many data structures and new print methods can easily be added.
-     #+name:
-     #+begin_src R :exports both :session :results output
-      methods(print)  # show print methods
-     #+end_src
-
-   * http://127.0.0.1:25444/library/base/html/message.html
-
-   * http://127.0.0.1:25444/library/base/html/cat.html
-
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].

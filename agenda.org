@@ -457,6 +457,11 @@
    * See some fun plotting techniques
 
 * NEXT Reviewing test 1 - w6s14 (02/16/22)
+** News
+
+   * Eliminated some DataCamp assignments
+   * Remaining assignments mostly bi-weekly
+   
 ** Overview
 
    |-------------------------------------+-------------------------------|
@@ -490,8 +495,37 @@
 
    * Plots: histogram, boxplot, density plot
 
-** Next
+** Concatenation and printing
 
+   * There are many different R functions to concatenate and print:
+     ~print~, ~paste~, ~cat~, ~message~. Where's the difference?
+
+   * ~paste~ converts vectors to characters and concatenates them. It
+     will be echoed as a side effect if it is the last statement of a
+     function with no explicit return value.
+     #+name: paste
+     #+begin_src R :exports both :session :results output
+       paste(c(1,2,3))
+     #+end_src
+
+     #+RESULTS: paste
+     : [1] "1" "2" "3"
+     : no methods found
+
+   * ~print~ prints values - it is a generic function, i.e. it works
+     on many data structures and new print methods can easily be added.
+     #+name:
+     #+begin_src R :exports both :session :results output
+      methods(print)  # show print methods
+     #+end_src
+
+   * http://127.0.0.1:25444/library/base/html/message.html
+
+   * http://127.0.0.1:25444/library/base/html/cat.html
+** Next (topical)
+
+   * Writing R system functions
+   * Statistical functions
    * Reading tables with ~read.table~
      
 * Guest talk - Stone Ward - w6s15 (02/18/22)
