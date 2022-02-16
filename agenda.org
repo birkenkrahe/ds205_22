@@ -450,31 +450,42 @@
    * You get the points if you attend and participate *actively*
    * If you check your phone instead, you're *not* active
    * If you could not attend (with a good excuse), submit *late*
+   * Submit an *Org-mode file*, not a screenshot
 
 ** Next
 
    * Wednesday: Review of test 1
    * See some fun plotting techniques
 
-* NEXT Reviewing test 1 - w6s14 (02/16/22)
+* IN PROGRESS Reviewing test 1 - w6s14 (02/16/22)
 ** News
 
    * Eliminated some DataCamp assignments
    * Remaining assignments mostly bi-weekly
+   * Emacs package of the week: ~xkcd~
+
+** xkcd - life is too serious sometimes
+
+   * Package is pre-installed (list: ~M-x package-list-packages~)
+   * ~M-x xkcd~ opens current comic
+   * ~o~ in ~xkcd~ mode opens browser with current topic
+   * ~C-h ? m~ opens full mode description
 
 ** Overview
 
    |-------------------------------------+-------------------------------|
    | HOW                                 | WHAT                          |
    |-------------------------------------+-------------------------------|
-   | Review                              | Test 1 - first month of class |
+   | Review                              | Hello function                |
+   |                                     | Test 1 - first month of class |
    |-------------------------------------+-------------------------------|
    | How to make up for bad test results | Complete a mini-project       |
    |-------------------------------------+-------------------------------|
 
 ** Objectives
 
-   * [ ] Review results of test 1
+   * [ ] Review: Hello function
+   * [ ] Review: results of test 1
    * [ ] Learn how to plot a density distribution and the mean
    * [ ] Understand factor vectors
    * [ ] Master Vector element extraction
@@ -487,13 +498,267 @@
    * [ ] Understand vectorization
    * [ ] Understand purpose and properties of interactive notebooks
 
-** Test 1 results
+** CHALLENGE: Write a hello function with your name as an argument
 
-   * Preparing such a test on paper and grading it while allowing for
-     partial credit is a nightmare: future tests will be online in
-     Schoology!
+   * You already learnt how to write a ~hello()~ function without
+     arguments. Write a function that takes your name as an argument
+     and prints ~"Hello, [your name]"~. Write and test the function in
+     the same code block.
+     #+name: hello
+     #+begin_src R :exports both :session :results output
+       hello <- function(name) {
+           print(paste("Hello, ", name))
+       }
+       hello(name="Marcus")
+     #+end_src
 
-   * Plots: histogram, boxplot, density plot
+   * Another solution, this time with two arguments.
+     #+name: hello2
+     #+begin_src R :exports both :session :results output
+       hello2 <- function(fname,lname) {
+           print(paste("Hello, ", fname, lname,"!"))
+       }
+       hello2(fname="Marcus", lname="Birkenkrahe")
+     #+end_src
+
+** Test review
+*** Paper vs Screen
+
+    #+attr_html: :width 500px
+    [[./img/xkcd.png]]
+
+    Never again! Preparing such a test on paper and grading it while
+    allowing for partial credit is a nightmare: future tests will be
+    online in Schoology!
+
+*** Test 1 results
+
+    * The test results are not great. Better next time!
+      #+caption: Test 1 results (Schoology)
+      #+attr_html: :width 500px
+      [[./img/test_1_stats.png]]
+
+    * What surprised me most was that many of you did not use the
+      available time. Alas, the stats don't show this number. A quick
+      glance does not seem to reveal any clear pattern[fn:2].
+
+    * When checking the stats with R, I find slightly different
+      results - why is the standard deviation different, what do you
+      think?
+      #+name: test 1 results
+      #+begin_src R :exports both :session :results output
+        results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
+                     17.17,14.16,11.91,16.16,14.8,13.67)
+        length(results)
+        sd(results)
+        summary(results)
+      #+end_src
+
+      #+RESULTS: test 1 results
+      : 
+      : [1] 13
+      : 
+      : [1] 2.503925
+      : 
+      :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      :    8.33   13.38   14.16   14.06   16.16   17.17
+
+    * Let's make some plots: histogram, boxplot and density plot. 
+      #+name: histogram
+      #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
+        hist(results, main="Histogram of test 1 results, CSC 330 Spring 2022")
+      #+end_src
+
+      #+RESULTS: histogram
+      [[file:./img/test1hist.png]]
+
+      #+name: boxplot
+      #+begin_src R :exports both :session :results output graphics file :file ./img/test1box.png
+        boxplot(results, main="Test 1 results, CSC 330 Spring 2022")
+      #+end_src
+
+      #+RESULTS: boxplot
+      [[file:./img/test1box.png]]
+
+      #+name: density
+      #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
+        ave <- mean(results)
+        d <- density(results)
+        plot(d, col="steelblue",main="Test 1 Results CSC 330 Spring 2022")
+        abline(v=ave,col="red")
+      #+end_src
+
+      #+RESULTS: density
+      [[file:./img/test1density.png]]
+
+*** Analysis - feedback and action points
+
+    * Test 1 can now be played an unlimited number of times. I have
+      added feedback to all new questions.
+
+    * If you didn't play the other quizzes until you reached 100%, you
+      had it coming. (My question: why wouldn't you do that?)
+
+    * What surprised me most was that many of you did not use the
+      available time. However, I have not (yet) been able to correlate
+      test time and test success (it's a project).
+
+    * Plots: I'd like the histogram and the density plot (a smoothened
+      histogram) to peak more to the right, and for the boxplot to be
+      smaller and higher up.
+      
+    * See also: [[https://github.com/birkenkrahe/org/blob/master/diary.org#i-can-teach-it-to-you-but-i-cannot-learn-it-for-you]["I can teach it to you but I cannot learn it for you"]]
+
+    * Questions:
+      - How did you study for this test?
+      - If you didn't perform well, what will you change?
+      - What can I do to help you help yourself?
+
+    * Changes to be applied in future quizzes/tests:
+      - Fewer multiple choices (max. 4)
+      - Announce if a question has > 1 answer (and/or how many)
+
+    #+caption: Feynman (via Twitter)
+    #+attr_html: :width 500px
+    [[./img/feynman.png]]
+
+*** Individual questions
+
+    Some questions do not accept a feedback option. I have put a GitHub
+    link into the question field.
+
+    * See [[https://github.com/birkenkrahe/db330/blob/main/FAQ.org#control-question-test-1-on-cloud-services][the FAQ]] for a question on the problem of "decreasing control"
+      for different cloud computing architectures. Some of you will get
+      points for giving the correct order, irrespective of the
+      direction - because indeed there was a conflict with the DataCamp
+      image showing that "control" decreases from IaaS to SaaS, and not
+      the other way around - because this was with regard to loss of
+      control from complexity, for both provider and customer, while I
+      was asking about the customer specifically. Complexity/abstraction
+      is an important parameter in system design but less relevant for
+      the customer, more relevant for the provider[fn:6].
+
+**** Customer control for different cloud architectures (Ø=0.46)
+
+     [[https://github.com/birkenkrahe/db330/blob/main/FAQ.org#control-question-test-1-on-cloud-services][See FAQ]] - student question and answer.
+
+**** How does MooCall sensor operate? (Ø=0.96)
+
+     Bring the following processes in the right order.
+
+     1) Edge computing: data are generated and pre-processed locally
+     2) Cloud computing: data are processed globally to generate a signal
+     3) Local computing: signal is transmitted to the user
+
+     Feedback: The sensor is attached to the cow's tail. It records
+     data as signals in the form of temperature, motion, etc. In
+     relation to the cloud, the sensor (a microcontroller with minimal
+     operating and processing capabilities) operators "on the edge" (of
+     the cloud). It has likely an SQLite database on board, or perhaps
+     something even simpler. Gathering the data and writing them to a
+     file if only for transport to the cloud is the "preprocessing". In
+     the next step, the signal for the end user is prepared once the
+     data (from different cows, and over a longer period of time) are
+     now "in the cloud". In practice this means that they are now in a
+     database on a server, very likely in tabular form. The processing
+     in the cloud generates a signal for the end user when the evidence
+     is conclusive, and when the software used to process the data has
+     reached a positive prediction: "Cow is ready to calve". Only then
+     the end user, the farmer, will be notified. In another scenario,
+     the farmer is continuously informed about the state of the
+     cow. But this does not change anything in the data processing
+     pipeline.
+
+**** Database architecture layer and example applications (Ø=88)
+
+     This question goes back to a slide from the DB foundation
+     presentation ([[pdbm][Lemahieu et al, 2021]]).
+
+     * The *external layer* is what the end-user sees - e.g. a manager
+       looking at a dashboard, or using SQL to formulate a database
+       query. The image shows entities and their attributes.
+
+     * The *conceptual/logical layer* is the database schema that
+       translates the user requirements - stored entities and their
+       attributes - into a database schema. The "logical" part relates
+       to the fact that this schema needs to fulfil certain conditions
+       to be usable by the RDBMS - e.g. records need to be uniquely
+       identifiable.
+
+     * The *internal layer* refers to the physical implementation,
+       e.g. the server infrastructure used to split up, or duplicate,
+       databases over an international network.
+
+     #+caption: Three-layer DBMS architecture (Lemahieu et al, 2021)
+     #+name: schema
+     #+attr_html: :width 500px
+     [[./img/layers.png]]
+
+**** Pros and Cons of SQLite (Ø=88)
+
+     | PROS                    | CONS                              |
+     |-------------------------+-----------------------------------|
+     | Very lightweight        | No concurrency                    |
+     | Zero configuration      | No user management                |
+     | No library dependendies | Security - no data access control |
+     | Highly portable         | Limited data types                |
+
+     * See [[https://github.com/birkenkrahe/db330/blob/main/sqlite/introduction_to_sqlite.png][Introduction to SQLite (mindmap)]]. This mindmap does not give
+       an explanation (or even a source) of these properties, just a
+       listing. For details, see e.g. [[https://www.keycdn.com/support/sqlite-vs-mysql][keycdn]] ([[keycdn][2018]]).
+
+**** Use case diagrams and UML (Ø=0.71)
+
+     * UML is Unified Modeling Language - an important modeling
+       framework for information systems design - from the small
+       (database system) to the large (e.g. all systems of an
+       airport). Use case diagrams are one of the 14 (standard) diagram
+       categories of this language - and probably the easiest at that.
+
+     * Here is a short [[https://youtu.be/zid-MVo7M-E][introductory video]] on Use Case diagrams only.
+
+**** In research communication, "limitations" means "bias" (Ø=0.54)
+
+     In the first video of the last DataCamp chapter on cloud computing
+     for everyone, the presenter initially spends a lot of time trying
+     to explain potential bias - e.g. because of the (commercial)
+     sources of information. This bias effectively limits the validity
+     of the presentation - high bias means that we cannot simply believe
+     what we're told. Scientific publications must have a section on
+     "limitations" of the research that is mainly about bias of method,
+     and bias of the researcher.
+
+**** What are "Meta Data"? (Ø=0.89)
+
+     Meta (from Greek, "with", or "alongside") Data come with the data,
+     and they are always data about data - in the case of databases,
+     e.g. about the ownership of the database. Definitions, and queries
+     belong to DDL, and DQL, respectively. Data design issues include
+     both of these.
+
+     An example outside of databases are the control codes for Emacs
+     Org-mode files beginning with the characters ~#+~. They contain
+     layout information (e.g. ~#+OPTIONS: toc:nil~) or information
+     about title or authorship.
+
+**** Database virtualization (Ø=0.61)
+
+     Virtualization is an important principle of system abstraction:
+     one abstracts from (= eliminates) the notion of physical
+     location. The database appears to be in one place (at the external
+     level) but at the internal level, it is distributed. The user
+     never knows this.
+
+     The same concept applies to operating systems whose
+     processes are virtualized in the sense that jobs are executed by a
+     concerted action of CPU, volatile memory (RAM) and non-volatile
+     memory (e.g. Hard disk), while the user knows nothing about it.
+
+**** Entering sqlite3 at the prompt opens SQLite to a transient database (Ø=0.54)
+**** Which database language properties does SQLite have? (Ø=0.64)
+
+     DDL, DML, DQL
+
 
 ** Concatenation and printing
 
@@ -519,9 +784,10 @@
        methods(print)  # show print methods
      #+end_src
 
-   * http://127.0.0.1:25444/library/base/html/message.html
+   * ~message~
 
-   * http://127.0.0.1:25444/library/base/html/cat.html
+   * ~cat~ (like the UNIX command)
+
 ** Next (topical)
 
    * Writing R system functions
