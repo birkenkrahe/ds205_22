@@ -3,6 +3,7 @@
 #+SUBTITLE: Agenda for CSC482/DSC205 Introduction to Advanced Data Science Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:R :session :results output
 * README
 
   This file contains the agenda overview (what I had planned), the
@@ -557,7 +558,7 @@
       #+attr_html: :width 500px
       [[./img/test_1_stats.png]]
       #+name: results
-      #+begin_src R :results silent
+      #+begin_src R  :results silent
 	results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
 		     17.17,14.16,11.91,16.16,14.8,13.67)
       #+end_src
@@ -581,13 +582,15 @@
       :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
       :    8.33   13.38   14.16   14.06   16.16   17.17
 
+
     * Let's make some plots: histogram, boxplot and density plot.
 
     * [[https://github.com/birkenkrahe/ds205/blob/main/agenda.org#test-1-results][Fetch the vector from GitHub]] and run the code in Emacs.
 
     * Histogram.
       #+name: histogram
-      #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
+
+            #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
 	hist(results, main="Test 1 results, DSC 205 Spring 2022")
       #+end_src
 
@@ -617,8 +620,8 @@
 
 *** Analysis - feedback and action points
 
-    * Test 1 can now be played an unlimited number of times. I have
-      added feedback to all new questions.
+    * Test 1 can now be played an unlimited number of times. I will 
+      add feedback to all new questions by the end of today.
 
     * If you didn't play the other quizzes until you reached 100%, you
       had it coming. (My question: why wouldn't you do that?)
