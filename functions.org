@@ -166,19 +166,8 @@
           return(m)
       }
     #+end_src
+
 * Footnotes
-
-[fn:6]For more details on S3 methods with examples, see [[S3][Wickham
-(2014)]]. The onboard explanation is technically quite difficult. You
-need to already understand the basics of OOP to understand this at
-all - e.g. from Java, C++ or my introduction to R.
-
-[fn:5]The population measure is based on the total number of samples
-$N$, while the sample measure is based on $N-1$.
-
-[fn:4]I cannot explain why ~paste~ does not respect the digits setting
-default (7 digits). Alternatives I found include the functions
-~format~ and ~sprintf~, e.g. ~sprintf("%0.2f%%",sd(x))~ works.
 
 [fn:3]When you run this, you get the same result, but you should still
 check identity, e.g. using the ~identical~ function:
