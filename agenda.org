@@ -457,7 +457,7 @@
    * Wednesday: Review of test 1
    * See some fun plotting techniques
 
-* IN PROGRESS Reviewing test 1 - w6s14 (02/16/22)
+* Reviewing test 1 - w6s14 (02/16/22)
 ** News
 
    * Eliminated some DataCamp assignments
@@ -520,6 +520,25 @@
        }
        hello2(fname="Marcus", lname="Birkenkrahe")
      #+end_src
+
+** Emacs check
+
+   * First thing, when you sit down at your desktop in the computer
+     lab, open Emacs, write a code block in an Org-mode file
+     (~test.org~), and try to run it:
+     #+begin_src R :session :results output
+       str(mtcars)
+     #+end_src
+   * If it does not work but instead complains about missing
+     ~org-babel~ whatever, you need to install a ~.emacs~ file in the
+     ~$HOME~ directory.
+   * Download the file or its content from
+     ~https://tinyurl.com/lyonemacs~. Make sure the file has the right
+     name, then restart Emacs and run the code block again.
+   * You unfortunately need to do this any time you sit at a computer
+     in the lab you have not sat at before.
+   * To make things easier, you could also put a ~.emacs~ file in your
+     GDrive and download it in one go.
 
 ** Test review
 *** Paper vs Screen
@@ -665,27 +684,8 @@
 
 * Guest talk - Stone Ward - w6s15 (02/18/22)
 * TODO Writing functions 2 - w7s16 (02/21/22)
-** Emacs check
-
-   * First thing, when you sit down at your desktop in the computer
-     lab, open Emacs, write a code block in ann Org-mode file
-     (~test.org~), and try to run it:
-     #+begin_src R :session :results output
-       str(mtcars)
-     #+end_src
-   * If it does not work but instead complains about missing
-     ~org-babel~ whatever, you need to install a ~.emacs~ file in the
-     ~$HOME~ directory.
-   * Download the file or its content from
-     ~https://tinyurl.com/lyonemacs~. Make sure the file has the right
-     name, then restart Emacs and run the code block again.
-   * You unfortunately need to do this any time you sit at a computer
-     in the lab you have not sat at before.
-   * To make things easier, you could also put a ~.emacs~ file in your
-     GDrive and download it in one go.
-
 * TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
-  * References
+* References
 
     Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
