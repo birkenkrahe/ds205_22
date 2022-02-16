@@ -542,9 +542,7 @@
       available time. Alas, the stats don't show this number. A quick
       glance does not seem to reveal any clear pattern[fn:2].
 
-    * When checking the stats with R, I find slightly different
-      results - why is the standard deviation different, what do you
-      think?
+    * When checking the stats with R, I find different results. Why?
       #+name: test 1 results
       #+begin_src R :exports both :session :results output
         results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
@@ -563,7 +561,9 @@
       :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
       :    8.33   13.38   14.16   14.06   16.16   17.17
 
-    * Let's make some plots: histogram, boxplot and density plot. 
+    * Let's make some plots: histogram, boxplot and density plot.
+
+    * Fetch the vector from GitHub and run this code in an Org-mode file.
       #+name: histogram
       #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
         hist(results, main="Histogram of test 1 results, CSC 330 Spring 2022")
