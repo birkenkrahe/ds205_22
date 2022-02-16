@@ -537,23 +537,25 @@
       #+caption: Test 1 results (Schoology)
       #+attr_html: :width 500px
       [[./img/test_1_stats.png]]
+      #+name: results
+      #+begin_src R :results silent
+        results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
+                     17.17,14.16,11.91,16.16,14.8,13.67)
+      #+end_src
 
     * What surprised me most was that many of you did not use the
       available time. Alas, the stats don't show this number. A quick
       glance does not seem to reveal any clear pattern[fn:2].
 
     * When checking the stats with R, I find different results. Why?
-      #+name: test 1 results
+      #+name: test 1 stats
       #+begin_src R :exports both :session :results output
-        results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
-                     17.17,14.16,11.91,16.16,14.8,13.67)
         length(results)
         sd(results)
         summary(results)
       #+end_src
 
-      #+RESULTS: test 1 results
-      : 
+      #+RESULTS: test 1 stats
       : [1] 13
       : 
       : [1] 2.503925
@@ -606,7 +608,7 @@
     * Plots: I'd like the histogram and the density plot (a smoothened
       histogram) to peak more to the right, and for the boxplot to be
       smaller and higher up.
-      
+
     * See also: [[https://github.com/birkenkrahe/org/blob/master/diary.org#i-can-teach-it-to-you-but-i-cannot-learn-it-for-you]["I can teach it to you but I cannot learn it for you"]]
 
     * Questions:
