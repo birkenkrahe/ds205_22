@@ -458,7 +458,7 @@
    * Wednesday: Review of test 1
    * See some fun plotting techniques
 
-* Reviewing test 1 - w6s14 (02/16/22)
+* Reviewing test 1, xkcd, plots - w6s14 (02/16/22)
 ** News
 
    * Eliminated some DataCamp assignments
@@ -522,7 +522,7 @@
        hello2(fname="Marcus", lname="Birkenkrahe")
      #+end_src
 
-** Emacs check
+** Lab 104 Emacs check
 
    * First thing, when you sit down at your desktop in the computer
      lab, open Emacs, write a code block in an Org-mode file
@@ -581,7 +581,6 @@
       : 
       :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
       :    8.33   13.38   14.16   14.06   16.16   17.17
-
 
     * Let's make some plots: histogram, boxplot and density plot.
 
@@ -650,6 +649,14 @@
     #+attr_html: :width 500px
     [[./img/feynman.png]]
 
+** Next (topical)
+
+   * Writing R system functions
+   * Statistical functions
+   * Reading tables with ~read.table~
+
+* Guest talk - Stone Ward - w6s15 (02/18/22)
+* TODO Writing functions 2 - w7s16 (02/21/22)
 ** Concatenation and printing
 
    * There are many different R functions to concatenate and print:
@@ -679,14 +686,6 @@
    * ~cat~ (like the UNIX command) outputs object, concatenates, less
      conversion than ~print~.
 
-** Next (topical)
-
-   * Writing R system functions
-   * Statistical functions
-   * Reading tables with ~read.table~
-
-* Guest talk - Stone Ward - w6s15 (02/18/22)
-* TODO Writing functions 2 - w7s16 (02/21/22)
 * TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
 * References
 

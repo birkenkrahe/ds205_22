@@ -458,6 +458,28 @@
     #+attr_html: :width 500px
     [[./img/rprofile.png]]
 
+* Reviewing test 1, xkcd, plots - w6s14 (02/16/22)
+  
+  * "p-hacking" refers to the practice of reanalyzing data in order to
+    get a predetermined, desired result that confirms ones bias. More
+    specifically, it is a misuse of the p-value, which is a measure
+    for statistical relevance (however not for practical relevance). A
+    small p-value corresponds to a greater chance that the observed
+    results are not just due to random effects. For a critical
+    discussion, see e.g. [[https://statisticalbullshit.com/2017/07/17/p-hacking/][Statistical Bullshit (2017)]].
+
+  * I dropped those DataCamp assignments that dealt with the
+    "Tidyverse", a bundle of packages including the popular ~dplyr~
+    package. In my view, the TidyVerse is not suited for
+    beginners ([[matloff][Matloff, 2020]]). However, if you have time, it would probably be useful
+    to take a look at the DataCamp course (it's not difficult).
+
+  * ~ggplot2~ is a very popular graphics package, especially for
+    creating pretty graphs. It is distributed with the "Tidyverse",
+    which it predates by several years however. We will take a look at
+    ~ggplot2~ in the course, in preparation for the EDA DataCamp
+    course.
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
@@ -473,6 +495,9 @@
     Awk. Here's Why...[blog]. [[https://www.makeuseof.com/tag/sed-awk-learn/][URL: www.makeuseof.com]].
   * Kenlon (March 10, 2020). Getting started with Emacs [blog]. [[https://opensource.com/article/20/3/getting-started-emacs][URL:
     opensource.com.]]
+  * <<matloff>> Matloff (2020). Tidyverse Sceptic - An opinionated
+    view of the Tidyverse "dialect" of the R language. [[https://github.com/matloff/TidyverseSkeptic][URL:
+    github.com]].
   * Pearson (2019). Exploratory Data Analysis Using R. CRC Press. [[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][URL:
     routledge.com]].
   * RegexOne (2021). Lesson 1: An Introduction, and the ABCs
