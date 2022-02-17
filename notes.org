@@ -352,9 +352,6 @@
 
     * "Innovations in the data tooling stack" (more and better tools)
 
-
-
-
 *** Trends
 
     1. 100-fold increase prediction in data generated (2021-2025)
@@ -477,8 +474,8 @@
   * ~ggplot2~ is a very popular graphics package, especially for
     creating pretty graphs. It is distributed with the "Tidyverse",
     which it predates by several years however. We will take a look at
-    ~ggplot2~ in the course, in preparation for the EDA DataCamp
-    course.
+    ~ggplot2~ in the course, in preparation for the [[https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-r][EDA in R DataCamp
+    course]].
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

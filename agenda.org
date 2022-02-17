@@ -553,31 +553,31 @@
 
 *** Test 1 results
 
-    * The test results are OK. Better next time!
+    * The test results are OK (average 70%). Better next time!
       #+caption: Test 1 results (Schoology)
       #+attr_html: :width 500px
       [[./img/test_1_stats.png]]
       #+name: results
       #+begin_src R  :results silent
-	results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
-		     17.17,14.16,11.91,16.16,14.8,13.67)
+        results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
+                     17.17,14.16,11.91,16.16,14.8,13.67)
       #+end_src
 
-    * When checking the stats with R, I find different results. Why?
+    * When checking the stats with R, I find different results. Why?[fn:2]
       #+name: test 1 stats
       #+begin_src R :exports both :session :results output
-	results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
-		     17.17,14.16,11.91,16.16,14.8,13.67)
-        length(results)
-        sd(results)
-        summary(results)
+	paste("Sample:",length(results))
+	paste("Standard deviation:", sd(results))
+        paste("Average:", 100*mean(results)/20) 
+	summary(results)
       #+end_src
 
       #+RESULTS: test 1 stats
+      : [1] "Sample: 13"
       : 
-      : [1] 13
+      : [1] "Standard deviation: 2.69653447301592"
       : 
-      : [1] 2.503925
+      : [1] "Average: 70.3153846153846"
       : 
       :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
       :    8.33   13.38   14.16   14.06   16.16   17.17
@@ -586,17 +586,22 @@
 
     * [[https://github.com/birkenkrahe/ds205/blob/main/agenda.org#test-1-results][Fetch the vector from GitHub]] and run the code in Emacs.
 
-    * Histogram.
+    * Histogram. Demonstrates the fact that almost the entire course
+      but one is above 50% (= pass). Looks more positive than the
+      whole truth, because the x-axis ends with the maximum result
+      achieved, and not with the maximum points available (20). 
       #+name: histogram
-
-            #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
+      #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
 	hist(results, main="Test 1 results, DSC 205 Spring 2022")
       #+end_src
 
       #+RESULTS: histogram
       [[file:./img/test1hist.png]]
 
-    * Boxplot 
+    * Boxplot: this graph is deceptively positive, because it doesn't
+      show the maximum points (20) but only the maximum achieved
+      points. The "whiskers" correspond to the outliers, and the thick
+      black line is the median (the middle value).
       #+name: boxplot
       #+begin_src R :exports both :session :results output graphics file :file ./img/test1box.png
         boxplot(results, main="Test 1 results, DSC 205 Spring 2022")
@@ -604,14 +609,18 @@
 
       #+RESULTS: boxplot
       [[file:./img/test1box.png]]
-      
-    * Density plot.
+
+    * Density plot: this is a smoothed histogram, and it does not look
+      quite as positive as the histogram. Negative outliers are rather
+      overaccentuated.
       #+name: density
       #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
-        ave <- mean(results)
-        d <- density(results)
-        plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
-        abline(v=ave,col="red")
+	ave <- mean(results)
+	med <- median(results)
+	d <- density(results)
+	plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
+	abline(v=ave,col="red")
+	abline(v=med,col="green")
       #+end_src
 
       #+RESULTS: density
@@ -619,7 +628,7 @@
 
 *** Analysis - feedback and action points
 
-    * Test 1 can now be played an unlimited number of times. I will 
+    * Test 1 can now be played an unlimited number of times. I will
       add feedback to all new questions by the end of today.
 
     * If you didn't play the other quizzes until you reached 100%, you
@@ -656,6 +665,12 @@
    * Reading tables with ~read.table~
 
 * Guest talk - Stone Ward - w6s15 (02/18/22)
+
+  Potential questions:
+  * What do your clients typically expect from you with regard to data
+    science?
+  * In the 2022 data trends report, we read that 
+  
 * TODO Writing functions 2 - w7s16 (02/21/22)
 ** Concatenation and printing
 
@@ -689,30 +704,32 @@
 * TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
 * References
 
-    Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-    notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
 
-    Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
-    [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
+  Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
+  [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
 
-    DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
-    datacamp.com.]]
+  DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
+  datacamp.com.]]
 
-    ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
+  ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
 
-    Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
-    [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
 
-    GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
+  GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
 
-    R Core Team (2021). R: A language and environment for statistical
-    computing. R Foundation for Statistical Computing, Vienna, Austria.
-    URL https://www.R-project.org/.
+  R Core Team (2021). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  URL https://www.R-project.org/.
 
-    System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
-    [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
+  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
+  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 
 * Footnotes
+
+[fn:2]Somehow Schoology counts 14, not 13 participants.
 
 [fn:1] Submission of the assignment by Monday 24 January 3pm gives 10
 extra credit points.
