@@ -667,9 +667,27 @@
 * Guest talk - Stone Ward - w6s15 (02/18/22)
 
   Potential questions:
-  * What do your clients typically expect from you with regard to data
-    science?
-  * In the 2022 data trends report, we read that 
+
+  1. What do your clients typically expect from you with regard to data
+     science?
+  2. In the 2022 data trends report, we read that "upskilling [with
+     data literacy skills] becomes a mandate". What is the level of
+     data literacy (with examples) at Stone Ward? Where would you like
+     it to be?
+  3. How well did your studies prepare you for what you're doing now as
+     a data scientist?
+  4. What should undergraduates at Lyon know before they decide to
+     embark on a potential career as data scientists or data analysts?
+  5. How important is machine learning in 2022 - and where is it going?
+  6. If you compare data science from an industry perspective 5 years
+     ago, now, and 5 years from now - what's different?
+  7. What should students know before they approach you/Stone Ward for
+     internships? What if they approach Stone Ward for a job?
+  8. What about a data science minor/major: important? Useful?
+     Relevant?
+  9. Which projects would you like students to have attempted or
+     completed? Is project experience important at all?
+  10. Which soft skills are most relevant at Stone Ward?
   
 * TODO Writing functions 2 - w7s16 (02/21/22)
 ** Concatenation and printing
