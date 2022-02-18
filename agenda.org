@@ -666,7 +666,9 @@
 
 * Guest talk - Stone Ward - w6s15 (02/18/22)
 
-  Potential questions:
+** Potential questions:
+
+   These are my questions informed e.g. by the 2022 data trends report.
 
   1. What do your clients typically expect from you with regard to data
      science?
@@ -688,7 +690,33 @@
   9. Which projects would you like students to have attempted or
      completed? Is project experience important at all?
   10. Which soft skills are most relevant at Stone Ward?
-  
+
+** Presentation questions:
+
+   These are some of my questions after leafing through a pre-view of
+   Matthew's presentation.
+
+   1) Why do clients want analysis? What do they do with the results?
+      (Example)
+   2) Are clients typically more interested in descriptive (historic),
+      prescriptive (normative) or predictive (future) analyses?
+   3) How much time do you still spend coding? Reading about R, new
+      packages etc. How important do you think this is?
+   4) Tidyverse or base R?
+   5) How important is Excel to your work? How important is it to your
+      clients still? (Compared to R or Python, or platforms like
+      Tableau or Power BI)
+   6) What's with Plato's cave!?
+   7) Clients only remember "1-3 numbers" - which numbers are these
+      (example)? How would I know what's important to them?
+   8) What if I screw up as a data analyst (example)?
+   9) How did you learn to talk about data and data science?
+   10) Do clients ever ask you for helicopter presentations like
+       these, or only data analysis presentations (close to the result)?
+   11) What is a "non-data minded person"? (What are they missing?)
+   12) Who is on the analytics team?
+   13) Have you had interns or employees from Lyon College yet?
+
 * TODO Writing functions 2 - w7s16 (02/21/22)
 ** News
 
