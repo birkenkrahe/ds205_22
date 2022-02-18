@@ -690,6 +690,16 @@
   10. Which soft skills are most relevant at Stone Ward?
   
 * TODO Writing functions 2 - w7s16 (02/21/22)
+** News
+
+   * If you answered TRUE for question 18 on vectorization, contact me
+     and you'll get an extra point for your test. My question was too
+     confusing because the comparison could be seen as vectorization:
+     check with ~is.vector("hello")~ - scalars and characters are
+     internally represented as vectors, hence the simultaneous
+     application of an operator (~<~) to all its elements could be
+     called vectorization!
+   
 ** Concatenation and printing
 
    * There are many different R functions to concatenate and print:
