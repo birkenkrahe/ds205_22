@@ -694,7 +694,7 @@
 ** Presentation questions:
 
    These are some of my questions after leafing through a pre-view of
-   [[https://docs.google.com/presentation/d/1PAqtrx59bYGcWCG37zu4GyXPfZC3FguOv_bNXBPorfM/edit?usp=sharing][Matthew's presentation]].
+   Matthew's presentation [[https://docs.google.com/presentation/d/1PAqtrx59bYGcWCG37zu4GyXPfZC3FguOv_bNXBPorfM/edit?usp=sharing]["Data in Business"]]:
 
    1) Why do clients want analysis? What do they do with the results?
       (Example)
