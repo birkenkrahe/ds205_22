@@ -716,6 +716,9 @@
    11) What is a "non-data minded person"? (What are they missing?)
    12) Who is on the analytics team?
    13) Have you had interns or employees from Lyon College yet?
+   14) Can you tell us more about the scope of the problem or problems
+       to be tackled in a mini-internship? How much does a student
+       have to know?
 
 * TODO Writing functions 2 - w7s16 (02/21/22)
 ** News
