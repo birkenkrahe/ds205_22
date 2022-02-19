@@ -566,20 +566,20 @@
     * When checking the stats with R, I find different results. Why?[fn:2]
       #+name: test 1 stats
       #+begin_src R :exports both :session :results output
-	paste("Sample:",length(results))
-	paste("Standard deviation:", sd(results))
-        paste("Average:", 100*mean(results)/20) 
-	summary(results)
+        paste("Sample:",length(results))
+        paste("Standard deviation:", sd(results))
+        paste("Average:", 100*mean(results)/20)
+        summary(results)
       #+end_src
 
       #+RESULTS: test 1 stats
       : [1] "Sample: 13"
-      : 
+      :
       : [1] "Standard deviation: 2.69653447301592"
-      : 
+      :
       : [1] "Average: 70.3153846153846"
-      : 
-      :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      :
+      :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
       :    8.33   13.38   14.16   14.06   16.16   17.17
 
     * Let's make some plots: histogram, boxplot and density plot.
@@ -589,10 +589,10 @@
     * Histogram. Demonstrates the fact that almost the entire course
       but one is above 50% (= pass). Looks more positive than the
       whole truth, because the x-axis ends with the maximum result
-      achieved, and not with the maximum points available (20). 
+      achieved, and not with the maximum points available (20).
       #+name: histogram
       #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
-	hist(results, main="Test 1 results, DSC 205 Spring 2022")
+        hist(results, main="Test 1 results, DSC 205 Spring 2022")
       #+end_src
 
       #+RESULTS: histogram
@@ -615,12 +615,12 @@
       overaccentuated.
       #+name: density
       #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
-	ave <- mean(results)
-	med <- median(results)
-	d <- density(results)
-	plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
-	abline(v=ave,col="red")
-	abline(v=med,col="green")
+        ave <- mean(results)
+        med <- median(results)
+        d <- density(results)
+        plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
+        abline(v=ave,col="red")
+        abline(v=med,col="green")
       #+end_src
 
       #+RESULTS: density
@@ -665,31 +665,30 @@
    * Reading tables with ~read.table~
 
 * Guest talk - Stone Ward - w6s15 (02/18/22)
-
 ** Potential questions:
 
    These are my questions informed e.g. by the 2022 data trends report.
 
-  1. What do your clients typically expect from you with regard to data
-     science?
-  2. In the 2022 data trends report, we read that "upskilling [with
-     data literacy skills] becomes a mandate". What is the level of
-     data literacy (with examples) at Stone Ward? Where would you like
-     it to be?
-  3. How well did your studies prepare you for what you're doing now as
-     a data scientist?
-  4. What should undergraduates at Lyon know before they decide to
-     embark on a potential career as data scientists or data analysts?
-  5. How important is machine learning in 2022 - and where is it going?
-  6. If you compare data science from an industry perspective 5 years
-     ago, now, and 5 years from now - what's different?
-  7. What should students know before they approach you/Stone Ward for
-     internships? What if they approach Stone Ward for a job?
-  8. What about a data science minor/major: important? Useful?
-     Relevant?
-  9. Which projects would you like students to have attempted or
-     completed? Is project experience important at all?
-  10. Which soft skills are most relevant at Stone Ward?
+   1. What do your clients typically expect from you with regard to data
+      science?
+   2. In the 2022 data trends report, we read that "upskilling [with
+      data literacy skills] becomes a mandate". What is the level of
+      data literacy (with examples) at Stone Ward? Where would you like
+      it to be?
+   3. How well did your studies prepare you for what you're doing now as
+      a data scientist?
+   4. What should undergraduates at Lyon know before they decide to
+      embark on a potential career as data scientists or data analysts?
+   5. How important is machine learning in 2022 - and where is it going?
+   6. If you compare data science from an industry perspective 5 years
+      ago, now, and 5 years from now - what's different?
+   7. What should students know before they approach you/Stone Ward for
+      internships? What if they approach Stone Ward for a job?
+   8. What about a data science minor/major: important? Useful?
+      Relevant?
+   9. Which projects would you like students to have attempted or
+      completed? Is project experience important at all?
+   10. Which soft skills are most relevant at Stone Ward?
 
 ** Presentation questions:
 
@@ -719,8 +718,59 @@
    14) Can you tell us more about the scope of the problem or problems
        to be tackled in a mini-internship? How much does a student
        have to know?
+   15) How large are the data sets that you encounter at
+       clients?[fn:3]
+   16)
 
-* TODO Writing functions 2 - w7s16 (02/21/22)
+* Guest talk - Post mortem - w7s16 (02/21/22)
+
+** What did you think?
+
+** The Google Data Analytics certificate (and other courses)
+
+** Excel
+
+   Question:
+   #+begin_quote
+   "During the data science talk yesterday, you mentioned that Excel
+   was error prone.  As someone who uses Excel quite a bit, this
+   caught my attention.  Would you mind expanding on that point for
+   me?" (Prof Matthew Peterson)
+   #+end_quote
+
+   Answer:
+   #+begin_quote
+   "Here is a series of more or less famous cases:
+   https://www.teampay.co/insights/biggest-excel-mistakes-of-all-time/
+
+   [[https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646][Here is a more high profile case]] that I often discuss with my
+   students. Though at Lyon, unless they are business students, they
+   won't be able to appreciate it as much perhaps.
+
+   My main point here re: Excel - 1) find alternatives (esp. for
+   visualization, R is great and really much easier to learn than
+   Excel) 2) check all results using original data (or probes) if you
+   can. (2) can lead to sudden fame - one of them could be the next
+   [[https://en.wikipedia.org/wiki/Thomas_Herndon][Thomas Herndon]]!
+
+   At the conceptual level, Excel does what most other dashboard apps
+   do, too - hide the inner workings from the user. Obviously, we need
+   some level of abstraction to use computers at all, but for
+   scientific purposes, this is not appropriate (and also not for
+   research-based teaching and learning). Which is why, in my classes,
+   it "foundations above all", mixed with the latest research. The
+   students take to the foundations easily enough once they have taken
+   leave of the drag-and-drop paradigm and acquainted themselves with
+   the command line, but they have difficulty with research because,
+   alas, they have not learnt how to read. I try to address this in my
+   classes (see my FAQ here - "[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-you-read][How should you read?]]")."
+   #+end_quote
+
+** Tidyverse vs base R
+
+** ~ggplot2~
+
+* TODO Writing functions 2
 ** News
 
    * If you answered TRUE for question 18 on vectorization, contact me
@@ -730,7 +780,7 @@
      internally represented as vectors, hence the simultaneous
      application of an operator (~<~) to all its elements could be
      called vectorization!
-   
+
 ** Concatenation and printing
 
    * There are many different R functions to concatenate and print:
@@ -760,7 +810,8 @@
    * ~cat~ (like the UNIX command) outputs object, concatenates, less
      conversion than ~print~.
 
-* TODO Reading tables with ~read.table~ - w6s15 (02/18/22)
+* TODO Reading tables with ~read.table~
+* TODO The ~apply~ family of functions
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
@@ -787,6 +838,12 @@
   [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 
 * Footnotes
+
+[fn:3]This was answered in the talk later. MS said that he had been
+asked to analyze time series data sets containing no more than 3
+months of data. Depending on the number of observations, this could
+mean that the data set consists of 90 lines only, which is very small
+indeed.
 
 [fn:2]Somehow Schoology counts 14, not 13 participants.
 
