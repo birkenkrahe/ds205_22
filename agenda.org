@@ -723,11 +723,59 @@
    16)
 
 * Guest talk - Post mortem - w7s16 (02/21/22)
+** News
 
-** What did you think?
+   * If you answered TRUE for question 18 on vectorization, contact me
+     and you'll get an extra point for your test. My question was too
+     confusing because the comparison could be seen as vectorization:
+     check with ~is.vector("hello")~ - scalars and characters are
+     internally represented as vectors, hence the simultaneous
+     application of an operator (~<~) to all its elements could be
+     called vectorization!
+
+** Objectives
+
+   [[https://docs.google.com/presentation/d/1PAqtrx59bYGcWCG37zu4GyXPfZC3FguOv_bNXBPorfM/edit?usp=sharing][Link to the slides]]
+   
+   * Summarize main messages of the talk by Matthew Stewart
+   * Identify what is most relevant to you
+   * Critically review claims and recommendations
+   * Apply the presentation to your own learning and career
+
+** Overview
+
+   | WHAT       | HOW                               |
+   |------------+-----------------------------------|
+   | Discussion | What did you think?               |
+   |            | Summarize main messages           |
+   |------------+-----------------------------------|
+   | Overview   | Google Data Analytics Certificate |
+   |            | Excel Errors                      |
+   |            | Tidyverse vs. Base R              |
+   |            | The ~ggplot2~ package             |
+     
+** TODO What did you think of the talk?
 
 ** The Google Data Analytics certificate (and other courses)
 
+   * This is a Coursera MOOC consisting of 8 courses
+   * The course promises to have you "job-ready in less than 6 months"
+     for under $300
+   * > 600k students have been enrolled[fn:4]
+   * It features SQL querying and R programming (not Python or Excel)
+
+   #+caption: Google Data Analytics Certificate @coursera.org
+   #+attr_html: :width 500px
+   [[./img/google.png]]
+
+   * The exposure to R is elementary and mixes language,
+     visualization, and documentation (with RStudio and RMarkdown)
+
+   * The R course has had > 100k students enrolled
+
+   * What's the difference between "data science" and "data
+     analytics"?[fn:5]
+   
 ** Excel
 
    Question:
@@ -766,21 +814,56 @@
    classes (see my FAQ here - "[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-you-read][How should you read?]]")."
    #+end_quote
 
-** Tidyverse vs base R
+** IN PROGRESS Tidyverse vs base R
 
-** ~ggplot2~
+   * Read: TidyverseSceptic by Norman Matloff
 
+   * Work through lessons on DataCamp mobile & practice 5-20 min per day
+     
+   #+caption: Introduction to R on DataCamp mobile
+   #+attr_html: :width 200px
+   [[./img/intro_r.jpg]]
+   
+   #+caption: Intermediate R on DataCamp mobile
+   #+attr_html: :width 200px
+   [[./img/intermediate_r.jpg]]
+
+   #+caption: Introduction to the Tidyverse on DataCamp mobile
+   #+attr_html: :width 200px
+   [[./img/intro_tidyverse.jpg]]
+
+   #+caption: Introduction to ggplot2 on DataCamp mobile
+   #+attr_html: :width 200px
+   [[./img/intro_ggplot2.jpg]]
+
+   #+caption: R Programming Compiler for Android - console
+   #+attr_html: :width 200px
+   [[./img/r_compiler_console.jpg]]
+
+   #+caption: R Programming Compiler for Android - output
+   #+attr_html: :width 200px
+   [[./img/r_compiler_output.jpg]]
+   
+   #+caption: R Programming Compiler for Android - image viewer
+   #+attr_html: :width 200px
+   [[./img/r_compiler_image_viewer.jpg]]
+   
+** IN PROGRESS ~ggplot2~
+
+   * We're going to do a quick tour of ~ggplot2~.
+
+   * Cedric Scherer has gathered [[https://github.com/z3tt/ggplot-courses][~ggplot2~ ressources here]]
+
+   * Wickham/Grolemund's "[[https://r4ds.had.co.nz/index.html][R for Data Science]]" book is all about
+     ~ggplot2~, visualization and EDA. It's not an easy book.
+
+** Next
+
+   * Writing functions
+   * Reading tables
+   * ~apply~ family of functions
+     
 * TODO Writing functions 2
-** News
-
-   * If you answered TRUE for question 18 on vectorization, contact me
-     and you'll get an extra point for your test. My question was too
-     confusing because the comparison could be seen as vectorization:
-     check with ~is.vector("hello")~ - scalars and characters are
-     internally represented as vectors, hence the simultaneous
-     application of an operator (~<~) to all its elements could be
-     called vectorization!
-
 ** Concatenation and printing
 
    * There are many different R functions to concatenate and print:
@@ -838,6 +921,14 @@
   [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 
 * Footnotes
+
+[fn:5]As the names suggest, data science is an umbrella term. The
+science, or research workflow includes analysis. Data analysis
+emphasizes the service character - you address a client's business
+problem using analytical methods.
+
+[fn:4]However, the completion rate of MOOCs is famously low, below
+15%.
 
 [fn:3]This was answered in the talk later. MS said that he had been
 asked to analyze time series data sets containing no more than 3
