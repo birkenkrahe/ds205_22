@@ -737,22 +737,22 @@
 
    [[https://docs.google.com/presentation/d/1PAqtrx59bYGcWCG37zu4GyXPfZC3FguOv_bNXBPorfM/edit?usp=sharing][Link to the slides]]
    
-   * [ ] Summarize main messages of the talk by Matthew Stewart
+   * [ ] Summarize talk (small group discussion + presentation)
    * [ ] Identify what is most relevant to you
    * [ ] Critically review claims and recommendations
    * [ ] Apply the presentation to your own learning and career
 
 ** Overview
 
-   | WHAT         | HOW                               |
-   |--------------+-----------------------------------|
-   | Discussion   | What did you think?               |
-   | Small groups | Summarize main messages           |
-   |--------------+-----------------------------------|
-   | Overview     | Google Data Analytics Certificate |
-   |              | Excel Errors                      |
-   |              | Tidyverse vs. Base R              |
-   |              | The ~ggplot2~ package             |
+   | WHAT          | HOW                               |
+   |---------------+-----------------------------------|
+   | Discussion in | What did you think?               |
+   | small groups  | Summarize main messages           |
+   |---------------+-----------------------------------|
+   | Overview      | Google Data Analytics Certificate |
+   |               | Excel Errors                      |
+   |               | Tidyverse vs. Base R              |
+   |               | The ~ggplot2~ package             |
      
 ** What did you think of the talk?
 
