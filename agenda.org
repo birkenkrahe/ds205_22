@@ -559,7 +559,7 @@
       [[./img/test_1_stats.png]]
       #+name: results
       #+begin_src R  :results silent
-        results <- c(15,14,16.41,11.08,13.38,16.75,8.33,
+        results <- c(15,14,17.41,11.08,13.38,16.75,8.33,
                      17.17,14.16,11.91,16.16,14.8,13.67)
       #+end_src
 
