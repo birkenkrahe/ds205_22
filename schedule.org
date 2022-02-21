@@ -28,15 +28,15 @@
   |    |      | Wed-16-Feb | Review of test 1/plot types  |                                                           |            |
   |    |      | Fri-18-Feb | Guest talk                   |                                                           |            |
   |----+------+------------+------------------------------+-----------------------------------------------------------+------------|
-  |    |    7 | Mon-21-Feb | Tour of ~tapply~             | Intermediate R: apply family                              | Quiz 4     |
-  |    |      | Wed-23-Feb |                              |                                                           |            |
-  |    |      | Fri-25-Feb |                              |                                                           |            |
+  |    |    7 | Mon-21-Feb | Review of guest talk         | Intermediate R: apply family                              | Quiz 4     |
+  |    |      | Wed-23-Feb | Statistical functions        |                                                           |            |
+  |    |      | Fri-25-Feb | Tour of ~tapply~             |                                                           |            |
   |----+------+------------+------------------------------+-----------------------------------------------------------+------------|
-  |    |    8 | Mon-28-Feb | Time and date                | Intermediate R: Utilities                                 | Quiz 5     |
+  |    |    8 | Mon-28-Feb |                              | Intermediate R: Utilities                                 | Quiz 5     |
   |    |      | Wed-02-Mar |                              |                                                           |            |
   |    |      | Fri-04-Mar |                              |                                                           |            |
   |----+------+------------+------------------------------+-----------------------------------------------------------+------------|
-  |    |    9 | Mon-07-Mar | Factors                      |                                                           | Quiz 6     |
+  |    |    9 | Mon-07-Mar |                              |                                                           | Quiz 6     |
   |    |      | Wed-09-Mar |                              |                                                           |            |
   |    |      | Fri-11-Mar |                              |                                                           |            |
   |----+------+------------+------------------------------+-----------------------------------------------------------+------------|
