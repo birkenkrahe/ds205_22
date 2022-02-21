@@ -741,6 +741,10 @@
    * [ ] Identify what is most relevant to you
    * [ ] Critically review claims and recommendations
    * [ ] Apply the presentation to your own learning and career
+   * [ ] Learn more about the Google Data Analytics certificate
+   * [ ] Understand the problems with Excel
+   * [ ] Understand the difference between the "Tidyverse" and Base R
+   * [ ] Learn more about ~ggplot2~
 
 ** Overview
 
