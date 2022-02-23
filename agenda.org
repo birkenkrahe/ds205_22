@@ -778,8 +778,8 @@
    #+attr_html: :width 500px
    [[./img/google.png]]
 
-   * The exposure to R is elementary and mixes language,
-     visualization, and documentation (with RStudio and RMarkdown)
+   * Elements of R - language instruction, visualization, and
+     documentation (with RStudio and RMarkdown) are mixed
 
    * The R course has had > 100k students enrolled
 
