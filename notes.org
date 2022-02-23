@@ -477,6 +477,23 @@
     ~ggplot2~ in the course, in preparation for the [[https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-r][EDA in R DataCamp
     course]].
 
+* Guest talk - Stone Ward - w6s15 (02/18/22)
+
+  * Ask Matthew Stewart for examples of the code he collects - a high
+    end and a low end example. Also, ask about RStudio vs. Emacs vs. R
+    console as his working environment[fn:2].
+
+  * FAQ: Animations - including GIFs - cannot be rendered inside Emacs, I
+    believe, (you can see open devices in R with ~dev.list()~). Those
+    are devices outside of Emacs run by the windows manager. Also, I
+    might do gganimate now or I might leave it for the DataViz course
+    next term. Simply because it isn't all that important. Most data
+    are difficult enough to understand without animation, and the
+    added value is often not there. It's a superficial pleasure to see
+    things moving (the eye likes it - but visualization is only
+    superficially for the eye). There are exceptions but one needs to
+    check in each case if running images add value.
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
@@ -510,6 +527,9 @@
   * xkcd (n.d.). Perl Problems [cartoon]. [[https://xkcd.com/1171/][URL: xkcd.com]].
 
 * Footnotes
+
+[fn:2]As a graduate of the Google certificate course, he is likely to
+be an RStudio user.
 
 [fn:1]Who wouldn't want to save the whales! Still, even a seeminly
 harmless ideological thrust can lead to conflict. E.g. what if you
