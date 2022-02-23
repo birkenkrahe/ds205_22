@@ -881,38 +881,8 @@
    * Reading tables
    * ~apply~ family of functions
      
-* TODO Writing functions 2
-** Concatenation and printing
+* NEXT Writing functions 2 - w7s17 (02/23/22)
 
-   * There are many different R functions to concatenate and print:
-     ~print~, ~paste~, ~cat~, ~message~. Where's the difference?
-
-   * ~paste~ converts vectors to characters and concatenates them. It
-     will be echoed as a side effect if it is the last statement of a
-     function with no explicit return value.
-     #+name: paste
-     #+begin_src R :exports both :session :results output
-       paste(c(1,2,3))
-     #+end_src
-
-     #+RESULTS: paste
-     : [1] "1" "2" "3"
-     : no methods found
-
-   * ~print~ prints values - it is a generic function, i.e. it works
-     on many data structures and new print methods can easily be added.
-     #+name:
-     #+begin_src R :exports both :session :results output
-       methods(print)  # show print methods
-     #+end_src
-
-   * ~message~ generates a diagnostic message from its arguments.
-
-   * ~cat~ (like the UNIX command) outputs object, concatenates, less
-     conversion than ~print~.
-
-* TODO Reading tables with ~read.table~
-* TODO The ~apply~ family of functions
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
