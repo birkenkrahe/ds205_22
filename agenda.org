@@ -882,7 +882,26 @@
    * ~apply~ family of functions
      
 * NEXT Writing functions 2 - w7s17 (02/23/22)
+** News
 
+   * Updated schedule
+   * Interesting GitHub issues
+   
+** Objectives
+
+   * [ ] Review writing functions
+   * [ ] Practice writing functions
+   * [ ] Understand stats functions in R
+     
+** Warmup exercise: write a system function!
+** Statistical functions
+** Practice: write a statistical function!
+** Next
+
+   * Tour of ~apply~
+   * ~ggplot2~
+   * R and SQL
+     
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
