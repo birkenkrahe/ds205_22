@@ -900,7 +900,7 @@
 
    * Tour of ~apply~
    * ~ggplot2~
-   * R and SQL
+   * Visualizing COVID-19
      
 * References
 
