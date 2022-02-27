@@ -497,7 +497,7 @@
     "For excel, if students can make a pivot table, use sumif, xlookup, and
     make a chart quickly then they're in a good spot with the program."
     #+end_quote
-
+    
   * I had another exchange on Excel with Lyon Prof of Exercise
     Science, Matthew Peterson. He asked:
     #+begin_quote
@@ -543,7 +543,6 @@
 
     Thanks for attending and for asking! Cheers, Marcus
     #+end_quote
-
 
   * FAQ: Animations - including GIFs - cannot be rendered inside Emacs, I
     believe, (you can see open devices in R with ~dev.list()~). Those
