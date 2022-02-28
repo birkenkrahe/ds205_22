@@ -3,3 +3,18 @@
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * README
+
+  * Contains interactive notebooks and solution files
+
+  * If you missed a class, you can run the notebook and submit it
+    after adding your meta header to ascertain that you did the work
+    (and not just copied the solutions file, which would be cheating).
+    #+begin_example
+      #+TITLE: title
+      #+AUTHOR: your name
+      #+HONOR: pledged
+    #+end_example
+  
+  | FILE          | CONTENT |
+  |---------------+---------|
+  | ~save_nb.org~ |         |
