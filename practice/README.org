@@ -1,0 +1,5 @@
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: practice directory DSC 205 Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* README
