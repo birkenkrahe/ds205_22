@@ -574,12 +574,12 @@
 
       #+RESULTS: test 1 stats
       : [1] "Sample: 13"
-      : 
+      :
       : [1] "Standard deviation: 2.59571120632991"
-      : 
+      :
       : [1] "Average: 70.7"
-      : 
-      :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      :
+      :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
       :    8.33   13.38   14.16   14.14   16.16   17.41
 
     * Let's make some plots: histogram, boxplot and density plot.
@@ -736,7 +736,7 @@
 ** Objectives
 
    [[https://docs.google.com/presentation/d/1PAqtrx59bYGcWCG37zu4GyXPfZC3FguOv_bNXBPorfM/edit?usp=sharing][Link to the slides]]
-   
+
    * [ ] Summarize talk (small group discussion + presentation)
    * [ ] Identify what is most relevant to you
    * [ ] Critically review claims and recommendations
@@ -757,7 +757,7 @@
    |               | Excel Errors                      |
    |               | Tidyverse vs. Base R              |
    |               | The ~ggplot2~ package             |
-     
+
 ** What did you think of the talk?
 
    * Summarize the main messages of the presentation?
@@ -765,7 +765,7 @@
    * Is there anything you'd like to know from me?
    * Do you want to have more presentations like this one?
    * Are you interested in the mini-internships at all?
-   
+
 ** The Google Data Analytics certificate (and other courses)
 
    * This is a Coursera MOOC consisting of 8 courses
@@ -778,14 +778,14 @@
    #+attr_html: :width 500px
    [[./img/google.png]]
 
-   * The exposure to R is elementary and mixes language,
-     visualization, and documentation (with RStudio and RMarkdown)
+   * Elements of R - language instruction, visualization, and
+     documentation (with RStudio and RMarkdown) are mixed
 
    * The R course has had > 100k students enrolled
 
    * What's the difference between "data science" and "data
      analytics"?[fn:5]
-   
+
 ** Excel
 
    Question:
@@ -825,15 +825,15 @@
    #+end_quote
 
 ** "Tidyverse" vs Base R
-   
+
    * Read: TidyverseSceptic by Norman Matloff
 
    * Work through lessons on DataCamp mobile & practice 5-20 min per day
-     
+
    #+caption: Introduction to R on DataCamp mobile
    #+attr_html: :width 200px
    [[./img/intro_r.jpg]]
-   
+
    #+caption: Intermediate R on DataCamp mobile
    #+attr_html: :width 200px
    [[./img/intermediate_r.jpg]]
@@ -853,17 +853,17 @@
    #+caption: R Programming Compiler for Android - output
    #+attr_html: :width 200px
    [[./img/r_compiler_output.jpg]]
-   
+
    #+caption: R Programming Compiler for Android - image viewer
    #+attr_html: :width 200px
    [[./img/r_compiler_image_viewer.jpg]]
-   
+
 ** Graphics with ~ggplot2~
 
    * ~ggplot2~ is not part of the "Tidyverse" but its creator (Hadley
      Wickham - yes, like the villain in Jane Austen's "Pride and
      Prejudice") are identical.
-   
+
    * We're going to do a quick tour of ~ggplot2~. It is commendable
      for final plots, and less for interactive explorative plotting
 
@@ -880,34 +880,80 @@
    * Writing functions
    * Reading tables
    * ~apply~ family of functions
-     
+
 * NEXT Writing functions 2 - w7s17 (02/23/22)
+** News
+
+   * Updated schedule: ~Rcpp~, ~bash~, ~Excel~ and ~SQLite~
+   * Interesting [[https://github.com/birkenkrahe/ds205/issues][GitHub issues]] for "forward studying"
+   * The quizzes are hard(er): I uploaded [[https://github.com/birkenkrahe/ds205/tree/main/quizzes][PDF versions to GitHub]]
+   * Emacs package(s) of the week: ~recentf~ (and ~ace-window~)
+
+** Objectives
+
+   * [ ] Get started with interactive Emacs notebooks
+   * [ ] Save and load user-defined functions
+   * [ ] Practice writing functions (system, stats)
+   * [ ] Understand stats functions in R
+   * [ ] Learn a new Emacs package or two
+
+** Emacs package of the week: how to display recent files
+
+   * Package is actually built in. You call it with ~M-x
+     recentf-open-files~, which, on my Windows Emacs, leads to this
+     buffer right now (the buffer below shows the buffer list - ~C-x
+     C-b~).
+
+   * It is nice that this also works when you kill Emacs by
+     mistake. It is very handy to just be able to continue your work
+     after you've opened and worked in 5-10 files!
+     #+caption: recent files on Emacs
+     #+attr_html: :width 400px
+     [[./img/recentf.png]]
+
+   * You can put the following code into your ~.emacs~ file to bind
+     the command to ~C-x r e~ (or any other available combination you
+     choose), and to enable it.
+     #+name: recentf
+     #+begin_example
+       ;; enable recentf mode and bind it to
+       (recentf-mode 1)
+       (global-set-key (kbd "C-x rf") 'recentf-open-files)
+     #+end_example
+
+   * More information:
+     - [[https://www.masteringemacs.org/article/mastering-key-bindings-emacs][Details on Emacs keybindings]] ([[kbd][Petersen, 2019]])
+     -  [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Key-Bindings.html][Customizing Key Bindings: GNU Emacs manual]] (also available
+       inside Emacs: ~C-h i~ opens the Emacs info reader)
+
+** Interactive notebook practice
+
+   Download 
+   
+** Next
+
+   * Tour of ~apply~
+   * ~ggplot2~
+   * Visualizing COVID-19
 
 * References
-
-  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
-
-  Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
-  [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
-
-  DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
-  datacamp.com.]]
-
-  ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
-
-  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
-  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
-
-  GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
-
-  R Core Team (2021). R: A language and environment for statistical
-  computing. R Foundation for Statistical Computing, Vienna, Austria.
-  URL https://www.R-project.org/.
-
-  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
-  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
-
+  * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+    notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  * Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
+    [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
+  * DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
+    datacamp.com.]]
+  * ESS (n.d.). Emacs Speaks Statistics. URL: ess.r-project.org
+  * Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+    [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+  * GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
+  * <<kbd>> Petersen (2019). Mastering Key Bindings in Emacs
+    [website]. [[https://www.masteringemacs.org/article/mastering-key-bindings-emacs][URL: masteringemacs.org]].
+  * R Core Team (2021). R: A language and environment for statistical
+    computing. R Foundation for Statistical Computing, Vienna,
+    Austria. URL https://www.R-project.org/.
+  * System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro
+    Timer?? [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 * Footnotes
 
 [fn:5]As the names suggest, data science is an umbrella term. The
