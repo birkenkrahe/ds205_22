@@ -884,9 +884,18 @@
 * NEXT Writing functions 2 - w7s17 (02/23/22)
 ** News
 
-   * Updated schedule
-   * Interesting GitHub issues
-   * Emacs package of the week: ~recentf~
+   * Updated schedule: ~Rcpp~, ~bash~, ~Excel~ and ~SQLite~
+   * Interesting [[https://github.com/birkenkrahe/ds205/issues][GitHub issues]] for "forward studying"
+   * The quizzes are hard(er): I uploaded [[https://github.com/birkenkrahe/ds205/tree/main/quizzes][PDF versions to GitHub]]
+   * Emacs package(s) of the week: ~recentf~ (and ~ace-window~)
+
+** Objectives
+
+   * [ ] Get started with interactive Emacs notebooks
+   * [ ] Save and load user-defined functions
+   * [ ] Practice writing functions (system, stats)
+   * [ ] Understand stats functions in R
+   * [ ] Learn a new Emacs package or two
 
 ** Emacs package of the week: how to display recent files
 
@@ -898,36 +907,29 @@
    * It is nice that this also works when you kill Emacs by
      mistake. It is very handy to just be able to continue your work
      after you've opened and worked in 5-10 files!
-   
      #+caption: recent files on Emacs
      #+attr_html: :width 400px
      [[./img/recentf.png]]
 
-     You can put the following code into your ~.emacs~ file to bind
+   * You can put the following code into your ~.emacs~ file to bind
      the command to ~C-x r e~ (or any other available combination you
      choose), and to enable it.
+     #+name: recentf
+     #+begin_example
+       ;; enable recentf mode and bind it to
+       (recentf-mode 1)
+       (global-set-key (kbd "C-x rf") 'recentf-open-files)
+     #+end_example
 
-   #+begin_example
-     ;; enable recentf mode and bind it to
-     (recentf-mode 1)
-     (global-set-key (kbd "C-x rf") 'recentf-open-files)
-   #+end_example
+   * More information:
+     - [[https://www.masteringemacs.org/article/mastering-key-bindings-emacs][Details on Emacs keybindings]] ([[kbd][Petersen, 2019]])
+     -  [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Key-Bindings.html][Customizing Key Bindings: GNU Emacs manual]] (also available
+       inside Emacs: ~C-h i~ opens the Emacs info reader)
 
-   More information:
-   * [[https://www.masteringemacs.org/article/mastering-key-bindings-emacs][Details on Emacs keybindings]] ([[kbd][Petersen, 2019]])
-   * [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Key-Bindings.html][Customizing Key Bindings: GNU Emacs manual]] (also available inside
-     Emacs: ~C-h i~ opens the Emacs info reader)
+** Interactive notebook practice
 
-** Objectives
-
-   * [ ] Review writing functions
-   * [ ] Practice writing functions
-   * [ ] Understand stats functions in R
-   * [ ] Learn a new Emacs package
-
-** Warmup exercise: write a system function!
-** Statistical functions
-** Practice: write a statistical function!
+   Download 
+   
 ** Next
 
    * Tour of ~apply~
