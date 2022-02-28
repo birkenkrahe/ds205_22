@@ -35,7 +35,7 @@
    * [ ] In case you have multiple buffers open: remember that ~C-x 1~
      closes all but the current buffer, and ~C-x o~ cycles through
      them[fn:1].
-   
+
    * [ ] If you have any trouble with executing the ~hello world~
      program, analyze the problem by yourself first. Typical sources
      of errors are:
@@ -44,21 +44,98 @@
      - Did you use the correct key sequence? (Check caps lock e.g.)
      - Do you have the right code block header arguments? (You only
        need ~:session :results output~ for now.
+     - Are you working with an old ~*R*~ session and writing to some
+       far-flung directory? (check with ~getwd()~ and reset with
+       ~setwd()~).
 
    * [ ] Now, we're going to do learn how to save and load our own
      functions, and then we're going to write two functions and test
      it.
 
-** Theory: saving and loading functions
+** Saving and loading user-defined functions
 
-   * [ ] Functions can be saved for later use. The following code
-     saves the function 
+   * [ ] Functions can be saved for later use. The code in [[save]]
+     defines and saves the function ~hello world~ as a binary to the
+     current directory. Try it: replace the ~???~ in the code block by
+     your own name.
+     #+name: save
+     #+begin_src R :session :results output
+       hello <- function(name) print(paste("hello",name ))
+       hello("???")
+       save(hello, file='hello')
+     #+end_src
+
+   * [ ] Now shut down the R session (type ~q()~ in the session buffer
+     and kill the buffer with ~C-x k~). Try to execute the function.
+     #+name: hello_error
+     #+begin_src R :results output
+       hello("error")
+     #+end_src
+
+   * [ ] You can load the function as shown in [[load]]. This will require
+     you to open a new R session.
+     #+name: load
+     #+begin_src R :session :results silent
+       load('hello')
+     #+end_src
+
+   * [ ] Now you can execute the function.
+     #+name: hello_error
+   #+begin_src R :session :results output
+     hello("loaded")
+   #+end_src
 
    * [ ] Do you have any questions or corrections for me about this?
      If there's anything you don't understand (including technical
      terms), please ask and don't be shy!
 
+   * If not, let's practice!
+
 ** Practice
+
+   * The R prompt can be changed on the console with the built-in
+     utility function ~options~.
+
+   * [ ] Write a function that changes the prompt to ~"R> "~. Execute
+     it and change the prompt to ~"R> "~.
+     #+name: define_prompt
+     #+begin_src R :session :results silen
+
+
+     #+end_src
+     Check your result in the session buffer.
+
+   * Change the prompt back to ~"> "~ by calling the function again.
+     #+name: change_prompt
+     #+begin_src R :session :results silen
+
+     #+end_src
+     Check your result in the session buffer again.
+
+   * Save your function in a file as ~'fprompt'~.
+     #+begin_src R :session :results silent
+
+     #+end_src
+
+   * As an alternative to shutting down the R session buffer, Empty
+     the object list with ~rm(list=ls())~ then try to call the function.
+     #+name: remove_ls
+     #+begin_src R :session :results silent
+
+
+     #+end_src
+
+   * Load the function by loading ~'frompt'~ , and change the prompt
+     to ~"hi> "~.
+     #+name: load_frompt
+     #+begin_src R :session :results silent
+
+
+     #+end_src
+     Check your result in the session buffer.
+
+   * Change the prompt back in the session buffer without using the
+     function.
 
 * Footnotes
 
@@ -74,5 +151,5 @@ with the Emacs package manager, and added the following lines to my
 
 ;; show ace window key in mode line
 ;; with > 2 windows show it in red
-(ace-window-display-mode 1) 
+(ace-window-display-mode 1)
 #+end_example
