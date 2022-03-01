@@ -891,11 +891,11 @@
 
 ** Objectives
 
-   * [ ] Get started with interactive Emacs notebooks
-   * [ ] Save and load user-defined functions
-   * [ ] Practice writing functions (system, stats)
+   * [X] Get started with interactive Emacs notebooks
+   * [X] Save and load user-defined functions
+   * [X] Practice writing functions (system, +stats+)
    * [ ] Understand stats functions in R
-   * [ ] Learn a new Emacs package or two
+   * [X] Learn a new Emacs package (or two)
 
 ** Emacs package of the week: how to display recent files
 
@@ -928,7 +928,7 @@
 
 ** Interactive notebook practice
 
-   Download 
+   Download save_nb.org from GitHub and work through it in class.
    
 ** Next
 
