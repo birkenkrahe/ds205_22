@@ -16,6 +16,6 @@
       #+HONOR: pledged
     #+end_example
   
-  | FILE          | CONTENT                              |
-  |---------------+--------------------------------------|
-  | ~save_nb.org~ | Save and load user-defined functions |
+  | FILE          | CONTENT                              | SOLUTIONS |
+  |---------------+--------------------------------------+-----------|
+  | ~save_nb.org~ | Save and load user-defined functions | Yes       |
