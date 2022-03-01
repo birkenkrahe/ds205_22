@@ -881,7 +881,7 @@
    * Reading tables
    * ~apply~ family of functions
 
-* NEXT Writing functions 2 - w7s17 (02/23/22)
+* Writing functions 2 - w8s17 (02/28/22)
 ** News
 
    * Updated schedule: ~Rcpp~, ~bash~, ~Excel~ and ~SQLite~
@@ -928,14 +928,21 @@
 
 ** Interactive notebook practice
 
-   Download save_nb.org from GitHub and work through it in class.
+   * Download [[https://github.com/birkenkrahe/ds205/tree/main/practice][save_nb.org from GitHub]] and work through it in class.
    
 ** Next
 
-   * Tour of ~apply~
-   * ~ggplot2~
-   * Visualizing COVID-19
+   * Statistical functions (lecture)
+   * Tour of ~apply~ (notebook)
+   * ~ggplot2~ (lecture + notebook)
+   * Visualizing COVID-19 (project)
 
+* w8s18 (03/02/22)
+
+** Notebook
+
+   * Download from Schoology folder Notebooks
+  
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
