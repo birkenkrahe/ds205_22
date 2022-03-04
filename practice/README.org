@@ -7,16 +7,22 @@
   * Contains interactive notebooks and solution files. Download the
     files, open and edit/run them in GNU Emacs + ESS.
 
+  * The notebooks themselves are also available for download on
+    GDrive.
+
   * If you missed a class, you can run the notebook and submit it
     after adding your meta header to ascertain that you did the work
     (and not just copied the solutions file, which would be cheating).
+
     #+begin_example
       #+TITLE: title
       #+AUTHOR: your name
       #+HONOR: pledged
     #+end_example
-  
-  | FILE           | CONTENT                              | SOLUTIONS |
-  |----------------+--------------------------------------+-----------|
-  | ~save_nb.org~  | Save and load user-defined functions | Yes       |
-  | ~repos_nb.org~ | Set default download repository      | Yes       |
+
+  * TOC
+
+    | FILE           | CONTENT                              | SOLUTIONS |
+    |----------------+--------------------------------------+-----------|
+    | ~save_nb.org~  | Save and load user-defined functions | Yes       |
+    | ~repos_nb.org~ | Set default download repository      | Yes       |
