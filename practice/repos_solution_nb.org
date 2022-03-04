@@ -1,0 +1,231 @@
+#+title: Set default download repo
+#+author: Marcus Birkenkrahe
+#+subtitle: Practice notebook for DSC 205 Spring 2022
+#+options: toc:nil ^:nil
+#+startup: hideblocks overview
+** README
+
+   In this notebook, you're learning and practicing how to set the
+   repository for R package uploads and upgrades using a
+   self-written function, and use the function in the ~.Rprofile~
+   init file for R.
+
+** Standard notebook instructions
+
+   * [ ] Work through this notebook at your own pace. When you're
+     done, check a task off by typing ~C-c C-c~ on the line with the
+     bullet point. Check this task off for practice!
+
+   * [ ] You can close bullet points with the ~<TAB>~ key on your
+     keyboard to reduce the clutter on the screen. Close this long
+     paragraph now by going to the line with the bullet point ~*~ in
+     it, then check the task off.
+
+   * [ ] Make sure that you can run R in this buffer by executing the
+     code block below (~C-c C-c~ with the cursor ON the block) and
+     then save the file (~C-x C-s~).
+     #+name: helloworld
+     #+begin_src R :session :results output
+       print("hello world")
+     #+end_src
+
+   * [ ] Sometimes, you want to check what happened in the R session
+     buffer. Make sure that you find that buffer (e.g. ~C-x C-b~ for
+     ~list-buffers~).
+
+   * [ ] Practice: go to the buffer ~*R*~ now, and run the command
+     shown below, then come back here again.
+
+     #+begin_example R
+       search()
+     #+end_example
+
+     Did you know what this command would do? Do you recognize the
+     output in the session buffer? If not, type ~?search~ for help,
+     then return here again to continue.
+
+   * [ ] In case you have multiple buffers open: remember that ~C-x 1~
+     closes all but the current buffer, and ~C-x o~ cycles through
+     them[fn:1].
+
+   * [ ] If you have any trouble with executing the ~hello world~
+     program, analyze the problem by yourself first. Typical sources
+     of errors are:
+     - Can you write to the current directory? (Windows may forbid it)
+     - Is this file an Org-file? (Syntax highlighting/modeline check)
+     - Did you use the correct key sequence? (Check caps lock e.g.)
+     - Do you have the right code block header arguments? (You only
+       need ~:session :results output~ for now.
+     - Are you working with an old ~*R*~ session and writing to some
+       far-flung directory? (check with ~getwd()~ and reset with
+       ~setwd()~).
+
+** Change package installation repository
+
+   * [ ] The utility function ~options~ allows you to set and see the
+     default download repository.
+
+   * [ ] Open the (local) help for ~options~ (you need to go to the
+     ~*R*~ session buffer to do this, or open a new buffer with ~M-x
+     R~) - or google the documentation.
+
+     #+name: optionsDoc
+     #+caption: Part of the options help revealing the attribute repos
+     #+attr_html: :width 400px
+     [[./img/doc.png]]
+
+   * [ ] Why is googling the help for this function only second best
+     compared to  looking up the help using R on your PC?
+
+     #+name: google
+     #+begin_quote
+     ANSWER: because the local documentation is aligned with the
+     version of R that you're actually using right now, while Google
+     will serve any documentation using their (unknown) algorithm.
+     #+end_quote
+
+   * [ ] Check current setting of the download repo with the R
+     function ~getOption~.
+
+     #+name: getOption1
+     #+begin_src R :exports both :session :results output
+       getOption("repos")
+     #+end_src
+
+   * [ ] Write a function ~frepos~ that changes the installation
+     repository to the URL ~"https://cloud.r-project.org/"~. The
+     function should take one argument only - a ~character~ vector
+     with the repo URL as its only element.
+
+     #+name: repos
+     #+begin_src R :exports both :session :results silent
+       frepos <- function(x) options(repos=x)
+       r <- c("https://mirrors.nics.utk.edu/cran/")
+       frepos(r)
+     #+end_src
+
+   * [ ] The chosen URL automatically picks the nearest CRAN
+     mirror. Though the output from [[repos]] is set to ~silent~, you
+     should see the mirror site URL in the echo area at the bottom.
+
+   * [ ] Re-run the ~getOption~ function on the attribute of ~options~
+     that you just changed in ~frepos~ to check the download repo.
+
+     #+name: getOption2
+     #+begin_src R :exports both :session :results output
+       getOption("repos")
+     #+end_src
+
+   * To test the function, you need to install a package. Let's use
+     ~ggplot2~ for that, since we're going to need it soon.
+
+** Install and test a package from the new repo location
+
+   * [ ] Split the screen horizontally with ~C-x 2~ to see both this
+     file and the R session in one window (see figure [[split]] - to open
+     the figure, use the toggling command ~C-x C-c C-v~).
+
+     #+name: split
+     #+caption: Split window with Org (top) and *R* (bottom)
+     #+attr_html: :width 400px
+     [[./img/split.png]]
+
+   * [ ] Install and load ~ggplot2~ (if you already have the package,
+     re-install it - this won't hurt unless your work relies on an
+     older version of the package).
+
+     #+name: installTest
+     #+begin_src R :session
+       install.packages("ggplot2")
+       library(ggplot2)
+     #+end_src
+
+     #+RESULTS: installTest
+     | ggplot2   |
+     | stats     |
+     | graphics  |
+     | grDevices |
+     | utils     |
+     | datasets  |
+     | methods   |
+     | base      |
+
+     The result will be a list of currently loaded packages.
+
+   * [ ] Test the installation with the command ~qplot(rnorm(100))~
+
+     #+name: qplot1
+     #+begin_src R :exports both :session :results output
+       qplot(rnorm(100))
+     #+end_src
+
+     #+RESULTS:
+     : `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+   * [ ] Since the output is graphics, move the output into this
+     Org-file by adding the following arguments to the code block
+     header line of [[qplot2]], and then re-run the command.
+
+     #+name: graphics
+     #+begin_example
+       :results output graphics file :file plot.png
+     #+end_example
+
+     #+name: qplot2
+     #+begin_src R :session :results output graphics file :file plot.png
+       qplot(rnorm(100))
+     #+end_src
+
+     #+RESULTS: qplot2
+     [[file:plot.png]]
+
+   * [ ] Note that your file will be saved whereever your current
+     working directory is - find it with ~getwd()~ and open your file,
+     or change the working directory with ~setwd()~, change the path
+     in the header argument and re-run the code block [[qplot2]].
+
+     #+begin_src R :exports both :session :results output
+       getwd()
+       setwd("w:/My Drive/2022_Spring/ds205/practice/")
+     #+end_src
+
+     #+RESULTS:
+     : [1] "c:/Users/birkenkrahe/Documents/GitHub/admin"
+
+** Save your function and use it in your R init file
+
+   * [ ] Save the function ~frepos~ to your home directory.
+
+     #+name: saveFunction
+   #+begin_src R :exports both :session :results silent
+     save(frepos, file='~/frepos')
+   #+end_src
+
+   * [ ] Check that the (binary) function file is there.
+
+** Use function in your R init file
+
+   * [ ] Load the function to your ~.Rprofile~ file. Create one if
+     necessary. This file contains R code and is executed by
+     ~Rscript~. Put the code here and test it.
+
+   #+begin_src R :session
+     load('~/frepos')
+     frepos(c("https://cloud.r-project.org/"))
+   #+end_src
+
+   #+RESULTS:
+   : https://mirrors.nics.utk.edu/cran/
+
+   * To test the ~.Rprofile~ setup, start another R session and test
+     the download repo location with ~getOption~ as before.
+
+     #+name: getOption3
+     #+begin_src R :exports both :session :results output
+       getOption("repos")
+     #+end_src
+
+     #+RESULTS: getOption3
+     : [1] "https://mirrors.nics.utk.edu/cran/"
+
+** Summary
