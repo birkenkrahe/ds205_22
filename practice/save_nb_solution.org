@@ -4,39 +4,44 @@
 #+startup: hideblocks overview
 ** README
 
-   * [ ] Work through this notebook at your own pace. When you're
+   * [X] Work through this notebook at your own pace. When you're
      done, check a task off by typing ~C-c C-c~ on the line with the
      bullet point. Check this task off for practice!
 
-   * [ ] You can close bullet points with the ~<TAB>~ key on your
+   * [X] You can close bullet points with the ~<TAB>~ key on your
      keyboard to reduce the clutter on the screen. Close this long
      paragraph now by going to the line with the bullet point ~*~ in
      it, then check the task off.
 
-   * [ ] Make sure that you can run R in this buffer by executing the
+   * [X] Make sure that you can run R in this buffer by executing the
      code block below (~C-c C-c~ with the cursor ON the block) and
      then save the file (~C-x C-s~).
+
      #+name: helloworld
      #+begin_src R :session :results output
        print("hello world")
      #+end_src
 
-   * [ ] Sometimes, you want to check what happened in the R session
+   * [X] Sometimes, you want to check what happened in the R session
      buffer. Make sure that you find that buffer (e.g. ~C-x C-b~ for
-     ~list-buffers~). Go to the buffer ~*R*~ now, and run the command
+     ~list-buffers~).
+
+   * [X] Practice: go to the buffer ~*R*~ now, and run the command
      shown below, then come back here again.
-     #+begin_example
+     
+     #+begin_example R
        search()
      #+end_example
-     Did you know what this command would do? Do you recognize the
+
+     - [X] Did you know what this command would do? Do you recognize the
      output in the session buffer? If not, type ~?search~ for help,
      then return here again to continue.
 
-   * [ ] In case you have multiple buffers open: remember that ~C-x 1~
+   * [X] In case you have multiple buffers open: remember that ~C-x 1~
      closes all but the current buffer, and ~C-x o~ cycles through
-     them[fn:1].
+     them. Try that now!
 
-   * [ ] If you have any trouble with executing the ~hello world~
+   * [X] If you have any trouble with executing the ~hello world~
      program, analyze the problem by yourself first. Typical sources
      of errors are:
      - Can you write to the current directory? (Windows may forbid it)
@@ -48,10 +53,9 @@
        far-flung directory? (check with ~getwd()~ and reset with
        ~setwd()~).
 
-   * [ ] Now, we're going to do learn how to save and load our own
+   * [X] Now, we're going to do learn how to save and load our own
      functions, and then we're going to write two functions and test
      it.
-
 ** Saving and loading user-defined functions
 
    * [ ] Functions can be saved for later use. The code in [[save]]

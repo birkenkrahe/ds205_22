@@ -928,8 +928,7 @@
 
 ** Interactive notebook practice
 
-   * Download [[https://github.com/birkenkrahe/ds205/tree/main/practice][save_nb.org from GitHub]] and work through it in class.
-
+   * Download [[https://drive.google.com/drive/folders/1A8yl4cnFhh-1sPO6gdb13DwEzUDDW7t1?usp=sharing][save_nb.org from GDrive]] and work through it in class.
 ** Next
 
    * Statistical functions (lecture)
@@ -941,14 +940,23 @@
 
 ** News
 
-   * Improve your grade with a project
+   * Mid-term grades - Improve your grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
+   * I only realized today that I can dispense with GitHub
 
-** Improve your grade with a project
+** Writing functions: set default R download repo
 
-   If you want to improve your grade, you can talk to me about doing
-   a small, independent research project leading to a writeup in the
-   form of a notebook, or a short (10-15 min) presentation. The topic
-   must be related to the topic of this course.
+   * Download ~repos_nb.org~ from GDrive and get cracking!
+   
+** Code along: statistical functions
+
+   * Code along = get the Org file from GDrive and code alongside me
+     while I lecture to my heart's delight
+   
+** Next
+
+   * Tour of ~apply~ (notebook)
+   * ~ggplot2~ (lecture + notebook)
+   * Visualizing COVID-19 (project)
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
