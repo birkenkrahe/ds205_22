@@ -23,11 +23,15 @@
 
    * [ ] Sometimes, you want to check what happened in the R session
      buffer. Make sure that you find that buffer (e.g. ~C-x C-b~ for
-     ~list-buffers~). Go to the buffer ~*R*~ now, and run the command
+     ~list-buffers~).
+
+   * [ ] Practice: go to the buffer ~*R*~ now, and run the command
      shown below, then come back here again.
-     #+begin_example
+     
+     #+begin_example R
        search()
      #+end_example
+
      Did you know what this command would do? Do you recognize the
      output in the session buffer? If not, type ~?search~ for help,
      then return here again to continue.

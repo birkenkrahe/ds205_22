@@ -16,6 +16,7 @@
       #+HONOR: pledged
     #+end_example
   
-  | FILE          | CONTENT                              | SOLUTIONS |
-  |---------------+--------------------------------------+-----------|
-  | ~save_nb.org~ | Save and load user-defined functions | Yes       |
+  | FILE           | CONTENT                              | SOLUTIONS |
+  |----------------+--------------------------------------+-----------|
+  | ~save_nb.org~  | Save and load user-defined functions | Yes       |
+  | ~repos_nb.org~ | Set default download repository      | Yes       |
