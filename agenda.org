@@ -508,7 +508,7 @@
      #+name: hello
      #+begin_src R :exports both :session :results output
        hello <- function(name) {
-           print(paste("Hello, ", name))
+         print(paste("Hello, ", name))
        }
        hello(name="Marcus")
      #+end_src
@@ -517,7 +517,7 @@
      #+name: hello2
      #+begin_src R :exports both :session :results output
        hello2 <- function(fname,lname) {
-           print(paste("Hello, ", fname, lname,"!"))
+         print(paste("Hello, ", fname, lname,"!"))
        }
        hello2(fname="Marcus", lname="Birkenkrahe")
      #+end_src
@@ -929,7 +929,7 @@
 ** Interactive notebook practice
 
    * Download [[https://github.com/birkenkrahe/ds205/tree/main/practice][save_nb.org from GitHub]] and work through it in class.
-   
+
 ** Next
 
    * Statistical functions (lecture)
@@ -937,12 +937,19 @@
    * ~ggplot2~ (lecture + notebook)
    * Visualizing COVID-19 (project)
 
-* w8s18 (03/02/22)
+* w8s18 (03/04/22)
 
-** Notebook
+** News
 
-   * Download from Schoology folder Notebooks
-  
+   * Improve your grade with a project
+
+** Improve your grade with a project
+
+   If you want to improve your grade, you can talk to me about doing
+   a small, independent research project leading to a writeup in the
+   form of a notebook, or a short (10-15 min) presentation. The topic
+   must be related to the topic of this course.
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
