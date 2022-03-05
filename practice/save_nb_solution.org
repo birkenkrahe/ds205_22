@@ -33,9 +33,9 @@
        search()
      #+end_example
 
-     - [X] Did you know what this command would do? Do you recognize the
-     output in the session buffer? If not, type ~?search~ for help,
-     then return here again to continue.
+     - [X] Did you know what this command would do? Do you recognize
+       the output in the session buffer? If not, type ~?search~ for
+       help, then return here again to continue.
 
    * [X] In case you have multiple buffers open: remember that ~C-x 1~
      closes all but the current buffer, and ~C-x o~ cycles through
