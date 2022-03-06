@@ -15,7 +15,7 @@
   The companion file to this file, less structured and with the
   captain's log, is the [[file:notes.org][notes.org]] file.
 
-* Course introduction - w1s1 (01/12/22)
+* Course introduction - w1s1 (12-Jan)
 ** Welcome
 
    #+attr_html: :width 500px
@@ -105,7 +105,7 @@
    * See you Friday 14-Jan online!
    * Hopefully Wednesday 19-Jan in class!
 
-* Installing R / Windows PATH - w1s2 (01/14/22)
+* Installing R / Windows PATH - w1s2 (14-Jan)
 ** Overview
 
    | HOW      | WHAT                             |
@@ -128,7 +128,7 @@
    * [ ] Install GNU Emacs
    * [ ] Test R in Emacs
 
-* Installing and setting up GNU Emacs - w2s3 (01/19/22)
+* Installing and setting up GNU Emacs - w2s3 (19-Jan)
 ** I'm back
 
    #+caption: "I'm back, baby."
@@ -160,7 +160,7 @@
    * Run R code blocks in an Org file
    * DataCamp assignments beginning soon!
 
-* Understand Emacs Org-mode - w2s4 (01/21/22)
+* Understand Emacs Org-mode - w2s4 (21-Jan)
 ** Overview
 
    | HOW          | WHAT                       |
@@ -184,7 +184,7 @@
    * Create Emacs Org file
    * Run R code blocks in an Org file
    * DataCamp assignments beginning soon
-* Customizing Emacs (init file) - w3s5 (01/24/22)
+* Customizing Emacs (init file) - w3s5 (24-Jan)
 ** Overview
 
    |--------------------------+-------------------------------------------------------|
@@ -239,7 +239,7 @@
    #+attr_html: :width 500px
    [[./img/datacamp1.png]]
 
-* Running code in Org-mode 1 - w3s6 (01/26/22)
+* Running code in Org-mode 1 - w3s6 (26-Jan)
 ** Overview
 
    |----------+------------------------------------------------------+--------------|
@@ -267,7 +267,7 @@
    #+attr_html: :width 500px
    [[./img/datacamp1.png]]
 
-* Running code in Org-mode 2 - w3s7 (01/28/22)
+* Running code in Org-mode 2 - w3s7 (28-Jan)
 
   1) We continue where we left it last Wednesday
 
@@ -282,7 +282,7 @@
 
   5) Submit results to Schoology.
 
-* Org-mode lab session - w4s8 (01/31/22)
+* Org-mode lab session - w4s8 (31-Jan)
 
   #+caption: Teaching Emacs on Dagobah
   #+attr_html: :width 400px
@@ -320,7 +320,7 @@
    * Check out the [[https://www.datacamp.com/resources/webinars/webinar-2022-data-trends-and-predictions-1][webinar recording]] with DataCamp luminaries (panel)
    * Use the breathing space to complete the Emacs tutorial (~C-h t~)
 
-* 2022 Data Trends - w4s9 (02/02/22)
+* 2022 Data Trends - w4s9 (2-Feb)
 
   #+begin_quote
   We meet today at 3-3.5- PM in the seminar room Lyon 106 - this room
@@ -350,7 +350,7 @@
    * Quiz 3 - Conditionals and Control Workflow (DataCamp review)
    * Test 1 (Friday 11 Feb 3 PM)
    * Interactive R notebook - Writing functions
-* Studying with DataCamp - w5s10 (02/07/22)
+* Studying with DataCamp - w5s10 (7-Feb)
 ** Overview
 
    |-----------+-------------------------------------------|
@@ -386,7 +386,7 @@
    * Interactive R notebook - loop problems
    * Test 1 (Friday 11 Feb 3 PM)
 
-* Installing packages, using index vectors - w5s11 (02/09/22)
+* Installing packages, using index vectors - w5s11 (9-Feb)
 ** Overview
 
    |---------+---------------------------------|
@@ -410,7 +410,7 @@
    * Test 1 (Friday 11 Feb 3-3.50 PM)
    * Matthew Stewart, Stone Ward (Friday 18 Feb 3-3.50 PM)
 
-* Writing functions 1- w6s13 - (02/14/22)
+* Writing functions 1- w6s13 - (14-Feb)
 ** News
 
    * [[https://improvetheworld.net/student-programs/student-innovation-challenge/][2022 Data analytics competition (accounting data)]]
@@ -458,7 +458,7 @@
    * Wednesday: Review of test 1
    * See some fun plotting techniques
 
-* Reviewing test 1, xkcd, plots - w6s14 (02/16/22)
+* Reviewing test 1, xkcd, plots - w6s14 (16-Feb)
 ** News
 
    * Eliminated some DataCamp assignments
@@ -664,7 +664,7 @@
    * Statistical functions
    * Reading tables with ~read.table~
 
-* Guest talk - Stone Ward - w6s15 (02/18/22)
+* Guest talk - Stone Ward - w6s15 (18-Feb)
 ** Potential questions:
 
    These are my questions informed e.g. by the 2022 data trends report.
@@ -722,7 +722,7 @@
        clients?[fn:3]
    16)
 
-* Guest talk - Post mortem - w7s16 (02/21/22)
+* Guest talk - Post mortem - w7s16 (21-Feb)
 ** News
 
    * If you answered TRUE for question 18 on vectorization, contact me
@@ -881,7 +881,7 @@
    * Reading tables
    * ~apply~ family of functions
 
-* Writing functions 2 - w8s17 (02/28/22)
+* Emacs recent files, Writing functions 2 - w8s17 (28-Feb)
 ** News
 
    * Updated schedule: ~Rcpp~, ~bash~, ~Excel~ and ~SQLite~
@@ -936,7 +936,7 @@
    * ~ggplot2~ (lecture + notebook)
    * Visualizing COVID-19 (project)
 
-* w8s18 (03/04/22)
+* Change R download repo - w8s18 (4-Mar)
 
 ** News
 
@@ -955,6 +955,16 @@
 ** Next
 
    * Tour of ~apply~ (notebook)
+   * ~ggplot2~ (lecture + notebook)
+   * Visualizing COVID-19 (project)
+
+* NEXT Tour of ~apply~ - w9s19 (7-Mar)     
+** News
+
+   * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+
+** Next
+
    * ~ggplot2~ (lecture + notebook)
    * Visualizing COVID-19 (project)
 
