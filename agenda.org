@@ -962,6 +962,7 @@
 ** News
 
    * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+   * [ ] Emacs package of the week: Org Pomodoro Timer
 
 ** Next
 
