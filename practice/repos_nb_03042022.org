@@ -3,7 +3,7 @@
 #+subtitle: Practice notebook for DSC 205 Spring 2022
 #+options: toc:nil ^:nil
 #+startup: hideblocks overview
-n** README
+** README
 
    In this notebook, you're learning and practicing how to set the
    repository for R package uploads and upgrades using a
