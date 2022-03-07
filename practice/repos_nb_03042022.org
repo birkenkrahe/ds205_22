@@ -78,7 +78,9 @@
 
      #+name: google
      #+begin_quote
-     ANSWER:
+     ANSWER: because the local documentation is aligned with the
+     version of R that you're actually using right now, while Google
+     will serve any documentation using their (unknown) algorithm.
      #+end_quote
 
    * [X] Check current setting of the download repo with the R

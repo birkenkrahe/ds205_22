@@ -46,7 +46,7 @@
 
    * [ ] In case you have multiple buffers open: remember that ~C-x 1~
      closes all but the current buffer, and ~C-x o~ cycles through
-     them[fn:1].
+     them.
 
    * [ ] If you have any trouble with executing the ~hello world~
      program, analyze the problem by yourself first. Typical sources
@@ -62,10 +62,10 @@
 
 ** Change package installation repository
 
-   * [ ] The utility function ~options~ allows you to set and see the
+   * [X] The utility function ~options~ allows you to set and see the
      default download repository.
 
-   * [ ] Open the (local) help for ~options~ (you need to go to the
+   * [X] Open the (local) help for ~options~ (you need to go to the
      ~*R*~ session buffer to do this, or open a new buffer with ~M-x
      R~) - or google the documentation.
 
@@ -74,7 +74,7 @@
      #+attr_html: :width 400px
      [[./img/doc.png]]
 
-   * [ ] Why is googling the help for this function only second best
+   * [X] Why is googling the help for this function only second best
      compared to  looking up the help using R on your PC?
 
      #+name: google
@@ -84,7 +84,7 @@
      will serve any documentation using their (unknown) algorithm.
      #+end_quote
 
-   * [ ] Check current setting of the download repo with the R
+   * [X] Check current setting of the download repo with the R
      function ~getOption~.
 
      #+name: getOption1
@@ -92,7 +92,10 @@
        getOption("repos")
      #+end_src
 
-   * [ ] Write a function ~frepos~ that changes the installation
+     #+RESULTS: getOption1
+     : [1] "https://mirrors.nics.utk.edu/cran/"
+
+   * [X] Write a function ~frepos~ that changes the installation
      repository to the URL ~"https://cloud.r-project.org/"~. The
      function should take one argument only - a ~character~ vector
      with the repo URL as its only element.
@@ -104,11 +107,11 @@
        frepos(r)
      #+end_src
 
-   * [ ] The chosen URL automatically picks the nearest CRAN
+   * [X] The chosen URL automatically picks the nearest CRAN
      mirror. Though the output from [[repos]] is set to ~silent~, you
      should see the mirror site URL in the echo area at the bottom.
 
-   * [ ] Re-run the ~getOption~ function on the attribute of ~options~
+   * [X] Re-run the ~getOption~ function on the attribute of ~options~
      that you just changed in ~frepos~ to check the download repo.
 
      #+name: getOption2
@@ -116,12 +119,15 @@
        getOption("repos")
      #+end_src
 
+     #+RESULTS: getOption2
+     : [1] "https://mirrors.nics.utk.edu/cran/"
+
    * To test the function, you need to install a package. Let's use
      ~ggplot2~ for that, since we're going to need it soon.
 
 ** Install and test a package from the new repo location
 
-   * [ ] Split the screen horizontally with ~C-x 2~ to see both this
+   * [X] Split the screen horizontally with ~C-x 2~ to see both this
      file and the R session in one window (see figure [[split]] - to open
      the figure, use the toggling command ~C-x C-c C-v~).
 
@@ -130,9 +136,9 @@
      #+attr_html: :width 400px
      [[./img/split.png]]
 
-   * [ ] Install and load ~ggplot2~ (if you already have the package,
+   * [X] Install and load ~ggplot2~ (if you already have the package,
      re-install it - this won't hurt unless your work relies on an
-     older version of the package).
+     older version of the package)[fn:1].
 
      #+name: installTest
      #+begin_src R :session
@@ -159,6 +165,9 @@
        qplot(rnorm(100))
      #+end_src
 
+     #+RESULTS: qplot1
+     : Error in qplot(rnorm(100)) : could not find function "qplot"
+
      #+RESULTS:
      : `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
@@ -179,33 +188,35 @@
      #+RESULTS: qplot2
      [[file:plot.png]]
 
-   * [ ] Note that your file will be saved whereever your current
+   * [X] Note that your file will be saved whereever your current
      working directory is - find it with ~getwd()~ and open your file,
      or change the working directory with ~setwd()~, change the path
      in the header argument and re-run the code block [[qplot2]].
 
      #+begin_src R :exports both :session :results output
        getwd()
-       setwd("w:/My Drive/2022_Spring/ds205/practice/")
+       setwd("c:/Users/birkenkrahe/Documents/GitHub/")
+       getwd()
      #+end_src
 
      #+RESULTS:
-     : [1] "c:/Users/birkenkrahe/Documents/GitHub/admin"
+     : [1] "c:/Users/birkenkrahe/Documents/GitHub/ds205/practice"
+     : [1] "c:/Users/birkenkrahe/Documents/GitHub"
 
 ** Save your function and use it in your R init file
 
-   * [ ] Save the function ~frepos~ to your home directory.
+   * [X] Save the function ~frepos~ to your home directory.
 
      #+name: saveFunction
    #+begin_src R :exports both :session :results silent
      save(frepos, file='~/frepos')
    #+end_src
 
-   * [ ] Check that the (binary) function file is there.
+   * [X] Check that the (binary) function file is there.
 
 ** Use function in your R init file
 
-   * [ ] Load the function to your ~.Rprofile~ file. Create one if
+   * [X] Load the function to your ~.Rprofile~ file. Create one if
      necessary. This file contains R code and is executed by
      ~Rscript~. Put the code here and test it.
 
@@ -215,7 +226,7 @@
    #+end_src
 
    #+RESULTS:
-   : https://mirrors.nics.utk.edu/cran/
+   : https://cloud.r-project.org/
 
    * To test the ~.Rprofile~ setup, start another R session and test
      the download repo location with ~getOption~ as before.
@@ -229,3 +240,10 @@
      : [1] "https://mirrors.nics.utk.edu/cran/"
 
 ** Summary
+
+* Footnotes
+
+[fn:1]If your OS reports that it cannot write to the library location
+(e.g. because it is in the system partition on Windows), change the
+location by running ~.libPaths(new)~ and/or adding this command to
+your ~.Rprofile~ file.
