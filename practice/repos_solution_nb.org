@@ -205,13 +205,15 @@
 
 ** Save your function and use it in your R init file
 
-   * [X] Save the function ~frepos~ to your home directory.
+   * [X] Save the function ~frepos~ to your home directory. Using the
+     absolute path (e.g. ~"c:\Users\birkenkrahe\frepos"~) to the file
+     is safer here.
 
      #+name: saveFunction
    #+begin_src R :exports both :session :results silent
      save(frepos, file='~/frepos')
    #+end_src
-
+   
    * [X] Check that the (binary) function file is there.
 
 ** Use function in your R init file
@@ -253,7 +255,8 @@
    * [ ] To find a function in currently installed packages, use ~??~
    * [ ] Whenever you find yourself doing the same thing several
      times, e.g. run a function with different values, write your own
-
+   * [ ] You can check the path where packages are downloaded to with
+     ~.Library~
 
 * Footnotes
 
@@ -261,3 +264,6 @@
 (e.g. because it is in the system partition on Windows), change the
 location by running ~.libPaths(new)~ and/or adding this command to
 your ~.Rprofile~ file.
+
+
+
