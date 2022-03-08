@@ -497,7 +497,7 @@
     "For excel, if students can make a pivot table, use sumif, xlookup, and
     make a chart quickly then they're in a good spot with the program."
     #+end_quote
-    
+
   * I had another exchange on Excel with Lyon Prof of Exercise
     Science, Matthew Peterson. He asked:
     #+begin_quote
@@ -511,13 +511,13 @@
     Good morning, Matthew - Sure, no problem. Here is a series of more
     or less famous cases: "[[https://www.teampay.co/insights/biggest-excel-mistakes-of-all-time/][The 7 Biggest Excel Mistakes of All Time]]"
     (teampay, 2022).
-    
+
     Here is a more high profile case that I often discuss with my
     students. Though at Lyon, unless they are business students, they
     won't be able to appreciate it as much perhaps: "[[https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646][The
     Reinhart-Rogoff error - or how not to Excel at economics]]"
     (Borwein/Bailey, 2013).
-    
+
     My main point here re: Excel - 1) find alternatives (esp. for
     visualization, R is great and really much easier to learn than
     Excel) 2) check all results using original data (or probes) if you
@@ -554,6 +554,45 @@
     things moving (the eye likes it - but visualization is only
     superficially for the eye). There are exceptions but one needs to
     check in each case if running images add value.
+
+* Change R download repo - w8s18 + 19 (7 Mar)
+
+  Device control is quite important in all graphical program. In R,
+  there are multiple functions that achieve this - look up
+  ~help(dev.list)~ for the documentation, especially
+  ~example(dev.list)~ (examples at the end of the help file).
+
+  Even though the [[eXample]] is supposedly Unix-specific, it runs under
+  Windows, too. ~x11~ is the windows manager. In the example, a series
+  of devices is opened, used, and finally closed again.
+
+  #+name: eXample
+  #+begin_src R :exports both :session :results output
+    x11()
+    plot(1:10)
+    x11()
+    plot(rnorm(10))
+    dev.set(dev.prev())
+    abline(0, 1) # through the 1:10 points
+    dev.set(dev.next())
+    abline(h = 0, col = "gray") # for the residual plot
+    dev.set(dev.prev())
+    dev.off(); dev.off() #- close the two X devices
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  windows
+        2
+  windows
+        3
+  windows
+        2
+  windows
+        3
+  null device
+            1
+  #+end_example
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

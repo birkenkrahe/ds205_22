@@ -936,29 +936,44 @@
    * ~ggplot2~ (lecture + notebook)
    * Visualizing COVID-19 (project)
 
-* Change R download repo - w8s18 (4-Mar)
-
+* Change R download repo - w8s18 + 19 (4-Mar)
 ** News
 
-   * Mid-term grades - Improve your grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
-   * I only realized today that I can dispense with GitHub
-   \
+   * [X] Mid-term grades - Improve your grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
+   * [X] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+
 ** Writing functions: set default R download repo
 
    * Download ~repos_nb.org~ from GDrive and get cracking!
+   * You can find the solution in ~repos_solution_nb.org~ in GDrive.
 
 ** Next
 
-   * Tour of ~apply~ (notebook)
-   * ~ggplot2~ (lecture + notebook)
-   * Visualizing COVID-19 (project)
+   * Statistical functions
+   * Tour of ~apply~
+   * ~ggplot2~ graphics
+   * Visualizing COVID-19 (DataCapmp project)
 
-* NEXT Statistical functions in R - w9s19 (7-Mar)
+* Controlling graphical devices, system functions - w9s19 (7-Mar)
 ** News
 
-   * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+   * [X] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+
+** Writing functions: set default R download repo
+
+   * Download ~repos_nb.org~ from GDrive and get cracking!
+   * You can find the solution in ~repos_solution_nb.org~ in GDrive.
+
+** Next
+
+   * Tour of ~apply~
+   * ~ggplot2~ graphics
+   * Visualizing COVID-19 (DataCapmp project)
+     
+* Pomodoro timer, tour of ~apply~ - w9s20 (9-Mar)
+** News
+
    * [ ] Emacs package of the week: Org Pomodoro Timer
-   * [ ] R Stats functions
 
 ** Emacs package of the week: Pomorodo timer
 
@@ -974,18 +989,18 @@
        (setq org-clock-sound "c:/Users/birkenkrahe/Documents/Sounds/ding.mp3")
      #+end_src
 
-** R Stats functions
+** Tour of ~apply~
 
-   * ~stats_nb.org~ notebook in GDrive
-
+   * Interactive notebook
+     
 ** Next
 
-   * Tour of ~apply~ (lecture + notebook)
    * Quiz 4-6 check and test preparation
    * ~ggplot2~ (lecture + notebook)
    * Visualizing COVID-19 (project)
 
-* NEXT Tour of ~apply~ - w9s20 (9-Mar)
+* Test preparation / quiz 4-6 - w9s21 (11-Mar)
+* Lab: COVID-19
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
