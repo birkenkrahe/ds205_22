@@ -32,12 +32,12 @@
   |    |      | +Wed-23-Feb+ | CANCELLED (WEATHER)     |                                  | CANCELLED (weather)          |            |
   |    |      | +Fri-25-Feb+ | CANCELLED (WEATHER)     |                                  | Statistical functions        |            |
   |----+------+--------------+-------------------------+----------------------------------+------------------------------+------------|
-  |    |    8 | Mon-28-Feb   | Save and load functions | R: apply family (Mar 1)          |                              | Quiz 5     |
+  | 17 |    8 | Mon-28-Feb   | Save and load functions | R: apply family (Mar 1)          |                              | Quiz 5     |
   |    |      | +Wed-02-Mar+ |                         |                                  | CANCELLED (illness)          |            |
-  |    |      | Fri-04-Mar   | Change download repo    |                                  |                              |            |
+  | 18 |      | Fri-04-Mar   | Change download repo    |                                  |                              |            |
   |----+------+--------------+-------------------------+----------------------------------+------------------------------+------------|
-  |    |    9 | Mon-07-Mar   | Change download repo    |                                  | Device control, library      | Quiz 6     |
-  |    |      | Wed-09-Mar   | Tour of ggplot2/dplyr   |                                  |                              |            |
+  | 19 |    9 | Mon-07-Mar   | Change download repo    |                                  | Device control, library      | Quiz 6     |
+  | 20 |      | Wed-09-Mar   | Tour of ggplot2/dplyr   |                                  |                              |            |
   |    |      | Fri-11-Mar   |                         | R: Utilities                     | Quiz rehearsal               |            |
   |----+------+--------------+-------------------------+----------------------------------+------------------------------+------------|
   |    |   10 | Mon-14-Mar   |                         |                                  |                              | Test 2     |
