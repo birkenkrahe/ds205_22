@@ -970,7 +970,13 @@
    * ~ggplot2~ graphics
    * Visualizing COVID-19 (DataCapmp project)
      
-* Pomodoro timer, tour of ~apply~ - w9s20 (9-Mar)
+* TODO Pomodoro timer - Tour of ggplot ? - w9s20 (9-Mar)
+** Preparations for test 2 (Mon 14-Mar)
+
+   * Test 2 will only cover questions from quiz 4-6 + new questions.
+   * You can find quiz 4-6 with solutions + feedback as PDF ([[https://github.com/birkenkrahe/os420/tree/main/quiz][in /quiz]])
+   * I will create an update of content Org files ([[https://github.com/birkenkrahe/os420/tree/main/pdf][in pdf/]])
+
 ** Emacs package of the week: Pomorodo timer
 
    * Auto-complete ~org-timer-~
@@ -1035,12 +1041,6 @@
    * Visualizing COVID-19 (project)
 
 * Test preparation / quiz 4-6 - w9s21 (11-Mar)
-* Lab: COVID-19 project - w10 (14-16-18-Mar)
-
-  * Tour of ~ggplot2~ (Mon 14-Mar)
-  * Tour of ~dplyr~ (Wed 16-Mar)
-  * Project post-mortem (Fri 18-Mar)
-
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
