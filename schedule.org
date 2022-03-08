@@ -36,11 +36,11 @@
   |    |      | +Wed-02-Mar+ |                         |                                  | CANCELLED (illness)          |            |
   |    |      | Fri-04-Mar   | Change download repo    |                                  |                              |            |
   |----+------+--------------+-------------------------+----------------------------------+------------------------------+------------|
-  |    |    9 | Mon-07-Mar   | Change download repo    |                                  | Device control, library                              | Quiz 6     |
-  |    |      | Wed-09-Mar   | Tour of ~apply~         |                                  |                              |            |
+  |    |    9 | Mon-07-Mar   | Change download repo    |                                  | Device control, library      | Quiz 6     |
+  |    |      | Wed-09-Mar   | Tour of ggplot2/dplyr   |                                  |                              |            |
   |    |      | Fri-11-Mar   |                         | R: Utilities                     | Quiz rehearsal               |            |
   |----+------+--------------+-------------------------+----------------------------------+------------------------------+------------|
-  |    |   10 | Mon-14-Mar   |                         |                                  | Lab: COVID-19 project        | Test 2     |
+  |    |   10 | Mon-14-Mar   |                         |                                  |                              | Test 2     |
   |    |      | Wed-16-Mar   |                         |                                  |                              |            |
   |    |      | Fri-18-Mar   |                         | Project: COVID-19                |                              |            |
   |----+------+--------------+-------------------------+----------------------------------+------------------------------+------------|
