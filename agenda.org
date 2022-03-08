@@ -954,7 +954,7 @@
    * ~ggplot2~ graphics
    * Visualizing COVID-19 (DataCapmp project)
 
-* Controlling graphical devices, system functions - w9s19 (7-Mar)
+* Graphical devices dev.list, .Library - w9s19 (7-Mar)
 ** News
 
    * [X] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
@@ -971,10 +971,6 @@
    * Visualizing COVID-19 (DataCapmp project)
      
 * Pomodoro timer, tour of ~apply~ - w9s20 (9-Mar)
-** News
-
-   * [ ] Emacs package of the week: Org Pomodoro Timer
-
 ** Emacs package of the week: Pomorodo timer
 
    * Auto-complete ~org-timer-~
@@ -989,9 +985,48 @@
        (setq org-clock-sound "c:/Users/birkenkrahe/Documents/Sounds/ding.mp3")
      #+end_src
 
-** Tour of ~apply~
+** Multiple device control
 
-   * Interactive notebook
+   Device control is quite important in all graphical program. In R,
+   there are multiple functions that achieve this - look up
+   ~help(dev.list)~ for the documentation, especially
+   ~example(dev.list)~ (examples at the end of the help file).
+
+   Even though the [[eXample]] is supposedly Unix-specific, it runs under
+   Windows, too. ~x11~ is the windows manager. In the example, a series
+   of devices is opened, used, and finally closed again.
+
+   #+name: eXample
+   #+begin_src R :exports both :session :results output
+     x11()
+     plot(1:10)
+     x11()
+     plot(rnorm(10))
+     dev.set(dev.prev())
+     abline(0, 1) # through the 1:10 points
+     dev.set(dev.next())
+     abline(h = 0, col = "gray") # for the residual plot
+     dev.set(dev.prev())
+     dev.off(); dev.off() #- close the two X devices
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   windows
+         2
+   windows
+         3
+   windows
+         2
+   windows
+         3
+   null device
+             1
+   #+end_example
+
+
+   * Tour of ~apply~
+   * Tour of statistical functions
      
 ** Next
 
@@ -1000,7 +1035,12 @@
    * Visualizing COVID-19 (project)
 
 * Test preparation / quiz 4-6 - w9s21 (11-Mar)
-* Lab: COVID-19
+* Lab: COVID-19 project - w10 (14-16-18-Mar)
+
+  * Tour of ~ggplot2~ (Mon 14-Mar)
+  * Tour of ~dplyr~ (Wed 16-Mar)
+  * Project post-mortem (Fri 18-Mar)
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
