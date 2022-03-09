@@ -10,10 +10,10 @@
   provided the underlying dataset is interesting.
 
   For an overview of both of these "Tidyverse" packages, see the
-  online reference pages for [[https://ggplot2.tidyverse.org/reference/][ggplot2]] and [[https://dplyr.tidyverse.org/reference/index.html][dplyr]].
+  online reference pages for [[https://ggplot2.tidyverse.org/reference/][ggplot2]] and [[https://dplyr.tidyverse.org/reference/index.html][dplyr]][fn:1].
 
   The dataset is gapminder adapted from the original dataset created
-  by Hans Rosling[fn:1].
+  by Hans Rosling[fn:2].
 
   This workbook is adapted from chapter 10 "Data visualization in
   practice" of the textbook by [[dslabs][Irizarry (2021)]], which is also the
@@ -41,15 +41,12 @@
     #+end_example
 
   * [ ] Check where your computer gets its CRAN packages from. If you
-    put the code [[optionsRepos]] into ~.Rprofile~
+    put the code [[optionsRepos]] into ~.Rprofile~, you should get the
+    nearest mirror.
 
     #+begin_src R :exports both :session :results output
       getOption("repos")
     #+end_src
-
-    #+RESULTS:
-    :                         CRAN
-    : "https://cran.microsoft.com"
 
   * [ ] We need a couple of packages and a dataset. Put the code in
     [[lockAndLoad] below and run it:
@@ -59,398 +56,26 @@
     3) Load the ~gapminder~ dataset from the ~dslabs~ package
 
     #+name: lockAndLoad
-    #+begin_src R :exports both :session :results output
-#      install.packages("tidyverse")
-#      install.packages("dslabs")
-      library(tidyverse)
-      library(dslabs)
-      data(gapminder)
+    #+begin_src R :exports both :session :results silent
+
     #+end_src
 
-    #+RESULTS: lockAndLoad
-    #+begin_example
-    Installing package into 'C:/Users/birkenkrahe/Documents/GitHub/R/win-library/4.1'
-    (as 'lib' is unspecified)
-    also installing the dependencies 'sys', 'bit', 'ps', 'sass', 'base64enc', 'fastmap', 'rappdirs', 'rematch', 'askpass', 'bit64', 'prettyunits', 'processx', 'evaluate', 'highr', 'yaml', 'xfun', 'bslib', 'htmltools', 'jquerylib', 'tinytex', 'backports', 'generics', 'assertthat', 'blob', 'DBI', 'tidyselect', 'data.table', 'gargle', 'uuid', 'cellranger', 'curl', 'ids', 'rematch2', 'cpp11', 'mime', 'openssl', 'clipr', 'vroom', 'tzdb', 'Rcpp', 'progress', 'callr', 'fs', 'knitr', 'rmarkdown', 'selectr', 'stringi', 'broom', 'dbplyr', 'dplyr', 'dtplyr', 'forcats', 'googledrive', 'googlesheets4', 'haven', 'hms', 'httr', 'jsonlite', 'lubridate', 'modelr', 'purrr', 'readr', 'readxl', 'reprex', 'rstudioapi', 'rvest', 'stringr', 'tidyr', 'xml2'
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/sys_3.4.zip'
-    Content type 'application/zip' length 59916 bytes (58 KB)
-    downloaded 58 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/bit_4.0.4.zip'
-    Content type 'application/zip' length 640745 bytes (625 KB)
-    downloaded 625 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/ps_1.6.0.zip'
-    Content type 'application/zip' length 776054 bytes (757 KB)
-    downloaded 757 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/sass_0.4.0.zip'
-    Content type 'application/zip' length 3639366 bytes (3.5 MB)
-    downloaded 3.5 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/base64enc_0.1-3.zip'
-    Content type 'application/zip' length 43156 bytes (42 KB)
-    downloaded 42 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/fastmap_1.1.0.zip'
-    Content type 'application/zip' length 215439 bytes (210 KB)
-    downloaded 210 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/rappdirs_0.3.3.zip'
-    Content type 'application/zip' length 58828 bytes (57 KB)
-    downloaded 57 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/rematch_1.0.1.zip'
-    Content type 'application/zip' length 16236 bytes (15 KB)
-    downloaded 15 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/askpass_1.1.zip'
-    Content type 'application/zip' length 243675 bytes (237 KB)
-    downloaded 237 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/bit64_4.0.5.zip'
-    Content type 'application/zip' length 565587 bytes (552 KB)
-    downloaded 552 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/prettyunits_1.1.1.zip'
-    Content type 'application/zip' length 37789 bytes (36 KB)
-    downloaded 36 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/processx_3.5.2.zip'
-    Content type 'application/zip' length 1246571 bytes (1.2 MB)
-    downloaded 1.2 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/evaluate_0.15.zip'
-    Content type 'application/zip' length 79453 bytes (77 KB)
-    downloaded 77 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/highr_0.9.zip'
-    Content type 'application/zip' length 46713 bytes (45 KB)
-    downloaded 45 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/yaml_2.3.5.zip'
-    Content type 'application/zip' length 209801 bytes (204 KB)
-    downloaded 204 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/xfun_0.30.zip'
-    Content type 'application/zip' length 405583 bytes (396 KB)
-    downloaded 396 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/bslib_0.3.1.zip'
-    Content type 'application/zip' length 5038308 bytes (4.8 MB)
-    downloaded 4.8 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/htmltools_0.5.2.zip'
-    Content type 'application/zip' length 347054 bytes (338 KB)
-    downloaded 338 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/jquerylib_0.1.4.zip'
-    Content type 'application/zip' length 525855 bytes (513 KB)
-    downloaded 513 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/tinytex_0.37.zip'
-    Content type 'application/zip' length 128929 bytes (125 KB)
-    downloaded 125 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/backports_1.4.1.zip'
-    Content type 'application/zip' length 110673 bytes (108 KB)
-    downloaded 108 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/generics_0.1.2.zip'
-    Content type 'application/zip' length 79170 bytes (77 KB)
-    downloaded 77 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/assertthat_0.2.1.zip'
-    Content type 'application/zip' length 54914 bytes (53 KB)
-    downloaded 53 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/blob_1.2.2.zip'
-    Content type 'application/zip' length 48104 bytes (46 KB)
-    downloaded 46 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/DBI_1.1.2.zip'
-    Content type 'application/zip' length 741759 bytes (724 KB)
-    downloaded 724 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/tidyselect_1.1.2.zip'
-    Content type 'application/zip' length 206488 bytes (201 KB)
-    downloaded 201 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/data.table_1.14.2.zip'
-    Content type 'application/zip' length 2600302 bytes (2.5 MB)
-    downloaded 2.5 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/gargle_1.2.0.zip'
-    Content type 'application/zip' length 537826 bytes (525 KB)
-    downloaded 525 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/uuid_1.0-3.zip'
-    Content type 'application/zip' length 45901 bytes (44 KB)
-    downloaded 44 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/cellranger_1.1.0.zip'
-    Content type 'application/zip' length 104948 bytes (102 KB)
-    downloaded 102 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/curl_4.3.2.zip'
-    Content type 'application/zip' length 4322451 bytes (4.1 MB)
-    downloaded 4.1 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/ids_1.0.1.zip'
-    Content type 'application/zip' length 123997 bytes (121 KB)
-    downloaded 121 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/rematch2_2.1.2.zip'
-    Content type 'application/zip' length 47567 bytes (46 KB)
-    downloaded 46 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/cpp11_0.4.2.zip'
-    Content type 'application/zip' length 327416 bytes (319 KB)
-    downloaded 319 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/mime_0.12.zip'
-    Content type 'application/zip' length 48094 bytes (46 KB)
-    downloaded 46 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/openssl_2.0.0.zip'
-    Content type 'application/zip' length 3994824 bytes (3.8 MB)
-    downloaded 3.8 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/clipr_0.8.0.zip'
-    Content type 'application/zip' length 54865 bytes (53 KB)
-    downloaded 53 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/vroom_1.5.7.zip'
-    Content type 'application/zip' length 2067785 bytes (2.0 MB)
-    downloaded 2.0 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/tzdb_0.2.0.zip'
-    Content type 'application/zip' length 1445300 bytes (1.4 MB)
-    downloaded 1.4 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/Rcpp_1.0.8.zip'
-    Content type 'application/zip' length 3317916 bytes (3.2 MB)
-    downloaded 3.2 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/progress_1.2.2.zip'
-    Content type 'application/zip' length 85963 bytes (83 KB)
-    downloaded 83 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/callr_3.7.0.zip'
-    Content type 'application/zip' length 438143 bytes (427 KB)
-    downloaded 427 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/fs_1.5.2.zip'
-    Content type 'application/zip' length 607705 bytes (593 KB)
-    downloaded 593 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/knitr_1.37.zip'
-    Content type 'application/zip' length 1472800 bytes (1.4 MB)
-    downloaded 1.4 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/rmarkdown_2.12.zip'
-    Content type 'application/zip' length 3707064 bytes (3.5 MB)
-    downloaded 3.5 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/selectr_0.4-2.zip'
-    Content type 'application/zip' length 490752 bytes (479 KB)
-    downloaded 479 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/stringi_1.7.6.zip'
-    Content type 'application/zip' length 16449819 bytes (15.7 MB)
-    downloaded 15.7 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/broom_0.7.12.zip'
-    Content type 'application/zip' length 1811941 bytes (1.7 MB)
-    downloaded 1.7 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/dbplyr_2.1.1.zip'
-    Content type 'application/zip' length 836172 bytes (816 KB)
-    downloaded 816 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/dplyr_1.0.8.zip'
-    Content type 'application/zip' length 1381590 bytes (1.3 MB)
-    downloaded 1.3 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/dtplyr_1.2.1.zip'
-    Content type 'application/zip' length 330257 bytes (322 KB)
-    downloaded 322 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/forcats_0.5.1.zip'
-    Content type 'application/zip' length 357806 bytes (349 KB)
-    downloaded 349 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/googledrive_2.0.0.zip'
-    Content type 'application/zip' length 1872561 bytes (1.8 MB)
-    downloaded 1.8 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/googlesheets4_1.0.0.zip'
-    Content type 'application/zip' length 492202 bytes (480 KB)
-    downloaded 480 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/haven_2.4.3.zip'
-    Content type 'application/zip' length 1291709 bytes (1.2 MB)
-    downloaded 1.2 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/hms_1.1.1.zip'
-    Content type 'application/zip' length 104056 bytes (101 KB)
-    downloaded 101 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/httr_1.4.2.zip'
-    Content type 'application/zip' length 518893 bytes (506 KB)
-    downloaded 506 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/jsonlite_1.8.0.zip'
-    Content type 'application/zip' length 1155899 bytes (1.1 MB)
-    downloaded 1.1 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/lubridate_1.8.0.zip'
-    Content type 'application/zip' length 1719623 bytes (1.6 MB)
-    downloaded 1.6 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/modelr_0.1.8.zip'
-    Content type 'application/zip' length 202997 bytes (198 KB)
-    downloaded 198 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/purrr_0.3.4.zip'
-    Content type 'application/zip' length 429788 bytes (419 KB)
-    downloaded 419 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/readr_2.1.2.zip'
-    Content type 'application/zip' length 1818411 bytes (1.7 MB)
-    downloaded 1.7 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/readxl_1.3.1.zip'
-    Content type 'application/zip' length 1717295 bytes (1.6 MB)
-    downloaded 1.6 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/reprex_2.0.1.zip'
-    Content type 'application/zip' length 500383 bytes (488 KB)
-    downloaded 488 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/rstudioapi_0.13.zip'
-    Content type 'application/zip' length 302766 bytes (295 KB)
-    downloaded 295 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/rvest_1.0.2.zip'
-    Content type 'application/zip' length 207395 bytes (202 KB)
-    downloaded 202 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/stringr_1.4.0.zip'
-    Content type 'application/zip' length 216838 bytes (211 KB)
-    downloaded 211 KB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/tidyr_1.2.0.zip'
-    Content type 'application/zip' length 1115364 bytes (1.1 MB)
-    downloaded 1.1 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/xml2_1.3.3.zip'
-    Content type 'application/zip' length 2911651 bytes (2.8 MB)
-    downloaded 2.8 MB
-
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/tidyverse_1.3.1.zip'
-    Content type 'application/zip' length 430187 bytes (420 KB)
-    downloaded 420 KB
-
-    package 'sys' successfully unpacked and MD5 sums checked
-    package 'bit' successfully unpacked and MD5 sums checked
-    package 'ps' successfully unpacked and MD5 sums checked
-    package 'sass' successfully unpacked and MD5 sums checked
-    package 'base64enc' successfully unpacked and MD5 sums checked
-    package 'fastmap' successfully unpacked and MD5 sums checked
-    package 'rappdirs' successfully unpacked and MD5 sums checked
-    package 'rematch' successfully unpacked and MD5 sums checked
-    package 'askpass' successfully unpacked and MD5 sums checked
-    package 'bit64' successfully unpacked and MD5 sums checked
-    package 'prettyunits' successfully unpacked and MD5 sums checked
-    package 'processx' successfully unpacked and MD5 sums checked
-    package 'evaluate' successfully unpacked and MD5 sums checked
-    package 'highr' successfully unpacked and MD5 sums checked
-    package 'yaml' successfully unpacked and MD5 sums checked
-    package 'xfun' successfully unpacked and MD5 sums checked
-    package 'bslib' successfully unpacked and MD5 sums checked
-    package 'htmltools' successfully unpacked and MD5 sums checked
-    package 'jquerylib' successfully unpacked and MD5 sums checked
-    package 'tinytex' successfully unpacked and MD5 sums checked
-    package 'backports' successfully unpacked and MD5 sums checked
-    package 'generics' successfully unpacked and MD5 sums checked
-    package 'assertthat' successfully unpacked and MD5 sums checked
-    package 'blob' successfully unpacked and MD5 sums checked
-    package 'DBI' successfully unpacked and MD5 sums checked
-    package 'tidyselect' successfully unpacked and MD5 sums checked
-    package 'data.table' successfully unpacked and MD5 sums checked
-    package 'gargle' successfully unpacked and MD5 sums checked
-    package 'uuid' successfully unpacked and MD5 sums checked
-    package 'cellranger' successfully unpacked and MD5 sums checked
-    package 'curl' successfully unpacked and MD5 sums checked
-    package 'ids' successfully unpacked and MD5 sums checked
-    package 'rematch2' successfully unpacked and MD5 sums checked
-    package 'cpp11' successfully unpacked and MD5 sums checked
-    package 'mime' successfully unpacked and MD5 sums checked
-    package 'openssl' successfully unpacked and MD5 sums checked
-    package 'clipr' successfully unpacked and MD5 sums checked
-    package 'vroom' successfully unpacked and MD5 sums checked
-    package 'tzdb' successfully unpacked and MD5 sums checked
-    package 'Rcpp' successfully unpacked and MD5 sums checked
-    package 'progress' successfully unpacked and MD5 sums checked
-    package 'callr' successfully unpacked and MD5 sums checked
-    package 'fs' successfully unpacked and MD5 sums checked
-    package 'knitr' successfully unpacked and MD5 sums checked
-    package 'rmarkdown' successfully unpacked and MD5 sums checked
-    package 'selectr' successfully unpacked and MD5 sums checked
-    package 'stringi' successfully unpacked and MD5 sums checked
-    package 'broom' successfully unpacked and MD5 sums checked
-    package 'dbplyr' successfully unpacked and MD5 sums checked
-    package 'dplyr' successfully unpacked and MD5 sums checked
-    package 'dtplyr' successfully unpacked and MD5 sums checked
-    package 'forcats' successfully unpacked and MD5 sums checked
-    package 'googledrive' successfully unpacked and MD5 sums checked
-    package 'googlesheets4' successfully unpacked and MD5 sums checked
-    package 'haven' successfully unpacked and MD5 sums checked
-    package 'hms' successfully unpacked and MD5 sums checked
-    package 'httr' successfully unpacked and MD5 sums checked
-    package 'jsonlite' successfully unpacked and MD5 sums checked
-    package 'lubridate' successfully unpacked and MD5 sums checked
-    package 'modelr' successfully unpacked and MD5 sums checked
-    package 'purrr' successfully unpacked and MD5 sums checked
-    package 'readr' successfully unpacked and MD5 sums checked
-    package 'readxl' successfully unpacked and MD5 sums checked
-    package 'reprex' successfully unpacked and MD5 sums checked
-    package 'rstudioapi' successfully unpacked and MD5 sums checked
-    package 'rvest' successfully unpacked and MD5 sums checked
-    package 'stringr' successfully unpacked and MD5 sums checked
-    package 'tidyr' successfully unpacked and MD5 sums checked
-    package 'xml2' successfully unpacked and MD5 sums checked
-    package 'tidyverse' successfully unpacked and MD5 sums checked
-
-    The downloaded binary packages are in
-            C:\Users\birkenkrahe\AppData\Local\Temp\RtmpiO7LFr\downloaded_packages
-    Installing package into 'C:/Users/birkenkrahe/Documents/GitHub/R/win-library/4.1'
-    (as 'lib' is unspecified)
-    trying URL 'https://cran.microsoft.com/bin/windows/contrib/4.1/dslabs_0.7.4.zip'
-    Content type 'application/zip' length 4699750 bytes (4.5 MB)
-    downloaded 4.5 MB
-
-    package 'dslabs' successfully unpacked and MD5 sums checked
-
-    The downloaded binary packages are in
-            C:\Users\birkenkrahe\AppData\Local\Temp\RtmpiO7LFr\downloaded_packages
-
-    : -- [1mAttaching packages[22m --------------------------------------- tidyverse 1.3.1 --
-    : [32mv[39m [34mggplot2[39m 3.3.5     [32mv[39m [34mpurrr  [39m 0.3.4
-    : [32mv[39m [34mtibble [39m 3.1.6     [32mv[39m [34mdplyr  [39m 1.0.8
-    : [32mv[39m [34mtidyr  [39m 1.2.0     [32mv[39m [34mstringr[39m 1.4.0
-    : [32mv[39m [34mreadr  [39m 2.1.2     [32mv[39m [34mforcats[39m 0.5.1
-    : -- [1mConflicts[22m ------------------------------------------ tidyverse_conflicts() --
-    : [31mx[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-    : [31mx[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
-
-      #+end_example
+    - I set the output of [[lockAndLoad]] to ~silent~. If you want to see
+      what R did, check the R console session in the ~*R*~ buffer.
+
+    - [ ] [[https://www.gapminder.org/data/][The original Gapminder data set]] is much larger than the
+      [[https://cran.r-project.org/web/packages/gapminder/README.html][subset at CRAN]] or the dslabs dataset.
+
+  * [ ] If you looked at the output of the ~data~ loading command, you
+    may have noticed that the data display is messed up with control
+    characters. If this happens with a familiar command (e.g. ~str~)
+    it's to with the "tibble" format that "Tidyverse" data frames come
+    in. [[https://github.com/emacs-ess/ESS/issues/810][Check here]] what to do to your Emacs + ESS setup to get rid of
+    the extra characters. Tibbles are limited to 10 rows by default.
 
   * [ ] If [[lockAndLoad]] ran successfully, I recommend you go back to
     the code block and comment the ~install.packages~
-    commands. Otherwise, your workbook may attempt to re-install them.  
+    commands. Otherwise, your workbook may attempt to re-install them.
 
   * [ ] You don't need to re-install packages unless a) you upgraded
     to a different version of R, or b) the package was upgraded.
@@ -466,9 +91,169 @@
       update.packages()
     #+end_example
 
+** Section summary
 
-* TODO Checking the data
-* TODO Filtering the data
+   * Knowing alternative paths in R is not a waste
+   * Installing and loading R packages
+   * Updating R packages
+   * Tibble format for data frames
+
+* Checking and getting to know the data
+
+  * [ ] Check the structure of ~gapminder~. You see ~numeric~ and
+    ~factor~ vectors.
+
+    #+name: structure
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+  * [ ] Check the local help for the dslabs ~gapminder~ dataset for
+    the meaning of the variables (do this from the R console).
+
+  * [ ] Make a copy of ~gapminder~ as ~gm~ so you won't have to do so
+    much typing (and also to protect the original data). Check that
+    they're identical!
+
+    #+name: identical
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+  * [ ] Print the first 10 lines of the first four columns, and then
+    the first 10 lines of the next four columns of the data frame.
+
+    #+name: headGap
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+  * [ ] This isn't a Nintendo Gameboy. You've got screen space! Reset
+    the number of columns printed on a line by resetting the attribute
+    ~width~ of ~options~ to the value 140 (the default is 80, the
+    maximum value is 10,000).
+
+    To test the new setting, print the top 10 lines of the whole
+    dataframe.
+
+    #+name: width
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+  * [ ] Print the dataframe as a "tibble". To do this, run the
+    function ~as_tibble~ with ~gapminder~ as the argument.
+
+    In Emacs, you will see the control characters obscuring the
+    display. To view it as it was meant to look like, switch to the R
+    console in the *R* buffer and run the command there.
+
+    #+name: tibble
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+    The figure [[fig:tibble]] shows what you should see. As you can see,
+    the format is condensed to fit the 80-char default display
+    setting. ~NA~ values are highlighted in color, data types are
+    shown in a separate row, and 10 lines are shown by default only.
+
+    None of these are either essential or even add much to our
+    understanding of the data (beyond the basic ~str~ command). At the
+    same time, an extra dependency (character layout) is introduced.
+
+    #+name: fig:tibble
+    #+attr_html: :width 600px
+    #+caption: Gapminder as tibble
+    [[./img/tibble.png]]
+
+  * [ ] The dplyr package is a package for data frame
+    manipulation. We're going to really use it in a moment. dplyr
+    makes ample use of the "piping" operator from another package,
+    magrittr ([[magrittr][Bache, 2014]])[fn:3]. Since last year, base R also has its
+    own pipeline operator, which is a little less obscure looking.
+
+    You don't see the potential power of pipes if you only use one. It
+    becomes a handy tool (to some, not to me[fn:4]) when you build a
+    "pipeline" of several commands as we will soon see.
+
+    In [[pipes]], "pipe" the data frame into the ~as_tibble~ function by
+    putting it on the left, and the function on the right of the
+    operator. Do this first for the magrittr, then for the base R
+    operator.
+
+    #+name: pipes
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+** Section summary
+
+   * Reviewing structure checking commands
+   * Changing the display width option
+   * Printing a data frame as a tibble
+   * Pipes to pass data to functions
+   * Pipeline concept
+
+* Filtering the data
+
+  * [ ] This is a famous survey question by Rosling at the start of
+    his TED talks: for each of the six pairs of countries below,
+    1) which country do you think had the highest child mortality
+       rates in 2015? (Measured in infant deaths per 1000)
+    2) Which pairs do you think are the most similar?
+
+    Think about this, then fill in the table [[tab:survey]] according to
+    your opinion (IM = Infant Mortality per 1000). Put a cross next to
+    the country that you think has the highter infant mortality.
+
+    #+name: tab:survey
+    | COUNTRY   | IM | COUNTRY      | IM |
+    |-----------+----+--------------+----|
+    | Sri Lanka |    | Turkey       |    |
+    | Poland    |    | South Korea  |    |
+    | Malaysia  |    | Russia       |    |
+    | Pakistan  |    | Vietnam      |    |
+    | Thailand  |    | South Africa |    |
+
+  * [ ] Let's run the numbers, then put the results in the table [[tab:survey]]
+
+    The code in [[SriLankaTurkey]] shows
+    - two pipes ~%>%~
+    - the function ~dplyr::filter~ to filter rows for year and countries
+    - the operator ~%in%~ to identify if an element is in a vector
+    - the function ~dplyr::select~ to select two column vectors
+
+    #+name: SriLankaTurkey
+    #+begin_src R :exports both :session :results output
+      gm %>%
+        filter(year == 2015 & country %in% c("Sri Lanka", "Turkey")) %>%
+        select(country, infant_mortality)
+    #+end_src
+
+  * [ ] Put in the code for the other four pairs below. Now, don't you
+    wish you'd have written a function first?
+
+    #+name: PolandSouthKorea
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+    #+name: MalaysiaRussia
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+    #+name: PakistanVietnam
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+
+    #+name: ThailandSouthAfrica
+    #+begin_src R :exports both :session :results output
+
+    #+end_src
+    
 * TODO Scatterplots
 * TODO Faceting
 * TODO Time series plots
@@ -478,7 +263,10 @@
 * TODO Summary of Concepts
 * TODO Summary of Code
 * References
-  
+
+  * <<magrittr>> Bache SM (Nov 2014). Introducing magrittr
+    [vignette]. [[https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html][URL: cran.r-project.org]].
+
   * <<berggren>> Berggren C (16 Nov 2018). The One-Sided Worldview of
     Hans Rosling [article]. [[https://quillette.com/2018/11/16/the-one-sided-worldview-of-hans-rosling/][URL: quillette.com]].
 
@@ -490,7 +278,32 @@
     in R [tutorial]. [[https://www.neonscience.org/resources/learning-hub/tutorials/packages-r][URL: neonscience.org]].
 * Footnotes
 
-[fn:1]The story of Hans Rosling and the Gapminder foundation has two
+[fn:4]You know me as a pipeline fanatic if you follow my Operating
+Systems course. However the UNIX command pipeline is completely
+different beast. It consists of single, super-focused, fast commands,
+each of them easy to understand, that unfold their great power when
+working side by side in a pipeline. The R pipeline only takes the
+general concept and idea from UNIX. In my view, it is unnecessary,
+slows process down and makes debugging much harder.
+
+[fn:3]This article, by the way, is a so-called "vignette", a long
+prose writeup documenting an R package. The best, and most used
+packages come with their own vignettes, which include use cases,
+examples etc., on top of the minimal package doc.
+
+[fn:2]The story of Hans Rosling and the Gapminder foundation has two
 sides. The bright side shines off Rosling's viral TED talks. The
 darker side is a little harder to detect, see e.g. "[[https://quillette.com/2018/11/16/the-one-sided-worldview-of-hans-rosling/][The One-Sided
 Worldview of Hans Rosling]]" in [[berggren][Berggren (2018)]].
+
+[fn:1]A complete introduction to the "Tidyverse" is beyond my
+abilities. I don't work with the package much, and it consists of
+several packages each of which come with hundreds of functions. That's
+supposedly one of its strengths (not to me). Another popular, and
+useful, package is ~readr~, which focuses on reading input into R. As
+I wrote before, ggplot2 actually predates the "Tidyverse" by a
+decade. If you're hungry for more, complete the DataCamp courses
+"Introduction to the Tidyverse" and "Introduction to Data
+Visualization with ggplot2", which are both quite enjoyable. I'm
+thinking about using the latter as an assignment for the "Data
+Visualization" course in fall 2022.
