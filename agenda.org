@@ -861,7 +861,7 @@
    * ~ggplot2~ graphics
    * Visualizing COVID-19 (DataCapmp project)
      
-* TODO Pomodoro timer - Tour of ggplot ? - w9s20 (9-Mar)
+* Gapminder, Pomodoro timer - Tour of ggplot - w9s20 (9-Mar)
 ** Preparations for test 2 (Mon 14-Mar)
 
    * Test 2 will only cover questions from quiz 4-6 + new questions.

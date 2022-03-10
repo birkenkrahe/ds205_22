@@ -213,65 +213,6 @@
    * Pipes to pass data to functions
    * Pipeline concept
 
-* Filtering the data
-
-  * [ ] This is a famous survey question by Rosling at the start of
-    his TED talks: for each of the six pairs of countries below,
-    1) which country do you think had the highest child mortality
-       rates in 2015? (Measured in infant deaths per 1000)
-    2) Which pairs do you think are the most similar?
-
-    Think about this, then fill in the table [[tab:survey]] according to
-    your opinion (IM = Infant Mortality per 1000). Put a cross next to
-    the country that you think has the highter infant mortality.
-
-    #+name: tab:survey
-    | COUNTRY   | IM | COUNTRY      | IM |
-    |-----------+----+--------------+----|
-    | Sri Lanka |    | Turkey       |    |
-    | Poland    |    | South Korea  |    |
-    | Malaysia  |    | Russia       |    |
-    | Pakistan  |    | Vietnam      |    |
-    | Thailand  |    | South Africa |    |
-
-  * [ ] Let's run the numbers, then put the results in the table [[tab:survey]]
-
-    The code in [[SriLankaTurkey]] shows
-    - two pipes ~%>%~
-    - the function ~dplyr::filter~ to filter rows for year and countries
-    - the operator ~%in%~ to identify if an element is in a vector
-    - the function ~dplyr::select~ to select two column vectors
-
-    #+name: SriLankaTurkey
-    #+begin_src R :exports both :session :results output
-      gm %>%
-        filter(year == 2015 & country %in% c("Sri Lanka", "Turkey")) %>%
-        select(country, infant_mortality)
-    #+end_src
-
-  * [ ] Put in the code for the other four pairs below. Now, don't you
-    wish you'd have written a function first?
-
-    #+name: PolandSouthKorea
-    #+begin_src R :exports both :session :results output
-
-    #+end_src
-
-    #+name: MalaysiaRussia
-    #+begin_src R :exports both :session :results output
-
-    #+end_src
-
-    #+name: PakistanVietnam
-    #+begin_src R :exports both :session :results output
-
-    #+end_src
-
-    #+name: ThailandSouthAfrica
-    #+begin_src R :exports both :session :results output
-
-    #+end_src
-
 * References
 
   * <<magrittr>> Bache SM (Nov 2014). Introducing magrittr
