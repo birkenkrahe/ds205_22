@@ -271,15 +271,7 @@
     #+begin_src R :exports both :session :results output
 
     #+end_src
-    
-* TODO Scatterplots
-* TODO Faceting
-* TODO Time series plots
-* TODO Data transformations
-* TODO Boxplots and ridge plots
-* TODO Data presentation
-* TODO Summary of Concepts
-* TODO Summary of Code
+
 * References
 
   * <<magrittr>> Bache SM (Nov 2014). Introducing magrittr
