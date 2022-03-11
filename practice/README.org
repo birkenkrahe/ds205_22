@@ -22,8 +22,11 @@
 
   * TOC
 
-    | FILE           | CONTENT                              | SOLUTIONS |
-    |----------------+--------------------------------------+-----------|
-    | ~save_nb.org~  | Save and load user-defined functions | Yes       |
-    | ~repos_nb.org~ | Set default download repository      | Yes       |
-    | ~apply_nb.org~ |                                      |           |
+    | FILE              | CONTENT                              | SOLUTIONS |
+    |-------------------+--------------------------------------+-----------|
+    | ~emacs-init-file~ | Save this as .emacs in ~/            |           |
+    | ~save_nb.org~     | Save and load user-defined functions | Yes       |
+    | ~repos_nb.org~    | Set default download repository      | Yes       |
+    | ~apply_nb.org~    |                                      |           |
+    | ~gapminder.org~   | Explore ggplot2 and dplyr            |           |
+

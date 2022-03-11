@@ -955,6 +955,13 @@
    * Visualizing COVID-19 (project)
 
 * Test preparation / quiz 4-6 - w9s21 (11-Mar)
+
+  * [ ] You find the materials of the past month in GitHub ([[https://github.com/birkenkrahe/ds205/tree/main/pdf][pdf/]])
+
+  * [ ] Review of DataCamp chapters "apply" and and "utilities"
+
+  * [ ] Review of quiz 4-6
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
