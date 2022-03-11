@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE: Notes for CSC482/DSC205 Introduction to Advanced Data Science Spring 2022
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:1 num:nil ^:nil
 * README
 
   Instead of bugging you with emails, I opt to summarize my course
@@ -412,7 +412,7 @@
     Try it now! ([[https://www.gnu.org/software/emacs/manual/html_node/org/Using-Header-Arguments.html][Documentation]])
 
   * Type the DataCamp exercises out as Org-mode files to get
-    practice - both in Emacs Org-mode, but also in R ([[file:~/GitHub/admin/spring22/ds205/datacamp.org::While loop][example]])
+    practice - both in Emacs Org-mode, but also in R ([[file:c:/Users/birkenkrahe/Documents/GitHub/GitHub/admin/spring22/ds205/datacamp.org][example]])
 
 
 ** The Anti-IF Campaign
@@ -561,7 +561,7 @@
    * This is a Coursera MOOC consisting of 8 courses
    * The course promises to have you "job-ready in less than 6 months"
      for under $300
-   * > 600k students have been enrolled[fn:4]
+   * > 600k students have been enrolled[fn:3]
    * It features SQL querying and R programming (not Python or Excel)
 
    #+caption: Google Data Analytics Certificate @coursera.org
@@ -574,7 +574,7 @@
    * The R course has had > 100k students enrolled
 
    * What's the difference between "data science" and "data
-     analytics"?[fn:5]
+     analytics"?[fn:4]
 ** Excel
 
    Question:
@@ -700,6 +700,13 @@
   * xkcd (n.d.). Perl Problems [cartoon]. [[https://xkcd.com/1171/][URL: xkcd.com]].
 
 * Footnotes
+[fn:4]As the names suggest, data science is an umbrella term. The
+science, or research workflow includes analysis. Data analysis
+emphasizes the service character - you address a client's business
+problem using analytical methods.
+
+[fn:3]However, the completion rate of MOOCs is famously low, below
+15%.
 
 [fn:2]As a graduate of the Google certificate course, he is likely to
 be an RStudio user.
