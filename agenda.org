@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE: Agenda for CSC482/DSC205 Introduction to Advanced Data Science Spring 2022
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: ^:nil toc:1
 #+PROPERTY: header-args:R :session :results output
 * README
 
@@ -958,9 +958,16 @@
 
   * [ ] You find the materials of the past month in GitHub ([[https://github.com/birkenkrahe/ds205/tree/main/pdf][pdf/]])
 
-  * [ ] Review of DataCamp chapters "apply" and and "utilities"
-
   * [ ] Review of quiz 4-6
+
+  * [ ] Review of DataCamp chapters "apply" and and "utilities"
+    - ~lapply~, ~sapply~, ~vapply~ and their uses
+    - Useful mathematical functions: ~abs~, ~sum~, ~mean~, ~round~
+    - Pattern matching: ~grep~, ~grepl~, ~sub~, ~gsub~
+    - Time and data manipulation and calculation
+
+  * [ ] Best way to prepare: practice "Intermediate R" in the DataCamp
+    app - my questions are likely to come from that source!
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
@@ -981,14 +988,6 @@
   * System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro
     Timer?? [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 * Footnotes
-
-[fn:5]As the names suggest, data science is an umbrella term. The
-science, or research workflow includes analysis. Data analysis
-emphasizes the service character - you address a client's business
-problem using analytical methods.
-
-[fn:4]However, the completion rate of MOOCs is famously low, below
-15%.
 
 [fn:3]This was answered in the talk later. MS said that he had been
 asked to analyze time series data sets containing no more than 3
