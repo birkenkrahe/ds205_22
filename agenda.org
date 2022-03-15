@@ -927,46 +927,46 @@
      
 ** ggplot2 and dplyr
 
-   * [ ] In winter 2020 (DSC101) I gave an introductory lecture to
+   * [X] In winter 2020 (DSC101) I gave an introductory lecture to
      ~ggplot2~ using [[https://colab.research.google.com/drive/1O5qKA7mHXd43m8ZXmgIMNj7mDua1nKW5?usp=sharing][this Google Colaboratory workbook]]. You can copy
      the workbook to your GDrive and work through it if you like.
 
-   * [ ] This workbook came from an Org-mode file that I have uploaded
+   * [X] This workbook came from an Org-mode file that I have uploaded
      in the practice directory in GDrive as ~ggplot2_2021.zip~ with
      all plots and images required to view and run it if you so
      wish. There is a also a 24-page PDF copy in the pdf directory.
 
-   * [ ] In this advanced introductory class, we will instead dive
+   * [X] In this advanced introductory class, we will instead dive
      right into an interesting EDA example, the gapminder dataset, to
      explore the possibilities of [[https://ggplot2.tidyverse.org/reference/][ggplot2]] and [[https://dplyr.tidyverse.org/reference/index.html][dplyr]].
 
-   * [ ] I say it once at the outset (and hopefully not too many
+   * [X] I say it once at the outset (and hopefully not too many
      times). I am not a friend of the "Tidyverse" ideology. In
      practice, I prefer ~data.table~ over ~dplyr~, and base R graphics
      over ggplot2. The reasons are manifold - [[https://github.com/matloff/TidyverseSkeptic][see here for details]].
 
-   * [ ] See also my notes on the "Tidyverse" and ggplot2 from the
+   * [X] See also my notes on the "Tidyverse" and ggplot2 from the
      post mortem session of our guest talk by Matthew Stewart.
    
 ** Next
 
    * Quiz 4-6 check and test preparation
-   * ~ggplot2~ (lecture + notebook)
    * Visualizing COVID-19 (project)
+   * ~ggplot2~ (lecture + notebook)
 
 * Test preparation / quiz 4-6 - w9s21 (11-Mar)
 
-  * [ ] You find the materials of the past month in GitHub ([[https://github.com/birkenkrahe/ds205/tree/main/pdf][pdf/]])
+  * [X] You find the materials of the past month in GitHub ([[https://github.com/birkenkrahe/ds205/tree/main/pdf][pdf/]])
 
-  * [ ] Review of quiz 4-6
+  * [X] Review of quiz 4-6
 
-  * [ ] Review of DataCamp chapters "apply" and and "utilities"
+  * [X] Review of DataCamp chapters "apply" and and "utilities"
     - ~lapply~, ~sapply~, ~vapply~ and their uses
     - Useful mathematical functions: ~abs~, ~sum~, ~mean~, ~round~
     - Pattern matching: ~grep~, ~grepl~, ~sub~, ~gsub~
     - Time and data manipulation and calculation
 
-  * [ ] Best way to prepare: practice "Intermediate R" in the DataCamp
+  * [X] Best way to prepare: practice "Intermediate R" in the DataCamp
     app - my questions are likely to come from that source!
 
 * References
