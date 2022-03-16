@@ -1,0 +1,356 @@
+#+TITLE:Test results with ggplot2
+#+AUTHOR:Test results with ggplot2
+#+SUBTITLE:Introduction to Advanced Data Science DSC 205 Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* README
+* Test 1 - week 6 (Base R)
+
+  * The test results are OK (average 70%). Better next time!
+    #+caption: Test 1 results (Schoology)
+    #+attr_html: :width 500px
+    [[./img/test_1_stats.png]]
+    #+name: results
+    #+begin_src R  :session :results silent
+      results <- c(15,14,17.41,11.08,13.38,16.75,8.33,
+                   17.17,14.16,11.91,16.16,14.8,13.67)
+    #+end_src
+
+  * When checking the stats with R, I find different results. Why?
+    #+name: test 1 stats
+    #+begin_src R :exports both :session :results output
+      paste("Sample:",length(results))
+      paste("Standard deviation:", sd(results))
+      paste("Average:", 100*mean(results)/20)
+      paste("Average (points):", mean(results))
+      summary(results)
+    #+end_src
+
+    #+RESULTS: test 1 stats
+    : [1] "Sample: 13"
+    : [1] "Standard deviation: 2.59571120632991"
+    : [1] "Average: 70.7"
+    : [1] "Average: 14.14"
+    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    :    8.33   13.38   14.16   14.14   16.16   17.41
+
+  * Let's make some plots: histogram, boxplot and density plot.
+
+  * [[https://github.com/birkenkrahe/ds205/blob/main/agenda.org#test-1-results][Fetch the vector from GitHub]] and run the code in Emacs.
+    
+  * Histogram. Demonstrates the fact that almost the entire course
+    but one is above 50% (= pass). Looks more positive than the
+    whole truth, because the x-axis ends with the maximum result
+    achieved, and not with the maximum points available (20).
+
+    #+name: histogram
+    #+begin_src R :session  :session :exports both :results output graphics file :file ~/ds205/practice/img/test1hist.png
+      hist(results, main="Test 1 results, DSC 205 Spring 2022")
+    #+end_src
+
+    #+RESULTS: histogram
+    [[file:~/ds205/practice/img/test1hist.png]]
+
+  * Boxplot: this graph is deceptively positive, because it doesn't
+    show the maximum points (20) but only the maximum achieved
+    points. The "whiskers" correspond to the outliers, and the thick
+    black line is the median (the middle value).
+    #+name: boxplot
+    #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test1box.png
+      boxplot(results, main="Test 1 results, DSC 205 Spring 2022")
+    #+end_src
+
+    #+RESULTS: boxplot
+    [[file:~/ds205/practice/img/test1box.png]]
+
+  * Density plot: this is a smoothed histogram, and it does not look
+    quite as positive as the histogram. Negative outliers are rather
+    overaccentuated.
+    #+name: density
+    #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test1density.png
+      ave <- mean(results)
+      med <- median(results)
+      d <- density(results)
+      plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
+      abline(v=ave,col="red")
+      abline(v=med,col="green")
+    #+end_src
+
+    #+RESULTS: density
+    [[file:~/ds205/practice/img/test1density.png]]
+
+* Test 2 - week 10 (ggplot2)
+
+  * Let's look at the stats and make some plots: histogram, boxplot
+    and density plot. Let's do it in ggplot2
+
+  * Then let's overlay the test 2 plots with the test 1 results.
+
+  * Lastly, let's put the code into a function so we have it for the
+    future - both as a ggplot2 and as a Base R project
+
+** Stats
+
+   * Test results average 83.33% - improvement of > 10%
+
+     #+attr_html: :width 500px
+     #+caption: Test 2 results (Schoology)
+     [[./img/test_2_stats.png]]
+
+   * Save [[results]] vector.
+
+     #+name: results2
+     #+begin_src R  :session :results silent
+       results2 <- c(17,16,17,16.17,13.17,19.67,15.67,
+                     18.67,13.17,16.67,19.17,16.33,18)
+     #+end_src
+
+   * [[summary2]]: stats computation.
+
+     #+name: summary2
+     #+begin_src R :exports both :session :results output
+       paste("Sample:",length(results2))
+       paste("Standard deviation:", sd(results2))
+       paste("Average:", 100*mean(results2)/20)
+       paste("Average (points):", mean(results2))
+       summary(results2)
+     #+end_src
+
+     #+RESULTS: summary2
+     : [1] "Sample: 13"
+     : [1] "Standard deviation: 1.99062739755521"
+     : [1] "Average: 83.3423076923077"
+     : [1] "Average (points): 16.6684615384615"
+     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     :   13.17   16.00   16.67   16.67   18.00   19.67
+
+** ggplot2
+
+   * ggplot2 distinguishes
+
+     | ggplot2           | WHAT                 | EXAMPLE      |
+     |-------------------+----------------------+--------------|
+     | data              | data component       | data frame   |
+     | object            | store graphic object | ggplot(data) |
+     | aesthetic mapping | data layer           | aes(x,y)     |
+     | geometry          | layer                | geom_point() |
+
+   * [ ] Load the package.
+
+     #+name: load
+     #+begin_src R :exports both :session :results silent
+       library(ggplot2)
+     #+end_src
+
+   * [ ] ggplot2 needs data frames
+
+     #+name: dataframe
+     #+begin_src R :exports both :session :results output
+       r <- data.frame(results2)
+       str(r)
+     #+end_src
+
+     #+RESULTS: dataframe
+     : 'data.frame':    13 obs. of  1 variable:
+     :  $ results2: num  17 16 17 16.2 13.2 ...
+
+   * [ ] Creating a ggplot2 object
+
+     - Method 1: assigning a ggplot object
+
+       #+name: object1
+       #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test21.png
+         gg_r <- ggplot(r)
+       #+end_src
+
+     - Method 2: piping data into ggplot - this will generate an error
+       because ggplot2 requires an aesthetic mapping first.
+
+       #+name: object2
+       #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test22.png
+         r |> ggplot(r)
+       #+end_src
+
+     Taking the argument out and calling just ggplot() generates an
+     empty plot with a grey background.
+
+** Histogram
+
+   * The ~qplot~ function looks like ~hist~ but the result isn't as nice.
+
+     #+name: qplot
+     #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/qplot.png
+       qplot(results2)
+     #+end_src
+
+     #+RESULTS: qplot
+     [[file:~/ds205/practice/img/qplot.png]]
+
+     #+name: hist2
+     #+begin_src R :exports both :session :results output  graphics file :file ~/ds205/practice/img/hist2.png
+       hist(results2)
+     #+end_src
+
+     #+RESULTS: hist2
+     [[file:~/ds205/practice/img/hist2.png]]
+
+   * With ~ggplot~, you can use the ~geom_histogram~ geometry. Note
+     that the vector is stored in ~r$results2~.
+
+     #+name: geom_hist
+     #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/geom_hist.png
+       ggplot(data=r, aes(results2)) + geom_histogram()
+     #+end_src
+
+     #+RESULTS: geom_hist
+     [[file:~/ds205/practice/img/geom_hist.png]]
+
+** Boxplot
+
+*** Example: ToothGrowth
+
+    * Let's use ~ToothGrowth~ as an example first. Remember the
+      structure of the data set.
+
+      #+begin_src R :exports both :session :results output
+        str(ToothGrowth)
+      #+end_src
+
+      #+RESULTS:
+      : 'data.frame':    60 obs. of  3 variables:
+      :  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+      :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
+      :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
+
+    * As aesthetics, we choose e.g. ~len~ vs. ~supp~, which gives us
+      two boxplots for the two ~factor~ values.
+
+      #+name: tgbox
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/tg_box.png
+        tg_box <- ggplot(data=ToothGrowth, aes(x=supp, y=len)) +
+          geom_boxplot()
+        tg_box
+      #+end_src
+
+      #+RESULTS: tgbox
+      [[file:~/ds205/practice/img/tg_box.png]]
+
+    * Notice how the ~aes~ function inside ~ggplot~ knows about the
+      data set - normally you'd have to specify ~ToothGrowth$supp~ and
+      ~ToothGrowth$len~.
+
+    * You want it notched where the median is? This is an attribute of
+      the geometry, in this case ~geom_boxplot(notch=TRUE)~.
+
+      Change [[tgbox]] so that the boxplot is notched!
+
+      #+name: tgbox_notch
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/tg_box_notch.png
+        tg_box_notch <- ggplot(data=ToothGrowth, aes(x=supp, y=len)) +
+          geom_boxplot(notch=TRUE)
+        tg_box_notch
+      #+end_src
+
+      #+RESULTS: tgbox_notch
+      [[file:~/ds205/practice/img/tg_box_notch.png]]
+
+    * Other arguments include ~outlier.color~ and ~outlier.shape~.
+
+      Change [[tgbox]] so that the outlier is colored ~"red"~ and has the
+      shape ~8~.
+
+      #+name: tgbox_out
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/tg_box_out.png
+        ggplot(data=ToothGrowth, aes(x=supp, y=len)) +
+          geom_boxplot(
+            outlier.color="red",
+            outlier.shape=8)
+      #+end_src
+
+      #+RESULTS: tgbox_out
+      [[file:~/ds205/practice/img/tg_box_out.png]]
+
+    * Such a plot can be flipped easily with another geometry -
+      ~coord_flip~. This time, we pipe the data into the function (if
+      you want to use the magrittr pipe ~%>%~ instead, you need to load
+      the dplyr package.
+
+      #+name: tgbox1
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/tg_box_flip.png
+        ToothGrowth |> ggplot(aes(x=supp, y=len)) +
+          geom_boxplot() +
+          coord_flip()
+      #+end_src
+
+      #+RESULTS: tgbox1
+      [[file:~/ds205/practice/img/tg_box_flip.png]]
+
+    * You can add dots (or points) to the box plot using other
+      geometries - remember that ~tg_box~ was the object we used to
+      store the first boxplot in.
+
+      #+name: tgbox2
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/tg_box_pts.png
+        tg_box +
+          geom_jitter(
+            shape=16,
+            position=position_jitter(0.2))
+      #+end_src
+
+      #+RESULTS: tgbox2
+      [[file:~/ds205/practice/img/tg_box_pts.png]]
+
+      #+name: tgbox3
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/tg_box_dot.png
+        tg_box +
+          geom_dotplot(
+            binaxis='y',
+            stackdir='center',
+            dotsize=1)
+      #+end_src
+
+      #+RESULTS: tgbox3
+      [[file:~/ds205/practice/img/tg_box_dot.png]]
+
+
+*** Test 2 boxplots
+
+    #+name: geom_box_test
+    #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test2_geom_box.png
+      ggplot(data=r, aes(results)) + geom_boxplot() + coord_flip()
+    #+end_src
+
+    #+RESULTS: geom_box_test
+    [[file:~/ds205/practice/img/test2_geom_box.png]]
+
+*** IN PROGRESS Test 2 scatterplot
+
+    * Still working on ggplot2 version...
+
+      #+name: geom_point_test
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test2_geom_pts.png
+        r |> ggplot(aes(x=results2,y=1:13)) + geom_point()
+      #+end_src
+
+      #+RESULTS: geom_point_test
+      [[file:~/ds205/practice/img/test2_geom_pts.png]]
+
+    * Base R version
+
+      #+begin_src R :exports both :session :results output graphics file :file ~/ds205/practice/img/test2_density.png
+	ave2 <- mean(results2)
+	med2 <- median(results2)
+	d2 <- density(results2)
+	plot(d2, col="steelblue",main="Test 2 Results DSC 205 Spring 2022")
+	abline(v=ave,col="red")
+	lines(density(results), col="orange")
+        abline(v=mean(results), col="green")
+      #+end_src
+
+      #+RESULTS:
+      [[file:~/ds205/practice/img/test2_density.png]]
+
+* References
+
+  ([[https://www.datacamp.com/community/tutorials/make-histogram-ggplot2][Source: DataCamp]])
+  ([[http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization][Source: sthda]])
