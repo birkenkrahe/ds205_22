@@ -970,9 +970,6 @@
     app - my questions are likely to come from that source!
 
 * w10s22
-
-  
-
 * News
 
   * Cleaning function with gsub in The Economist ([[https://github.com/birkenkrahe/ds205/issues/37][issue]])

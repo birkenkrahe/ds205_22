@@ -10,6 +10,7 @@
     #+caption: Test 1 results (Schoology)
     #+attr_html: :width 500px
     [[./img/test_1_stats.png]]
+
     #+name: results
     #+begin_src R  :session :results silent
       results <- c(15,14,17.41,11.08,13.38,16.75,8.33,
@@ -48,6 +49,9 @@
       hist(results, main="Test 1 results, DSC 205 Spring 2022")
     #+end_src
 
+    #+RESULTS: histogram
+    [[file:test1hist.png]]
+
   * Boxplot: this graph is deceptively positive, because it doesn't
     show the maximum points (20) but only the maximum achieved
     points. The "whiskers" correspond to the outliers, and the thick
@@ -56,6 +60,9 @@
     #+begin_src R :exports both :session :results output graphics file :file test1box.png
       boxplot(results, main="Test 1 results, DSC 205 Spring 2022")
     #+end_src
+
+    #+RESULTS: boxplot
+    [[file:test1box.png]]
 
   * Density plot: this is a smoothed histogram, and it does not look
     quite as positive as the histogram. Negative outliers are rather
@@ -100,20 +107,32 @@
      #+begin_src R  :session :results output
        results2 <- c(17,16,17,16.17,13.17,19.67,15.67,
                      18.67,13.17,16.67,19.17,16.33,18)
+       ls()
      #+end_src
 
-   * See [[summary2]]: stats computation.
+     #+RESULTS: results2
+     : [1] "results2" "x"
 
-     Replace the ??? by the correct functions and run the block!
+     * See [[summary2]]: stats computation.
+
+     Replace the ~???~ by the correct functions and run the block!
 
      #+name: summary2
      #+begin_src R :exports both :session :results output
        paste("Sample:",length(results2))
-       paste("Standard deviation:", ??? (results2))
-       paste("Average (percent):", 100 * ??? (results2)/20)
-       paste("Average (points):", ??? (results2))
-       ??? (results2) ## statistical summary
+       paste("Standard deviation:", sd(results2))
+       paste("Average (percent):", 100 * mean(results2)/20)
+       paste("Average (points):", mean(results2))
+       summary(results2) ## statistical summary
      #+end_src
+
+     #+RESULTS: summary2
+     : [1] "Sample: 13"
+     : [1] "Standard deviation: 1.99062739755521"
+     : [1] "Average (percent): 83.3423076923077"
+     : [1] "Average (points): 16.6684615384615"
+     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     :   13.17   16.00   16.67   16.67   18.00   19.67
 
 ** ggplot2
 
@@ -126,22 +145,26 @@
      | aesthetic mapping | data layer           | aes(x,y)     |
      | geometry          | layer                | geom_point() |
 
-   * [ ] Load the package into the current R session.
+   * [X] Load the ggplot2 package into the current R session.
 
      #+name: load
      #+begin_src R :exports both :session :results silent
-
+       library(ggplot2)
      #+end_src
 
-   * [ ] ggplot2 needs data frames. Turn ~results2~ into a data
+   * [X] ggplot2 needs data frames. Turn ~results2~ into a data
      frame. Replace ~???~ in the code block, then look at the
      structure.
 
      #+name: dataframe
      #+begin_src R :exports both :session :results output
-       r <- ??? (results2)
-       ???(r)
+       r <- data.frame(results2)
+       str(r)
      #+end_src
+
+     #+RESULTS: dataframe
+     : 'data.frame':    13 obs. of  1 variable:
+     :  $ results2: num  17 16 17 16.2 13.2 ...
 
    * [ ] Creating a ggplot2 object
 
@@ -152,6 +175,9 @@
          gg_r <- ggplot(r)
        #+end_src
 
+       #+RESULTS: object1
+       [[file:test21.png]]
+
      - Method 2: piping data into ggplot - this will generate an error
        because ggplot2 requires an aesthetic mapping first.
 
@@ -159,24 +185,38 @@
 
        #+name: object2
        #+begin_src R :exports both :session :results output graphics file :file test22.png
-         r ??? ggplot(r)
+         library(dplyr)
+         r %>% ggplot(r)
        #+end_src
 
        #+RESULTS: object2
        [[file:test22.png]]
 
-     Taking the argument out and calling just ggplot() generates an
-     empty plot with a grey background. Try that!
+
+   Taking the argument out and calling just ggplot() generates an
+   empty plot with a grey background. Try that!
+
+   #+name: object3
+   #+begin_src R :exports both :session :results output graphics file :file test23.png
+     library(dplyr)
+     r %>% ggplot()
+   #+end_src
+
+   #+RESULTS: object3
+   [[file:test23.png]]
 
 ** Histogram
 
    * The ~qplot~ function looks like ~hist~ but the result isn't as
-     nice. Run [[qplot]].
+     nice. Run [[qplot]]. ~results2~ was defined in [[results2]].
 
      #+name: qplot
      #+begin_src R :exports both :session :results output graphics file :file qplot.png
        qplot(results2)
      #+end_src
+
+     #+RESULTS: qplot
+     [[file:qplot.png]]
 
      This is Base R. Run [[hist2]].
 
@@ -185,13 +225,23 @@
        hist(results2)
      #+end_src
 
+     #+RESULTS: hist2
+     [[file:hist2.png]]
+
    * With ~ggplot~, you can use the ~geom_histogram~ geometry. Note
-     that the vector is stored in ~r$results2~.
+     that the vector is stored in ~r$results2~. ~results2~ was defined
+     in [[results2]].
 
      #+name: geom_hist
      #+begin_src R :exports both :session :results output graphics file :file geom_hist.png
-       ggplot(data=r, aes(results2)) + geom_histogram()
+       ggplot(
+         data=r,
+         aes(results2)) +
+         geom_histogram()
      #+end_src
+
+     #+RESULTS: geom_hist
+     [[file:geom_hist.png]]
 
 ** Boxplot
 
@@ -254,14 +304,14 @@
       you want to use the magrittr pipe ~%>%~ instead, you need to load
       the dplyr package.
 
-      
 
-      #+name: tgbox1
-      #+begin_src R :exports both :session :results output graphics file :file tg_box_flip.png
-        ToothGrowth ??? ggplot(aes(x=supp, y=len)) +
-          geom_boxplot() +
-          ???
-      #+end_src
+
+    #+name: tgbox1
+    #+begin_src R :exports both :session :results output graphics file :file tg_box_flip.png
+      ToothGrowth ??? ggplot(aes(x=supp, y=len)) +
+        geom_boxplot() +
+        ???
+    #+end_src
 
     * You can add dots (or points) to the box plot using other
       geometries - remember that ~tg_box~ was the object we used to
@@ -269,14 +319,14 @@
 
       In [[tgbox2]], add the geometry ~geom_jitter~ with the arguments ~shape=16~ and
       ~position=position_jitter(0.2)~.
-      
+
       #+name: tgbox2
       #+begin_src R :exports both :session :results output graphics file :file tg_box_pts.png
-	tg_box + ???
+        tg_box + ???
       #+end_src
 
       You can also create a dotplot - run the block [[tgbox3]].
-   
+
       #+name: tgbox3
       #+begin_src R :exports both :session :results output graphics file :file tg_box_dot.png
         tg_box +
@@ -290,35 +340,42 @@
 *** Test 2 boxplots
 
     Now create a flipped ~ggplot~ boxplot of the results of test 2.
+    ~results2~ was defined in [[results2]], and assigned to a data frame
+    in [[dataframe]].
 
     #+name: geom_box_test
     #+begin_src R :exports both :session :results output graphics file :file test2_geom_box.png
-      
-    #+end_src
 
+    #+end_src
 
 *** IN PROGRESS Test 2 scatterplot
 
-    * Still working on ggplot2 version...
+    * [ ] Base R version - this is what we already did last month, but
+      now for ~results2~, which was assigned in [[results2]], while
+      ~results~ (from test 1) was assigned in [[results]].
 
+      In the plot, test 2 is rendered in blue, and test 1 in
+      green. The average is indicated by a vertical line in this
+      color.
+
+      #+name: density2
+      #+begin_src R :exports both :session :results output
+      plot(
+        x=density(results2),
+        col="steelblue",
+        main="Test 1 + 2 Results DSC 205 Spring 2022")
+      abline(v = mean(results2), col="steelblue")
+      lines(density(results), col="green")
+      abline(v=mean(results), col="green")
+      #+end_src
+
+      #+RESULTS: density2
+
+    * [ ] Still working on ggplot2 version
       #+name: geom_point_test
       #+begin_src R :exports both :session :results output graphics file :file test2_geom_pts.png
         r |> ggplot(aes(x=results2,y=1:13)) + geom_point()
       #+end_src
-
-
-    * Base R version
-
-      #+begin_src R :exports both :session :results output graphics file :file test2_density.png
-        ave2 <- mean(results2)
-        med2 <- median(results2)
-        d2 <- density(results2)
-        plot(d2, col="steelblue",main="Test 2 Results DSC 205 Spring 2022")
-        abline(v=ave,col="red")
-        lines(density(results), col="orange")
-        abline(v=mean(results), col="green")
-      #+end_src
-
 
 * References
 
