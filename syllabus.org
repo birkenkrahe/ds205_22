@@ -107,6 +107,8 @@
     - COMPLETE WEEKLY CHAPTERS OF DATACAMP ASSIGNMENTS
     - SPEND 30-45 MIN PER WEEK ON AN ASSIGNMENT
     - BRING QUESTIONS AND COMMENTS TO CLASS FOR DISCUSSION
+    - Late DataCamp submissions will be accepted but you'll lose 1
+      point for every day that your submission is late.
 
 *** MONTHLY TESTS (30%)
 

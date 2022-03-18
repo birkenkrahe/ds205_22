@@ -32,7 +32,7 @@
     : [1] "Standard deviation: 2.59571120632991"
     : [1] "Average: 70.7"
     : [1] "Average (points): 14.14"
-    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     :    8.33   13.38   14.16   14.14   16.16   17.41
 
   * Let's make some plots: histogram, boxplot and density plot.
