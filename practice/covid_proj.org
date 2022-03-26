@@ -1,0 +1,134 @@
+* README
+
+  * Demo of ggplot2 using early pandemic COVID data
+
+  * The material covered comes from the following DataCamp courses:
+    - [[https://learn.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2][Data Visualization with ggplot2]] (a graphics package for R)
+    - [[https://learn.datacamp.com/courses/intermediate-data-visualization-with-ggplot2][Intermediate Data Visualization with ggplot2]]
+    - [[https://learn.datacamp.com/courses/data-manipulation-with-dplyr][Data Manipulation with dplyr]] (a table manipulation package in R)
+    - [[https://learn.datacamp.com/courses/introduction-to-importing-data-in-r][Introduction to Importing Data in R]] (using ~read.table~)
+
+  * To look at the whole project at once [[https://rpubs.com/zaharoian/covid19datacamp][see here]].
+
+* From epidemic to pandemic
+
+  * Reading data into a data frame using ~readr::read_csv~
+
+    #+name: read_csv
+    #+begin_src R :exports both :session :results output
+      ## Load the readr, ggplot2, and dplyr packages
+      library(readr)
+      library(ggplot2)
+      library(dplyr)
+
+      ## Read datasets/confirmed_cases_worldwide.csv into confirmed_cases_worldwide
+      confirmed_cases_worldwide <- read_csv("covid.csv")
+
+      ## Print out confirmed_cases_worldwide
+      str(confirmed_cases_worldwide)
+    #+end_src
+
+    #+RESULTS: read_csv
+    #+begin_example
+    Rows: 169173 Columns: 4
+    -- Column specification --------------------------------------------------------
+    Delimiter: ","
+    chr  (2): Entity, Code
+    dbl  (1): Total confirmed cases of COVID-19
+    date (1): Day
+
+    i Use `spec()` to retrieve the full column specification for this data.
+    i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+    spec_tbl_df [169,173 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+     $ Entity                           : chr [1:169173] "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+     $ Code                             : chr [1:169173] "AFG" "AFG" "AFG" "AFG" ...
+     $ Day                              : Date[1:169173], format: "2020-02-24" "2020-02-25" ...
+     $ Total confirmed cases of COVID-19: num [1:169173] 5 5 5 5 5 5 5 5 5 5 ...
+     - attr(*, "spec")=
+      .. cols(
+      ..   Entity = col_character(),
+      ..   Code = col_character(),
+      ..   Day = col_date(format = ""),
+      ..   `Total confirmed cases of COVID-19` = col_double()
+      .. )
+     - attr(*, "problems")=<
+    #+end_example
+
+  * Reading data into a data frame using Base R's ~read.csv~
+
+    #+name: read.csv
+    #+begin_src R :exports both :session :results output
+      ## Read data into cases
+      cases <- read.csv("covid.csv")
+
+      ## Print out confirmed_cases_worldwide
+      str(cases)
+    #+end_src
+
+    #+RESULTS: read.csv
+    : 'data.frame':     169173 obs. of  4 variables:
+    :  $ Entity                           : chr  "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+    :  $ Code                             : chr  "AFG" "AFG" "AFG" "AFG" ...
+    :  $ Day                              : chr  "2020-02-24" "2020-02-25" "2020-02-26" "2020-02-27" ...
+    :  $ Total.confirmed.cases.of.COVID.19: int  5 5 5 5 5 5 5 5 5 5 ...
+
+* Confirmed cases throughout the world
+
+  * To get this plot from the downloaded data, the ~aes~ arguments
+    have to be adapted accordingly.
+
+    #+name: plot
+    #+begin_src R :exports both :session :results output graphics file :file caseline.png
+      ## Draw a line plot of cumulative cases vs. date
+      ## Label the y-axis
+      ggplot(
+        confirmed_cases_worldwide,
+        aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
+        geom_line() +
+
+        ylab("Cumulative confirmed cases")
+    #+end_src
+
+    #+RESULTS: plot
+    [[file:caseline.png]]
+
+  * If you change ~geom_line()~ to ~geom_point()~, you see the
+    individual lines (for each entity, or country): the cumulative
+    case line is the enveloping line for all of them.
+
+  * To narrow the data set, you can use ~dplyr::filter~ applied to the
+    ~Day~ variable. This function filters all values for which the
+    argument is ~TRUE~.x
+
+    #+name: plot1
+    #+begin_src R :exports both :session :results output graphics file :file caseline1.png
+      ## Draw a line plot of cumulative cases vs. date
+      ## Label the y-axis
+      confirmed_cases_worldwide %>%
+        filter(Day < "2020-03-18") %>%
+        ggplot(
+          aes(
+            x=Day,
+            y=`Total confirmed cases of COVID-19`)) +
+        geom_line() +
+        ylab("Cumulative confirmed cases")
+    #+end_src
+
+    #+RESULTS: plot1
+    [[file:caseline1.png]]
+    
+  * Which geometry would work better here?
+
+* NEXT China compared to the rest of the world
+
+* TODO Let's annotate!
+
+* TODO Adding a trend line to China
+
+* TODO And the rest of the world?
+
+* TODO Adding a logarithmic scale
+
+* TODO Which countries outside of China have been hit hardest?
+
+* TODO Plotting hardest hit countries as of Mid-March 2020

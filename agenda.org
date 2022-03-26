@@ -969,40 +969,46 @@
   * [X] Best way to prepare: practice "Intermediate R" in the DataCamp
     app - my questions are likely to come from that source!
 
-* w10s22
-* News
+* w10s22 (16-Mar)
+** News
 
-  * Cleaning function with gsub in The Economist ([[https://github.com/birkenkrahe/ds205/issues/37][issue]])
-  * Emacs snippet of the week: ~org-skeleton~
-  * Test grades plotting with ggplot2
+   * Cleaning function with gsub in The Economist ([[https://github.com/birkenkrahe/ds205/issues/37][issue]])
+   * Emacs snippet of the week: ~org-skeleton~
+   * Test grades plotting with ggplot2
     
-* Emacs snippet of the week
+** Emacs snippet of the week
 
-  * ~Org-skeleton~ is an built-in Org function but you need to
-    customize it.
+   * ~Org-skeleton~ is an built-in Org function but you need to
+     customize it.
 
-  * Put the code below into your ~.emacs~ file, create a new Org file,
-    and enter ~M-x org-skeleton~ to automatically add the meta data.
+   * Put the code below into your ~.emacs~ file, create a new Org file,
+     and enter ~M-x org-skeleton~ to automatically add the meta data.
 
-  * You can also enter CTRL + SHIFT + F4 to activate the function
+   * You can also enter CTRL + SHIFT + F4 to activate the function
 
-    #+begin_src emacs-lisp
-      (define-skeleton org-skeleton
-        "Header info for a emacs-org file."
-        "Title: "
-        "#+TITLE:" str " \n"
-        "#+AUTHOR:" str " \n"
-        "#+SUBTITLE:" str " \n"
-        "#+STARTUP:overview hideblocks\n"
-        "#+OPTIONS: toc:nil num:nil ^:nil\n"
-        ;;  "#+email: your-email@server.com\n"
-        ;;  "#+INFOJS_OPT: :view:info \n"
-        ;;  "#+BABEL: :session *R* :cache yes :results output graphics :exports both :tangle yes \n"
-        )
-      (global-set-key [C-S-f4] 'org-skeleton)
+     #+begin_src emacs-lisp
+       (define-skeleton org-skeleton
+         "Header info for a emacs-org file."
+         "Title: "
+         "#+TITLE:" str " \n"
+         "#+AUTHOR:" str " \n"
+         "#+SUBTITLE:" str " \n"
+         "#+STARTUP:overview hideblocks\n"
+         "#+OPTIONS: toc:nil num:nil ^:nil\n"
+         ;;  "#+email: your-email@server.com\n"
+         ;;  "#+INFOJS_OPT: :view:info \n"
+         ;;  "#+BABEL: :session *R* :cache yes :results output graphics :exports both :tangle yes \n"
+         )
+       (global-set-key [C-S-f4] 'org-skeleton)
 
-    #+end_src
+     #+end_src
 
+* w10s23 (18-Mar)
+
+  * COVID-10 project deadline moved
+  * Finish ggplot2 boxplots
+  * Retrieve updated file from GDrive
+  
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
