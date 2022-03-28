@@ -10,114 +10,484 @@
 
   * To look at the whole project at once [[https://rpubs.com/zaharoian/covid19datacamp][see here]].
 
+  * We'll revisit some topics in our gapminder project
+
+* Aspects of this project (discussion)
+
+  The table [[project_aspects]] lists some (*variable*) aspects of this
+  project. In practice, you would revisit these before, during and
+  after the project.
+
+  #+name: project_aspects
+  | ASPECT     | CONTENT               | DECISIONS                  |
+  |------------+-----------------------+----------------------------|
+  | Technical  | R packages            | Base R, ggplot2            |
+  | Scientific | Data science pipeline | Data quality, presentation |
+  | Political  | Policy                | Funding, trust, future     |
+  | Personal   | Pro or Con            | Do it or don't, dig deeper |
+
+  *Which aspects did you find interesting and why (not)?*
+
+** Technical
+
+** Scientific
+
+** Political
+
+** Personal
+
+** Example: getting the data for your own project
+
+   * I found this dataset via
+     1) Google search of ~datasets/confirmed_cases_worldwide.csv~
+     2) The site [[https://ourworldindata.org/coronavirus-source-data][ourworldindata.org]] uses JHU [[https://ourworldindata.org/covid-data-switch-jhu][as the main data source]]
+     3) Data import from [[https://github.com/owid/covid-19-data/blob/master/public/data/testing/covid-testing-latest-data-source-details.csv][GitHub]] - you need the raw source
+
+   * Or you can select the Jan-Mar 17, 2020 timeline and download the
+     CSV data from the "[[https://ourworldindata.org/explorers/coronavirus-data-explorer][COVID-19 Data Explorer]]", a graphical dashboard.
+
+   * From the "[[https://ourworldindata.org/explorers/coronavirus-data-explorer][COVID-19 Data Explorer]]".
+
+     #+attr_html: :width 500px
+     #+caption: Cumulative cases (Asia, Europe, USA) Jan-March 17, 2020 (Source: OWID)
+     [[./img/owidlin.png]]
+
+     #+attr_html: :width 500px
+     #+caption: Cumulative cases (Asia, Europe, USA) Jan-March 17, 2020 (Source: OWID)
+     [[./img/owidlog.png]]
+
+   * [ ] What's wrong with just using such a nice dashboard solution?
+
 * From epidemic to pandemic
+** Load packages
 
-  * Reading data into a data frame using ~readr::read_csv~
+   * We load three different packages - for data import (readr),
+     graphics (ggplot2) and table manipulation (dplyr).
 
-    #+name: read_csv
-    #+begin_src R :exports both :session :results output
-      ## Load the readr, ggplot2, and dplyr packages
-      library(readr)
-      library(ggplot2)
-      library(dplyr)
+   * They're contained in the "Tidyverse" package but it's preferable
+     to load them individually.
 
-      ## Read datasets/confirmed_cases_worldwide.csv into confirmed_cases_worldwide
-      confirmed_cases_worldwide <- read_csv("covid.csv")
+   * [ ] Why is it better to load packages individually?
 
-      ## Print out confirmed_cases_worldwide
-      str(confirmed_cases_worldwide)
-    #+end_src
+   #+begin_src R :exports both :session :results silent
+     ## Load the readr, ggplot2, and dplyr packages
+     library(readr)
+     library(ggplot2)
+     library(dplyr)
+   #+end_src
 
-    #+RESULTS: read_csv
-    #+begin_example
-    Rows: 169173 Columns: 4
-    -- Column specification --------------------------------------------------------
-    Delimiter: ","
-    chr  (2): Entity, Code
-    dbl  (1): Total confirmed cases of COVID-19
-    date (1): Day
+** Reading data into a data frame using ~readr::read_csv~
 
-    i Use `spec()` to retrieve the full column specification for this data.
-    i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    spec_tbl_df [169,173 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-     $ Entity                           : chr [1:169173] "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
-     $ Code                             : chr [1:169173] "AFG" "AFG" "AFG" "AFG" ...
-     $ Day                              : Date[1:169173], format: "2020-02-24" "2020-02-25" ...
-     $ Total confirmed cases of COVID-19: num [1:169173] 5 5 5 5 5 5 5 5 5 5 ...
-     - attr(*, "spec")=
-      .. cols(
-      ..   Entity = col_character(),
-      ..   Code = col_character(),
-      ..   Day = col_date(format = ""),
-      ..   `Total confirmed cases of COVID-19` = col_double()
-      .. )
-     - attr(*, "problems")=<
-    #+end_example
+   * We use readr::read_csv to read a (local) CSV file into a data
+     frame
 
-  * Reading data into a data frame using Base R's ~read.csv~
+   * [ ] What's a data frame again? Can you define it?
 
-    #+name: read.csv
-    #+begin_src R :exports both :session :results output
-      ## Read data into cases
-      cases <- read.csv("covid.csv")
+     #+begin_quote
+     "A data frame is ... a list of variables of the same number of
+     rows with unique row names, given class "data.frame". If no
+     variables are included, the row names determine the number of
+     rows." (~data.frame~ help page)
 
-      ## Print out confirmed_cases_worldwide
-      str(cases)
-    #+end_src
+     Alternative definition: "A data frame is a table or a
+     two-dimensional array-like structure in which each column
+     contains values of one variable and each row contains one set of
+     values from each column." (tutorialspoint.com)
+     #+end_quote
 
-    #+RESULTS: read.csv
-    : 'data.frame':     169173 obs. of  4 variables:
-    :  $ Entity                           : chr  "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
-    :  $ Code                             : chr  "AFG" "AFG" "AFG" "AFG" ...
-    :  $ Day                              : chr  "2020-02-24" "2020-02-25" "2020-02-26" "2020-02-27" ...
-    :  $ Total.confirmed.cases.of.COVID.19: int  5 5 5 5 5 5 5 5 5 5 ...
+   * The command creates a number of substructures
+
+   #+name: read_csv
+   #+begin_src R :exports both :session :results output
+
+     ## Read datasets/confirmed_cases_worldwide.csv into confirmed_cases_worldwide
+     confirmed_cases_worldwide <- read_csv("data/covid.csv")
+
+     ## Try to fix tibble display problems in Emacs + ESS
+     ## Source: https://github.com/emacs-ess/ESS/issues/810
+     options(crayon.enabled = FALSE)
+
+     ## Print out confirmed_cases_worldwide
+     str(confirmed_cases_worldwide)
+     class(confirmed_cases_worldwide)
+   #+end_src
+
+   #+RESULTS: read_csv
+   #+begin_example
+   Rows: 169173 Columns: 4
+   -- Column specification --------------------------------------------------------
+   Delimiter: ","
+   chr  (2): Entity, Code
+   dbl  (1): Total confirmed cases of COVID-19
+   date (1): Day
+
+   i Use `spec()` to retrieve the full column specification for this data.
+   i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+   spec_tbl_df [169,173 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+    $ Entity                           : chr [1:169173] "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+    $ Code                             : chr [1:169173] "AFG" "AFG" "AFG" "AFG" ...
+    $ Day                              : Date[1:169173], format: "2020-02-24" "2020-02-25" ...
+    $ Total confirmed cases of COVID-19: num [1:169173] 5 5 5 5 5 5 5 5 5 5 ...
+    - attr(*, "spec")=
+     .. cols(
+     ..   Entity = col_character(),
+     ..   Code = col_character(),
+     ..   Day = col_date(format = ""),
+     ..   `Total confirmed cases of COVID-19` = col_double()
+     .. )
+    - attr(*, "problems")=<
+
+   [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
+   #+end_example
+
+*** readr::read_csv
+
+    #+name: readr
+    #+begin_quote
+    "The goal of readr is to provide a fast and friendly way to read
+    rectangular data from delimited files, such as comma-separated values
+    (CSV) and tab-separated values (TSV). It is designed to parse many
+    types of data found in the wild, while providing an informative
+    problem report when parsing leads to unexpected results. If you are
+    new to readr, the best place to start is the data import chapter in R
+    for Data Science." ([[https://readr.tidyverse.org/][online documentation]])
+    #+end_quote
+
+    * [ ] Check the documentation for ~read_csv~ and its many options.
+
+    * [ ] Test the claims made in the quote [[readr]] by reading the Pima
+      indians diabetes data set (in GDrive - download [[https://www.kaggle.com/datasets/kumargh/pimaindiansdiabetescsv?resource=download][via Kaggle]]).
+
+    * [ ] Try to extract the ZIP file itself first, then the unzipped
+      CSV file
+
+    * [ ] After extraction, print the data structure and the first few
+      lines
+
+      #+name: pima_archive
+      #+begin_src R :exports both :session :results output
+        pima_archive <- read_csv("data/archive.zip")
+        str(pima)
+        head(pima_archive)
+      #+end_src
+
+      #+RESULTS: pima_archive
+      #+begin_example
+      Rows: 767 Columns: 9
+      -- Column specification --------------------------------------------------------
+      Delimiter: ","
+      dbl (9): 6, 148, 72, 35, 0, 33.6, 0.627, 50, 1
+
+      i Use `spec()` to retrieve the full column specification for this data.
+      i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+      spec_tbl_df [767 x 9] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+       $ 6    : num [1:767] 1 8 1 0 5 3 10 2 8 4 ...
+       $ 148  : num [1:767] 85 183 89 137 116 78 115 197 125 110 ...
+       $ 72   : num [1:767] 66 64 66 40 74 50 0 70 96 92 ...
+       $ 35   : num [1:767] 29 0 23 35 0 32 0 45 0 0 ...
+       $ 0    : num [1:767] 0 0 94 168 0 88 0 543 0 0 ...
+       $ 33.6 : num [1:767] 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 37.6 ...
+       $ 0.627: num [1:767] 0.351 0.672 0.167 2.288 0.201 ...
+       $ 50   : num [1:767] 31 32 21 33 30 26 29 53 54 30 ...
+       $ 1    : num [1:767] 0 1 0 1 0 1 0 1 1 0 ...
+       - attr(*, "spec")=
+        .. cols(
+        ..   `6` = col_double(),
+        ..   `148` = col_double(),
+        ..   `72` = col_double(),
+        ..   `35` = col_double(),
+        ..   `0` = col_double(),
+        ..   `33.6` = col_double(),
+        ..   `0.627` = col_double(),
+        ..   `50` = col_double(),
+        ..   `1` = col_double()
+        .. )
+       - attr(*, "problems")=<
+
+      # A tibble: 6 x 9
+          `6` `148`  `72`  `35`   `0` `33.6` `0.627`  `50`   `1`
+      <dbl>
+      1     1    85    66    29     0   26.6   0.351    31     0
+      2     8   183    64     0     0   23.3   0.672    32     1
+      3     1    89    66    23    94   28.1   0.167    21     0
+      4     0   137    40    35   168   43.1   2.29     33     1
+      5     5   116    74     0     0   25.6   0.201    30     0
+      6     3    78    50    32    88   31     0.248    26     1
+      #+end_example
+
+      #+name: pima
+      #+begin_src R :exports both :session :results output
+        pima <- read_csv("data/pima-indians-diabetes.csv")
+        str(pima)
+        head(pima)
+      #+end_src
+
+      #+RESULTS: pima
+      #+begin_example
+      Rows: 767 Columns: 9
+      -- Column specification --------------------------------------------------------
+      Delimiter: ","
+      dbl (9): 6, 148, 72, 35, 0, 33.6, 0.627, 50, 1
+
+      i Use `spec()` to retrieve the full column specification for this data.
+      i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+      spec_tbl_df [767 x 9] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+       $ 6    : num [1:767] 1 8 1 0 5 3 10 2 8 4 ...
+       $ 148  : num [1:767] 85 183 89 137 116 78 115 197 125 110 ...
+       $ 72   : num [1:767] 66 64 66 40 74 50 0 70 96 92 ...
+       $ 35   : num [1:767] 29 0 23 35 0 32 0 45 0 0 ...
+       $ 0    : num [1:767] 0 0 94 168 0 88 0 543 0 0 ...
+       $ 33.6 : num [1:767] 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 37.6 ...
+       $ 0.627: num [1:767] 0.351 0.672 0.167 2.288 0.201 ...
+       $ 50   : num [1:767] 31 32 21 33 30 26 29 53 54 30 ...
+       $ 1    : num [1:767] 0 1 0 1 0 1 0 1 1 0 ...
+       - attr(*, "spec")=
+        .. cols(
+        ..   `6` = col_double(),
+        ..   `148` = col_double(),
+        ..   `72` = col_double(),
+        ..   `35` = col_double(),
+        ..   `0` = col_double(),
+        ..   `33.6` = col_double(),
+        ..   `0.627` = col_double(),
+        ..   `50` = col_double(),
+        ..   `1` = col_double()
+        .. )
+       - attr(*, "problems")=<
+
+      # A tibble: 6 x 9
+          `6` `148`  `72`  `35`   `0` `33.6` `0.627`  `50`   `1`
+        <
+      <
+      <
+      <
+      <
+       <
+        <
+      <
+      <dbl>
+      1     1    85    66    29     0   26.6   0.351    31     0
+      2     8   183    64     0     0   23.3   0.672    32     1
+      3     1    89    66    23    94   28.1   0.167    21     0
+      4     0   137    40    35   168   43.1   2.29     33     1
+      5     5   116    74     0     0   25.6   0.201    30     0
+      6     3    78    50    32    88   31     0.248    26     1
+      #+end_example
+
+    * [ ] For comparison, extract the archive and the CSV data using the Base R
+      function ~read.csv~
+
+      #+name: pima_base
+      #+begin_src R :exports both :session :results output
+        pima_base <- read.csv("data/pima-indians-diabetes.csv")
+        str(pima_base)
+        head(pima_base)
+      #+end_src
+
+      #+RESULTS: pima_base
+      #+begin_example
+      'data.frame':     767 obs. of  9 variables:
+       $ X6    : int  1 8 1 0 5 3 10 2 8 4 ...
+       $ X148  : int  85 183 89 137 116 78 115 197 125 110 ...
+       $ X72   : int  66 64 66 40 74 50 0 70 96 92 ...
+       $ X35   : int  29 0 23 35 0 32 0 45 0 0 ...
+       $ X0    : int  0 0 94 168 0 88 0 543 0 0 ...
+       $ X33.6 : num  26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 37.6 ...
+       $ X0.627: num  0.351 0.672 0.167 2.288 0.201 ...
+       $ X50   : int  31 32 21 33 30 26 29 53 54 30 ...
+       $ X1    : int  0 1 0 1 0 1 0 1 1 0 ...
+        X6 X148 X72 X35  X0 X33.6 X0.627 X50 X1
+      1  1   85  66  29   0  26.6  0.351  31  0
+      2  8  183  64   0   0  23.3  0.672  32  1
+      3  1   89  66  23  94  28.1  0.167  21  0
+      4  0  137  40  35 168  43.1  2.288  33  1
+      5  5  116  74   0   0  25.6  0.201  30  0
+      6  3   78  50  32  88  31.0  0.248  26  1
+      #+end_example
+
+      * The Base R function cannot read the ZIP file.
+
+        #+name: pima_base_zip
+        #+begin_src R :exports both :session :results output
+          pima_base_archive <- read.csv("data/archive.zip")
+          str(pima_base_archive)
+          head(pima_base_archive)
+        #+end_src
+
+        #+RESULTS: pima_base_zip
+        #+begin_example
+        Warning messages:
+        1: In read.table(file = file, header = header, sep = sep, quote = quote,  :
+          line 1 appears to contain embedded nulls
+        2: In read.table(file = file, header = header, sep = sep, quote = quote,  :
+          incomplete final line found by readTableHeader on 'data/archive.zip'
+        'data.frame':   3 obs. of  1 variable:
+         $ PK...: chr  "" "" "ÌÆ\vöÝ²Š\037¬_-%'®¡÷Ý½'X•}\037üëw\033"
+                                                                                                                                                                                                                                                             PK...
+        ÷âYá{\017ïm¿Ó\177±ÿÝ{þÕ¹~Á›ïóÛúõ‚7×¹\177½Ý\037Ä¿Øû\016\003÷ß¿®ó·üôÁwG¹ï.¸½ýÖÆ ï»pGýWpùÎ%&_~\037_\aoÅ\0338´Ú:'ò¿ÿ»ã;ë·Ê¯\217ßèí>òßÀ\017Æ}$ß}g\026ãw¦\036 gß7\215Ž‹÷\217ûø\023zöâÀêÉ\201áÍw:\036wÛ¼yÜ©¶ž\003kç·5²XwÒõ_ïõ7\026ï¾KzW
+        ËùÛ}bdX¶vîÈŽWå®éÂ\f~u
+                                                                                                                                                                                                                             ÌÆ\vöÝ²Š\037¬_-%'®¡÷Ý½'X•}\037üëw\033
+        #+end_example
+
+** Reading data into a data frame using Base R's ~read.csv~
+
+   * We use ~read.csv~ to read a (local) CSV file into a data frame
+
+   #+name: read.csv
+   #+begin_src R :exports both :session :results output
+     ## Read data into cases
+     cases <- read.csv("data/covid.csv")
+
+     ## Print out confirmed_cases_worldwide
+     str(cases)
+     class(cases)
+   #+end_src
+
+   #+RESULTS: read.csv
+   : 'data.frame':      169173 obs. of  4 variables:
+   :  $ Entity                           : chr  "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+   :  $ Code                             : chr  "AFG" "AFG" "AFG" "AFG" ...
+   :  $ Day                              : chr  "2020-02-24" "2020-02-25" "2020-02-26" "2020-02-27" ...
+   :  $ Total.confirmed.cases.of.COVID.19: int  5 5 5 5 5 5 5 5 5 5 ...
+   : [1] "data.frame"
+
+*** utils::read.table
+
+    #+begin_quote
+    "Reads a file in table format and creates a data frame from it,
+    with cases corresponding to lines and variables to fields in the
+    file."
+    #+end_quote
+
+    * Lines and fields are synonyms for rows and columns, resp.
+
+    * Cases or records, and variables or vectors are the corresponding
+      names for the data structure (data frame)
+
+    * It is often important to distinguish between data in the real
+      world (usually the result of real observations) and their
+      representation by a machine
 
 * Confirmed cases throughout the world
+** Basics: data and layout (aes and geom)
 
-  * To get this plot from the downloaded data, the ~aes~ arguments
-    have to be adapted accordingly.
+   * To get this plot from the downloaded data, the ~aes~ arguments
+     have to be adapted accordingly.
 
-    #+name: plot
-    #+begin_src R :exports both :session :results output graphics file :file caseline.png
-      ## Draw a line plot of cumulative cases vs. date
-      ## Label the y-axis
-      ggplot(
-        confirmed_cases_worldwide,
-        aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
-        geom_line() +
+   * Remember: ~aes~[thetics] means data, as in x and y for 2d plots,
+     while ~geom~[etry] means layout
 
-        ylab("Cumulative confirmed cases")
-    #+end_src
+** Plotting a line graph straight from the full data set
 
-    #+RESULTS: plot
-    [[file:caseline.png]]
+   #+name: plot
+   #+begin_src R :exports both :session :results output graphics file :file caseline.png
+     ## Draw a line plot of cumulative cases vs. date
+     ## Label the y-axis
+     ggplot(
+       confirmed_cases_worldwide,
+       aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
+       geom_line() +
 
-  * If you change ~geom_line()~ to ~geom_point()~, you see the
-    individual lines (for each entity, or country): the cumulative
-    case line is the enveloping line for all of them.
+       ylab("Cumulative confirmed cases")
+   #+end_src
 
-  * To narrow the data set, you can use ~dplyr::filter~ applied to the
-    ~Day~ variable. This function filters all values for which the
-    argument is ~TRUE~.x
+   #+RESULTS: plot
+   [[file:caseline.png]]
 
-    #+name: plot1
-    #+begin_src R :exports both :session :results output graphics file :file caseline1.png
-      ## Draw a line plot of cumulative cases vs. date
-      ## Label the y-axis
-      confirmed_cases_worldwide %>%
-        filter(Day < "2020-03-18") %>%
-        ggplot(
-          aes(
-            x=Day,
-            y=`Total confirmed cases of COVID-19`)) +
-        geom_line() +
-        ylab("Cumulative confirmed cases")
-    #+end_src
+** Plot points not lines
 
-    #+RESULTS: plot1
-    [[file:caseline1.png]]
-    
-  * Which geometry would work better here?
+   * If you change ~geom_line()~ to ~geom_point()~, you see the
+     individual lines (for each entity, or country): the cumulative
+     case line is the enveloping line for all of them.
+
+     #+name: points
+     #+begin_src R :exports both :session :results output graphics file :file casepts.png
+       ## Draw a line plot of cumulative cases vs. date
+       ## Label the y-axis
+       ggplot(
+         confirmed_cases_worldwide,
+         aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
+         geom_point() +
+
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+     #+RESULTS: points
+     [[file:casepts.png]]
+
+** Limit the data set by filtering
+
+   * To narrow the data to the day range covered by the DataCamp
+     project, you can use ~dplyr::filter~ applied to the ~Day~
+     variable. This function filters all values for which the argument
+     is ~TRUE~.
+
+     Use ~geom_point~ for the plot layout.
+
+     #+name: plot1
+     #+begin_src R :exports both :session :results output graphics file :file caseline1.png
+       ## Draw a point plot of cases vs. date
+       ## Label the y-axis
+       confirmed_cases_worldwide %>%
+         filter(Day < "2020-03-18") %>%
+         ggplot(
+           aes(
+             x=Day,
+             y=`Total confirmed cases of COVID-19`)) +
+         geom_point() +
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+     #+attr_html: :width 400px
+     #+RESULTS: plot1
+     [[file:caseline1.png]]
+
+** Use both lines and points
+
+   * [ ] Experiment with mixing both point and line layout: use both
+     layouts in the same plot! Remember that layouts are layered.'
+
+     Below is the code from above. Alter it accordingly and run it.
+
+     #+name: plot2
+     #+begin_src R :exports both :session :results output graphics file :file casemix.png
+       ## Draw a plot of cumulative cases vs. date
+       ## Label the y-axis
+       confirmed_cases_worldwide %>%
+         filter(Day < "2020-03-18") %>%
+         ggplot(
+           aes(
+             x=Day,
+             y=`Total confirmed cases of COVID-19`)) +
+         geom_point() +
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+** Compare with the DataCamp plot
+
+   * This is the output from DataCamp:
+
+     #+attr_html: :width 400px
+     #+caption: Cumulative Covid cases Feb/Mar 2020 (DataCamp)
+     [[./img/dcplot.png]]
+
+   * [ ] How can you remove the shading under the curve in our plot
+     from the code block [[plot]] above?
+
+** Emacs tip
+     
+   * [ ] Emacs info: you can change the HTML and screen layout of a
+     plot with meta data - e.g. ~#+attr_html: :width 400px~ would
+     restrict the width of the following inline image to 400px.
+
+     Try that with the last inline image - set the width to 200px.
+
+     To open/close inline images, use the key sequence C-c C-x C-v (or
+     the command M-x org-toggle-inline-images).
+
+** Further reading
+   
+   * [[http://www.sthda.com/english/wiki/ggplot2-line-plot-quick-start-guide-r-software-and-data-visualization][You can find more examples on the ggplot2 line plot here]].
 
 * NEXT China compared to the rest of the world
 
@@ -132,3 +502,12 @@
 * TODO Which countries outside of China have been hit hardest?
 
 * TODO Plotting hardest hit countries as of Mid-March 2020
+
+* References
+
+  * Wickham H, Hester J, Bryan J (2022). readr: Read Rectangular Text
+    Data. https://readr.tidyverse.org,
+    https://github.com/tidyverse/readr.
+  * R Core Team (2021). R: A language and environment for statistical
+    computing. R Foundation for Statistical Computing, Vienna,
+    Austria. URL https://www.R-project.org/.
