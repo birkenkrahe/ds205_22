@@ -50,8 +50,7 @@
    
 ** Political
 
-   * Ongoing issue (with every new variant)
-  
+   * Ongoing issue (with every new variant)  
 
 ** Example: getting the data for your own project
 
@@ -92,6 +91,12 @@
      library(ggplot2)
      library(dplyr)
    #+end_src
+
+   * Answer: performance and memory issues aside, packages rely on a
+     limited supply of function names. When different packages use the
+     same name, the function name of the older (less recently
+     installed) package is masked - usually this is the base R
+     function name. This can lead to confusion or error.
 
 ** Reading data into a data frame using ~readr::read_csv~
 
