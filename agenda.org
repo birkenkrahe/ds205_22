@@ -1015,11 +1015,12 @@
 
    * Week 11: Finish gapminder intro to ggplot2 and dplyr packages
    * Week 12: Base R bar charts, DataCamp review (categorical data)
+     - No class on Friday, April 8
    * Week 13: Tableau, DataCamp review (numerical data)
    * Week 14: SQLite and R, Excel and R
    * Week 15: R and C++, data cleaning on the command line (Wyatt/Ben?)
    * Week 16: Webscraping and final project
-   * 5 quizzes, 1 test, 1 final exam (Monday May 9, 3.30-5.30)
+   * 5 quizzes, 1 test, 1 final exam
    * 4 DataCamp assignments (EDA using ggplot2 and dplyr)
 
 ** Review: COVID-19 project     
@@ -1028,10 +1029,13 @@
    * [ ] Getting the data
    * [ ] Reading the data (readr vs utils)
    * [ ] Plotting with ggplot2
-   * [ ] Filtering with dplyr
+   * [ ] Filtering with dplyr (~filter~)
+   * [ ] Grouping with dplyr (~group~)
+   * [ ] 
 
 * NEXT Gapminder 2 - scatterplots, faceting - w11s25 (30-Mar)
 * NEXT Gapminder 3 - time series, transformations - w11s26 (1-Apr)
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
