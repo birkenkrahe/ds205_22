@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE: Notes for CSC482/DSC205 Introduction to Advanced Data Science Spring 2022
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:1 num:nil ^:nil
+#+OPTIONS: toc:1 ^:nil num:nil
 * README
 
   Instead of bugging you with emails, I opt to summarize my course
@@ -555,7 +555,7 @@
     superficially for the eye). There are exceptions but one needs to
     check in each case if running images add value.
 
-* Guest talk post mortem: Google Analytics, Excel, Tidyverse - w7s16 (21-Feb)
+* Guest talk review: Google, Excel, Tidyverse - w7s16 (21-Feb)
 ** The Google Data Analytics certificate (and other courses)
 
    * This is a Coursera MOOC consisting of 8 courses

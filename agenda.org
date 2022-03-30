@@ -1022,20 +1022,30 @@
    * 5 quizzes, 1 test, 1 final exam
    * 4 DataCamp assignments (EDA using ggplot2 and dplyr)
 
-** Review: COVID-19 project     
+** Review: COVID-19 project
 
+   Download the whole directory [[https://drive.google.com/drive/folders/1BICBxgLLplylMm1dNKGSgoHmgsdmkHfu?usp=sharing]["covid" from GDrive]] - it includes the
+   data sets in the directory data, and a location for the images in img.
+
+   Extract the file anywhere on your computer and go through the
+   Org-mode workbook.
+
+   There is a [[https://github.com/birkenkrahe/ds205/blob/main/pdf/covid_project.pdf][30-page PDF on GitHub]] with the whole workbook filled in.
+   
    * [ ] Aspects of the project
    * [ ] Getting the data
    * [ ] Reading the data (readr vs utils)
    * [ ] Plotting with ggplot2
    * [ ] Filtering with dplyr (~filter~)
    * [ ] Grouping with dplyr (~group~)
-   * [ ] 
 
 * NEXT Gapminder 2 - scatterplots, faceting - w11s25 (1-Apr)
 * NEXT Gapminder 3 - time series, transformations - w11s26 (4-Apr)
 
 * NEXT DataCamp review: categorical variables (6-Apr)
+
+* *THERE IS NO CLASS ON FRIDAY APRIL 8*
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].

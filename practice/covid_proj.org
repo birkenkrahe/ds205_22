@@ -1,3 +1,8 @@
+#+TITLE:DataCamp Covid-19 Project
+#+AUTHOR:DataCamp Covid-19 Project / M Birkenkrahe
+#+SUBTITLE: DSC 205 Introduction to Advanced Data Science
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:1 num:nil ^:nil
 * README
 
   * Demo of ggplot2 using early pandemic COVID data
@@ -33,24 +38,24 @@
    * Alright - "we've talked about COVID a lot"
    * These plots were new?
    * I somewhat disliked this project
-   
+
 ** Technical
 
    * Fun to create fancy graphs with little effort
    * Is ggplot2 really necessary?
    * dplyr - table manipulation (similar to SQL)
    * linear modeling with the glm() family of functions
-    
+
 ** Scientific
 
    * You should always try to go to the source of the data
      (In this case: JHU)
    * Data quality in this area needs to be questioned
    * Issues are: collection procedures and measures
-   
+
 ** Political
 
-   * Ongoing issue (with every new variant)  
+   * Ongoing issue (with every new variant)
 
 ** Example: getting the data for your own project
 
@@ -83,14 +88,14 @@
    * They're contained in the "Tidyverse" package but it's preferable
      to load them individually.
 
-   * [ ] Why is it better to load packages individually?
+   * [X] Why is it better to load packages individually?
 
-   #+begin_src R :exports both :session :results silent
-     ## Load the readr, ggplot2, and dplyr packages
-     library(readr)
-     library(ggplot2)
-     library(dplyr)
-   #+end_src
+     #+begin_src R :exports both :session :results silent
+       ## Load the readr, ggplot2, and dplyr packages
+       library(readr)
+       library(ggplot2)
+       library(dplyr)
+     #+end_src
 
    * Answer: performance and memory issues aside, packages rely on a
      limited supply of function names. When different packages use the
@@ -103,28 +108,63 @@
    * We use readr::read_csv to read a (local) CSV file into a data
      frame
 
-   * [ ] What's a data frame again? Can you define it?
+   * [X] What's a data frame again? Can you define it?
 
      #+begin_quote
+     "A data frame is ... a list of variables of the same number of
+     rows with unique row names, given class "data.frame". If no
+     variables are included, the row names determine the number of
+     rows." (~data.frame~ help page)
 
-          #+end_quote
-     
-   * The command creates a number of substructures
+     Alternative definition: "A data frame is a table or a
+     two-dimensional array-like structure in which each column
+     contains values of one variable and each row contains one set of
+     values from each column." (tutorialspoint.com)
+     #+end_quote
 
-   #+name: read_csv
-   #+begin_src R :exports both :session :results output
+   * [X] The command creates a number of substructures
 
-     ## Read datasets/confirmed_cases_worldwide.csv into confirmed_cases_worldwide
-     confirmed_cases_worldwide <- read_csv("data/covid.csv")
+     #+name: read_csv
+     #+begin_src R :exports both :session :results output
+       ## Read datasets/confirmed_cases_worldwide.csv into confirmed_cases_worldwide
+       confirmed_cases_worldwide <- read_csv("data/covid.csv")
 
-     ## Try to fix tibble display problems in Emacs + ESS
-     ## Source: https://github.com/emacs-ess/ESS/issues/810
-     options(crayon.enabled = FALSE)
+       ## Try to fix tibble display problems in Emacs + ESS
+       ## Source: https://github.com/emacs-ess/ESS/issues/810
+       options(crayon.enabled = FALSE)
 
-     ## Print out confirmed_cases_worldwide
-     str(confirmed_cases_worldwide)
-     class(confirmed_cases_worldwide)
-   #+end_src
+       ## Print out confirmed_cases_worldwide
+       str(confirmed_cases_worldwide)
+       class(confirmed_cases_worldwide)
+     #+end_src
+
+     #+RESULTS: read_csv
+     #+begin_example
+     Rows: 169173 Columns: 4
+     -- Column specification --------------------------------------------------------
+     Delimiter: ","
+     chr  (2): Entity, Code
+     dbl  (1): Total confirmed cases of COVID-19
+     date (1): Day
+
+     i Use `spec()` to retrieve the full column specification for this data.
+     i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+     spec_tbl_df [169,173 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+      $ Entity                           : chr [1:169173] "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+      $ Code                             : chr [1:169173] "AFG" "AFG" "AFG" "AFG" ...
+      $ Day                              : Date[1:169173], format: "2020-02-24" "2020-02-25" ...
+      $ Total confirmed cases of COVID-19: num [1:169173] 5 5 5 5 5 5 5 5 5 5 ...
+      - attr(*, "spec")=
+       .. cols(
+       ..   Entity = col_character(),
+       ..   Code = col_character(),
+       ..   Day = col_date(format = ""),
+       ..   `Total confirmed cases of COVID-19` = col_double()
+       .. )
+      - attr(*, "problems")=<
+
+     [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
+     #+end_example
 
 *** readr::read_csv
 
@@ -139,71 +179,220 @@
     for Data Science." ([[https://readr.tidyverse.org/][online documentation]])
     #+end_quote
 
-    * [ ] Check the documentation for ~read_csv~ and its many options.
+    * [X] Check the documentation for ~read_csv~ and its many options.
 
-    * [ ] Test the claims made in the quote [[readr]] by reading the Pima
-      indians diabetes data set (in GDrive - download [[https://www.kaggle.com/datasets/kumargh/pimaindiansdiabetescsv?resource=download][via Kaggle]]).
+    * [X] Test the claims made in the quote [[readr]] by reading the Pima
+      indians diabetes data set (download [[https://www.kaggle.com/datasets/kumargh/pimaindiansdiabetescsv?resource=download][via Kaggle]]).
 
     * [ ] Try to extract the ZIP file itself first, then the unzipped
       CSV file
 
     * [ ] After extraction, print the data structure and the first few
-      lines
+      lines (each block should have three statements).
+
+    * [X] Read the archive ZIP file first. Do you think it'll work?
 
       #+name: pima_archive
       #+begin_src R :exports both :session :results output
-
+        pima_archive <- read_csv("data/archive.zip")
+        str(pima_archive)
+        head(pima_archive)
       #+end_src
+
+      #+RESULTS: pima_archive
+      #+begin_example
+      Rows: 767 Columns: 9
+      -- Column specification --------------------------------------------------------
+      Delimiter: ","
+      dbl (9): 6, 148, 72, 35, 0, 33.6, 0.627, 50, 1
+
+      i Use `spec()` to retrieve the full column specification for this data.
+      i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+      spec_tbl_df [767 x 9] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+       $ 6    : num [1:767] 1 8 1 0 5 3 10 2 8 4 ...
+       $ 148  : num [1:767] 85 183 89 137 116 78 115 197 125 110 ...
+       $ 72   : num [1:767] 66 64 66 40 74 50 0 70 96 92 ...
+       $ 35   : num [1:767] 29 0 23 35 0 32 0 45 0 0 ...
+       $ 0    : num [1:767] 0 0 94 168 0 88 0 543 0 0 ...
+       $ 33.6 : num [1:767] 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 37.6 ...
+       $ 0.627: num [1:767] 0.351 0.672 0.167 2.288 0.201 ...
+       $ 50   : num [1:767] 31 32 21 33 30 26 29 53 54 30 ...
+       $ 1    : num [1:767] 0 1 0 1 0 1 0 1 1 0 ...
+       - attr(*, "spec")=
+        .. cols(
+        ..   `6` = col_double(),
+        ..   `148` = col_double(),
+        ..   `72` = col_double(),
+        ..   `35` = col_double(),
+        ..   `0` = col_double(),
+        ..   `33.6` = col_double(),
+        ..   `0.627` = col_double(),
+        ..   `50` = col_double(),
+        ..   `1` = col_double()
+        .. )
+       - attr(*, "problems")=<
+
+      # A tibble: 6 x 9
+          `6` `148`  `72`  `35`   `0` `33.6` `0.627`  `50`   `1`
+        <
+      <
+      <
+      <
+      <
+       <
+        <
+      <
+      <dbl>
+      1     1    85    66    29     0   26.6   0.351    31     0
+      2     8   183    64     0     0   23.3   0.672    32     1
+      3     1    89    66    23    94   28.1   0.167    21     0
+      4     0   137    40    35   168   43.1   2.29     33     1
+      5     5   116    74     0     0   25.6   0.201    30     0
+      6     3    78    50    32    88   31     0.248    26     1
+      #+end_example
+
+    * [X] Next, read the CSV file.
 
       #+name: pima
       #+begin_src R :exports both :session :results output
-
-
-
+        pima_archive <- read_csv("data/pima-indians-diabetes.csv")
+        str(pima_archive)
+        head(pima_archive)
       #+end_src
 
+      #+RESULTS: pima
+      #+begin_example
+      Rows: 767 Columns: 9
+      -- Column specification --------------------------------------------------------
+      Delimiter: ","
+      dbl (9): 6, 148, 72, 35, 0, 33.6, 0.627, 50, 1
 
-    * [ ] For comparison, extract the archive and the CSV data using the Base R
-      function ~read.csv~
+      i Use `spec()` to retrieve the full column specification for this data.
+      i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+      spec_tbl_df [767 x 9] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+       $ 6    : num [1:767] 1 8 1 0 5 3 10 2 8 4 ...
+       $ 148  : num [1:767] 85 183 89 137 116 78 115 197 125 110 ...
+       $ 72   : num [1:767] 66 64 66 40 74 50 0 70 96 92 ...
+       $ 35   : num [1:767] 29 0 23 35 0 32 0 45 0 0 ...
+       $ 0    : num [1:767] 0 0 94 168 0 88 0 543 0 0 ...
+       $ 33.6 : num [1:767] 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 37.6 ...
+       $ 0.627: num [1:767] 0.351 0.672 0.167 2.288 0.201 ...
+       $ 50   : num [1:767] 31 32 21 33 30 26 29 53 54 30 ...
+       $ 1    : num [1:767] 0 1 0 1 0 1 0 1 1 0 ...
+       - attr(*, "spec")=
+        .. cols(
+        ..   `6` = col_double(),
+        ..   `148` = col_double(),
+        ..   `72` = col_double(),
+        ..   `35` = col_double(),
+        ..   `0` = col_double(),
+        ..   `33.6` = col_double(),
+        ..   `0.627` = col_double(),
+        ..   `50` = col_double(),
+        ..   `1` = col_double()
+        .. )
+       - attr(*, "problems")=<
+
+      # A tibble: 6 x 9
+          `6` `148`  `72`  `35`   `0` `33.6` `0.627`  `50`   `1`
+        <
+      <
+      <
+      <
+      <
+       <
+        <
+      <
+      <dbl>
+      1     1    85    66    29     0   26.6   0.351    31     0
+      2     8   183    64     0     0   23.3   0.672    32     1
+      3     1    89    66    23    94   28.1   0.167    21     0
+      4     0   137    40    35   168   43.1   2.29     33     1
+      5     5   116    74     0     0   25.6   0.201    30     0
+      6     3    78    50    32    88   31     0.248    26     1
+      #+end_example
+
+    * [X] For comparison, extract the archive and the CSV data using the Base R
+      function ~read.csv~.
+
+      Start with the CSV file "pima-indians-diabetes.csv".
 
       #+name: pima_base
       #+begin_src R :exports both :session :results output
-
-
+        pima <- read.csv("data/pima-indians-diabetes.csv", header=FALSE)
+        str(pima)
+        head(pima)
       #+end_src
 
+      #+RESULTS: pima_base
+      #+begin_example
+      'data.frame':     768 obs. of  9 variables:
+       $ V1: int  6 1 8 1 0 5 3 10 2 8 ...
+       $ V2: int  148 85 183 89 137 116 78 115 197 125 ...
+       $ V3: int  72 66 64 66 40 74 50 0 70 96 ...
+       $ V4: int  35 29 0 23 35 0 32 0 45 0 ...
+       $ V5: int  0 0 0 94 168 0 88 0 543 0 ...
+       $ V6: num  33.6 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 ...
+       $ V7: num  0.627 0.351 0.672 0.167 2.288 ...
+       $ V8: int  50 31 32 21 33 30 26 29 53 54 ...
+       $ V9: int  1 0 1 0 1 0 1 0 1 1 ...
+        V1  V2 V3 V4  V5   V6    V7 V8 V9
+      1  6 148 72 35   0 33.6 0.627 50  1
+      2  1  85 66 29   0 26.6 0.351 31  0
+      3  8 183 64  0   0 23.3 0.672 32  1
+      4  1  89 66 23  94 28.1 0.167 21  0
+      5  0 137 40 35 168 43.1 2.288 33  1
+      6  5 116 74  0   0 25.6 0.201 30  0
+      #+end_example
 
-      * The Base R function cannot read the ZIP file.
+    * [X] There is a mistake in the code block [[pima_base]]. Fix it and
+      run the block again!
 
-        #+name: pima_base_zip
-        #+begin_src R :exports both :session :results output
+    * [ ] Convince yourself that the Base R function cannot read the
+      ZIP file. I have specified ~:results silent~, otherwise Emacs
+      will get confused by spurious characters in the ZIP file - you
+      see the output in the echo area of the mini buffer.
 
-
-        #+end_src
+      #+name: pima_base_zip
+      #+begin_src R :exports both :session :results silent
+        pima_base_archive <- read.csv("data/archive.zip")
+        str(pima_base_archive)
+        head(pima_base_archive)
+      #+end_src
 
 ** Reading data into a data frame using Base R's ~read.csv~
 
-   * We use ~read.csv~ to read a (local) CSV file into a data frame
+   * [ ] We use ~read.csv~ to read a (local) CSV file into a data
+     frame. The result is formatted much simpler than before.
 
-   #+name: read.csv
-   #+begin_src R :exports both :session :results output
-     ## Read data into cases
-     cases <- read.csv("data/covid.csv")
+     #+name: read.csv
+     #+begin_src R :exports both :session :results output
+       ## Read data into cases
+       cases <- read.csv("data/covid.csv")
 
-     ## Print out confirmed_cases_worldwide
-     str(cases)
-     class(cases)
-   #+end_src
+       ## Print out confirmed_cases_worldwide
+       str(cases)
+       class(cases)
+     #+end_src
 
-*** utils::read.table
+     #+RESULTS: read.csv
+     : 'data.frame':    169173 obs. of  4 variables:
+     :  $ Entity                           : chr  "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+     :  $ Code                             : chr  "AFG" "AFG" "AFG" "AFG" ...
+     :  $ Day                              : chr  "2020-02-24" "2020-02-25" "2020-02-26" "2020-02-27" ...
+     :  $ Total.confirmed.cases.of.COVID.19: int  5 5 5 5 5 5 5 5 5 5 ...
+     : [1] "data.frame"
+
+*** utils::read.table (which contains read.csv)
+
+    The ~read.csv~ command belongs to the ~read.table~ family of
+    functions as calling the help function will tell you.
 
     #+begin_quote
     "Reads a file in table format and creates a data frame from it,
-    with cases corresponding to lines and variables to fields in the
-    file."
+    with cases corresponding to lines (rows) and variables to fields
+    (columns) in the file."
     #+end_quote
-
-    * Lines and fields are synonyms for rows and columns, resp.
 
     * Cases or records, and variables or vectors are the corresponding
       names for the data structure (data frame)
@@ -221,134 +410,46 @@
    * Remember: ~aes~[thetics] means data, as in x and y for 2d plots,
      while ~geom~[etry] means layout
 
-   * [ ] What does ggplot do if only one argument is given to ~aes~?
+   * [X] What does ggplot do if only one argument is given to ~aes~?
 
-   * [ ] Answer: Depends on the layout function! ~geom_hist~ works
-     (counts occurrences), but ~geom_point()~ does not. A few examples:
+   * [ ] Answer: *it depends on the geometry layout function!*
+     ~geom_hist~ works (counts occurrences), and so does
+     ~geom_boxplot~, but ~geom_point()~ does not.
 
-     - Flipped Histogram
+   * [X] Make a histogram from the data set mtcars for the variable
+     mpg in that data set: do this using ggplot2
 
-       #+name: aes_hist
-       #+begin_src R :file aeshist.png :exports both :session :results output graphics file
-         ggplot(data=mtcars, aes(y=mpg)) +
-           geom_histogram() +
-           coord_flip()
-       #+end_src
-
-     - Boxplot
-
-       #+name: aes_box
-       #+begin_src R :file aesbox.png :exports both :session :results output graphics file
-         ggplot(data=mtcars, aes(y=mpg)) +
-           geom_boxplot()
-       #+end_src
-
-** base::plot is generic
-
-   * [ ] Compare this with ~base::plot~, which is a generic function
-     capable of adapting to different data structures.
-
-     Plot the ~mpg~ variable of ~mtcars~.
-
-     #+name: plotmpg
-     #+begin_src R :file plotmpg.png :exports both :session :results output graphics file
-
-
+     #+name: aes_hist
+     #+begin_src R :file img/aeshist.png :exports both :session :results output graphics file
+       ggplot(data=mtcars, aes(y=mpg)) +
+         geom_histogram(binwidth=1) +
+         coord_flip()
      #+end_src
 
-   * [ ] To see which data structures ~plot~ can digest, check ~methods(plot)~.
+     #+RESULTS: aes_hist
+     [[file:img/aeshist.png]]
 
-     #+name: methods
-     #+begin_src R :exports both :session :results output
+     - [X] what is the default binwidth?
+     - [X] Change it to 5. Tip: ~binwidth=5~ is a layout parameter.
+     - [X] How would you turn the plot by 90 degrees? Do it!
 
+   * [ ] Boxplot: make a boxplot!
+
+     #+name: aes_box
+     #+begin_src R :file img/aesbox.png :exports both :session :results output graphics file
+       ggplot(data=mtcars, aes(y=mpg)) +
+         geom_boxplot() +
+         scale_x_discrete()
      #+end_src
 
-     #+RESULTS: methods
+     #+attr_html: :width 200px
+     #+RESULTS: aes_box
+     [[file:img/aesbox.png]]
 
-** Plotting a line graph straight from the full data set
 
-   #+name: plot
-   #+begin_src R :exports both :session :results output graphics file :file caseline.png
-     ## Draw a line plot of cumulative cases vs. date
-     ## Label the y-axis
-     ggplot(
-       confirmed_cases_worldwide,
-       aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
-       geom_line() +
-       ylab("Cumulative confirmed cases")
-   #+end_src
-
-** Plot points not lines
-
-   * If you change ~geom_line()~ to ~geom_point()~, you see the
-     individual lines (for each entity, or country): the cumulative
-     case line is the enveloping line for all of them.
-
-     #+name: points
-     #+begin_src R :exports both :session :results output graphics file :file casepts.png
-     ## Draw a line plot of cumulative cases vs. date
-     ## Label the y-axis
-     ggplot(
-       confirmed_cases_worldwide,
-       aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
-       geom_line() +
-       ylab("Cumulative confirmed cases")
-          #+end_src
-
-** Limit the data set by filtering
-
-   * To narrow the data to the day range covered by the DataCamp
-     project, you can use ~dplyr::filter~ applied to the ~Day~
-     variable. This function filters all values for which the argument
-     is ~TRUE~.
-
-     Use ~geom_point~ for the plot layout.
-
-     #+name: plot1
-     #+begin_src R :exports both :session :results output graphics file :file caseline1.png
-       ## Draw a point plot of cases vs. date
-       ## Label the y-axis
-       confirmed_cases_worldwide %>%
-         filter(Day < "2020-03-18") %>%
-         ggplot(
-           aes(
-             x=Day,
-             y=`Total confirmed cases of COVID-19`)) +
-         geom_point() +
-         ylab("Cumulative confirmed cases")
-     #+end_src
-
-** Use both lines and points
-
-   * [ ] Experiment with mixing both point and line layout: use both
-     layouts in the same plot! Remember that layouts are layered.'
-
-     Below is the code from above. Alter it accordingly and run it.
-
-     #+name: plot2
-     #+begin_src R :exports both :session :results output graphics file :file casemix.png
-       ## Draw a plot of cumulative cases vs. date
-       ## Label the y-axis
-       confirmed_cases_worldwide %>%
-         filter(Day < "2020-03-18") %>%
-         ggplot(
-           aes(
-             x=Day,
-             y=`Total confirmed cases of COVID-19`)) +
-         geom_point() +
-         ylab("Cumulative confirmed cases")
-     #+end_src
-
-** Compare with the DataCamp plot
-
-   * This is the output from DataCamp:
-
-     #+attr_html: :width 400px
-     #+caption: Cumulative Covid cases Feb/Mar 2020 (DataCamp)
-     [[./img/dcplot.png]]
-
-   * [ ] How can you remove the shading under the curve in our plot
-     from the code block [[plot]] above? (Extra credit question!)
+   Note that the x-axis shows a scale [-0.5,0.5].
+   - [X]  To remove the x scale, add a layer ~scale_x_discrete()~
+     and run the code again.
 
 ** Emacs tip
 
@@ -361,6 +462,161 @@
      To open/close inline images, use the key sequence C-c C-x C-v (or
      the command M-x org-toggle-inline-images).
 
+** base::plot is generic
+
+   * [ ] Compare this with ~base::plot~, which is a generic function
+     capable of adapting to different data structures.
+
+     Scatterplot: plot the variable ~mpg~ of the data frame ~mtcars~
+     using the function plot().
+
+     #+name: plotmpg
+     #+begin_src R :file img/plotmpg.png :exports both :session :results output graphics file
+       plot(mtcars$mpg)
+     #+end_src
+
+     #+RESULTS: plotmpg
+     [[file:img/plotmpg.png]]
+
+
+   * [ ] To see which data structures ~plot~ can digest, call the
+     function ~methods~ with ~plot~ as argument
+
+     #+name: methods
+     #+begin_src R :exports both :session :results output
+       methods(plot)
+     #+end_src
+
+     #+RESULTS: methods
+     #+begin_example
+      [1] plot,ANY-method     plot,color-method   plot.acf*          
+      [4] plot.data.frame*    plot.decomposed.ts* plot.default       
+      [7] plot.dendrogram*    plot.density*       plot.ecdf          
+     [10] plot.factor*        plot.formula*       plot.function      
+     [13] plot.ggplot*        plot.gtable*        plot.hcl_palettes* 
+     [16] plot.hclust*        plot.histogram*     plot.HoltWinters*  
+     [19] plot.isoreg*        plot.lm*            plot.medpolish*    
+     [22] plot.mlm*           plot.ppr*           plot.prcomp*       
+     [25] plot.princomp*      plot.profile.nls*   plot.R6*           
+     [28] plot.raster*        plot.spec*          plot.stepfun       
+     [31] plot.stl*           plot.table*         plot.trans*        
+     [34] plot.ts             plot.tskernel*      plot.TukeyHSD*     
+     see '?methods' for accessing help and source code
+     #+end_example
+
+   * [ ] The "boxplot" function will display every available numerical
+     variable. Make a Base R boxplot of ~mtcars~.
+
+     #+name: boxplotmtcars
+     #+begin_src R :file img/boxmtcars.png :exports both :session :results output graphics file
+       boxplot(mtcars)
+     #+end_src
+
+     #+RESULTS: boxplotmtcars
+     [[file:img/boxmtcars.png]]
+
+** Plotting a line graph straight from the full data set
+
+   * [ ] Let's first run this code in [[plot]] using the full, current
+     data set.
+
+     #+name: plot
+     #+begin_src R :file img/caseline.png :exports both :session :results output graphics file
+       ## Draw a line plot of cumulative cases vs. date
+       ## Label the y-axis
+       ggplot(
+         confirmed_cases_worldwide,
+         aes(x=Day, y=`Total confirmed cases of COVID-19`)) +
+         geom_line() +
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+** Plot points not lines
+
+   * [ ] If you change ~geom_line()~ to ~geom_point()~, you see the
+     individual lines (for each entity, or country): the cumulative
+     case line is the enveloping line for all of them.
+
+     #+name: points
+     #+begin_src R :file img/casepts.png :exports both :session :results output graphics file
+       ## Draw a line plot of cumulative cases vs. date
+       ## Label the y-axis
+       ggplot(confirmed_cases_worldwide,
+              aes(x=Day,
+                  y=`Total confirmed cases of COVID-19`))+
+         geom_line() +
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+     #+RESULTS: points
+     [[file:img/casepts.png]]
+
+** Limit the data set by filtering
+
+   * [ ] To narrow the data to the day range covered by the DataCamp
+     project, you can use ~dplyr::filter~ applied to the ~Day~
+     variable. This function filters all values for which the argument
+     is ~TRUE~.
+
+     - Use ~geom_point~ for the plot layout.
+     - Pipe the data set into ~filter()~
+     - Filter those records earlier than March 18, 2020
+     - Does the order of the layers ylab() and geom_point() matter?
+
+     #+name: plot1
+     #+begin_src R :file img/caseline1.png :exports both :session :results output graphics file
+       ## Draw a point plot of cases vs. date
+       ## Label the y-axis
+       confirmed_cases_worldwide %>%
+         filter( ???  ) %>%
+         ggplot(
+           aes(
+             x=Day,
+             y=`Total confirmed cases of COVID-19`)) +
+         ??? +
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+** Use both lines and points
+
+   * [ ] Experiment with mixing both point and line layout: use both
+     layouts in the same plot! Remember that layouts are layered.
+
+     Below is the code from above. Alter it accordingly and run it.
+
+     #+name: plot2
+     #+begin_src R :file img/casemix.png :exports both :session :results output graphics file
+       ## Draw a plot of cumulative cases vs. date
+       ## Label the y-axis
+       confirmed_cases_worldwide %>%
+         filter(Day < "2020-03-18") %>%
+         ggplot(
+           aes(
+             x=Day,
+             y=`Total confirmed cases of COVID-19`)) +
+         ???
+         ylab("Cumulative confirmed cases")
+     #+end_src
+
+** Compare with the DataCamp plot
+
+   We're now using the DataCamp data sets.
+
+   #+name: cum_cases_ggplot
+   #+begin_src R :file img/dc_cases.png :exports both :session :results output graphics file
+     confirmed_cases_worldwide <- read_csv('data/confirmed_cases_worldwide.csv')
+
+     ## Draw a line plot of cumulative cases vs. date
+     ## Label the y-axis
+     ggplot(confirmed_cases_worldwide,
+            aes(y=cum_cases, x=date)) +
+       geom_line() +
+       ylab('Cumulative confirmed cases')
+   #+end_src
+
+   * [ ] How can you remove the shading under the curve in our plot
+     from the code block [[plot]] above? (Extra credit question!)
+
 ** Further reading
 
    * [[http://www.sthda.com/english/wiki/ggplot2-line-plot-quick-start-guide-r-software-and-data-visualization][ggplot2 line plot : Quick start guide]] (2018)
@@ -368,11 +624,17 @@
 
 * China compared to the rest of the world
 
-  See also: [[https://rpubs.com/zaharoian/covid19datacamp][online project notebook copy]]
+  * [ ] Load data.
+
+    #+begin_src R :exports both :session :results output
+      ## Read in datasets/confirmed_cases_china_vs_world.csv
+      confirmed_cases_china_vs_world <-
+        read_csv('data/confirmed_cases_china_vs_world.csv')
+    #+end_src
 
 ** Glimpse of the data
 
-   * [ ] What does dplyr::glimpse do?
+   * [X] What does dplyr::glimpse do?
 
      Same thing (almost) as ~str~ but "it tries to show you as much
      data as possible" (documentation). Run ~glimpse~ on the data frame
@@ -380,8 +642,16 @@
 
      #+name: glimpse
      #+begin_src R :exports both :session :results output
+       glimpse(mtcars)
+       str(mtcars)
+     #+end_src
 
+   * [X] Glimpse at the Chinese COVID cases. The output is slightly
+     different.
 
+     #+name: glimpse_china
+     #+begin_src R :exports both :session :results output
+       glimpse(confirmed_cases_china_vs_world)
      #+end_src
 
 ** Aesthetics inside a geometry of the plot
@@ -389,26 +659,26 @@
    * [ ] What's the effect of putting ~aes~ into the geometry instead
      of into the ~ggplot~ call?
 
-     Let's try that with the plot we already made.
-
-     #+name: aes_in_geom
-     #+begin_src R :exports both :session :results output graphics file :file aes_in_geom.png
-       ## Draw a point plot of cases vs. date
-       ## Label the y-axis
-       confirmed_cases_worldwide %>%
-         filter(Day < "2020-03-18") %>%
-         ggplot() +
-         geom_point(
-           aes(x=Day,
-               y=`Total confirmed cases of COVID-19`)) +
-         ylab("Cumulative confirmed cases")
-     #+end_src
-
    * [ ] Answer: The geometry is responsible for the drawing - putting
      the aes in a geom function means that we only draw on the data
      specified in the geom function call.
 
 ** Plot China data
+
+   * [ ] Line plot of China data and store the plot in an object.
+
+     #+name: chinaline
+   #+begin_src R :file img/chinaline.png :exports both :session :results output graphics file
+     ## Draw a line plot of cumulative cases vs. date, grouped and colored by is_china
+     ## Define aesthetics within the line geom
+     plt_cum_confirmed_cases_china_vs_world <-
+       ggplot(confirmed_cases_china_vs_world) +
+       geom_line(aes(x=date, y=cum_cases, group = is_china, color=is_china)) +
+       ylab("Cumulative confirmed cases")
+
+     ## See the plot
+     plt_cum_confirmed_cases_china_vs_world
+   #+end_src
 
    * The attribute ~group~ removes the default grouping and splits the
      data into Chinese and non-Chinese data (using the variable
@@ -421,36 +691,258 @@
    * The attribute ~color~ colors both categorical variables of the
      underlying data set
 
+   * [ ] What kind of R object is the plot? Check class and structure.
+
+     #+name: ggplotobject
+     #+begin_src R :exports both :session :results output
+       class(plt_cum_confirmed_cases_china_vs_world)
+       str(plt_cum_confirmed_cases_china_vs_world)
+     #+end_src
+
+     #+RESULTS: ggplotobject
+     #+begin_example
+     [1] "gg"     "ggplot"
+     List of 9
+      $ data       : spec_tbl_df [112 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+       ..$ is_china : chr [1:112] "China" "China" "China" "China" ...
+       ..$ date     : Date[1:112], format: "2020-01-22" "2020-01-23" ...
+       ..$ cases    : num [1:112] 548 95 277 486 669 ...
+       ..$ cum_cases: num [1:112] 548 643 920 1406 2075 ...
+       ..- attr(*, "spec")=
+       .. .. cols(
+       .. ..   is_china = col_character(),
+       .. ..   date = col_date(format = ""),
+       .. ..   cases = col_double(),
+       .. ..   cum_cases = col_double()
+       .. .. )
+       ..- attr(*, "problems")=<
+
+      $ layers     :List of 1
+       ..$ :Classes 'LayerInstance', 'Layer', 'ggproto', 'gg' <ggproto object: Class LayerInstance, Layer, gg>
+         aes_params: list
+         compute_aesthetics: function
+         compute_geom_1: function
+         compute_geom_2: function
+         compute_position: function
+         compute_statistic: function
+         computed_geom_params: list
+         computed_mapping: uneval
+         computed_stat_params: list
+         data: waiver
+         draw_geom: function
+         finish_statistics: function
+         geom: <ggproto object: Class GeomLine, GeomPath, Geom, gg>
+             aesthetics: function
+             default_aes: uneval
+             draw_group: function
+             draw_key: function
+             draw_layer: function
+             draw_panel: function
+             extra_params: na.rm orientation
+             handle_na: function
+             non_missing_aes:
+             optional_aes:
+             parameters: function
+             required_aes: x y
+             setup_data: function
+             setup_params: function
+             use_defaults: function
+             super:  <ggproto object: Class GeomPath, Geom, gg>
+         geom_params: list
+         inherit.aes: TRUE
+         layer_data: function
+         map_statistic: function
+         mapping: uneval
+         position: <ggproto object: Class PositionIdentity, Position, gg>
+             compute_layer: function
+             compute_panel: function
+             required_aes:
+             setup_data: function
+             setup_params: function
+             super:  <ggproto object: Class Position, gg>
+         print: function
+         setup_layer: function
+         show.legend: NA
+         stat: <ggproto object: Class StatIdentity, Stat, gg>
+             aesthetics: function
+             compute_group: function
+             compute_layer: function
+             compute_panel: function
+             default_aes: uneval
+             extra_params: na.rm
+             finish_layer: function
+             non_missing_aes:
+             optional_aes:
+             parameters: function
+             required_aes:
+             retransform: TRUE
+             setup_data: function
+             setup_params: function
+             super:  <ggproto object: Class Stat, gg>
+         stat_params: list
+         super:  <ggproto object: Class Layer,
+
+      $ scales     :Classes 'ScalesList', 'ggproto', 'gg' <ggproto object: Class ScalesList, gg>
+         add: function
+         clone: function
+         find: function
+         get_scales: function
+         has_scale: function
+         input: function
+         n: function
+         non_position_scales: function
+         scales: list
+         super:  <ggproto object: Class ScalesList,
+
+      $ mapping    : Named list()
+       ..- attr(*, "class")= chr "uneval"
+      $ theme      : list()
+      $ coordinates:Classes 'CoordCartesian', 'Coord', 'ggproto', 'gg' <ggproto object: Class CoordCartesian, Coord, gg>
+         aspect: function
+         backtransform_range: function
+         clip: on
+         default: TRUE
+         distance: function
+         expand: TRUE
+         is_free: function
+         is_linear: function
+         labels: function
+         limits: list
+         modify_scales: function
+         range: function
+         render_axis_h: function
+         render_axis_v: function
+         render_bg: function
+         render_fg: function
+         setup_data: function
+         setup_layout: function
+         setup_panel_guides: function
+         setup_panel_params: function
+         setup_params: function
+         train_panel_guides: function
+         transform: function
+         super:  <ggproto object: Class CoordCartesian, Coord,
+
+      $ facet      :Classes 'FacetNull', 'Facet', 'ggproto', 'gg' <ggproto object: Class FacetNull, Facet, gg>
+         compute_layout: function
+         draw_back: function
+         draw_front: function
+         draw_labels: function
+         draw_panels: function
+         finish_data: function
+         init_scales: function
+         map_data: function
+         params: list
+         setup_data: function
+         setup_params: function
+         shrink: TRUE
+         train_scales: function
+         vars: function
+         super:  <ggproto object: Class FacetNull, Facet,
+
+      $ plot_env   :<environment: R_
+
+      $ labels     :List of 4
+       ..$ y     : chr "Cumulative confirmed cases"
+       ..$ x     : chr "date"
+       ..$ group : chr "is_china"
+       ..$ colour: chr "is_china"
+      - attr(*, "class")= chr [1:2] "gg" "ggplot"
+     #+end_example
+
 * Let's annotate!
 
   * You've already seen annotation in the test data analysis when we
-    drew vertical lines for the average values
+    drew vertical lines for the average values.
 
-  * [ ] ~who_events~ is a data frame with two variables. Create this
-    data frame using these data - not as a "tribble" but using the
-    Base R tools that you already know.
+  * We want to annotate by drawing vertical lines over dates and
+    giving them text labels.
 
-    #+name: who_event_data
-    #+begin_example
-    "2020-01-30" "Global health\nemergency declared"
-    "2020-03-11" "Pandemic\ndeclared"
-    "2020-02-13" "China reporting\nchange"
-    #+end_example
+** Date and text data frame
 
-    #+name: who_events
-    #+begin_src R :exports both :session :results output
- 
-    #+end_src
+   * [ ] ~who_events~ is a data frame with two variables. Create this
+     data frame using these data - not as a "tribble" but using the
+     Base R tools that you already know. Call it ~df~.
+
+     #+name: who_event_data
+     #+begin_example
+     "2020-01-30" "Global health\nemergency declared"
+     "2020-03-11" "Pandemic\ndeclared"
+     "2020-02-13" "China reporting\nchange"
+     #+end_example
+
+     #+name: who_events_df
+     #+begin_src R :exports both :session :results output
+
+
+
+     #+end_src
 
    * The functions ~geom_vline~ and ~geom_text~ are drawn using the
-    data frame and their own attributes. The Base R equivalents are
-    [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/abline.html][~abline~]] (drawing a line from a to b, horizontally or
-    vertically), and [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/text.html][~text~]].
+     data frame and their own attributes. The Base R equivalents are
+     [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/abline.html][~abline~]] (drawing a line from a to b, horizontally or
+     vertically), and [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/text.html][~text~]].
+
+** DataCamp plot
+
+   * The DataCamp example uses a data frame formatted as a "tribble"
+     and created with the ~tribble~ function instead of ~data.frame~.
+
+   * The dplyr::mutate function attaches a new variable ~date~ to the
+     data frame.
+
+     #+name: who_events_tribble
+     #+begin_src R :exports both :session :results output
+       who_events <- tribble(
+         ~ date, ~ event,
+         "2020-01-30", "Global health\nemergency declared",
+         "2020-03-11", "Pandemic\ndeclared",
+         "2020-02-13", "China reporting\nchange"
+       ) %>%
+         mutate(date = as.Date(date))
+       who_events
+     #+end_src
+
+     #+RESULTS: who_events_tribble
+     : # A tibble: 3 x 2
+     :   date       event
+     :   <
+     :     <
+     :
+     : 1 2020-01-30 "Global health\nemergency declared"
+     : 2 2020-03-11 "Pandemic\ndeclared"
+     : 3 2020-02-13 "China reporting\nchange"
+
+   * [X] Annotate the stored plot. I have broken the lines differently
+     than DataCamp to clarify the layers and arguments within each
+     layer.
+
+     #+name: annotate
+     #+begin_src R :file img/annotate.png :exports both :session :results output graphics file
+       ## Using who_events, add vertical dashed lines with an xintercept at date
+       ## and text at date, labeled by event, and at 100000 on the y-axis
+       plt_cum_confirmed_cases_china_vs_world +
+         geom_vline(
+           data=who_events,
+           aes(xintercept=date),
+           linetype="dashed") +
+         geom_text(
+           data = who_events,
+           aes(x=date, label=event),
+           y=1e5)
+     #+end_src
 
 * Adding a trend line to China
 
   * You can use dplyr::filter to filter data set lines / rows that
     fulfil a set of logical conditions.
+
+    #+name: filter_china
+    #+begin_src R :exports both :session :results silent
+      ## Filter for China, from Feb 15
+      china_after_feb15 <- confirmed_cases_china_vs_world %>%
+        filter(is_china == "China" & date >= '2020-02-15')
+    #+end_src
 
   * ~geom_smooth~ implements a linear model.
 
@@ -465,30 +957,168 @@
     #+end_quote
 
   * [ ] what does the attribute ~se=FALSE~ mean? (Answer: [[https://ggplot2.tidyverse.org/reference/geom_smooth.html][see doc]])
-    
+
   * For more information and a demo, see ~??predict~ and run the
     ~glm()~ demo with examples.
 
   * Better: separate modeling and creation of pretty plots. Understand
     functions like ~glm()~ before blindly applying them (needlessly,
     in this case - the linear modeling adds nothing to the plot).
-    
+
+  * Trend plot with ~lm~
+
+    #+name: lm
+    #+begin_src R :file img/lmchina.png :exports both :session :results output graphics file
+      ## Using china_after_feb15, draw a line plot cum_cases vs. date
+      ## Add a smooth trend line using linear regression, no error bars
+      ggplot(china_after_feb15, aes(x=date, y=cum_cases)) +
+        geom_line() +
+        geom_smooth(method='lm', se=FALSE) +
+        ylab("Cumulative confirmed cases")
+    #+end_src
+
 * And the rest of the world?
+
+  * [ ] Same thing for the rest of the world.
+
+    #+name: lm_world
+    #+begin_src R :file img/lmworld.png :exports both :session :results output graphics file
+      ## Filter confirmed_cases_china_vs_world for not China
+      not_china <- confirmed_cases_china_vs_world %>%
+        filter(is_china == 'Not China')
+
+      ## Using not_china, draw a line plot cum_cases vs. date
+                                              # Add a smooth trend line using linear regression, no error bars
+      plt_not_china_trend_lin <- ggplot(not_china, aes(x=date, y=cum_cases)) +
+        geom_line() +
+        geom_smooth(method='lm', se=FALSE) +
+        ylab("Cumulative confirmed cases")
+
+      ## See the result
+      plt_not_china_trend_lin
+    #+end_src
+
+
 * Adding a logarithmic scale
 
-  * [ ] What does the image suggest?
+  * [ ] What does the image suggest to not data-literate viewers?
   * [ ] What does it mean "we get a much closer fit of the data?"
   * [ ] What do you think of the graph (in terms of communication)?
 
+    #+name: loglin
+    #+begin_src R :file img/loglin.png :exports both :session :results output graphics file
+      ## Modify the plot to use a logarithmic scale on the y-axis
+      plt_not_china_trend_lin +
+        scale_y_log10()
+    #+end_src
+
 * Which countries outside of China have been hit hardest?
+
+  * New input data.
+
+    #+name: toplist
+    #+begin_src R :exports both :session :results silent
+      ## Run this to get the data for each country
+      confirmed_cases_by_country <-
+        read_csv("data/confirmed_cases_by_country.csv")
+    #+end_src
+
+  * Glimpse at the data
+
+    #+name: glimpsetoplist
+    #+begin_src R :exports both :session :results output
+      glimpse(confirmed_cases_by_country)
+    #+end_src
+
+    #+RESULTS: glimpsetoplist
+    #+begin_example
+    Rows: 13,272
+    Columns: 5
+    $ country   <
+    "Afghanistan", "Albania", "Algeria", "Andorra", "Antigua and~
+    $ province  <
+    NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+    $ date      <
+    2020-01-22, 2020-01-22, 2020-01-22, 2020-01-22, 2020-01-22,~
+    $ cases     <
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+    $ cum_cases <
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+    #+end_example
 
   * [ ] What does dplyr:group_by do?
   * [ ] What does dplyr::summarize do?
-    
+
+    #+name: group
+    #+begin_src R :exports both :session :results output
+      ## Group by country, summarize to calculate total cases, find the top 7
+      top_countries_by_total_cases <- confirmed_cases_by_country %>%
+        group_by(country) %>%
+        summarize(total_cases = max(cum_cases)) %>%
+        top_n(7)
+
+      ## See the result
+      top_countries_by_total_cases
+    #+end_src
+
+    #+RESULTS: group
+    #+begin_example
+    Selecting by total_cases
+    # A tibble: 7 x 2
+      country      total_cases
+      <
+                 <dbl>
+    1 France              7699
+    2 Germany             9257
+    3 Iran               16169
+    4 Italy              31506
+    5 Korea, South        8320
+    6 Spain              11748
+    7 US                  6421
+    #+end_example
+
 * Plotting hardest hit countries as of Mid-March 2020
 
   * [ ] Why do we move the aesthetic mapping back into the main
     function?
+
+  * New input data.
+
+    #+begin_src R :exports both :session :results silent
+      ## Run this to get the data for the top 7 countries
+      confirmed_cases_top7_outside_china <-
+        read_csv('data/confirmed_cases_top7_outside_china.csv')
+    #+end_src
+
+  * Glimpse.
+
+    #+begin_src R :exports both :session :results output
+      glimpse(confirmed_cases_top7_outside_china)
+    #+end_src
+
+    #+RESULTS:
+    : Rows: 2,030
+    : Columns: 3
+    : $ country   <
+    : "Germany", "Iran", "Italy", "Korea, South", "Spain", "US", "~
+    : $ date      <
+    : 2020-02-18, 2020-02-18, 2020-02-18, 2020-02-18, 2020-02-18,~
+    : $ cum_cases <
+    : 16, 0, 3, 31, 2, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,~
+
+  * Plot
+
+    #+name: plot_toplist
+    #+begin_src R :file img/toplist.png :exports both :session :results output graphics file
+      ## Using confirmed_cases_top7_outside_china, draw a line plot of
+      ## cum_cases vs. date, grouped and colored by country
+      ggplot(confirmed_cases_top7_outside_china, aes(x=date, y=cum_cases, group=country, color=country))+
+        geom_line()+
+        ylab('Cumulative confirmed cases')
+    #+end_src
+
+    #+RESULTS: plot_toplist
+    [[file:img/toplist.png]]
 
 * References
 
