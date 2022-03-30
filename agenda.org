@@ -969,7 +969,7 @@
   * [X] Best way to prepare: practice "Intermediate R" in the DataCamp
     app - my questions are likely to come from that source!
 
-* Test 2 with ggplot2, org-skeleton - w10s22 (16-Mar)
+* Test 2 with ggplot2, org-skeleton - w10s23 (16-Mar)
 ** News
 
    * Cleaning function with gsub in The Economist ([[https://github.com/birkenkrahe/ds205/issues/37][issue]])
@@ -1003,14 +1003,13 @@
 
      #+end_src
 
-* Test 2 ggplot2 boxplots - w10s23 (18-Mar)
+* Test 2 ggplot2 boxplots - w10s24 (18-Mar)
 
   * COVID-10 project deadline moved
   * Finish ggplot2 boxplots
   * Retrieve updated file from GDrive
   
-* Analysis COVID-19 DataCamp project - w11s24 (28-Mar)
-
+* Analysis COVID-19 DataCamp project - w11s25 (28-Mar/30 Mar)
 ** Tentative plan for the rest of the term
 
    * Week 11: Finish gapminder intro to ggplot2 and dplyr packages
@@ -1033,9 +1032,10 @@
    * [ ] Grouping with dplyr (~group~)
    * [ ] 
 
-* NEXT Gapminder 2 - scatterplots, faceting - w11s25 (30-Mar)
-* NEXT Gapminder 3 - time series, transformations - w11s26 (1-Apr)
+* NEXT Gapminder 2 - scatterplots, faceting - w11s25 (1-Apr)
+* NEXT Gapminder 3 - time series, transformations - w11s26 (4-Apr)
 
+* NEXT DataCamp review: categorical variables (6-Apr)
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
