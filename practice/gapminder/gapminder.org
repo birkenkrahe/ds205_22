@@ -3,6 +3,9 @@
 #+subtitle: Practice notebook for DSC 205 Spring 2022
 #+options: toc:nil ^:nil
 #+startup: hideblocks overview
+#+property: header-args:R :session *R*
+#+property: header-args:R :results output
+#+property: header-args:R :exports both
 * README
 
   In this extensive notebook, you're learning how relatively simple
@@ -33,12 +36,12 @@
   * [X] To be able to run the installation inside Org-mode (and see
     the output here), I put one line in my ~.Rprofile~. This file will
     be fetched by Emacs + ESS, so it needs to be placed in the Emacs
-    HOME directory. Do this now before starting R.
+    HOME directory. You can also run the code right now.
 
     #+name: optionsRepos
-    #+begin_example R
+    #+begin_src R :session *R* :results silent
       options(repos=c("https://cloud.r-project.org/"))
-    #+end_example
+    #+end_src
 
   * [X] Check where your computer gets its CRAN packages from. If you
     put the code [[optionsRepos]] into ~.Rprofile~, you should get the
@@ -49,9 +52,11 @@
     #+end_src
 
     #+RESULTS:
-    : [1] "https://cloud.r-project.org/"
+    : Error in `select()`:
+    : ! object 'year' not found
+    : Run `rlang::last_error()` to see where the error occurred.
 
-  * [ ] We need a couple of packages and a dataset. Put the code in
+  * [X] We need a couple of packages and a dataset. Put the code in
     [[lockAndLoad]] below and run it:
 
     1) Install the ~tidyverse~ and the ~dslabs~ packages
@@ -59,50 +64,48 @@
     3) Load the ~gapminder~ dataset from the ~dslabs~ package
 
     #+name: lockAndLoad
-    #+begin_src R :exports both :session :results output
-      ##      install.packages("tidyverse")
-      ##      install.packages("dslabs")
+    #+begin_src R :exports both :session :results silent
+      install.packages("tidyverse")
+      install.packages("dslabs")
       library(tidyverse)
       library(dslabs)
       data(gapminder)
     #+end_src
 
-    #+RESULTS: lockAndLoad
-    : 
-    : -- [1mAttaching packages[22m --------------------------------------- tidyverse 1.3.1 --
-    : [32mv[39m [34mggplot2[39m 3.3.5     [32mv[39m [34mpurrr  [39m 0.3.4
-    : [32mv[39m [34mtibble [39m 3.1.6     [32mv[39m [34mdplyr  [39m 1.0.8
-    : [32mv[39m [34mtidyr  [39m 1.2.0     [32mv[39m [34mstringr[39m 1.4.0
-    : [32mv[39m [34mreadr  [39m 2.1.2     [32mv[39m [34mforcats[39m 0.5.1
-    : -- [1mConflicts[22m ------------------------------------------ tidyverse_conflicts() --
-    : [31mx[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-    : [31mx[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
-
     - I set the output of [[lockAndLoad]] to ~silent~. If you want to see
       what R did, check the R console session in the ~*R*~ buffer.
 
-    - [ ] [[https://www.gapminder.org/data/][The original Gapminder data set]] is much larger than the
+    - [[https://www.gapminder.org/data/][The original Gapminder data set]] is much larger than the
       [[https://cran.r-project.org/web/packages/gapminder/README.html][subset at CRAN]] or the dslabs dataset.
 
-  * [ ] If you looked at the output of the ~data~ loading command, you
+  * [X] Check ~??gapminder~ in the R console to see how many gapminder
+    data sets you have available for loading.
+
+  * [X] If you looked at the output of the ~data~ loading command, you
     may have noticed that the data display is messed up with control
     characters. If this happens with a familiar command (e.g. ~str~)
     it's to with the "tibble" format that "Tidyverse" data frames come
-    in. [[https://github.com/emacs-ess/ESS/issues/810][Check here]] what to do to your Emacs + ESS setup to get rid of
-    the extra characters. Tibbles are limited to 10 rows by default.
+    in. To get rid of the extra characters, run this command (or
+    better put it into your .Rprofile:
 
-  * [ ] If [[lockAndLoad]] ran successfully, I recommend you go back to
+    #+begin_example R
+     options(crayon.enabled = FALSE)
+    #+end_example
+    Tibbles are limited to 10 rows by default.
+
+  * [X] If [[lockAndLoad]] ran successfully, I recommend you go back to
     the code block and comment the ~install.packages~
     commands. Otherwise, your workbook may attempt to re-install them.
 
-  * [ ] You don't need to re-install packages unless a) you upgraded
+  * [X] You don't need to re-install packages unless a) you upgraded
     to a different version of R, or b) the package was upgraded.
 
     You can update your installed packages with one command (Wasser,
     2021). You should do this on the console - answer "Yes" always.
 
     Check the (local) ~update.packages()~ reference for additional
-    options and commands.
+    options and commands. You can run the commmand below in the R
+    console.
 
     #+name: updatePackages
     #+begin_example R
@@ -126,6 +129,7 @@
 
     #+end_src
 
+    
   * [ ] Check the local help for the dslabs ~gapminder~ dataset for
     the meaning of the variables (do this from the R console).
 
@@ -133,18 +137,22 @@
     much typing (and also to protect the original data). Check that
     they're identical!
 
-    #+name: identical
+    #+name: copy
     #+begin_src R :exports both :session :results output
 
+
     #+end_src
+
 
   * [ ] Print the first 10 lines of the first four columns, and then
     the first 10 lines of the next four columns of the data frame.
 
-    #+name: headGap
+    #+name: top10
     #+begin_src R :exports both :session :results output
 
+
     #+end_src
+
 
   * [ ] This isn't a Nintendo Gameboy. You've got screen space! Reset
     the number of columns printed on a line by resetting the attribute
@@ -157,7 +165,9 @@
     #+name: width
     #+begin_src R :exports both :session :results output
 
+
     #+end_src
+
 
   * [ ] Print the dataframe as a "tibble". To do this, run the
     function ~as_tibble~ with ~gapminder~ as the argument.
@@ -169,7 +179,9 @@
     #+name: tibble
     #+begin_src R :exports both :session :results output
 
+
     #+end_src
+
 
     The figure [[fig:tibble]] shows what you should see. As you can see,
     the format is condensed to fit the 80-char default display
@@ -185,25 +197,32 @@
     #+caption: Gapminder as tibble
     [[./img/tibble.png]]
 
-  * [ ] The dplyr package is a package for data frame
-    manipulation. We're going to really use it in a moment. dplyr
+  * The dplyr package is a package for data frame
+    nmanipulation. We're going to really use it in a moment. dplyr
     makes ample use of the "piping" operator from another package,
-    magrittr ([[magrittr][Bache, 2014]])[fn:3]. Since last year, base R also has its
-    own pipeline operator, which is a little less obscure looking.
+    magrittr, ~%>%~ ([[magrittr][Bache, 2014]])[fn:3]. Since last year, base R also
+    has its own pipeline operator, which is a little less obscure
+    looking: ~|>~.
 
-    You don't see the potential power of pipes if you only use one. It
-    becomes a handy tool (to some, not to me[fn:4]) when you build a
-    "pipeline" of several commands as we will soon see.
+  * Emacs tip: to follow the footnotes, press C-o on the footnote, to
+    get back here, press C-o again, this time in the footnote.
+
+  * [ ] You don't see the potential power of pipes if you only use
+    one. It becomes a handy tool (to some, not to me[fn:4]) when you
+    build a "pipeline" of several commands as we will soon see.
 
     In [[pipes]], "pipe" the data frame into the ~as_tibble~ function by
     putting it on the left, and the function on the right of the
     operator. Do this first for the magrittr, then for the base R
-    operator.
+    operator. (There are some spurious > characters in the output -
+    you can just delete the resp. rows).
 
     #+name: pipes
     #+begin_src R :exports both :session :results output
 
+
     #+end_src
+
 
 ** Section summary
 
@@ -213,6 +232,323 @@
    * Pipes to pass data to functions
    * Pipeline concept
 
+* Filtering the data
+** Rosling's survey
+
+   * [ ] This is a famous survey question by Rosling at the start of
+     his TED talks: for each of the six pairs of countries below,
+
+     1) which country do you think had the highest child mortality
+        rates in 2015? (Measured in infant deaths per 1000)
+     2) Which pairs do you think are the most similar?
+
+     Think about this, then fill in the table [[tab:survey]] according to
+     your opinion (IM = Infant Mortality per 1000). Put a cross next to
+     the country that you think has the highter infant mortality.
+
+     #+name: tab:survey
+     | COUNTRY   |   IM | COUNTRY      |   IM |
+     |-----------+------+--------------+------|
+     | Sri Lanka |      | Turkey       |      |
+     | Poland    |      | South Korea  |      |
+     | Malaysia  |      | Russia       |      |
+     | Pakistan  |      | Vietnam      |      |
+     | Thailand  |      | South Africa |      |
+
+   * [ ] Let's run the numbers in the code blocks below, then put the
+     results in the table [[tab:survey]] and interpret them.
+
+     The code in [[SriLankaTurkey]] shows
+     - two pipes ~%>%~
+     - the function ~dplyr::filter~ to filter rows for year and countries
+     - the operator ~%in%~ to identify if an element is in a vector
+     - the function ~dplyr::select~ to select two column vectors
+
+     #+name: SriLankaTurkey
+     #+begin_src R :exports both :session :results output
+       gm %>%
+         filter(year == 2015 & country %in% c("Sri Lanka", "Turkey")) %>%
+         select(country, infant_mortality)
+     #+end_src
+
+     #+RESULTS: SriLankaTurkey
+     :     country infant_mortality
+     : 1 Sri Lanka              8.4
+     : 2    Turkey             11.6
+
+
+   * [ ] Put in the code for the other four pairs. Now, don't you
+     wish you'd have written a function first?
+
+     #+name: PolandSouthKorea
+     #+begin_src R :exports both :session :results output
+
+
+     #+end_src
+
+     #+name: MalaysiaRussia
+     #+begin_src R :exports both :session :results output
+
+
+
+     #+end_src
+
+
+     #+name: PakistanVietnam
+     #+begin_src R :exports both :session :results output
+
+
+
+     #+end_src
+
+
+     #+name: ThailandSouthAfrica
+     #+begin_src R :exports both :session :results output
+
+
+
+     #+end_src
+
+
+   * [ ] Extra credit: Write a function that achieves this and test it
+     with the five pairs in table [[tab:survey]] - test it and send me the
+     solution via email.
+
+** Interpretation
+
+   * [ ] Interpreting table [[tab:survey]]: apparently, less than 50% of
+     surveyed would hit on these numbers, even if they were generally
+     educated. Most would automatically assume that non-European
+     countries have higher infant mortality rates.
+
+     Rosling took this as a sign that people were misinformed rather
+     than ignorant. Can you think of other more concrete reasons why
+     the survey answers and the data answers differed so wildly?[fn:5]
+
+   * [ ] List potential reasons (other than misinformation) for the
+     survey results in opposition to the data findings in [[reasons]]:
+
+     #+name: reasons
+     #+begin_quote
+     1) ...
+
+     2) ...
+
+     3) ...
+     #+end_quote
+
+   * Rosling's central point in his TED talks and in his books was:
+     our 1960s view of the world is outdated. The old dichotomy of
+     rich and poor countries no longer holds. The response to table
+     [[tab:survey]] in contrast to the findings illustrates this one point
+     quite well. But as the analysis shows, the whole truth may well
+     be more multi-layered.
+
+** Code analysis and examples
+*** Code
+
+    #+name: tableExample
+    #+begin_example R
+      gm %>%
+        filter(year == 2015 & country %in% c("Sri Lanka", "Turkey")) %>%
+        select(country, infant_mortality)
+    #+end_example
+
+    There is a lot going on in this code already. Let's analyze it
+    element by element:
+    - pipes ~%>%~
+    - ~filter~
+    - ~select~
+    - ~%in%~
+
+*** gm %>%
+
+    * The first line calls the data frame and pipes it into the
+      function on the right hand side of the pipe operator.
+
+    * [ ] Pipe ~gm~ into the function ~is.data.frame~. The answer
+      should be ~TRUE~.
+
+      #+name: pipe1
+      #+begin_src R :exports both :session :results output
+
+      #+end_src
+
+    * [ ] How would you find out how many countries there are in
+      ~gapminder~ by stringing functions together using the pipe?
+
+      #+name: pipe2
+      #+begin_src R :exports both :session :results output
+
+      #+end_src
+
+      This is equivalent to the expression without pipe. Type the code
+      without pipes into the block [[nopipe]] and run it.
+
+      #+name: nopipe
+      #+begin_src R :exports both :session :results output
+
+      #+end_src
+
+
+    * [ ] Count the number of missing ~infant_mortality~ values.
+
+      #+name: pipe3
+      #+begin_src R :exports both :session :results output
+
+      #+end_src
+
+
+*** dplyr::filter
+
+    * ~filter~ returns the rows for which its argument is ~TRUE~. This
+      is like the ~WHERE~ operator in SQL.
+
+    * In the code extract [[filter]], the function argument is true for all
+      rows of the data frame for whom both conditions are true:
+      - the ~year~ is ~2015~, AND
+      - the ~country~ is either Sri Lanka or Turkey
+
+      #+name: filter
+      #+begin_example R
+        filter(year == 2015 & country %in% c("Sri Lanka", "Turkey"))
+      #+end_example
+
+*** dplyr::select
+
+    * ~select~ selects column vectors. This is like ~SELECT~ in SQL.
+
+      #+name: select
+      #+begin_src R :exports both :session :results output
+        gm %>% select(region) %>% head(5)
+      #+end_src
+
+** The %in% operator
+
+   * ~%in%~ is a value matching operator. It is itself a function that
+     runs the ~match~ function: it returns a logical vector indicating
+     if there is a match or not for its left operand.
+
+     Check out ~example("%in%")~ for a demo based on the examples from
+     the help. A nice touch: ~%in%~ never returns ~NA~.
+
+     #+name: in
+     #+begin_example R
+       "%in%" <- function(x, table) match(x, table, nomatch=0) > 0
+     #+end_example
+
+** Section summary
+
+   * Data findings need to be critically viewed just like people's
+     opinions. Important aspects include: data quality, samples, and
+     context. Though the data may not change, their interpretation
+     may.
+
+   * dplyr's commands - like ~select~ for column vector selection, or
+     %in% for pattern matching- were designed with SQL in mind.
+
+   * The pipe operator can be used to string commands together as a
+     pipeline where the output of the last command becomes the input
+     of the next. In R, both ~|>~ (base R) and ~%>%~ (dplyr) are valid
+     pipe operators.
+
+* Scatterplots
+
+
+
+  * [ ] Use ggplot to plot ~life_expectancy~ vs. ~fertility~ rate
+    (average number of children per woman), for data from 50 years
+    ago - ~filter~ the year ~1962~).
+
+    #+name: life_fertility_1
+    #+begin_src R :file life_fertility_1.png :exports both :session :results output graphics file
+
+
+
+    #+end_src
+
+
+  * There are two clusters:
+    1) life expectancy around 70 years and 3 or fewer children per
+       family
+    2) life expectancy lower than 65 years and more than 5 children
+       per family
+
+  * [ ] To confirm that these countries are from the regions we
+    expect, add ~color=continent~ to the aesthetic mapping.
+
+    #+name: life_fertility_2
+    #+begin_src R :file life_fertility_2.png :exports both :session :results output graphics file
+
+
+
+
+
+    #+end_src
+
+
+  * In 1962, the view of the West vs. developing world is clearly
+    visible. Let's check on the situation 50 years later.
+
+* Faceting
+
+  * It would be nice to see plots of 1962 and 2012 side by side.
+
+  * This is achieved by adding a layer ~facet_grid~, which
+    automatically separates the plots.
+
+  * [ ] Use the %in% function to filter the years 1962 and 2012, and
+    add the layer ~facet_grid(continent ~ year)~.
+
+    #+name facet1
+    #+begin_src R :file facet1.png :exports both :session :results output graphics file
+
+
+
+
+
+
+    #+end_src
+
+
+  * You should see a plot for each continent/year pair. This is more
+    than we want - we only need one faceting variable. Replace
+    ~continent~ in the argument of ~facet_grid~ by ~.~ (period) and
+    run the code.
+
+    #+name: facet2
+    #+begin_src R :file facet2.png :exports both :session :results output graphics file
+
+
+
+
+
+
+    #+end_src
+
+    
+  * This plot shows that many countries have moved from the developing
+    world cluster (low life expectancy and high fertility) to the
+    western world one (high life expectancy and low fertility).
+
+  * The effect is more easily visible if you change the y axis of the
+    plot. Perhaps you can find out yourself how to do that so that it
+    looks more like this:
+
+    #+attr_html: :width 500px
+    #+caption: life expectancy vs fertility (Source: Irizarry 2012).
+    [[./img/facet.png]]
+
+* TODO Time series plots
+* TODO Data transformations
+* TODO Boxplots and ridge plots
+* TODO Data presentation
+* TODO Summary of Concepts
+
+  * The Tidyverse is a large collection of different packages,
+    including: ggplot2 (graphics), dplyr (table manipulation)
+
+* TODO Summary of Code
 * References
 
   * <<magrittr>> Bache SM (Nov 2014). Introducing magrittr
@@ -228,6 +564,11 @@
   * <<wasser> Wasser L (Apr 8, 2021). Installing & Updating Packages
     in R [tutorial]. [[https://www.neonscience.org/resources/learning-hub/tutorials/packages-r][URL: neonscience.org]].
 * Footnotes
+
+[fn:5]Yet another issue I have whenever the word "misinformation" is
+used - and "disinformation" is even worse in this regard - it
+instantly summons the idea of an agent, and gives thereby rise to
+conspiracy theories before other avenues of explanation were explored.
 
 [fn:4]You know me as a pipeline fanatic if you follow my Operating
 Systems course. However the UNIX command pipeline is completely

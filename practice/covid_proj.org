@@ -108,21 +108,13 @@
    * We use readr::read_csv to read a (local) CSV file into a data
      frame
 
-   * [X] What's a data frame again? Can you define it?
+   * [ ] What's a data frame again? Can you define it?
 
      #+begin_quote
-     "A data frame is ... a list of variables of the same number of
-     rows with unique row names, given class "data.frame". If no
-     variables are included, the row names determine the number of
-     rows." (~data.frame~ help page)
 
-     Alternative definition: "A data frame is a table or a
-     two-dimensional array-like structure in which each column
-     contains values of one variable and each row contains one set of
-     values from each column." (tutorialspoint.com)
-     #+end_quote
+          #+end_quote
 
-   * [X] The command creates a number of substructures
+   * [ ] The command creates a number of substructures
 
      #+name: read_csv
      #+begin_src R :exports both :session :results output
@@ -137,34 +129,6 @@
        str(confirmed_cases_worldwide)
        class(confirmed_cases_worldwide)
      #+end_src
-
-     #+RESULTS: read_csv
-     #+begin_example
-     Rows: 169173 Columns: 4
-     -- Column specification --------------------------------------------------------
-     Delimiter: ","
-     chr  (2): Entity, Code
-     dbl  (1): Total confirmed cases of COVID-19
-     date (1): Day
-
-     i Use `spec()` to retrieve the full column specification for this data.
-     i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-     spec_tbl_df [169,173 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-      $ Entity                           : chr [1:169173] "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
-      $ Code                             : chr [1:169173] "AFG" "AFG" "AFG" "AFG" ...
-      $ Day                              : Date[1:169173], format: "2020-02-24" "2020-02-25" ...
-      $ Total confirmed cases of COVID-19: num [1:169173] 5 5 5 5 5 5 5 5 5 5 ...
-      - attr(*, "spec")=
-       .. cols(
-       ..   Entity = col_character(),
-       ..   Code = col_character(),
-       ..   Day = col_date(format = ""),
-       ..   `Total confirmed cases of COVID-19` = col_double()
-       .. )
-      - attr(*, "problems")=<
-
-     [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
-     #+end_example
 
 *** readr::read_csv
 
@@ -319,33 +283,33 @@
 
       #+name: pima_base
       #+begin_src R :exports both :session :results output
-        pima <- read.csv("data/pima-indians-diabetes.csv", header=FALSE)
+        pima <- read.csv("data/pima-indians-diabetes.csv")
         str(pima)
         head(pima)
       #+end_src
 
       #+RESULTS: pima_base
       #+begin_example
-      'data.frame':     768 obs. of  9 variables:
-       $ V1: int  6 1 8 1 0 5 3 10 2 8 ...
-       $ V2: int  148 85 183 89 137 116 78 115 197 125 ...
-       $ V3: int  72 66 64 66 40 74 50 0 70 96 ...
-       $ V4: int  35 29 0 23 35 0 32 0 45 0 ...
-       $ V5: int  0 0 0 94 168 0 88 0 543 0 ...
-       $ V6: num  33.6 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 ...
-       $ V7: num  0.627 0.351 0.672 0.167 2.288 ...
-       $ V8: int  50 31 32 21 33 30 26 29 53 54 ...
-       $ V9: int  1 0 1 0 1 0 1 0 1 1 ...
-        V1  V2 V3 V4  V5   V6    V7 V8 V9
-      1  6 148 72 35   0 33.6 0.627 50  1
-      2  1  85 66 29   0 26.6 0.351 31  0
-      3  8 183 64  0   0 23.3 0.672 32  1
-      4  1  89 66 23  94 28.1 0.167 21  0
-      5  0 137 40 35 168 43.1 2.288 33  1
-      6  5 116 74  0   0 25.6 0.201 30  0
+      'data.frame':	767 obs. of  9 variables:
+       $ X6    : int  1 8 1 0 5 3 10 2 8 4 ...
+       $ X148  : int  85 183 89 137 116 78 115 197 125 110 ...
+       $ X72   : int  66 64 66 40 74 50 0 70 96 92 ...
+       $ X35   : int  29 0 23 35 0 32 0 45 0 0 ...
+       $ X0    : int  0 0 94 168 0 88 0 543 0 0 ...
+       $ X33.6 : num  26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 37.6 ...
+       $ X0.627: num  0.351 0.672 0.167 2.288 0.201 ...
+       $ X50   : int  31 32 21 33 30 26 29 53 54 30 ...
+       $ X1    : int  0 1 0 1 0 1 0 1 1 0 ...
+	X6 X148 X72 X35  X0 X33.6 X0.627 X50 X1
+      1  1   85  66  29   0  26.6  0.351  31  0
+      2  8  183  64   0   0  23.3  0.672  32  1
+      3  1   89  66  23  94  28.1  0.167  21  0
+      4  0  137  40  35 168  43.1  2.288  33  1
+      5  5  116  74   0   0  25.6  0.201  30  0
+      6  3   78  50  32  88  31.0  0.248  26  1
       #+end_example
 
-    * [X] There is a mistake in the code block [[pima_base]]. Fix it and
+    * [ ] There is a mistake in the code block [[pima_base]]. Fix it and
       run the block again!
 
     * [ ] Convince yourself that the Base R function cannot read the
@@ -375,14 +339,6 @@
        class(cases)
      #+end_src
 
-     #+RESULTS: read.csv
-     : 'data.frame':    169173 obs. of  4 variables:
-     :  $ Entity                           : chr  "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
-     :  $ Code                             : chr  "AFG" "AFG" "AFG" "AFG" ...
-     :  $ Day                              : chr  "2020-02-24" "2020-02-25" "2020-02-26" "2020-02-27" ...
-     :  $ Total.confirmed.cases.of.COVID.19: int  5 5 5 5 5 5 5 5 5 5 ...
-     : [1] "data.frame"
-
 *** utils::read.table (which contains read.csv)
 
     The ~read.csv~ command belongs to the ~read.table~ family of
@@ -410,45 +366,34 @@
    * Remember: ~aes~[thetics] means data, as in x and y for 2d plots,
      while ~geom~[etry] means layout
 
-   * [X] What does ggplot do if only one argument is given to ~aes~?
+   * [ ] What does ggplot do if only one argument is given to ~aes~?
 
    * [ ] Answer: *it depends on the geometry layout function!*
      ~geom_hist~ works (counts occurrences), and so does
      ~geom_boxplot~, but ~geom_point()~ does not.
 
-   * [X] Make a histogram from the data set mtcars for the variable
+   * [ ] Make a histogram from the data set mtcars for the variable
      mpg in that data set: do this using ggplot2
 
      #+name: aes_hist
      #+begin_src R :file img/aeshist.png :exports both :session :results output graphics file
-       ggplot(data=mtcars, aes(y=mpg)) +
-         geom_histogram(binwidth=1) +
-         coord_flip()
+
      #+end_src
 
-     #+RESULTS: aes_hist
-     [[file:img/aeshist.png]]
-
-     - [X] what is the default binwidth?
-     - [X] Change it to 5. Tip: ~binwidth=5~ is a layout parameter.
-     - [X] How would you turn the plot by 90 degrees? Do it!
+     - [ ] what is the default binwidth?
+     - [ ] Change it to 5. Tip: ~binwidth=5~ is a layout parameter.
+     - [ ] How would you turn the plot by 90 degrees? Do it!
 
    * [ ] Boxplot: make a boxplot!
 
      #+name: aes_box
      #+begin_src R :file img/aesbox.png :exports both :session :results output graphics file
-       ggplot(data=mtcars, aes(y=mpg)) +
-         geom_boxplot() +
-         scale_x_discrete()
+
+
      #+end_src
 
-     #+attr_html: :width 200px
-     #+RESULTS: aes_box
-     [[file:img/aesbox.png]]
-
-
    Note that the x-axis shows a scale [-0.5,0.5].
-   - [X]  To remove the x scale, add a layer ~scale_x_discrete()~
+   - [ ]  To remove the x scale, add a layer ~scale_x_discrete()~
      and run the code again.
 
 ** Emacs tip
@@ -472,11 +417,8 @@
 
      #+name: plotmpg
      #+begin_src R :file img/plotmpg.png :exports both :session :results output graphics file
-       plot(mtcars$mpg)
-     #+end_src
 
-     #+RESULTS: plotmpg
-     [[file:img/plotmpg.png]]
+     #+end_src
 
 
    * [ ] To see which data structures ~plot~ can digest, call the
@@ -484,36 +426,17 @@
 
      #+name: methods
      #+begin_src R :exports both :session :results output
-       methods(plot)
+
      #+end_src
 
-     #+RESULTS: methods
-     #+begin_example
-      [1] plot,ANY-method     plot,color-method   plot.acf*          
-      [4] plot.data.frame*    plot.decomposed.ts* plot.default       
-      [7] plot.dendrogram*    plot.density*       plot.ecdf          
-     [10] plot.factor*        plot.formula*       plot.function      
-     [13] plot.ggplot*        plot.gtable*        plot.hcl_palettes* 
-     [16] plot.hclust*        plot.histogram*     plot.HoltWinters*  
-     [19] plot.isoreg*        plot.lm*            plot.medpolish*    
-     [22] plot.mlm*           plot.ppr*           plot.prcomp*       
-     [25] plot.princomp*      plot.profile.nls*   plot.R6*           
-     [28] plot.raster*        plot.spec*          plot.stepfun       
-     [31] plot.stl*           plot.table*         plot.trans*        
-     [34] plot.ts             plot.tskernel*      plot.TukeyHSD*     
-     see '?methods' for accessing help and source code
-     #+end_example
 
    * [ ] The "boxplot" function will display every available numerical
      variable. Make a Base R boxplot of ~mtcars~.
 
      #+name: boxplotmtcars
      #+begin_src R :file img/boxmtcars.png :exports both :session :results output graphics file
-       boxplot(mtcars)
-     #+end_src
 
-     #+RESULTS: boxplotmtcars
-     [[file:img/boxmtcars.png]]
+     #+end_src
 
 ** Plotting a line graph straight from the full data set
 
@@ -547,9 +470,6 @@
          geom_line() +
          ylab("Cumulative confirmed cases")
      #+end_src
-
-     #+RESULTS: points
-     [[file:img/casepts.png]]
 
 ** Limit the data set by filtering
 
