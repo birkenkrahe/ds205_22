@@ -1009,7 +1009,7 @@
   * Finish ggplot2 boxplots
   * Retrieve updated file from GDrive
   
-* Analysis COVID-19 DataCamp project - w11s25 (28-Mar/30 Mar)
+* Analysis COVID-19 DataCamp project - w11s25/26 (28/30-Mar)
 ** Tentative plan for the rest of the term
 
    * Week 11: Finish gapminder intro to ggplot2 and dplyr packages
@@ -1039,7 +1039,7 @@
    * [ ] Filtering with dplyr (~filter~)
    * [ ] Grouping with dplyr (~group~)
 
-* IN PROGRESS UpdateR, scatterplots, faceting - w11s25 (1-Apr)
+* UpdateR, scatterplots - w11s27 (1-Apr)
 ** Updating R on Windows in 6 steps
 
    #+attr_html: :width 500px
@@ -1067,15 +1067,25 @@
    * [ ] Download the gapminder directory from GDrive
    * [ ] Open gapminder.org
 
-* NEXT time series, transformations - w11s26 (4-Apr)
+* NEXT time series, transformations - w12s28 (4-Apr)
 
-* NEXT boxplots, ridge plots, data presentation (6-Apr)
+* NEXT boxplots, ridge plots, data presentation - w12s29 (6-Apr)
 
 * *THERE IS NO CLASS ON FRIDAY APRIL 8*
 
   But there will be a substitute assignment of ca. 1 hour length, to
   be handed in by 3.50 pm.
   
+* EDA with numerical data - w13s30/31 (11/13-Apr)
+  * [ ] DataCamp review
+  * [ ] Lab
+* Numerical summaries - w14s32/33 (20/22-Apr)
+  * [ ] DataCamp review
+  * [ ] Lab
+* C++ and R (Wyatt) - w15s34 (27-Apr)
+* Data science on the command line (Ben) - w15s35 (29-Apr)
+* Excel and R? Tableau? - w16s36 (2-May)
+* SQLite and R? - w17s37 (4-May)
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].

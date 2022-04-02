@@ -41,12 +41,12 @@
   | 21 |      | Fri-11-Mar   |                         | R: Utilities                     | Quiz rehearsal                |            |
   |----+------+--------------+-------------------------+----------------------------------+-------------------------------+------------|
   | 22 |   10 | Mon-14-Mar   |                         |                                  |                               | Test 2     |
-  | 23 |      | Wed-16-Mar   |                         |                                  |                               |            |
-  | 24 |      | Fri-18-Mar   |                         |                                  |                               |            |
+  | 23 |      | Wed-16-Mar   |                         |                                  | Test 2 with ggplot2           |            |
+  | 24 |      | Fri-18-Mar   |                         |                                  | boxplots                      |            |
   |----+------+--------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 25 |   11 | Mon-28-Mar   |                         | Project: COVID-19                |                               |            |
-  |    |      | Wed-30-Mar   |                         |                                  |                               |            |
-  |    |      | Fri-01-Apr   |                         |                                  |                               |            |
+  | 25 |   11 | Mon-28-Mar   | Project analysis        | Project: COVID-19                | Analysis COVID-19 project     |            |
+  | 26 |      | Wed-30-Mar   | Project analysis        |                                  | Analysis COVID-19 project     |            |
+  | 27 |      | Fri-01-Apr   | Gapminder               |                                  | UpdateR, scatterplots         |            |
   |----+------+--------------+-------------------------+----------------------------------+-------------------------------+------------|
   |    |   12 | Mon-04-Apr   |                         | EDA: Categorical Data            |                               | Quiz 7     |
   |    |      | Wed-06-Apr   |                         |                                  |                               |            |
