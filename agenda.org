@@ -1055,12 +1055,12 @@
    
 ** Preview: DataCamp course EDA in R
 
-   * [ ] You find the datasets at the end of the course page
-   * [ ] Read them into data frames using ~read_csv~ or ~read.csv~
-   * [ ] Introduction of the contingency table function ~table~
-   * [ ] Uses ~factor~ and ~levels~ (both function and attribute)
-   * [ ] Presents different formats of bar charts with ~geom_bar~
-   * [ ] Faceting with ~facet_wrap~
+   * [X] You find the datasets at the end of the course page
+   * [X] Read them into data frames using ~read_csv~ or ~read.csv~
+   * [X] Introduction of the contingency table function ~table~
+   * [X] Uses ~factor~ and ~levels~ (both function and attribute)
+   * [X] Presents different formats of bar charts with ~geom_bar~
+   * [X] Faceting with ~facet_wrap~
 
 ** Gapminder 2 - scatterplots and faceting
 
@@ -1069,11 +1069,13 @@
 
 * NEXT time series, transformations - w11s26 (4-Apr)
 
-* NEXT multimodal  distributions (6-Apr)
+* NEXT boxplots, ridge plots, data presentation (6-Apr)
 
 * *THERE IS NO CLASS ON FRIDAY APRIL 8*
 
-
+  But there will be a substitute assignment of ca. 1 hour length, to
+  be handed in by 3.50 pm.
+  
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
