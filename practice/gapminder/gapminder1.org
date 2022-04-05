@@ -1,4 +1,4 @@
-#+title: Exploring gapminder
+#+title: Exploring gapminder 1
 #+author: Marcus Birkenkrahe
 #+subtitle: Practice notebook for DSC 205 Spring 2022
 #+options: toc:nil ^:nil
@@ -33,7 +33,7 @@
     way of getting what you want in R (this is true for all good
     programming languages).
 
-  * [X] To be able to run the installation inside Org-mode (and see
+  * [ ] To be able to run the installation inside Org-mode (and see
     the output here), I put one line in my ~.Rprofile~. This file will
     be fetched by Emacs + ESS, so it needs to be placed in the Emacs
     HOME directory. You can also run the code right now.
@@ -64,24 +64,18 @@
 
     #+name: lockAndLoad
     #+begin_src R :exports both :session :results silent
-##      install.packages("tidyverse")
-##      install.packages("dslabs")
-      library(tidyverse)
-      library(dslabs)
-      data(gapminder)
+
+
+
+
+
     #+end_src
 
   * [ ] Check which packages were loaded.
     
     #+begin_src R :exports both :session :results output
-    search()
-    #+end_src    
 
-    #+RESULTS:
-    :  [1] ".GlobalEnv"        "package:dslabs"    "package:forcats"   "package:stringr"   "package:dplyr"     "package:purrr"    
-    :  [7] "package:readr"     "package:tidyr"     "package:tibble"    "package:ggplot2"   "package:tidyverse" "ESSR"             
-    : [13] "package:stats"     "package:graphics"  "package:grDevices" "package:utils"     "package:datasets"  "package:methods"  
-    : [19] "Autoloads"         "org:r-lib"         "package:base"
+    #+end_src    
 
     - I set the output of [[lockAndLoad]] to ~silent~. If you want to see
       what R did, check the R console session in the ~*R*~ buffer.
@@ -137,23 +131,8 @@
 
     #+name: structure
     #+begin_src R :exports both :session :results output
-      str(gapminder)
+
     #+end_src
-
-    #+RESULTS: structure
-    #+begin_example
-    'data.frame':	10545 obs. of  9 variables:
-     $ country         : Factor w/ 185 levels "Albania","Algeria",..: 1 2 3 4 5 6 7 8 9 10 ...
-     $ year            : int  1960 1960 1960 1960 1960 1960 1960 1960 1960 1960 ...
-     $ infant_mortality: num  115.4 148.2 208 NA 59.9 ...
-     $ life_expectancy : num  62.9 47.5 36 63 65.4 ...
-     $ fertility       : num  6.19 7.65 7.32 4.43 3.11 4.55 4.82 3.45 2.7 5.57 ...
-     $ population      : num  1636054 11124892 5270844 54681 20619075 ...
-     $ gdp             : num  NA 1.38e+10 NA NA 1.08e+11 ...
-     $ continent       : Factor w/ 5 levels "Africa","Americas",..: 4 1 1 2 2 3 2 5 4 3 ...
-     $ region          : Factor w/ 22 levels "Australia and New Zealand",..: 19 11 10 2 15 21 2 1 22 21 ...
-    #+end_example
-
     
   * [ ] Check the local help for the dslabs ~gapminder~ dataset for
     the meaning of the variables (do this from the R console).
@@ -164,51 +143,19 @@
 
     #+name: copy
     #+begin_src R :exports both :session :results output
-      gm <- gapminder
-      identical(gm, gapminder)
+
+
     #+end_src
-
-    #+RESULTS: copy
-    : [1] TRUE
-
 
   * [ ] Print the first 10 lines of the first four columns, and then
     the first 10 lines of the next four columns of the data frame.
 
     #+name: top10
     #+begin_src R :exports both :session :results output
-      head(gm[1:4],10)
-      paste("")
-      head(gm[5:9],10)
+
+
+
     #+end_src
-
-    #+RESULTS: top10
-    #+begin_example
-		   country year infant_mortality life_expectancy
-    1              Albania 1960           115.40           62.87
-    2              Algeria 1960           148.20           47.50
-    3               Angola 1960           208.00           35.98
-    4  Antigua and Barbuda 1960               NA           62.97
-    5            Argentina 1960            59.87           65.39
-    6              Armenia 1960               NA           66.86
-    7                Aruba 1960               NA           65.66
-    8            Australia 1960            20.30           70.87
-    9              Austria 1960            37.30           68.75
-    10          Azerbaijan 1960               NA           61.33
-    [1] ""
-       fertility population          gdp continent                    region
-    1       6.19    1636054           NA    Europe           Southern Europe
-    2       7.65   11124892  13828152297    Africa           Northern Africa
-    3       7.32    5270844           NA    Africa             Middle Africa
-    4       4.43      54681           NA  Americas                 Caribbean
-    5       3.11   20619075 108322326649  Americas             South America
-    6       4.55    1867396           NA      Asia              Western Asia
-    7       4.82      54208           NA  Americas                 Caribbean
-    8       3.45   10292328  96677859364   Oceania Australia and New Zealand
-    9       2.70    7065525  52392699681    Europe            Western Europe
-    10      5.57    3897889           NA      Asia              Western Asia
-    #+end_example
-
 
   * [ ] This isn't a Nintendo Gameboy. You've got screen space! Reset
     the number of columns printed on a line by resetting the attribute
@@ -220,27 +167,11 @@
 
     #+name: width
     #+begin_src R :exports both :session :results output
-      options(width=140)
-      head(gm, 10)
+
+
     #+end_src
 
-    #+RESULTS: width
-    #+begin_example
-		   country year infant_mortality life_expectancy fertility population          gdp continent                    region
-    1              Albania 1960           115.40           62.87      6.19    1636054           NA    Europe           Southern Europe
-    2              Algeria 1960           148.20           47.50      7.65   11124892  13828152297    Africa           Northern Africa
-    3               Angola 1960           208.00           35.98      7.32    5270844           NA    Africa             Middle Africa
-    4  Antigua and Barbuda 1960               NA           62.97      4.43      54681           NA  Americas                 Caribbean
-    5            Argentina 1960            59.87           65.39      3.11   20619075 108322326649  Americas             South America
-    6              Armenia 1960               NA           66.86      4.55    1867396           NA      Asia              Western Asia
-    7                Aruba 1960               NA           65.66      4.82      54208           NA  Americas                 Caribbean
-    8            Australia 1960            20.30           70.87      3.45   10292328  96677859364   Oceania Australia and New Zealand
-    9              Austria 1960            37.30           68.75      2.70    7065525  52392699681    Europe            Western Europe
-    10          Azerbaijan 1960               NA           61.33      5.57    3897889           NA      Asia              Western Asia
-    #+end_example
-
-
-  * [X] Print the dataframe as a "tibble". To do this, run the
+  * [ ] Print the dataframe as a "tibble". To do this, run the
     function ~as_tibble~ with ~gapminder~ as the argument.
 
     In Emacs, you will see the control characters obscuring the
@@ -250,25 +181,8 @@
     #+name: tibble
     #+begin_src R :exports both :session :results output
       options(crayon.enabled=FALSE)
-      as_tibble(gm)
-    #+end_src
 
-    #+RESULTS: tibble
-    #+begin_example
-    # A tibble: 10,545 x 9
-       country              year infant_mortality life_expectancy fertility population          gdp continent region                   
-     1 Albania              1960            115.             62.9      6.19    1636054           NA Europe    Southern Europe          
-     2 Algeria              1960            148.             47.5      7.65   11124892  13828152297 Africa    Northern Africa          
-     3 Angola               1960            208              36.0      7.32    5270844           NA Africa    Middle Africa            
-     4 Antigua and Barbuda  1960             NA              63.0      4.43      54681           NA Americas  Caribbean                
-     5 Argentina            1960             59.9            65.4      3.11   20619075 108322326649 Americas  South America            
-     6 Armenia              1960             NA              66.9      4.55    1867396           NA Asia      Western Asia             
-     7 Aruba                1960             NA              65.7      4.82      54208           NA Americas  Caribbean                
-     8 Australia            1960             20.3            70.9      3.45   10292328  96677859364 Oceania   Australia and New Zealand
-     9 Austria              1960             37.3            68.8      2.7     7065525  52392699681 Europe    Western Europe           
-    10 Azerbaijan           1960             NA              61.3      5.57    3897889           NA Asia      Western Asia             
-    # ... with 10,535 more rows
-    #+end_example
+    #+end_src
 
     The figure [[fig:tibble]] shows what you should see. As you can see,
     the format is condensed to fit the 80-char default display
@@ -291,8 +205,8 @@
     has its own pipeline operator, which is a little less obscure
     looking: ~|>~.
 
-  * Emacs tip: to follow the footnotes, press C-c C-o on the footnote,
-    to get back here, press C-c C-o again, this time in the footnote.
+  * Emacs tip: to follow the footnotes, press ~C-c C-o~ on the footnote,
+    to get back here, press ~C-c C-o~ again, this time in the footnote.
 
   * [ ] You don't see the potential power of pipes if you only use
     one. It becomes a handy tool (to some, not to me[fn:4]) when you
@@ -306,8 +220,8 @@
 
     #+name: pipes
     #+begin_src R :exports both :session :results output
-      gm %>% as_tibble()
-      gm |> as_tibble()
+
+
     #+end_src
 
 ** Section summary
@@ -357,12 +271,6 @@
          select(country, infant_mortality)
      #+end_src
 
-     #+RESULTS: SriLankaTurkey
-     :     country infant_mortality
-     : 1 Sri Lanka              8.4
-     : 2    Turkey             11.6
-
-
    * [ ] Put in the code for the other four pairs. Now, don't you
      wish you'd have written a function first?
 
@@ -379,7 +287,6 @@
 
      #+end_src
 
-
      #+name: PakistanVietnam
      #+begin_src R :exports both :session :results output
 
@@ -387,14 +294,12 @@
 
      #+end_src
 
-
      #+name: ThailandSouthAfrica
      #+begin_src R :exports both :session :results output
 
 
 
      #+end_src
-
 
    * [ ] Extra credit: Write a function that achieves this and test it
      with the five pairs in table [[tab:survey]] - test it and send me the
@@ -503,9 +408,13 @@
 
     * ~select~ selects column vectors. This is like ~SELECT~ in SQL.
 
+      In the code block below, write a command with *two* pipes starting
+      with the data set ~gm~: first, ~select~ the variable ~region~, and
+      then print the first ~5~ lines of the column.
+
       #+name: select
       #+begin_src R :exports both :session :results output
-        gm %>% select(region) %>% head(5)
+
       #+end_src
 
 ** The %in% operator
@@ -530,7 +439,7 @@
      may.
 
    * dplyr's commands - like ~select~ for column vector selection, or
-     %in% for pattern matching- were designed with SQL in mind.
+     ~%in%~ for pattern matching- were designed with SQL in mind.
 
    * The pipe operator can be used to string commands together as a
      pipeline where the output of the last command becomes the input
@@ -539,7 +448,6 @@
 
 * Scatterplots
 
-
   * [ ] Use ggplot to plot ~life_expectancy~ vs. ~fertility~ rate
     (average number of children per woman), for data from 50 years
     ago - ~filter~ the year ~1962~), using the scatterplot geometry
@@ -547,14 +455,10 @@
 
     #+name: life_fertility_1
     #+begin_src R :file life_fertility_1.png :exports both :session :results output graphics file
-      gm %>% filter (year == 1962) %>%
-             ggplot( aes(x=fertility, y=life_expectancy)) +
-             geom_point()
+
+
+
     #+end_src
-
-    #+RESULTS: life_fertility_1
-    [[file:life_fertility_1.png]]
-
 
   * There are two clusters:
     1) life expectancy around 70 years and 3 or fewer children per
@@ -567,30 +471,14 @@
 
     #+name: life_fertility_2
     #+begin_src R :file life_fertility_2.png :exports both :session :results output graphics file
-      gm %>% filter (year == 1962) %>%
-             ggplot( aes(x=fertility, y=life_expectancy, color=continent)) +
-             geom_point()
-    #+end_src
 
-    #+attr_html: :width 700px
-    #+RESULTS: life_fertility_2
-    [[file:life_fertility_2.png]]
 
+
+      #+end_src
 
   * In 1962, the view of the West vs. developing world is clearly
     visible. Let's check on the situation 50 years later.
 
-* NEXT Faceting
-* TODO Time series plots
-* TODO Data transformations
-* TODO Boxplots and ridge plots
-* TODO Data presentation
-* TODO Summary of Concepts
-
-  * The Tidyverse is a large collection of different packages,
-    including: ggplot2 (graphics), dplyr (table manipulation)
-
-* TODO Summary of Code
 * References
 
   * <<magrittr>> Bache SM (Nov 2014). Introducing magrittr

@@ -975,7 +975,7 @@
    * Cleaning function with gsub in The Economist ([[https://github.com/birkenkrahe/ds205/issues/37][issue]])
    * Emacs snippet of the week: ~org-skeleton~
    * Test grades plotting with ggplot2
-    
+
 ** Emacs snippet of the week
 
    * ~Org-skeleton~ is an built-in Org function but you need to
@@ -1008,7 +1008,7 @@
   * COVID-10 project deadline moved
   * Finish ggplot2 boxplots
   * Retrieve updated file from GDrive
-  
+
 * Analysis COVID-19 DataCamp project - w11s25/26 (28/30-Mar)
 ** Tentative plan for the rest of the term
 
@@ -1031,7 +1031,7 @@
    Org-mode workbook.
 
    There is a [[https://github.com/birkenkrahe/ds205/blob/main/pdf/covid_project.pdf][30-page PDF on GitHub]] with the whole workbook filled in.
-   
+
    * [ ] Aspects of the project
    * [ ] Getting the data
    * [ ] Reading the data (readr vs utils)
@@ -1052,7 +1052,7 @@
    4) [ ] Add new Rterm location to your PATH environment variable
    5) [ ] Set Emacs variable inferior-ess-r-program to Rterm path
    6) [ ] Restart Emacs and M-x R
-   
+
 ** Preview: DataCamp course EDA in R
 
    * [X] You find the datasets at the end of the course page
@@ -1062,20 +1062,55 @@
    * [X] Presents different formats of bar charts with ~geom_bar~
    * [X] Faceting with ~facet_wrap~
 
-** Gapminder 2 - scatterplots and faceting
+** Gapminder - scatterplots
 
-   * [ ] Download the gapminder directory from GDrive
-   * [ ] Open gapminder.org
+   * [ ] Download the gapminder directory from [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+   * [ ] Open ~gapminder1.org~ 
 
-* NEXT time series, transformations - w12s28 (4-Apr)
+* Faceting, time series, transformations - w12s28 (4-Apr)
 
-* NEXT boxplots, ridge plots, data presentation - w12s29 (6-Apr)
+** Homekeeping
+
+  * [ ] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~, or
+    customize the variable by typing ~C-h v org-hide-emphasis-markers~
+    and choose ~toggle~ and ~Apply and Save~ in the menu[fn:4].
+
+  * [ ] R 4.1.3 is missing ~Internet.dll~ - fix [fn:5]    
+
+** Review:  last time (gapminder 1)
+
+   *Getting the data* 
+   * Knowing alternative paths in R is not a waste
+   * Installing and loading R packages
+   * Updating R packages
+   * Tibble format for data frames
+   * Fixing an ~Internet.dll~ issue on Windows
+
+   *Checking and getting to know the data*
+   * Reviewing structure checking commands
+   * Changing the display width option
+   * Printing a data frame as a tibble
+   * Pipes to pass data to functions
+   * Pipeline concept
+
+   *Filtering the data*
+   * Review data findings for: quality, sample, context
+   * ~dplyr~ commands resemble SQL: ~select~, ~filter~, ~%in~
+   * The pipe operator in ~dplyr~ is ~%>%~ 
+    
+** Topics    
+    
+  * [ ] Assignment: writing ~dplyr~ function
+  * [ ] Topics: faceting, time series and transformations
+  * [ ] Practice workbook ~gapminder2.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+
+* Boxplots, ridge plots, data presentation - w12s29 (6-Apr)
 
 * *THERE IS NO CLASS ON FRIDAY APRIL 8*
 
   But there will be a substitute assignment of ca. 1 hour length, to
   be handed in by 3.50 pm.
-  
+
 * EDA with numerical data - w13s30/31 (11/13-Apr)
   * [ ] DataCamp review
   * [ ] Lab
@@ -1105,6 +1140,20 @@
   * System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro
     Timer?? [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 * Footnotes
+
+[fn:5]On my machine, R version 4.1.3 cannot open documentation in a
+browser. This seems to be a Windows 10 issue (~internet.dll~ is
+missing). I simply copied the file from /R-4.1.2/modules/x64/ to
+/R-4.1.3/modules/x64/ and that fixed it.
+
+[fn:4]And if you wish for the emphasis markers to appear when you
+hover over an expression with the mouse, install the ~org-appear~
+package and add this code to your ~.emacs~ file, too:
+#+begin_example emacs-lisp
+;; Show hidden emphasis markers
+(use-package org-appear
+  :hook (org-mode . org-appear-mode))
+#+end_example
 
 [fn:3]This was answered in the talk later. MS said that he had been
 asked to analyze time series data sets containing no more than 3

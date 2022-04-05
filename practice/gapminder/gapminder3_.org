@@ -1,0 +1,37 @@
+* Time series plots
+
+  * Time series plots have time in the x-axis and an outcome or
+    measurement of interest on the y-axis.
+
+  * [ ] Example: US ~fertility~ rates from 1960 to 2012.
+
+    1) Filter the ~country~ ~United States~ out of ~gapminder~.
+    2) Plot ~year~ vs. ~fertility~.
+
+       #+name: ts1
+       #+begin_src R :file ts1.png :exports both :session :results output graphics file
+
+       #+end_src
+
+  * [ ] Turn the plot into a line plot. Lines are easier to follow
+    than scattered points.
+
+    #+name: ts2
+    #+begin_src R :file ts2.png :exports both :session :results output graphics file
+
+    #+end_src
+
+  * [ ] Let's look at two countries.
+
+    1) Define a ~countries~ vector with ~South Korea~ and ~Germany~ in it.
+    2) Filter both countries out of ~gapminder~
+    3) Make a line plot of ~year~ vs. ~fertility~
+
+    #+name: ts3
+    #+begin_src R :file ts3.png :exports both :session :results output graphics file
+
+    #+end_src
+
+  * We haven't told ~ggplot~ anything about separating these data, so
+    they're all connected by the same line.
+
