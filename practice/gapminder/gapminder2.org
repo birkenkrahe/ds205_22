@@ -1,0 +1,302 @@
+#+title: Exploring gapminder
+#+author: Marcus Birkenkrahe
+#+subtitle: Practice notebook for DSC 205 Spring 2022
+#+options: toc:nil ^:nil
+#+startup: hideblocks overview
+#+property: header-args:R :session *R*
+#+property: header-args:R :results output
+#+property: header-args:R :exports both
+* README
+
+  In this extensive notebook, you're learning how relatively simple
+  ggplot2 and dplyr code can create interesting plots - always
+  provided the underlying dataset is interesting.
+
+  For an overview of both of these "Tidyverse" packages, see the
+  online reference pages for [[https://ggplot2.tidyverse.org/reference/][ggplot2]] and [[https://dplyr.tidyverse.org/reference/index.html][dplyr]][fn:1].
+
+  The dataset is gapminder adapted from the original dataset created
+  by Hans Rosling[fn:2].
+
+  This workbook is adapted from chapter 10 "Data visualization in
+  practice" of the textbook by [[dslabs][Irizarry (2021)]], which is also the
+  basis of an introductory data science course at Harvard U.
+
+* Getting the data
+
+  * [X] We need a couple of packages and a dataset. Put the code in
+    [[lockAndLoad]] below and run it:
+
+    1) Install the ~tidyverse~ and the ~dslabs~ packages
+    2) Load the ~tidyverse~ and the ~dslabs~ packages
+    3) Load the ~gapminder~ dataset from the ~dslabs~ package
+
+    #+name: lockAndLoad
+    #+begin_src R :exports both :session :results silent
+      ## The install commands are commented out to save time
+      ##      install.packages("tidyverse")
+      ##      install.packages("dslabs")
+      library(tidyverse)
+      library(dslabs)
+      data(gapminder)
+    #+end_src
+
+* Checking and getting to know the data
+
+  * [X] Make a copy of ~gapminder~ as ~gm~ so you won't have to do so
+    much typing (and also to protect the original data). Check that
+    they're identical!
+
+    #+name: identical
+    #+begin_src R :exports both :session :results output
+      gm <- gapminder
+      identical(gm, gapminder)
+    #+end_src
+
+    #+RESULTS: identical
+    : [1] TRUE
+
+* Filtering the data
+** Rosling's survey
+
+   * [X] This is a famous survey question by Rosling at the start of
+     his TED talks: for each of the six pairs of countries below,
+
+     1) which country do you think had the highest child mortality
+        rates in 2015? (Measured in infant deaths per 1000)
+     2) Which pairs do you think are the most similar?
+
+     Think about this, then fill in the table [[tab:survey]] according to
+     your opinion (IM = Infant Mortality per 1000). Put a cross next to
+     the country that you think has the highter infant mortality.
+
+     #+name: tab:survey
+     | COUNTRY   |   IM | COUNTRY      |   IM |
+     |-----------+------+--------------+------|
+     | Sri Lanka |  8.4 | Turkey       | 11.6 |
+     | Poland    |  4.5 | South Korea  |  2.9 |
+     | Malaysia  |  6.0 | Russia       |  8.2 |
+     | Pakistan  | 65.8 | Vietnam      | 17.3 |
+     | Thailand  | 10.5 | South Africa | 33.6 |
+
+   * [X] Let's run the numbers in the code blocks below, then put the
+     results in the table [[tab:survey]] and interpret them.
+
+     The code in [[SriLankaTurkey]] shows
+     - two pipes ~%>%~
+     - the function ~dplyr::filter~ to filter rows for year and countries
+     - the operator ~%in%~ to identify if an element is in a vector
+     - the function ~dplyr::select~ to select two column vectors
+
+     #+name: SriLankaTurkey
+     #+begin_src R :exports both :session :results output
+       gm %>%
+         filter(year == 2015 & country %in% c("Sri Lanka", "Turkey")) %>%
+         select(country, infant_mortality)
+     #+end_src
+
+     #+RESULTS: SriLankaTurkey
+     :     country infant_mortality
+     : 1 Sri Lanka              8.4
+     : 2    Turkey             11.6
+
+   * [X] Put in the code for the other four pairs using a function ~gf~
+     that takes the year and the countries as arguments.
+
+     #+name: PolandSouthKorea
+     #+begin_src R :exports both :session :results output
+
+     #+end_src
+
+     #+name: MalaysiaRussia
+     #+begin_src R :exports both :session :results output
+
+     #+end_src
+
+     #+name: PakistanVietnam
+     #+begin_src R :exports both :session :results output
+
+     #+end_src
+
+     #+name: ThailandSouthAfrica
+     #+begin_src R :exports both :session :results output
+
+     #+end_src
+
+   * [ ] Extra credit: Write a function that achieves this and test it
+     with the five pairs in table [[tab:survey]] - test it and send me the
+     solution via email.
+
+   * [X] Solution
+
+     1) start with one argument in the ~filter~ function
+
+        #+name: gf1
+        #+begin_src R :exports both :session :results output
+
+        #+end_src
+
+     2) add the other argument in the ~filter~ function
+
+        #+name: gf2
+        #+begin_src R :exports both :session :results output
+
+        #+end_src
+
+* Scatterplots
+
+  * [X] Use ggplot to plot ~life_expectancy~ vs. ~fertility~ rate
+    (average number of children per woman), for data from 50 years
+    ago - ~filter~ the year ~1962~).
+
+    /Tip: you need to start with ~filter~ and plot the result./
+
+    #+name: life_fertility_1
+    #+begin_src R :file life_fertility_1.png :exports both :session :results output graphics file
+      gm %>% filter(year == 1962) %>%
+        ggplot(aes(fertility, life_expectancy)) +
+        geom_point()
+    #+end_src
+
+  * There are two clusters:
+    1) life expectancy around 70 years and 3 or fewer children per
+       family
+    2) life expectancy lower than 65 years and more than 5 children
+       per family
+
+  * [ ] To confirm that these countries are from the regions we
+    expect, add ~color=continent~ to the aesthetic mapping.
+
+    #+name: life_fertility_2
+    #+begin_src R :file life_fertility_2.png :exports both :session :results output graphics file
+      gm %>% filter(year == 1962) %>%
+        ggplot(aes(fertility,
+                   life_expectancy,
+                   ??? )) +
+        geom_point()
+    #+end_src
+
+  * In 1962, the view of the West vs. developing world is clearly
+    visible. Let's check on the situation 50 years later.
+
+  * [ ] Change the ~year~ to ~2012~.
+
+    #+name: life_fertility_3
+    #+begin_src R :file life_fertility_3.png :exports both :session :results output graphics file
+      gm %>% filter(year == ???) %>%
+        ggplot(aes(fertility,
+                   life_expectancy,
+                   color = continent )) +
+        geom_point()
+    #+end_src
+
+* Faceting
+
+  * It would be nice to see plots of 1962 and 2012 side by side.
+
+  * This is achieved by adding a layer ~facet_grid~, which
+    automatically separates the plots.
+
+** ~facet_grid~
+
+   * [X] Use the ~%in%~ function to ~filter~ the years ~1962~ and ~2012~, and
+     add the layer ~facet_grid(continent ~ year)~ to the pipe.
+
+     /Tip: ~%in%~ matches elements on its right side./
+
+     #+name facet1
+     #+begin_src R :file facet1.png :exports both :session :results output graphics file
+
+
+
+     #+end_src
+
+   * You should see a plot for each continent/year pair. This is more
+     than we want - we only need one faceting variable. Replace
+     ~continent~ in the argument of ~facet_grid~ by a period ~.~ , and
+     run the code again.
+
+     #+name: facet2
+     #+begin_src R :file facet2.png :exports both :session :results output graphics file
+
+
+
+     #+end_src
+
+   * This plot shows that many countries have moved from the developing
+     world cluster (low life expectancy and high fertility) to the
+     western world one (high life expectancy and low fertility).
+
+   * The effect is more easily visible if you change the y axis of the
+     plot. Perhaps you can find out yourself how to do that so that it
+     looks more like this[fn:8]:
+
+     #+attr_html: :width 500px
+     #+caption: life expectancy vs fertility (Source: Irizarry 2012).
+     [[./img/facet.png]]
+
+** ~facet_wrap~
+
+   * To explore how the transformation of a distribution evolved, we
+     look at the plots for several years. This is also a suitable
+     starting point for animation.
+
+   * [ ] In the code block below, construct a pipe that displays
+     ~fertility~ vs. ~life_expectancy~ for several years on two
+     continents.
+
+     1) Define a vector for the variable ~years~ that contains the years
+        ~1962~, ~1980~, ~1990~, ~2000~, and ~2012~, and a vector ~continents~ for
+        ~Europe~ and ~Asia~. Now, begin building a pipe:
+     2) Filter ~years~ and ~continent~ from the dataset ~gapminder~
+     3) Pipe the result into ~ggplot~, plot points, and add the geometry
+        ~facet_wrap( ~ year)~.
+
+     #+name: wrap1
+     #+begin_src R :file wrap1.png :exports both :session :results output graphics file
+
+
+
+
+     #+end_src
+
+** Fix scales
+
+   * Axis range is an important visualization parameter. Without using
+     ~facet~, the range is determined by the data shown in the plot.
+
+   * When using ~facet~, the range is determined by the data shown in
+     /all/ plots and kept fixed across plots.
+
+   * If you adjust the scales individually by facet plot, you need to
+     pay extra attention to see what has actually changed (or not).
+
+   * [ ] Add ~scales = "free"~ to the argument of ~facet_wrap~ in the
+     previous code block.
+
+     #+name: wrap2
+     #+begin_src R :file wrap2.png :exports both :session :results output graphics file
+
+
+
+
+     #+end_src
+
+* References
+
+  * <<magrittr>> Bache SM (Nov 2014). Introducing magrittr
+    [vignette]. [[https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html][URL: cran.r-project.org]].
+
+  * <<berggren>> Berggren C (16 Nov 2018). The One-Sided Worldview of
+    Hans Rosling [article]. [[https://quillette.com/2018/11/16/the-one-sided-worldview-of-hans-rosling/][URL: quillette.com]].
+
+  * <<dslabs>> Irizarry R (2021). Introduction to Data Science - Data
+    Analysis and Prediction Algorithms with R. CRC Press. [[https://rafalab.github.io/dsbook/gapminder.html][URL:
+    rafalab.github.io]].
+
+  * <<wasser> Wasser L (Apr 8, 2021). Installing & Updating Packages
+    in R [tutorial]. [[https://www.neonscience.org/resources/learning-hub/tutorials/packages-r][URL: neonscience.org]].
+* Footnotes
+
+[fn:8]Look it up in the ~facet_grid~ [[https://www.rdocumentation.org/packages/ggplot2/versions/1.0.1/topics/facet_grid][documentation]].
+
