@@ -1,4 +1,4 @@
-#+title: Exploring gapminder
+#+title: Exploring gapminder 2
 #+author: Marcus Birkenkrahe
 #+subtitle: Practice notebook for DSC 205 Spring 2022
 #+options: toc:nil ^:nil
@@ -8,9 +8,9 @@
 #+property: header-args:R :exports both
 * README
 
-  In this extensive notebook, you're learning how relatively simple
-  ggplot2 and dplyr code can create interesting plots - always
-  provided the underlying dataset is interesting.
+  In this notebook, you're learning how relatively simple ~ggplot2~ and
+  ~dplyr~ code can create interesting plots - always provided the
+  underlying dataset is interesting.
 
   For an overview of both of these "Tidyverse" packages, see the
   online reference pages for [[https://ggplot2.tidyverse.org/reference/][ggplot2]] and [[https://dplyr.tidyverse.org/reference/index.html][dplyr]][fn:1].

@@ -1067,8 +1067,7 @@
    * [ ] Download the gapminder directory from [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
    * [ ] Open ~gapminder1.org~ 
 
-* Faceting, time series, transformations - w12s28 (4-Apr)
-
+* Faceting - w12s28 (4-Apr)
 ** Homekeeping
 
   * [ ] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~, or
@@ -1101,25 +1100,88 @@
 ** Topics    
     
   * [ ] Assignment: writing ~dplyr~ function
-  * [ ] Topics: faceting, time series and transformations
+  * [ ] Topics: faceting with gapminder
   * [ ] Practice workbook ~gapminder2.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
 
-* Boxplots, ridge plots, data presentation - w12s29 (6-Apr)
+* Time series plots - w12s29 (6-Apr)
+** Emacs tip: hide emphatic characters
 
-* *THERE IS NO CLASS ON FRIDAY APRIL 8*
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
 
-  But there will be a substitute assignment of ca. 1 hour length, to
-  be handed in by 3.50 pm.
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
 
-* EDA with numerical data - w13s30/31 (11/13-Apr)
-  * [ ] DataCamp review
-  * [ ] Lab
-* Numerical summaries - w14s32/33 (20/22-Apr)
-  * [ ] DataCamp review
-  * [ ] Lab
+   Note: If you don't put it in your ~/.emacs~ file, the command will
+   only work for the current Emacs session, and for all new buffers
+   (not for buffers already opened).
+
+   See also: [[https://lucidmanager.org/categories/productivity/][articles on becoming more *productive* with Emacs.]]
+** Emacs tip: change theme to "Leuven"
+
+   * In Emacs, open the theme selector with ~M-x custom-themes~
+   * Select ~Leuven~ and click on ~Save theme settings~
+   * Your code blocks are now more clearly visible
+     
+** Package tip: overviewR ([[https://github.com/birkenkrahe/ds205/issues/43][issue #43]])
+
+   * [[https://twitter.com/daily_r_sheets/status/1511584521191366663?s=20&t=VqrGiNYJvs0xeg3XbPbXuw][Link to tweet and cheatsheet]] & [[https://cran.r-project.org/web/packages/overviewR/vignettes/overviewR_vignette.html][vignette at CRAN]]
+   * This could be a cool project - exploring pros and cons
+   
+** Topics
+   
+  * [ ] Finish faceting: ~facet_wrap~ in ~gapminder2.org~ 
+  * [ ] Topic: time series plots with ~gapminder~
+  * [ ] Practice workbook ~gapminder3.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+  * [ ] Quiz 8 = DataCamp review + time series + faceting
+
+** Reading and writing assignment for Friday April 8
+
+   There will be no class on *Friday, April 8*. Instead, please complete
+   the following assignment:
+
+   * [ ] Read the *introduction* to the essay [[https://github.com/matloff/TidyverseSkeptic#case-study--tidy-obstacles-to-debugging]["Teaching R in a Kinder,
+     Gentler, More Effective Manner: Use Base-R, Not the Tidyverse"]]
+
+   * [ ] Pick one of the 10 *case studies* included in the essay and
+     study it so that you can answer the following questions
+     1. *Message:* What's the main message of the case study?
+     2. *Content:* In your own words, what is the author trying to say?
+     3. *Opinion:* What are your personal views (if any) on the case study?
+     4. And anything else you wish to share!
+
+   * [ ] Post your thoughts as an [[https://github.com/birkenkrahe/ds205/issues][issue to GitHub]] (with your name and
+     the title of the case study in the title of the issue).
+
+   * [ ] You should not spend less than an hour on this
+     assignment. This may include looking stuff up or trying things
+     out (in R).
+
+   *Background* to the assignment: this essay (from 2019) by R legend
+   Norman Matloff has recently been [[https://matloff.wordpress.com/2022/04/02/greatly-revised-edition-of-tidyverse-skeptic/][greatly revised]]. It is important
+   for any user of R because of the way the 'Tidyverse' is seen (as an
+   alternative R universe). It is important for you as non-teachers,
+   because you're likely to have to teach, or instruct other users of
+   data (who aren't happy enough with Excel). Lastly, it's interesting
+   because it's political, and to see politics, history & business so
+   clearly in computing is rare and will help you grow professionally.
+    
+* Scale and value transformations - w13s30/31 (11-Apr)
+
+  * [ ] Quiz 8 = DataCamp review + time series + faceting
+  * [ ] Topic: scale and value transformations with ~gapminder~
+  * [ ] Practice workbook ~gapminder4.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+
+* Boxplots and ridge plots - w14s32/33 (12-Apr)
+
+  * [ ] Topic: boxplots and ridge plots with ~gapminder~    
+  * [ ] Practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
-* Excel and R? Tableau? - w16s36 (2-May)
+* gganimate()? Excel and R? Tableau? - w16s36 (2-May)
 * SQLite and R? - w17s37 (4-May)
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
