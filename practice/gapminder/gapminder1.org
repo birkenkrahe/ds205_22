@@ -8,8 +8,8 @@
 #+property: header-args:R :exports both
 * README
 
-  In this extensive notebook, you're learning how relatively simple
-  ggplot2 and dplyr code can create interesting plots - always
+  In this notebook, you're learning how relatively simple
+  ~ggplot2~ and ~dplyr~ code can create interesting plots - always
   provided the underlying dataset is interesting.
 
   For an overview of both of these "Tidyverse" packages, see the

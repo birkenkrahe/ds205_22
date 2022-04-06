@@ -48,22 +48,22 @@
   | 26 |      | Wed-30-Mar | Project analysis        |                                  | Analysis COVID-19 project     |            |
   | 27 |      | Fri-01-Apr | Gapminder 1             |                                  | UpdateR, scatterplots         |            |
   |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   12 | Mon-04-Apr | Gapminder 2             | EDA: Categorical Data            | Faceting, time                | Quiz 7     |
-  |    |      | Wed-06-Apr | Gapminder 3             |                                  |                               |            |
-  |    |      | Fri-08-Apr | NO CLASS (Colloquium)   |                                  |                               |            |
+  |    |   12 | Mon-04-Apr | Gapminder 2             | EDA: Categorical Data            | Faceting                      | Quiz 7     |
+  |    |      | Wed-06-Apr | Gapminder 3             |                                  | Time series plots             |            |
+  |    |      | Fri-08-Apr | NO CLASS (Colloquium)   |                                  | Tidyverse Sceptic Essay       |            |
   |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   13 | Mon-11-Apr |                         | EDA: Numerical Data              |                               | Quiz 8     |
-  |    |      | Wed-13-Apr |                         |                                  |                               |            |
+  |    |   13 | Mon-11-Apr | Gapminder 4             |                                  | Scale transformations         | Quiz 8     |
+  |    |      | Wed-13-Apr | Gapminder 5             | EDA: Numerical Data              | Boxplots and ridge plots      |            |
   |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
   |    |   14 | Wed-20-Apr |                         |                                  |                               | Quiz 9     |
-  |    |      | Fri-22-Apr |                         | EDA: Numerical Summaries         | DS on the command line (Ben?) |            |
+  |    |      | Fri-22-Apr |                         | EDA: Numerical Summaries         |                               |            |
   |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
   |    |   15 | Mon-25-Apr |                         |                                  |                               | Test 3     |
   |    |      | Wed-27-Apr |                         |                                  | C++ and R(Wyatt?)             |            |
   |    |      | Fri-29-Apr |                         | EDA: Spam Case Study             | DS on the command line (Ben?) |            |
   |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   16 | Mon-02-May |                         |                                  | Excel and R                   |            |
-  |    |      | Wed-04-May |                         |                                  | SQLite and R                  |            |
+  |    |   16 | Mon-02-May |                         |                                  |                               |            |
+  |    |      | Wed-04-May |                         |                                  |                               |            |
   |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
 
 * Footnotes
