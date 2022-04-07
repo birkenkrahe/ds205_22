@@ -70,14 +70,17 @@
 
 ** Classic first - the Nile
 
-   * [ ] We begin with a classic - the univariate (= 1 variable) ~Nile~ data
+   * [X] We begin with a classic - the univariate (= 1 variable) ~Nile~ data
      set, which is a ~time series~ object. Plot this using the Base-R
      ~plot~ function and as line type: ~type="l"~.
 
      #+name: nile
      #+begin_src R :file nile.png :exports both :session :results output graphics file
-
+       plot(Nile, type="l")
      #+end_src
+
+     #+RESULTS: nile
+     [[file:nile.png]]
 
    * [ ] Now, plot ~Nile~ using ~ggplot~. For the scatterplot and line
      plot, you need to specify both ~aes~ arguments, and you need to feed
@@ -85,16 +88,20 @@
 
      1) Start by turning ~Nile~ into a ~data.frame~
      2) Pipe the result into ~ggplot~
-     3) Map the data in the ~aes~ function: ~x~ are the years, ~y~ is the ~Nile~ values
+     3) Map the data in the ~aes~ function: ~x~ are the years, ~y~ is the
+        ~Nile~ values
      4) Choose a line graph for the geometry
-	
+
      #+name: ggnile
      #+begin_src R :file nilegg.png :exports both :session :results output graphics file
-
-
-
+       data.frame(Nile) %>%
+         ggplot(aes(x=1871:1970, y=Nile)) +
+         geom_line()
      #+end_src
-     
+
+     #+RESULTS: ggnile
+     [[file:nilegg.png]]
+
    * [ ] Are these last two plots identical? ~plot~ results cannot be
      stored as R objects, but ~ggplot~ results can. Compare the plots.
 
@@ -106,18 +113,25 @@
 
      #+name: compare
      #+begin_src R :exports both :session :results output
- 
- 
+       g <- ggplot(data=data.frame(Nile), aes(x=1871:1970, y=Nile)) + geom_line()
+       identical(g, plot(Nile, type="l"))
      #+end_src
+
+     #+RESULTS: compare
+     : [1] FALSE
 
    * [ ] ~g~ is a completely different R object from ~plot(Nile)~. Check
      their ~class~.
 
      #+name: obj
      #+begin_src R :exports both :session :results output
-
-
+       class(g)
+       class(plot(Nile))
      #+end_src
+
+     #+RESULTS: obj
+     : [1] "gg"     "ggplot"
+     : [1] "NULL"
 
 ** US fertility rates over time: scatterplot
 
@@ -127,14 +141,20 @@
      2) Plot ~year~ vs. ~fertility~ as a scatterplot.
 
      This pipeline command has three parts:
-     1. the dataset ~%>%~ 
-     2. the filter ~%>%~ 
+     1. the dataset ~%>%~
+     2. the filter ~%>%~
      3. the plot - ~aes~ data mapping and geometry.
 
      #+name: ts1
      #+begin_src R :file ts1.png :exports both :session :results output graphics file
-
+       gapminder %>%
+         filter(country == "United States") %>%
+         ggplot(aes(x = year , y = fertility)) +
+         geom_point()
      #+end_src
+
+     #+RESULTS: ts1
+     [[file:ts1.png]]
 
 ** US fertility rates over time: lineplot
 
@@ -143,8 +163,14 @@
 
      #+name: ts2
      #+begin_src R :file ts2.png :exports both :session :results output graphics file
-
+       gapminder %>%
+         filter(country == "United States") %>%
+         ggplot(aes(x = year , y = fertility)) +
+         geom_line()
      #+end_src
+
+     #+RESULTS: ts2
+     [[file:ts2.png]]
 
 ** Fertility rates over time for two countries: grouping
 
@@ -157,8 +183,16 @@
 
      #+name: ts3
      #+begin_src R :file ts3.png :exports both :session :results output graphics file
+       countries <- c("South Korea", "Germany")
 
+       gapminder %>%
+         filter(country %in% countries) %>%
+         ggplot(aes(x=year,y=fertility)) +
+         geom_line()
      #+end_src
+
+     #+RESULTS: ts3
+     [[file:ts3.png]]
 
    * Bummer! We haven't told ~ggplot~ anything about separating these
      data, so they're all connected by the same line.
@@ -171,8 +205,16 @@
 
      #+name: ts4
      #+begin_src R :file ts4.png :exports both :session :results output graphics file
+       countries <- c("South Korea", "Germany")
 
+       gapminder %>%
+         filter(country %in% countries) %>%
+         ggplot(aes(x=year,y=fertility,group=country)) +
+         geom_line()
      #+end_src
+
+     #+RESULTS: ts4
+     [[file:ts4.png]]
 
 
    * [ ] But *which line* belongs to which country? Use the ~color~
@@ -182,8 +224,16 @@
 
      #+name: ts5
      #+begin_src R :file ts5.png :exports both :session :results output graphics file
+       countries <- c("South Korea", "Germany")
 
+       gapminder %>%
+         filter(country %in% countries) %>%
+         ggplot(aes(x=year,y=fertility,color=country)) +
+         geom_line()
      #+end_src
+
+     #+RESULTS: ts5
+     [[file:ts5.png]]
 
    * At this point, aren't you curious what happened in South Korea
      between 1960 and 1990? [[https://en.wikipedia.org/wiki/South_Korea#Post-Korean_War_(1960%E2%80%931990)][Check it here]].
@@ -222,6 +272,9 @@
        theme(legend.position = "none")
    #+end_src
 
+   #+RESULTS: ts6
+   [[file:ts6.png]]
+
    * [ ] Now *do this yourself*: change the code in [[ts5]], ~fertility
      vs. year~ from a plot with legend to a plot with labels for both
      countries, and remove the legend.
@@ -232,11 +285,10 @@
      #+begin_src R :file ts7.png :exports both :session :results output graphics file
        labels <- ???
 
-       gapminder %>%
+         gapminder %>%
          filter(country %in% countries) %>%
          ggplot(aes(x = year,y = fertility, color = country)) +
          geom_line() +
          ??? +
          ???
-          #+end_src
-
+     #+end_src
