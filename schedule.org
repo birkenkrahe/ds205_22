@@ -4,67 +4,67 @@
 
   [[https://github.com/birkenkrahe/ds205/blob/main/schedule.org][Updated schedule in GitHub.]]
 
-  | NO | WEEK | DATE       | CLASS ASSIGNMENT        | DATACAMP ASSIGNMENT[fn:2]        | LECTURE/LAB[fn:1]             | TEST[fn:3] |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |  1 |    1 | Wed-12-Jan | GitHub Hello World      |                                  | Introduction                  | Entry Quiz |
-  |  2 |      | Fri-14-Jan |                         |                                  |                               |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |  3 |    2 | Wed-19-Jan |                         |                                  | Installing R                  | Quiz 1     |
-  |  4 |      | Fri-21-Jan |                         |                                  | Installing Emacs              |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |  5 |    3 | Mon-24-Jan | Create a .emacs file    |                                  | Emacs IDE                     | Quiz 2     |
-  |  6 |      | Wed-26-Jan |                         |                                  | Org-mode                      |            |
-  |  7 |      | Fri-28-Jan |                         |                                  |                               |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |  8 |    4 | Mon-31-Jan | Read 2022 trend report  |                                  | Org-mode lab session          |            |
-  |  9 |      | Wed-02-Feb |                         | R: Conditionals and Control Flow | 2022 data trends              |            |
-  |    |      | +Fri-04-Feb+ | CANCELLED (WEATHER)     |                                  | CANCELLED (weather)           | Quiz 3     |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 10 |    5 | Mon-07-Feb |                         | R: Loops (Feb 8)                 | Conditions, loops, functions  |            |
-  | 11 |      | Wed-09-Feb |                         |                                  | Problems (lab session)        |            |
-  | 12 |      | Fri-11-Feb |                         |                                  | Test                          | Test 1     |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 13 |    6 | Mon-14-Feb | Writing own function    | R: Functions                     | Writing functions             |            |
-  | 14 |      | Wed-16-Feb |                         |                                  | Review of test 1/plot types   |            |
-  | 15 |      | Fri-18-Feb |                         |                                  | Guest: DataScience in Action  |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 16 |    7 | Mon-21-Feb |                         |                                  | Review of guest talk          | Quiz 4     |
-  |    |      | +Wed-23-Feb+ | CANCELLED (WEATHER)     |                                  | CANCELLED (weather)           |            |
-  |    |      | +Fri-25-Feb+ | CANCELLED (WEATHER)     |                                  | Statistical functions         |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 17 |    8 | Mon-28-Feb | Save and load functions | R: apply family (Mar 1)          |                               | Quiz 5     |
-  |    |      | +Wed-02-Mar+ |                         |                                  | CANCELLED (illness)           |            |
-  | 18 |      | Fri-04-Mar | Change download repo 1  |                                  |                               |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 19 |    9 | Mon-07-Mar | Change download repo 2  |                                  | Device control, library       | Quiz 6     |
-  | 20 |      | Wed-09-Mar |                         |                                  | Tour of ggplot2/dplyr         |            |
-  | 21 |      | Fri-11-Mar |                         | R: Utilities                     | Quiz rehearsal                |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 22 |   10 | Mon-14-Mar |                         |                                  |                               | Test 2     |
-  | 23 |      | Wed-16-Mar |                         |                                  | Test 2 with ggplot2           |            |
-  | 24 |      | Fri-18-Mar |                         |                                  | boxplots                      |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  | 25 |   11 | Mon-28-Mar | Project analysis        | Project: COVID-19                | Analysis COVID-19 project     |            |
-  | 26 |      | Wed-30-Mar | Project analysis        |                                  | Analysis COVID-19 project     |            |
-  | 27 |      | Fri-01-Apr | Gapminder 1             |                                  | UpdateR, scatterplots         |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   12 | Mon-04-Apr | Gapminder 2             | EDA: Categorical Data            | Faceting                      | Quiz 7     |
-  |    |      | Wed-06-Apr | Gapminder 3             |                                  | Time series plots             |            |
-  |    |      | Fri-08-Apr | NO CLASS (Colloquium)   |                                  | Tidyverse Sceptic Essay       |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   13 | Mon-11-Apr | Gapminder 4             |                                  | Scale transformations         | Quiz 8     |
-  |    |      | Wed-13-Apr | Gapminder 5             | EDA: Numerical Data              | Boxplots and ridge plots      |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   14 | Wed-20-Apr |                         |                                  |                               | Quiz 9     |
-  |    |      | Fri-22-Apr |                         | EDA: Numerical Summaries         |                               |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   15 | Mon-25-Apr |                         |                                  |                               | Test 3     |
-  |    |      | Wed-27-Apr |                         |                                  | C++ and R(Wyatt?)             |            |
-  |    |      | Fri-29-Apr |                         | EDA: Spam Case Study             | DS on the command line (Ben?) |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
-  |    |   16 | Mon-02-May |                         |                                  |                               |            |
-  |    |      | Wed-04-May |                         |                                  |                               |            |
-  |----+------+------------+-------------------------+----------------------------------+-------------------------------+------------|
+  | NO | WEEK | DATE       | LECTURE/LAB[fn:1]             | CLASS ASSIGNMENT        | DATACAMP ASSIGNMENT[fn:2]        | TEST[fn:3] |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |  1 |    1 | Wed-12-Jan | Introduction                  | GitHub Hello World      |                                  | Entry Quiz |
+  |  2 |      | Fri-14-Jan |                               |                         |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |  3 |    2 | Wed-19-Jan | Installing R                  |                         |                                  | Quiz 1     |
+  |  4 |      | Fri-21-Jan | Installing Emacs              |                         |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |  5 |    3 | Mon-24-Jan | Emacs IDE                     | Create a .emacs file    |                                  | Quiz 2     |
+  |  6 |      | Wed-26-Jan | Org-mode                      |                         |                                  |            |
+  |  7 |      | Fri-28-Jan |                               |                         |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |  8 |    4 | Mon-31-Jan | Org-mode lab session          | Read 2022 trend report  |                                  |            |
+  |  9 |      | Wed-02-Feb | 2022 data trends              |                         | R: Conditionals and Control Flow |            |
+  |    |      | +Fri-04-Feb+ | CANCELLED (weather)           | CANCELLED (WEATHER)     |                                  | Quiz 3     |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 10 |    5 | Mon-07-Feb | Conditions, loops, functions  |                         | R: Loops (Feb 8)                 |            |
+  | 11 |      | Wed-09-Feb | Problems (lab session)        |                         |                                  |            |
+  | 12 |      | Fri-11-Feb | Test                          |                         |                                  | Test 1     |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 13 |    6 | Mon-14-Feb | Writing functions             | Writing own function    | R: Functions                     |            |
+  | 14 |      | Wed-16-Feb | Review of test 1/plot types   |                         |                                  |            |
+  | 15 |      | Fri-18-Feb | Guest: DataScience in Action  |                         |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 16 |    7 | Mon-21-Feb | Review of guest talk          |                         |                                  | Quiz 4     |
+  |    |      | +Wed-23-Feb+ | CANCELLED (weather)           | CANCELLED (WEATHER)     |                                  |            |
+  |    |      | +Fri-25-Feb+ | Statistical functions         | CANCELLED (WEATHER)     |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 17 |    8 | Mon-28-Feb |                               | Save and load functions | R: apply family (Mar 1)          | Quiz 5     |
+  |    |      | +Wed-02-Mar+ | CANCELLED (illness)           |                         |                                  |            |
+  | 18 |      | Fri-04-Mar |                               | Change download repo 1  |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 19 |    9 | Mon-07-Mar | Device control, library       | Change download repo 2  |                                  | Quiz 6     |
+  | 20 |      | Wed-09-Mar | Tour of ggplot2/dplyr         |                         |                                  |            |
+  | 21 |      | Fri-11-Mar | Quiz rehearsal                |                         | R: Utilities                     |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 22 |   10 | Mon-14-Mar |                               |                         |                                  | Test 2     |
+  | 23 |      | Wed-16-Mar | Test 2 with ggplot2           |                         |                                  |            |
+  | 24 |      | Fri-18-Mar | boxplots                      |                         |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  | 25 |   11 | Mon-28-Mar | Analysis COVID-19 project     | Project analysis        | Project: COVID-19                |            |
+  | 26 |      | Wed-30-Mar | Analysis COVID-19 project     | Project analysis        |                                  |            |
+  | 27 |      | Fri-01-Apr | UpdateR, scatterplots         | Gapminder 1             |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |    |   12 | Mon-04-Apr | Faceting                      | Gapminder 2             | EDA: Categorical Data            | Quiz 7     |
+  |    |      | Wed-06-Apr | Time series plots             | Gapminder 3             |                                  |            |
+  |    |      | Fri-08-Apr | Tidyverse Sceptic Essay       | NO CLASS (Colloquium)   |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |    |   13 | Mon-11-Apr | Scale transformations         | Gapminder 4             |                                  | Quiz 8     |
+  |    |      | Wed-13-Apr | Boxplots and ridge plots      | Gapminder 5             | EDA: Numerical Data              |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |    |   14 | Wed-20-Apr |                               |                         |                                  | Quiz 9     |
+  |    |      | Fri-22-Apr |                               |                         | EDA: Numerical Summaries         |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |    |   15 | Mon-25-Apr |                               |                         |                                  | Test 3     |
+  |    |      | Wed-27-Apr | C++ and R(Wyatt?)             |                         |                                  |            |
+  |    |      | Fri-29-Apr | DS on the command line (Ben?) |                         | EDA: Spam Case Study             |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
+  |    |   16 | Mon-02-May |                               |                         |                                  |            |
+  |    |      | Wed-04-May |                               |                         |                                  |            |
+  |----+------+------------+-------------------------------+-------------------------+----------------------------------+------------|
 
 * Footnotes
 

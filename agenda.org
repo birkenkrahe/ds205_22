@@ -1168,17 +1168,50 @@
    because it's political, and to see politics, history & business so
    clearly in computing is rare and will help you grow professionally.
     
-* Scale and value transformations - w13s30/31 (11-Apr)
+* NEXT Scale and value transformations - w13s30/31 (11-Apr)
 
+  * [ ] Review: Tidyverse Sceptic essay reading + writing assignment
   * [ ] Quiz 8 = DataCamp review + time series + faceting
   * [ ] Topic: scale and value transformations with ~gapminder~
   * [ ] Practice workbook ~gapminder4.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+
+** Conceptual data science stuff
+
+   * This completes our monthly "conceptual" series:
+     - 2022 data trends: knowing what the future might hold
+     - Stone Ward guest talk: knowing what the industry wants
+     - Tidyverse Sceptic: knowing that there are movements
+
+   * You do not need to deeply engage with this side of things but you
+     should be aware that there are serious (ideological) issues
+
+   * Computer science and data science are also battlefields where you
+     may have to pick your sides and your heroes (based on values)
+
+   * In an open source landscape, these battles are more open and
+     visible but of course they do exist in the commercial world, too
+
+   * We met a fourth issue (interactive notebooks) in practice via
+     Emacs - topic of my recent faculty colloquium talk ([[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][link]])
+   
+** Topics
+
+   * Remember: ~ggplot2~ is actually not really part of the "Tidyverse"
+   * [ ] Scale and value transformations (gapminder4.org in GDrive)
+   * [ ] Review: DataCamp - EDA with R - categorical variables
 
 * Boxplots and ridge plots - w14s32/33 (12-Apr)
 
   * [ ] Topic: boxplots and ridge plots with ~gapminder~    
   * [ ] Practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+  * [ ] Resource: [[https://www.r-bloggers.com/2022/04/how-to-make-a-boxplot-in-r/][How to make a boxplot in R]] (Negoita, 2022)
 
+    #+attr_html: :width 500px
+    #+caption: How to make and modify boxplots (Source: R-blogger)
+    [[./img/boxplot.png]]
+
+  * [ ] Another resource: [[https://www.r-bloggers.com/2022/03/complete-tutorial-on-using-apply-functions-in-r/]['apply' functions in R]] (Cheng, 2022)
+    
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
 * gganimate()? Excel and R? Tableau? - w16s36 (2-May)
@@ -1186,6 +1219,9 @@
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  * Cheng (Mar 8, 2022). Complete tutorial on using 'apply' functions
+    in R - How to use apply(), lapply(), sapply(), and tapply(), and
+    how they compare to using dplyr [blog]. [[https://www.rforecology.com/post/how-to-use-apply-functions/][URL: rforecology.com]].
   * Cotton (Oct 25, 2018). How DataCamp Handles Course Quality
     [blog]. [[https://www.datacamp.com/community/blog/datacamp-quality][URL: www.datacamp.com.]]
   * DataCamp (2022). 2022 Data trends and predictions. [[https://www2.datacamp.com/rs/307-OAT-968/images/Data_Trends_and_Predictions_2022.pdf][URL:
@@ -1194,6 +1230,8 @@
   * Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
     [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
   * GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
+  * Negoita (Apr 6, 2022). How to make a boxplot in R - The complete
+    beginner's tutorial on boxplots in R [blog]. 
   * <<kbd>> Petersen (2019). Mastering Key Bindings in Emacs
     [website]. [[https://www.masteringemacs.org/article/mastering-key-bindings-emacs][URL: masteringemacs.org]].
   * R Core Team (2021). R: A language and environment for statistical
