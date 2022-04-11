@@ -662,7 +662,7 @@
    * Wickham/Grolemund's "[[https://r4ds.had.co.nz/index.html][R for Data Science]]" book is all about
      ~ggplot2~, visualization and EDA. It's not an easy book.
 
-  
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].

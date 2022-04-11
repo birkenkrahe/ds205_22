@@ -1065,20 +1065,20 @@
 ** Gapminder - scatterplots
 
    * [ ] Download the gapminder directory from [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
-   * [ ] Open ~gapminder1.org~ 
+   * [ ] Open ~gapminder1.org~
 
 * Faceting - w12s28 (4-Apr)
 ** Homekeeping
 
-  * [ ] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~, or
-    customize the variable by typing ~C-h v org-hide-emphasis-markers~
-    and choose ~toggle~ and ~Apply and Save~ in the menu[fn:4].
+   * [ ] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~, or
+     customize the variable by typing ~C-h v org-hide-emphasis-markers~
+     and choose ~toggle~ and ~Apply and Save~ in the menu[fn:4].
 
-  * [ ] R 4.1.3 is missing ~Internet.dll~ - fix [fn:5]    
+   * [ ] R 4.1.3 is missing ~Internet.dll~ - fix [fn:5]
 
 ** Review:  last time (gapminder 1)
 
-   *Getting the data* 
+   *Getting the data*
    * Knowing alternative paths in R is not a waste
    * Installing and loading R packages
    * Updating R packages
@@ -1095,13 +1095,13 @@
    *Filtering the data*
    * Review data findings for: quality, sample, context
    * ~dplyr~ commands resemble SQL: ~select~, ~filter~, ~%in~
-   * The pipe operator in ~dplyr~ is ~%>%~ 
-    
-** Topics    
-    
-  * [ ] Assignment: writing ~dplyr~ function
-  * [ ] Topics: faceting with gapminder
-  * [ ] Practice workbook ~gapminder2.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+   * The pipe operator in ~dplyr~ is ~%>%~
+
+** Topics
+
+   * [ ] Assignment: writing ~dplyr~ function
+   * [ ] Topics: faceting with gapminder
+   * [ ] Practice workbook ~gapminder2.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
 
 * Time series plots - w12s29 (6-Apr)
 ** Emacs tip: hide emphatic characters
@@ -1124,18 +1124,18 @@
    * In Emacs, open the theme selector with ~M-x custom-themes~
    * Select ~Leuven~ and click on ~Save theme settings~
    * Your code blocks are now more clearly visible
-     
+
 ** Package tip: overviewR ([[https://github.com/birkenkrahe/ds205/issues/43][issue #43]])
 
    * [[https://twitter.com/daily_r_sheets/status/1511584521191366663?s=20&t=VqrGiNYJvs0xeg3XbPbXuw][Link to tweet and cheatsheet]] & [[https://cran.r-project.org/web/packages/overviewR/vignettes/overviewR_vignette.html][vignette at CRAN]]
    * This could be a cool project - exploring pros and cons
-   
+
 ** Topics
-   
-  * [ ] Finish faceting: ~facet_wrap~ in ~gapminder2.org~ 
-  * [ ] Topic: time series plots with ~gapminder~
-  * [ ] Practice workbook ~gapminder3.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
-  * [ ] Quiz 8 = DataCamp review + time series + faceting
+
+   * [ ] Finish faceting: ~facet_wrap~ in ~gapminder2.org~
+   * [ ] Topic: time series plots with ~gapminder~
+   * [ ] Practice workbook ~gapminder3.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+   * [ ] Quiz 8 = DataCamp review + time series + faceting
 
 ** Reading and writing assignment for Friday April 8
 
@@ -1167,42 +1167,123 @@
    data (who aren't happy enough with Excel). Lastly, it's interesting
    because it's political, and to see politics, history & business so
    clearly in computing is rare and will help you grow professionally.
-    
-* NEXT Scale and value transformations - w13s30/31 (11-Apr)
 
-  * [ ] Review: Tidyverse Sceptic essay reading + writing assignment
-  * [ ] Quiz 8 = DataCamp review + time series + faceting
-  * [ ] Topic: scale and value transformations with ~gapminder~
-  * [ ] Practice workbook ~gapminder4.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
+* Scale and value transformations - w13s30/31 (11-Apr)
+** Housekeeping
+   
+  * [X] Review: Tidyverse Sceptic essay reading + writing assignment
+    - RStudio is not evil, just mistaken
+    - Check out [[https://youtu.be/sD39WAZo99A][Programming Games with R Shiny]] (for DataViz? Here?)
+  * [X] Quiz 8 = DataCamp review + time series + faceting
+  * [X] Test 3 will be available for 24 hours (we need the time)
+  * [X] All quizzes are now randomized (don't learn the sequence)x
 
-** Conceptual data science stuff
+** Emacs tips - keyboard macros
 
-   * This completes our monthly "conceptual" series:
+   * Keyboard macros are powerful time savers
+   * Example: when creating quizzes, I need to surround
+     expressions with the ~ symbol to emphasize code
+   * Keyboard macro: ~C-x ( [key sequence] C-x )~
+   * Repeat with
+   * E.g. add ~[ ]~ after each bullet point of this list
+     - Type ~C-x (~ to start the macro
+     - Enter exact sequence that you want repeated
+     - Type ~C-x )~ to close macro definition
+   * To run the macro: ~C-x e~.
+     - Repeat manually with ~e~
+     - Repeat N times with ~C-u N C-x e~
+   * Bind the macro to a key sequence (for the session):
+     - ~C-x C-k b~
+     - Choose 0 to 9
+   * Save it for later use:
+     - Give it a /name/ with ~C-x C-k n~
+     - Go to ~/.emacs~
+     - Save the definition with ~M-x insert-kbd-macro RET /name/ RET~
+   * In my Emacs file, my macro looks like this:
+     #+begin_example emacs-lisp
+      ;; surround region from point to EOL with ~
+     (fset 'tt
+        (kmacro-lambda-form [?~ ?\C-e ?~] 0 "%d"))
+     #+end_example
+
+   ([[https://www.gnu.org/software/emacs/manual/html_node/emacs/Save-Keyboard-Macro.html][See GNU Emacs Manual]])
+
+** Conceptual [data science] stuff
+
+   * This assignment completes our monthly "conceptual" series:
      - 2022 data trends: knowing what the future might hold
      - Stone Ward guest talk: knowing what the industry wants
      - Tidyverse Sceptic: knowing that there are movements
 
    * You do not need to deeply engage with this side of things but you
-     should be aware that there are serious (ideological) issues
+     should be aware that there are serious (/ideological/) issues.
 
-   * Computer science and data science are also battlefields where you
-     may have to pick your sides and your heroes (based on values)
+   * Computer science and data science are also /battlefields/ where you
+     may have to pick your sides and your heroes (based on /values/).
 
-   * In an open source landscape, these battles are more open and
-     visible but of course they do exist in the commercial world, too
+   * In an /open source/ landscape, these battles are more open and
+     visible but of course they do exist in the commercial world, too.
 
-   * We met a fourth issue (interactive notebooks) in practice via
-     Emacs - topic of my recent faculty colloquium talk ([[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][link]])
-   
+   * We met a fourth issue (literate programming) through our Emacs
+     practice - topic of my recent faculty colloquium talk ([[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][link]]).
+
+   * What is programming? It has a coding and a meta part:
+
+     #+attr_html: :width 600px
+     #+caption: Programming as coding (left) and meta activity (right)
+     [[./img/programming.png]]
+
+     | *CODING*     | *EXAMPLE*     | *META-CODING* | *EXAMPLE*     |
+     |------------+-------------+-------------+-------------|
+     | Language   | R, C, Java  | Story       | Plotting    |
+     | & paradigm | OOP, FP     | LitProg     | Emacs + Org |
+     |------------+-------------+-------------+-------------|
+     | Style      | "Tidyverse" | Data        | ~gapminder~   |
+     | & Package  | ~data.table~  |             |             |
+     |------------+-------------+-------------+-------------|
+     | Flow       | ~if~, ~goto~    | Model logic | BPMN model  |
+     |------------+-------------+-------------+-------------|
+     | Output:    | Histogram   | Benchmark   | Performance |
+     |------------+-------------+-------------+-------------|
+
+** Scattermore demo
+
+   * This is a cool new package. "Bazillion of points without wait."
+
+   * Check out their [[https://github.com/exaexa/scattermore][GitHub repo]]. Demo code below.
+
+   #+begin_src R :file scattermore.png :exports both :session :results output graphics file
+     library(scattermore)
+
+     ## create 10 million 2D datapoints
+     data <- cbind(rnorm(1e7),rnorm(1e7))
+
+     ## prepare empty plot
+     par(mar=rep(0,4))
+
+     ## plot the datapoints and see how long it takes
+     system.time(plot(
+       scattermore(data,
+                   rgba=c(64,128,192,10),
+                   xlim=c(-3,3),
+                   ylim=c(-3,3))))
+   #+end_src
+
+   #+RESULTS:
+   [[file:scattermore.png]]
+
 ** Topics
 
    * Remember: ~ggplot2~ is actually not really part of the "Tidyverse"
-   * [ ] Scale and value transformations (gapminder4.org in GDrive)
+   * [X] Fun package: ~scattermore~ - "more points = more power"
+   * [X] Scale and value transformations (~gapminder4.org~ in GDrive)
    * [ ] Review: DataCamp - EDA with R - categorical variables
+   * [ ] Practice: Base-R vs. "Tidyverse" (~practice/tidyverse~)
+
 
 * Boxplots and ridge plots - w14s32/33 (12-Apr)
 
-  * [ ] Topic: boxplots and ridge plots with ~gapminder~    
+  * [ ] Topic: boxplots and ridge plots with ~gapminder~
   * [ ] Practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
   * [ ] Resource: [[https://www.r-bloggers.com/2022/04/how-to-make-a-boxplot-in-r/][How to make a boxplot in R]] (Negoita, 2022)
 
@@ -1211,7 +1292,7 @@
     [[./img/boxplot.png]]
 
   * [ ] Another resource: [[https://www.r-bloggers.com/2022/03/complete-tutorial-on-using-apply-functions-in-r/]['apply' functions in R]] (Cheng, 2022)
-    
+
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
 * gganimate()? Excel and R? Tableau? - w16s36 (2-May)
@@ -1231,7 +1312,7 @@
     [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
   * GNU Emacs (n.d.). GNU Editor. URL: gnu.org/software/emacs/
   * Negoita (Apr 6, 2022). How to make a boxplot in R - The complete
-    beginner's tutorial on boxplots in R [blog]. 
+    beginner's tutorial on boxplots in R [blog].
   * <<kbd>> Petersen (2019). Mastering Key Bindings in Emacs
     [website]. [[https://www.masteringemacs.org/article/mastering-key-bindings-emacs][URL: masteringemacs.org]].
   * R Core Team (2021). R: A language and environment for statistical
