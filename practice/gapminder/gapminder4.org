@@ -1,0 +1,200 @@
+#+title: Exploring gapminder 4
+#+author: Marcus Birkenkrahe
+#+subtitle: Practice notebook for DSC 205 Spring 2022
+#+options: toc:nil ^:nil
+#+startup: hideblocks overview
+#+property: header-args:R :session *R*
+#+property: header-args:R :results output
+#+property: header-args:R :exports both
+* README
+
+  In this notebook, you're learning how relatively simple ~ggplot2~ and
+  ~dplyr~ code can create interesting plots - always provided the
+  underlying dataset is interesting.
+
+  For an overview of both of these "Tidyverse" packages, see the
+  online reference pages for [[https://ggplot2.tidyverse.org/reference/][ggplot2]] and [[https://dplyr.tidyverse.org/reference/index.html][dplyr]][fn:1].
+
+  The dataset is gapminder adapted from the original dataset created
+  by Hans Rosling[fn:2].
+
+  This workbook is adapted from chapter 10 "Data visualization in
+  practice" of the textbook by [[dslabs][Irizarry (2021)]], which is also the
+  basis of an introductory data science course at Harvard U.
+
+* Emacs tip
+
+  To *not* see the emphatic characters like ~ or * or / in the Org file
+  text, run the following code chunk (or put the code in your ~/.emacs~
+  file): if successful, you should see ~"t"~ in the minibuffer.
+
+  #+begin_src emacs-lisp :results silent
+    (setq-default org-hide-emphasis-markers t)
+  #+end_src
+
+  Now you need to kill this buffer (~C-x k~) and reopen the file (~C-x f~).
+
+  Note: If you don't put it in your ~/.emacs~ file, the command will
+  only work for the current Emacs session.
+
+* Getting the data
+
+  * [X] Install and/or load the necessary packages and the ~gapminder~
+    data set. If successful, you should see ~"gapminder"~ in the
+    mini-buffer.
+
+    #+name: install
+    #+begin_src R :exports both :session :results silent
+      ## The install commands are commented out to save time
+      ##      install.packages("ggplot2")
+      ##      install.packages("dplyr")
+      ##      install.packages("dslabs")
+      library(ggplot2)
+      library(dplyr)
+      library(dslabs)
+      data(gapminder)
+    #+end_src
+
+* Data transformations
+** Value transformation (before plotting)
+
+   * Transformations can help provide more informative summaries and
+     plots.
+
+   * ~gapminder~ contains a ~gdp~ column.
+
+     #+begin_src R :exports both :session :results output
+       str(gapminder)
+     #+end_src
+
+
+   * We add a column ~dollars_per_day~ by dividing the GDP by ~population~
+     (that gives us GDP per person) and then by 365. The ~dplyr::mutate~
+     function adds the new column to the data frame.
+
+     #+name: dollars_per_day_dplyr
+     #+begin_src R :exports both :session :results output
+       gm_dplyr <- gapminder %>%
+         mutate(dollars_per_day = gdp/population/365)
+       str(gm_dplyr)
+     #+end_src
+
+
+   * In ~Base-R~, it works like this:
+
+     #+begin_src R :exports both :session :results output
+       dollars_per_day <- gapminder$gdp / gapminder$population / 365
+       gm <- cbind(gapminder,dollars_per_day)
+       str(gm)
+     #+end_src
+
+
+   * [ ] Plot ~dollars_per_day~ for the data set between 1960 and 2012
+     for the ~"United States"~ using a ~ggplot2~ line plot.
+
+     #+name: dollars_per_day_ggplot2
+     #+begin_src R :file ggdollars.png :exports both :session :results output graphics file
+
+     #+end_src
+
+
+   * [ ] Plot ~dollars_per_day~ for the data set in 1960 and 2012 using
+     the ~Base_R~ function ~plot~.
+
+     #+name: dollars_per_day
+     #+begin_src R :file dollars.png :exports both :session :results output graphics file
+
+     #+end_src
+
+
+** Scale transformations (scale axes)
+
+   * [ ] Make a histogram using ~ggplot2~ for the ~year~ 1970. For the
+     histogram, use the arguments ~binwidth = 1~ and ~color = "black"~.
+
+     #+name: dollars_per_day_histogram_ggplot2
+     #+begin_src R :file ggdollarsHist.png :exports both :session :results output graphics file
+       gm_dplyr %>%
+        ...
+     #+end_src
+
+
+   * [ ] Do it with ~hist~ in ~Base-R~.
+
+     #+begin_src R :exports both :session :results output
+
+     #+end_src
+
+   * It might be more informative to apply a logarithm (base 2)
+     transform to see how many countries have average daily incomes
+     that are multiples of 2:
+
+     | INCOME | POVERY         |
+     |--------+----------------|
+     | $1     | extremely poor |
+     | $2     | very poor      |
+     | $4     | poor           |
+     | $8     | middle         |
+     | $16    | well off       |
+     | $32    | rich           |
+     | $64    | very rich      |
+
+   * [ ] Change the variable in the previous code block from
+     ~dollars_per_day~ to ~log2(dollars_per_day)~.
+
+     #+name: dollars_per_day_histogram_ggplot2_log2
+     #+begin_src R :file ggdollarsHistlog2.png :exports both :session :results output graphics file
+       gm_dplyr %>%
+         filter( year == 1970 & !is.na(gdp) ) %>%
+         ggplot( aes (log2(dollars_per_day) ) ) +
+         geom_histogram(binwidth = 1, color = "black")
+     #+end_src
+
+     #+RESULTS: dollars_per_day_histogram_ggplot2_log2
+     [[file:ggdollarsHistlog2.png]]
+
+** Which base should you use?
+
+   * Common choices are ~log2~, ~log10~, and the natural ~log~ (base e).
+
+   * For data exploration, do not use the natural log (hard to imagine)
+
+   * Example: ~population~ sizes.
+
+   * [ ] What is the range of ~population~ sizes in ~gapminder~?
+
+     Do it in ~dplyr~ and then in ~Base-R~.
+
+     dplyr:
+     #+name: dplyr_pop
+     #+begin_src R :exports both :session :results output
+
+     #+end_src
+
+   Base-R:
+   #+name: pop
+   #+begin_src R :exports both :session :results output
+     pop <- gapminder$population
+     yr  <- gapminder$year
+     ...
+   #+end_src
+
+
+   * [ ] Draw a histogram of the transformed values of ~population~
+     using the argument ~x = log10(population)~.
+
+     #+name: pop_hist_ggplot2
+     #+begin_src R :file ggpopHist.png :exports both :session :results output graphics file
+
+     #+end_src
+
+
+   * [ ] To transform the axis with logs, you can use
+     ~scale_x_continuous~ in ~ggplot2~:
+
+     #+name: ddpd_log10_x_ggplot2
+     #+begin_src R :file ggdollarsLog10.png :exports both :session :results output graphics file
+       gm_dplyr %>%
+	 ... +
+	 scale_x_continuous(trans = "log2")
+     #+end_src
