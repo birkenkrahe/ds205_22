@@ -1280,12 +1280,26 @@
    * [ ] Review: DataCamp - EDA with R - categorical variables
    * [ ] Practice: Base-R vs. "Tidyverse" (~practice/tidyverse~)
 
-
 * Boxplots and ridge plots - w14s32/33 (12-Apr)
+** Emacs tip
 
-  * [ ] Topic: boxplots and ridge plots with ~gapminder~
-  * [ ] Practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]
-  * [ ] Resource: [[https://www.r-bloggers.com/2022/04/how-to-make-a-boxplot-in-r/][How to make a boxplot in R]] (Negoita, 2022)
+   * With Emacs, you're now part of the free software world
+   * With great[er] power comes great[er] responsibility
+   * You need to update your Emacs packages:
+     - ~M-x package-list-packages~ (will try to refresh the list)
+     - In ~*Packages*~, type ~U~ to update
+     - If there are packages to update, type ~x~ to execute
+
+   #+attr_html: :width 500px
+   #+caption: End of the *Packages* buffer
+   [[./img/packages.png]]
+   
+** Topics and resources
+   
+  * [ ] Topic: boxplots and ridge plots with ~gapminder~ 
+  * [ ] +~ggplot2~: practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]+
+  * [ ] ~Base-R~: [[https://www.r-bloggers.com/2022/04/how-to-make-a-boxplot-in-r/][How to make a boxplot in R]] (Negoita, April 2022)
+  * [ ] ~ggplot2~ and ~dplyr~ summary
 
     #+attr_html: :width 500px
     #+caption: How to make and modify boxplots (Source: R-blogger)
@@ -1293,6 +1307,25 @@
 
   * [ ] Another resource: [[https://www.r-bloggers.com/2022/03/complete-tutorial-on-using-apply-functions-in-r/]['apply' functions in R]] (Cheng, 2022)
 
+**  ~ggplot2~ and ~dplyr~ summary
+
+*** Concepts
+
+    * Aesthetics (~ggplot2~) = mapping of data on a plot
+    * Piping (~dplyr~) = A form of summarizing / passing data on to
+      other functions
+    * Faceting = displaying plots in different panels (to show
+      plots next to one another)
+    * Other forms of showing information: stack, ridge, fill, identify
+    * Object-orientation is part of R (via "S3") - everything is an
+      object - in ~ggplot2~, plots become objects
+    * Functional programming: analysis is done with functions, which
+      can be nested
+    * Layout is controlled via geometry and suitable ~geom_~ functions
+    
+*** Code
+
+    
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
 * gganimate()? Excel and R? Tableau? - w16s36 (2-May)
