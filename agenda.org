@@ -1168,7 +1168,7 @@
    because it's political, and to see politics, history & business so
    clearly in computing is rare and will help you grow professionally.
 
-* Scale and value transformations - w13s30/31 (11-Apr)
+* Scale and value transformations - w13s30 (11-Apr)
 ** Housekeeping
    
   * [X] Review: Tidyverse Sceptic essay reading + writing assignment
@@ -1280,7 +1280,7 @@
    * [ ] Review: DataCamp - EDA with R - categorical variables
    * [ ] Practice: Base-R vs. "Tidyverse" (~practice/tidyverse~)
 
-* Boxplots and ridge plots - w14s32/33 (12-Apr)
+* Boxplots and ridge plots - w13s31 (12-Apr)
 ** Emacs tip
 
    * With Emacs, you're now part of the free software world
@@ -1325,6 +1325,10 @@
     
 *** Code
 
+
+* w15s34 (20-Apr)
+
+  * [ ] In software development [[https://github.com/birkenkrahe/ds205/issues/59]["Lightweight is the right weight"]]
     
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
