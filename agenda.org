@@ -1325,11 +1325,24 @@
     
 *** Code
 
+* EDA with categorical data - w15s34 (20-Apr)
 
-* w15s34 (20-Apr)
+  * [X] In software development [[https://github.com/birkenkrahe/ds205/issues/59]["Lightweight is the right weight"]]
 
-  * [ ] In software development [[https://github.com/birkenkrahe/ds205/issues/59]["Lightweight is the right weight"]]
+  * [X] Followup from the math test lecture yesterday: [[https://igraph.org/r/#startr][~igraph~]]
+
+  * [X] Book recommendation for the holidays! [[https://www.amazon.com/How-Solve-Mathematical-Penguin-Science/dp/0140124993/]["How to solve it"]] by
+    George Pólya (1990 - see also [[https://www.wtamu.edu/academic/anns/mps/math/mathlab/int_algebra/int_alg_tut8_probsol.htm][application example]]).
+
+    #+attr_html: :width 200px
+    #+caption: Perennial classic: Pólya's HOW TO SOLVE IT
+    [[./img/polya.jpg]]
     
+  * [X] Exploring Categorical Data workbook ([[https://drive.google.com/drive/folders/1Qc2bDvV7oJH4mnBzqLdcCe5_n2uQvzKy?usp=sharing][eda_1.org in GDrive]]) -
+    solutions in the pdf/ directory in GitHub
+
+* EDA with numerical data - w15s35 (22-Apr)
+  
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
 * gganimate()? Excel and R? Tableau? - w16s36 (2-May)
