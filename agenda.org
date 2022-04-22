@@ -1325,7 +1325,7 @@
     
 *** Code
 
-* EDA with categorical data - w14s32 (20-Apr)
+* EDA with categorical data - w14s32 (20-Apr + 22-Apr)
 
   * [X] In software development [[https://github.com/birkenkrahe/ds205/issues/59]["Lightweight is the right weight"]]
 
@@ -1341,8 +1341,13 @@
   * [X] Exploring Categorical Data workbook ([[https://drive.google.com/drive/folders/1Qc2bDvV7oJH4mnBzqLdcCe5_n2uQvzKy?usp=sharing][eda_1.org in GDrive]]) -
     solutions in the pdf/ directory in GitHub
 
-* EDA with numerical data - w14s33 (22-Apr)
-  
+  * [ ] Quiz 9 on EDA (last quiz!) online from Fri until Monday
+    
+* EDA with numerical data - w14s33 (25-Apr)
+
+  * [ ] Complete ~eda_2.org~ workbook (numerical variables)
+
+* Review quiz 7-9  - w15s34 (25-Apr)
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
 * gganimate()? Excel and R? Tableau? - w16s36 (2-May)

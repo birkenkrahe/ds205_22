@@ -1,0 +1,130 @@
+#+TITLE:DataCamp EDA in R
+#+AUTHOR: DataCamp / Andrew Bray & Lyon College / Marcus Birkenkrahe
+#+SUBTITLE:DataCamp EDA in R
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:R :session "*EDA in R*" :exports both :results output :comments both
+* README
+
+  * This is an example of how I work through a [[https://campus.datacamp.com/courses/exploratory-data-analysis-in-r/exploring-categorical-data?ex=1][DataCamp lesson]] - no
+    matter what the subject. It's a little more work when there are
+    videos involved. Time to completion about 2 hours.
+
+  * I am pretty sure that you won't really understand what's going on
+    without doing it at this level of granularity and with the
+    original data set.
+
+  * This is also a way of keeping the DataCamp lessons interesting
+    because otherwise I'd sometimes get very bored with the pace
+    and/or the subject matter. Gotta keep things buzzing!
+
+  * As a classroom assignment, this file has been sanitized for use as
+    a practice exercise. The complete file is available as a PDF in
+    the ~ds205/pdf/~ directory in GitHub.
+
+* Emacs setup (optional)
+** Hide emphatic characters like ~, *
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   This will only work for new buffers. If you don't put it in your
+   ~/.emacs~ file, the command will only work for the current Emacs
+   session.
+
+   *Close and reopen this file to see an effect.*
+
+** Change your theme
+
+   * In Emacs, type ~M-x custom-themes~
+   * In the buffer that appears, select ~Leuven~
+   * Select ~Apply and Save Setting~
+   * This will work immediately
+
+* Exploring categorical data
+** Import and view the data
+
+   * [X] Download the raw data ~Comics data~ [[https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-r][from DataCamp]] to your PC
+     into a directory ~./data/~
+
+   * [ ] Read the data set into an R data frame named ~comics~ and check
+     the structure of the data frame.
+
+     #+begin_src R
+ 
+     #+end_src
+
+   * [ ] Print the first 10 rows of the dataset.
+     
+     #+begin_src R
+
+     #+end_src
+
+   * [ ] What happens when you only enter the name of the data frame
+     in the console? What is the default maximum value of rows
+     displayed? Enter the command below to print this value.
+
+     #+begin_src R
+
+     #+end_src
+
+   * [ ] Unlike the data shown in the video, the data frame you are
+     currently working with is not a ~data.frame~ but a "~tibble~".
+
+     More importantly, the tibble contains ~factor~ variables where the
+     ~comics~ data frame has ~character~ variables.
+
+     Re-import ~comics.csv~ into ~comics~ so that the characters in the
+     data frame become ~factor~ variables. /Tip: check the ~read.csv~ help./
+
+     #+begin_src R
+
+     #+end_src
+
+** Working with factors - levels, NAs, contingency
+
+   * [ ] Let's look at ~factor~ ~levels~.
+     - Store the variables ~align~ and ~id~ of the data frame in vectors
+       of that name.
+     - Print the ~levels~ of the ~align~ and ~id~ columns that indicate how
+       good and hidden a superhero is.
+     - Can you do this in 3 lines (instead of 4) using vectorization?
+
+     #+begin_src R
+
+     #+end_src
+
+   * [ ] In the video, you're told that ~levels~ has ignored ~NA~ values.
+
+     How many ~NA~ values does ~align~ and ~id~ have?
+
+     /Tip: use the ~is.na~ function to find out/
+
+     #+begin_src R
+
+     #+end_src
+
+   * [ ] Print the contingency ~table~ for ~align~ and ~id~, which shows how
+     these two categorical variables are connected.[fn:1]
+
+     #+begin_src R
+
+     #+end_src
+
+   * [ ] How many ~good~ superheroes are there, who are also living in
+     ~secret~? The answer, from the table, is 2475. Which commands get 
+     you this number, too?
+
+     #+begin_src R
+
+     #+end_src
+
+* Footnotes
+
+[fn:1]German lesson! The German word for contingency,
+"zusammenhängen", means "hang together".
