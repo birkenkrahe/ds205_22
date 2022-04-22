@@ -1280,7 +1280,7 @@
    * [ ] Review: DataCamp - EDA with R - categorical variables
    * [ ] Practice: Base-R vs. "Tidyverse" (~practice/tidyverse~)
 
-* Boxplots and ridge plots - w13s31 (12-Apr)
+* Boxplots and ridge plots - w13s31 (13-Apr)
 ** Emacs tip
 
    * With Emacs, you're now part of the free software world
@@ -1325,7 +1325,7 @@
     
 *** Code
 
-* EDA with categorical data - w15s34 (20-Apr)
+* EDA with categorical data - w14s32 (20-Apr)
 
   * [X] In software development [[https://github.com/birkenkrahe/ds205/issues/59]["Lightweight is the right weight"]]
 
@@ -1341,7 +1341,7 @@
   * [X] Exploring Categorical Data workbook ([[https://drive.google.com/drive/folders/1Qc2bDvV7oJH4mnBzqLdcCe5_n2uQvzKy?usp=sharing][eda_1.org in GDrive]]) -
     solutions in the pdf/ directory in GitHub
 
-* EDA with numerical data - w15s35 (22-Apr)
+* EDA with numerical data - w14s33 (22-Apr)
   
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
