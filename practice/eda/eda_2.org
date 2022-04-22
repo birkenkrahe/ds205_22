@@ -1,0 +1,194 @@
+#+TITLE:DataCamp EDA in R 2
+#+AUTHOR: DataCamp / Andrew Bray & Lyon College / Marcus Birkenkrahe
+#+SUBTITLE:DataCamp EDA in R
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:R :session "*EDA in R*" :exports both :results output :comments both
+* README
+
+  * This is an example of how I work through a [[https://campus.datacamp.com/courses/exploratory-data-analysis-in-r/exploring-categorical-data?ex=1][DataCamp lesson]] - no
+    matter what the subject. It's a little more work when there are
+    videos involved. Time to completion about 2 hours.
+
+  * I am pretty sure that you won't really understand what's going on
+    without doing it at this level of granularity and with the
+    original data set.
+
+  * This is also a way of keeping the DataCamp lessons interesting
+    because otherwise I'd sometimes get very bored with the pace
+    and/or the subject matter. Gotta keep things buzzing!
+
+  * As a classroom assignment, this file has been sanitized for use as
+    a practice exercise. The complete file is available as a PDF in
+    the ~ds205/pdf/~ directory in GitHub.
+
+* Emacs setup (optional)
+** Hide emphatic characters like ~, *
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   This will only work for new buffers. If you don't put it in your
+   ~/.emacs~ file, the command will only work for the current Emacs
+   session.
+
+   *Close and reopen this file to see an effect.*
+
+** Change your theme
+
+   * In Emacs, type ~M-x custom-themes~
+   * In the buffer that appears, select ~Leuven~
+   * Select ~Apply and Save Setting~
+   * This will work immediately
+
+* Import the data
+
+  * [ ] Download the raw data ~Comics data~ [[https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-r][from DataCamp]] to your PC
+    into a directory ~./data/~
+
+  * [ ] Read the data set into an R data frame named ~comics~ and check
+    the structure of the data frame.
+
+    #+begin_src R
+      comics <- read.csv("data/comics.csv", header=TRUE, stringsAsFactors=TRUE)
+      str(comics)
+    #+end_src
+
+    #+RESULTS:
+    #+begin_example
+    'data.frame':	23272 obs. of  11 variables:
+     $ name        : Factor w/ 23272 levels "'Spinner (Earth-616)",..: 19830 3335 22769 9647 20956 2220 17576 9347 18794 10957 ...
+     $ id          : Factor w/ 4 levels "No Dual","Public",..: 3 2 2 2 1 2 2 2 2 2 ...
+     $ align       : Factor w/ 4 levels "Bad","Good","Neutral",..: 2 2 3 2 2 2 2 2 3 2 ...
+     $ eye         : Factor w/ 26 levels "Amber Eyes","Auburn Hair",..: 11 5 5 5 5 5 6 6 6 5 ...
+     $ hair        : Factor w/ 28 levels "Auburn Hair",..: 7 27 3 3 4 14 7 7 7 4 ...
+     $ gender      : Factor w/ 3 levels "Female","Male",..: 2 2 2 2 2 2 2 2 2 2 ...
+     $ gsm         : Factor w/ 6 levels "Bisexual Characters",..: NA NA NA NA NA NA NA NA NA NA ...
+     $ alive       : Factor w/ 2 levels "Deceased Characters",..: 2 2 2 2 2 2 2 2 2 2 ...
+     $ appearances : int  4043 3360 3061 2961 2258 2255 2072 2017 1955 1934 ...
+     $ first_appear: Factor w/ 1606 levels "1935, October",..: 874 1278 1513 1296 1424 1432 1432 1364 1570 1432 ...
+     $ publisher   : Factor w/ 2 levels "dc","marvel": 2 2 2 2 2 2 2 2 2 2 ...
+    #+end_example
+
+** Barplots with the ~comics~ data set and ~ggplot2~
+
+   * [ ] Create a directory ~./img/~ for the plots.
+
+   * [ ] Make a barplot of the superhero identities (~x = comics$id~).
+
+     #+begin_src R :results output graphics file :file img/bar1.png
+
+     #+end_src
+
+   * [ ] Make a /stacked/ barplot that shows superhero identities (~x =
+     comics$id~) and superhero goodness (~fill = comics$align~).
+
+     #+begin_src R :results output graphics file :file img/bar2.png
+
+     #+end_src
+
+   * [ ] Make a /side-by-side/ barplot that shows superhero identities
+     (~x = comics$id~) and superhero goodness (~fill = comics$align~).
+
+     #+begin_src R :results output graphics file :file img/bar3.png
+
+     #+end_src
+
+   * [ ] Go back over the last plots and add text:
+     - x labels (barplot bar1, stacked / side-by-side bar2, bar3)
+     - y labels (proportional barchart bar4)
+     - plot titles
+
+** Exploring proportions
+
+   * [ ] Simplify the display format using the ~options~ command. Set the
+     ~scipen~ attribute to ~999~ and the ~digits~ to ~3~. Check the doc if
+     you're curious what ~scipen~ means.
+
+     #+begin_src R :results silent
+
+     #+end_src
+
+   * [ ] The ~options~ settings are only valid for the current R
+     session. How can you make them permanent?
+
+     #+begin_quote
+     ANSWER: ...
+     #+end_quote
+
+   * [ ] Store the contingency table for ~comics$align~ and ~comics$id~ in
+     the variable ~tab_cnt~.
+     - Find out what kind of R object ~tab_cnt~ is. Use ~class~ and the
+       ~is.X~ family of functions (e.g. ~is.data.frame~).
+
+     #+begin_src R
+
+     #+end_src
+
+
+     * [ ] Check that the proportions (counts as parts of a whole,
+       computed with ~prop.table~) of all entries in the table ~tab_cnt~
+       add up to 1.
+
+       #+begin_src R
+
+       #+end_src
+
+     * [ ] What is the default ~margin~ of ~prop.table~? Can you define ~margin~?
+
+       #+begin_quote
+       ANSWER: ...
+       #+end_quote
+
+     * [ ] Print the table of proportions with the default ~margin~.
+
+       #+begin_src R
+
+       #+end_src
+       
+     * [ ] Condition on a row: print only the proportions of ~Bad~
+       superheroes.
+
+       #+begin_src R
+
+       #+end_src
+
+     * [ ] Condition on a column: print only the proportions of ~Public~
+       superheroes.
+
+       #+begin_src R
+
+       #+end_src
+
+   * [ ] Make a /stacked/ barplot that shows the /proportion/ (not the
+     /count/) of superhero identities (~comics$id~) and superhero
+     goodness (~comics$align~), conditioned on identities.
+
+     Don't forget to label and title the graph appropriately.
+
+     /Tip: to do this in ~ggplot2~ remember that you need to specify the
+     ~position=fill~ in the ~geom_bar~ geometry./
+     
+     #+begin_src R :results output graphics file :file img/bar4.png
+
+     #+end_src
+
+   * [ ] Make a /stacked/ barplot that shows the /proportion/ (not the
+     /count/) of superhero identities (~comics$id~) and superhero
+     goodness (~comics$align~), conditioned on goodness.
+
+     Don't forget to label and title the graph appropriately.
+
+     /Tip: to do this in ~ggplot2~ remember that you need to specify the
+     ~position=fill~ in the ~geom_bar~ geometry./
+     
+     #+begin_src R :results output graphics file :file img/bar5.png
+
+     #+end_src
+
+              
