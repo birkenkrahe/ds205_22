@@ -131,7 +131,7 @@
      #+end_src
 
 
-     * [ ] Check that the proportions (counts as parts of a whole,
+   * [ ] Check that the proportions (counts as parts of a whole,
        computed with ~prop.table~) of all entries in the table ~tab_cnt~
        add up to 1.
 
@@ -139,32 +139,54 @@
 
        #+end_src
 
-     * [ ] What is the default ~margin~ of ~prop.table~? Can you define ~margin~?
+   * [ ] What is the default ~margin~ of ~prop.table~? Can you define ~margin~?
 
        #+begin_quote
        ANSWER: ...
        #+end_quote
 
-     * [ ] Print the table of proportions with the default ~margin~.
+   * [ ] Print the table of proportions with the default ~margin~.
 
        #+begin_src R
 
        #+end_src
        
-     * [ ] Condition on a row: print only the proportions of ~Bad~
+   * [ ] Condition on a row: print only the proportions of ~Bad~
        superheroes.
 
        #+begin_src R
 
        #+end_src
 
-     * [ ] Condition on a column: print only the proportions of ~Public~
+   * [ ] Condition on a column: print only the proportions of ~Public~
        superheroes.
 
        #+begin_src R
 
        #+end_src
 
+
+   * [ ] Create a contingency table for the variables ~id~ and ~alive~
+     showing how these are related.
+     - Store the result in ~tab~ and print it with the names ~[id]~
+       and ~[alive]~ for rows and columns, respectively.
+
+     #+begin_src R
+  
+     #+end_src
+
+   * [ ] Add a column ~Total~ to the table with the row totals for each
+     ~id~.
+
+     /Tip: to run sums over columns, you can use ~rowSums~, to bind a
+     column to a data frame or matrix/table, use ~cbind~./
+
+     #+begin_src R
+
+     #+end_src
+
+** Barplots with ~ggplot2~
+   
    * [ ] Make a /stacked/ barplot that shows the /proportion/ (not the
      /count/) of superhero identities (~comics$id~) and superhero
      goodness (~comics$align~), conditioned on identities.
