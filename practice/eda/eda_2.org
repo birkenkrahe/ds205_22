@@ -61,7 +61,7 @@
 
     #+RESULTS:
     #+begin_example
-    'data.frame':	23272 obs. of  11 variables:
+    'data.frame':       23272 obs. of  11 variables:
      $ name        : Factor w/ 23272 levels "'Spinner (Earth-616)",..: 19830 3335 22769 9647 20956 2220 17576 9347 18794 10957 ...
      $ id          : Factor w/ 4 levels "No Dual","Public",..: 3 2 2 2 1 2 2 2 2 2 ...
      $ align       : Factor w/ 4 levels "Bad","Good","Neutral",..: 2 2 3 2 2 2 2 2 3 2 ...
@@ -132,38 +132,38 @@
 
 
    * [ ] Check that the proportions (counts as parts of a whole,
-       computed with ~prop.table~) of all entries in the table ~tab_cnt~
-       add up to 1.
+     computed with ~prop.table~) of all entries in the table ~tab_cnt~
+     add up to 1.
 
-       #+begin_src R
+     #+begin_src R
 
-       #+end_src
+     #+end_src
 
    * [ ] What is the default ~margin~ of ~prop.table~? Can you define ~margin~?
 
-       #+begin_quote
-       ANSWER: ...
-       #+end_quote
+     #+begin_quote
+     ANSWER: ...
+     #+end_quote
 
    * [ ] Print the table of proportions with the default ~margin~.
 
-       #+begin_src R
+     #+begin_src R
 
-       #+end_src
-       
+     #+end_src
+
    * [ ] Condition on a row: print only the proportions of ~Bad~
-       superheroes.
+     superheroes.
 
-       #+begin_src R
+     #+begin_src R
 
-       #+end_src
+     #+end_src
 
    * [ ] Condition on a column: print only the proportions of ~Public~
-       superheroes.
+     superheroes.
 
-       #+begin_src R
+     #+begin_src R
 
-       #+end_src
+     #+end_src
 
 
    * [ ] Create a contingency table for the variables ~id~ and ~alive~
@@ -172,7 +172,7 @@
        and ~[alive]~ for rows and columns, respectively.
 
      #+begin_src R
-  
+
      #+end_src
 
    * [ ] Add a column ~Total~ to the table with the row totals for each
@@ -185,8 +185,24 @@
 
      #+end_src
 
+   * [ ] Print only the proportions of ~Secret~ superheroes that are
+     ~alive~.
+
+     /Tip: condition on columns (~margin=2~)./
+
+     #+begin_src R
+       paste("Secret & alive:")
+       prop.table(tab,margin=2)["Secret","Living Characters"]
+       prop.table(tab,margin=2)[3,2]
+     #+end_src
+
+     #+RESULTS:
+     : [1] "Secret & alive:"
+     : [1] 0.492
+     : [1] 0.492
+
 ** Barplots with ~ggplot2~
-   
+
    * [ ] Make a /stacked/ barplot that shows the /proportion/ (not the
      /count/) of superhero identities (~comics$id~) and superhero
      goodness (~comics$align~), conditioned on identities.
@@ -195,7 +211,7 @@
 
      /Tip: to do this in ~ggplot2~ remember that you need to specify the
      ~position=fill~ in the ~geom_bar~ geometry./
-     
+
      #+begin_src R :results output graphics file :file img/bar4.png
 
      #+end_src
@@ -208,9 +224,7 @@
 
      /Tip: to do this in ~ggplot2~ remember that you need to specify the
      ~position=fill~ in the ~geom_bar~ geometry./
-     
+
      #+begin_src R :results output graphics file :file img/bar5.png
 
      #+end_src
-
-              
