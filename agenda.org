@@ -1341,7 +1341,7 @@
   * [X] Exploring Categorical Data workbook ([[https://drive.google.com/drive/folders/1Qc2bDvV7oJH4mnBzqLdcCe5_n2uQvzKy?usp=sharing][eda_1.org in GDrive]]) -
     solutions in the pdf/ directory in GitHub
 
-  * [ ] Quiz 9 on EDA (last quiz!) online from Fri until Monday
+  * [X] Quiz 9 on EDA (last quiz!) online from Fri until Monday
     
 * EDA with numerical data - w14s33 (25-Apr)
 
