@@ -1345,11 +1345,25 @@
 
   * [X] Complete 2nd workbook on categorical variables, ~eda_2.org~.
     
-* EDA with numerical data - w14s33 (25-Apr)
-
-  * [X] Complete workbook on EDA for numerical variables, ~eda_2.org~.
-
 * Review quiz 7-9  - w15s34 (25-Apr)
+
+  * FREE PIZZA + ORGANIC CHEMISTRY!
+    #+begin_quote
+    Interesting Topics in Organic Chemistry Seminars - On April 27th
+    at noon in Derby 16. Pizza will be provided. The short seminars
+    will be conducted by CHM 220 students and the content is geared to
+    freshmen-sophomore and/or a general audience. (Prof. Narawathne)
+    #+end_quote
+  * [X] Who is interested? (headcount = 0)
+
+  * [X] /How are you?/
+  * [X] Review quiz 7-9
+
+  * [ ] *Test 3 will run from Thursday 6 pm to Saturday 8 am:*
+    - You have 30 minutes for 15 questions
+    - *You cannot resume an incomplete submission*
+    - Let me know if there are any difficulties during that time!
+      
 * C++ and R (Wyatt) - w15s34 (27-Apr)
 * Data science on the command line (Ben) - w15s35 (29-Apr)
 * gganimate()? Excel and R? Tableau? - w16s36 (2-May)
