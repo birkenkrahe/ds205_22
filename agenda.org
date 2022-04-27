@@ -1365,9 +1365,24 @@
     - Let me know if there are any difficulties during that time!
       
 * C++ and R (Wyatt) - w15s34 (27-Apr)
+** Evaluate 
+   
+  * [ ] Evaluate this course! Help Lyon decide if I stay or if I go!
+
+     *Extra credit* for evaluating! - Don't forget to click the box.
+
+     [[./img/survey.png]]
+
+** R and C++
+   
+  * [ ] The amazing ~Rcpp~ package - introduced by /Wyatt Frerichs/
+
+    #+attr_html: :width 500px
+    #+caption: Wyatt hails from Oklahoma (Photo: R Sanner on Unsplash)
+    [[./img/oklahoma.jpg]]
+  
 * Data science on the command line (Ben) - w15s35 (29-Apr)
-* gganimate()? Excel and R? Tableau? - w16s36 (2-May)
-* SQLite and R? - w17s37 (4-May)
+* Last Rites (R and SQLite? Webscraping?) - w16
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
@@ -1391,6 +1406,11 @@
     Austria. URL https://www.R-project.org/.
   * System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro
     Timer?? [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
+
+** Image references
+
+   * Oklahoma [[https://unsplash.com/@raychelsnr][Photo by Raychel Sanner on Unsplash]]
+   
 * Footnotes
 
 [fn:5]On my machine, R version 4.1.3 cannot open documentation in a
