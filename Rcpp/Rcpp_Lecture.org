@@ -1,0 +1,270 @@
+#+TITLE:RCPP NOTEBOOK
+#+Author: Wyatt Freichs
+#+options: toc:nil ^:nil
+#+startup: hideblocks overview
+* R you ready to learn
+** Brief history and introduction
+
+   R was first implemented in the early 1990’s by Robert Gentleman and
+   Ross Ihaka, both faculty members at the University of Auckland.
+   Robert and Ross established R as an open source project
+   in 1995. Since 1997, the R project has been managed by the R Core
+   Group. And in February 2000, R 1.0.0 was released. ([[https://mran.microsoft.com/documents/what-is-r][Source]])
+
+   * [[https://www.stat.auckland.ac.nz/~ihaka/downloads/Interface98.pdf][More history]] (Ihaka, 1998)
+
+** The benefits of R
+
+   Despite being nearly 30 years old, R is one of the best statistical
+   programming languages available to date.  There are many reasons
+   for the success of R:
+
+   1. R is an *open source language*: ITS FREE!! R is a free language
+      which has led to a large community developing around the
+      language.
+   2. *Cross platform development*: R is a machine independent. Thus it
+      supports cross platform operation and is usable on a variety of
+      operating systems.
+   3. *Compatible* with other languages R is compatible with a variety
+      of other languages. Extensions for R can be written in a variety
+      of languages. C, C++, and FORTRAN are all compatible with R.
+
+** The dark side of R
+
+   While R is a powerful tool for data science it is not without its
+   drawbacks. A few key limitations of R:
+
+   1) The Learning Curve
+
+      R can make easy things hard and hard things easy. Syntax in R is
+      very different from that of other languages, hence there is a
+      very steep learning curve for the language. This is often
+      overlooked because of the amazing benefits it offers once the
+      curve has been overcome.
+
+   2) Poor Memory Management and Security
+
+      R commands do not bother with memory management, as a result of
+      this R can take up all the memory that is allowed. There is also
+      a lack of basic security measures within R which makes it
+      unsuitable for tasks such as web apps due to safety.
+
+   3) Slow
+
+      "To understand R’s performance, it helps to think about R as
+      both a language and as an implementation of that language. The
+      R-language is abstract: it defines what R code means and how it
+      should work."[[http://adv-r.had.co.nz/Performance.html#:~:text=Beyond%20performance%20limitations%20due%20to,R%20code%20for%20a%20living.][ (Wickham, 2019)]] R is designed to make things
+      easier for the user but not necessarily the Computer. Beyond
+      performance limitations due to design and implementation, it has
+      to be said that a lot of R code is slow simply because it’s
+      poorly written.
+
+   * [[https://techvidvan.com/tutorials/pros-and-cons-of-r/][See also: Techvidan, 2022]]
+
+* Tenacious C and the quest for optimization
+** Brief History
+
+   C was developed in 1972 by Dennis Ritchie. Originally developed for
+   the UNIX OS it was created in order to overcome the limitations of
+   available languages, i.e B, BCPL, etc. As a result of this it
+   inherited many features from these languages. Eight years later in
+   1980, C++ was developed to incorporate object orientatted
+   programming into C. C++ is a superset of C. This means that any C
+   script can be run in C++.
+
+   * [[https://www.cplusplus.com/info/history/][More on the history of C++]]
+
+** Advantages of C++
+
+   1. Portable
+
+      Code written in C++ has amazing portability. Portable code means
+      that it can be compiled across:
+      - different compilers
+      - different platforms
+      - changes in the language
+      - different uses of the code-base[fn:1]
+
+   2. Object-Oriented
+
+      This feature was not included in basic C and proved itself to be
+      of great significance. Object-Oriented Programming (OOP) allowed
+      users to treat data as /objects/ and /classes/.
+
+   3. FAST
+
+      C++'s speed can be explained in 3 main points:
+      1) C++ is a compiled language, This means that the source code
+         is translated directly into machine code.
+      2) C++ doesn’t require implementations to care about “undefined
+         behavior”.
+      3) Third,C++ offers /abstraction/ mechanisms that allow
+         sophisticated,industrial-strength algorithms to be packaged
+         in libraries that add very little overhead to “straight code
+         expansion”
+
+   4. Memory Management
+
+      C++ gives the user complete control over memory management. This
+      is done using Dynamic memory allocation using /pointers/.
+
+   5.Scalability
+
+   C++ programs possess the ability to run on a small scale with
+   minimal operations a swell as large resource intensive operations.
+
+** C - The Downside
+
+   1. Pointers
+
+      Pointers in C and C++ consume a lot of memory and the misuse of
+      pointers can lead to system crashes.
+
+   2. Security Issues
+
+      The presence of pointers, global variables, etc. is the main
+      reason behind these security issues.  It means it is possible to
+      corrupt the entire program just by using a part of the memory as
+      an incorrect type.
+
+   3. Not Flexible
+
+      C++ has a very strict syntax that is rather unforgiving.
+
+   4. Functions are not first class
+
+      For functions to be considered first class:
+      - Values can be passed and returned from functions without
+        restrictions.
+      - Functions can be created and constructed at
+        any point without restrictions.
+      - The functions are written in such a way that an entity is able
+      to be assigned to it.
+      C++ meets two of these criteria but within C++ there are
+      constraints on function defenition.
+
+   5. Lack of algebraic data types
+
+      Algebraic Datatypes is a structured datatype which is composed
+      of other types. Cpp offers little to no support for such types.
+
+* You, Me, and RCpp
+** Humble Beginings
+
+   The Rcpp package was created in 2011 by Dirk Eddelbuettel and
+   Romain François with later contributions by Doug Bates, John
+   Chambers, and JJ Allaire. The package was developed with two key
+   ideas in mind. First, the 'mission' of the package was to assist in
+   Data exploration and provide the best platform for analysis.Second,
+   That the software built is Trustworthy: “the many computational
+   steps between original data source and displayed result must all be
+   trustful.”  The package was developed in order to allow developers
+   to aid the 'mission' by creating their own trustworthy extensions.
+
+** What is it
+
+   Rcpp is a CRAN package that allows the user to embed or import C++
+   code into an R environment. This is not a new concept - base R
+   provides the ability to write C or Fortran.
+
+   Here is an example for C (Wickham, 2019). ~SEXP~ ("~S-expression~") is
+   Rs data type to store R objects: every C function must return a
+   ~SEXP~ as output and take a ~SEXP~ as input.
+
+   C function definition:
+   #+begin_example C
+   // In C ----------------------------------------
+   #include <R.h>
+   #include <Rinternals.h>
+
+   SEXP add(SEXP a, SEXP b) {
+   SEXP result = PROTECT(allocVector(REALSXP, 1));
+   REAL(result)[0] = asReal(a) + asReal(b);
+   UNPROTECT(1);
+   
+   return result;
+   }
+   #+end_example
+
+   R function definition:
+   #+begin_example R
+     # In R ----------------------------------------
+     add <- function(a, b) {
+     .Call("add", a, b)
+     }
+   #+end_example
+   
+   That being said the provided methods for this integration are, for
+   lack of better words, incredibly ugly. Rcpp provides a clean and
+   approachable API to write high preformance C++ code within R
+   seperate from the arcane API that is provided.
+
+** But like why
+
+   Why and When are two very important questions when it comes to
+   Rcpp. R just like any programming language is prone to bottlenecks.
+   C++ can be used to overcome certain bottlenecks within R.
+   
+   * Loops that depend on previous itterations to create the next
+     recursion or programs which involve calling a function numerous
+     times
+   * Advanced data structures and algorithms
+   * IMPORTANT NOTE: While C++ is inherently faster than R BAD CODE IS
+     STILL BAD CODE and can lead to larger bottlenecks within the
+     code.
+
+     Two things Eddelbuettel says to keep in mind to prevent
+     increasing bottlenecks are:
+
+   1. Does the implementation produce the correct results?
+
+   2. What implementation of the routine is the best?
+
+** Extensions
+
+*** RCPP Armadillo
+
+    /Armadillo/ is a linear Algebra package for C++. The package
+    provides a proper balance between speed and simplicity. Providing
+    excellent class for vectors matrices and cubes and functions which
+    operate on these classes.
+
+    * [[http://arma.sourceforge.net/docs.html][Armadillo Documentation]]
+    * [[https://cran.r-project.org/web/packages/RcppArmadillo/RcppArmadillo.pdf][Rcpp Armadillo Documentation]]
+      
+*** Rcpp Sugar
+
+    /Rcpp sugar/ is a set of functions and operators that can be loaded
+    into C++ to make it behave in a similar fashion to R. This
+    basically means that the C++ code will look similar to R code.
+
+    * [[https://dirk.eddelbuettel.com/code/rcpp/Rcpp-sugar.pdf][Rcpp Sugar Documentation]]
+      
+** For Additional information
+
+   * [[https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-introduction.pdf][The Rcpp Vignette]]
+   * [[https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-attributes.pdf][Rcpp Attributes]]
+   * [[https://cran.r-project.org/web/packages/Rcpp/Rcpp.pdf][Rcpp Documentation]]
+   * [[http://dirk.eddelbuettel.com/code/rcpp/Rcpp-FAQ.pdf][Rcpp FAQ]]
+   * [[http://adv-r.had.co.nz/Rcpp.html#sourceCpp][High performance functions with Rcpp -Hadley Wickham]]
+
+* Getting the workspace
+
+  1) Login to [[https://www.datacamp.com/users/sign_in][Datacamp]]
+  2) At the top right of the screen locate the dropdown menu and
+     select workspace
+  3) Click the Create workspace button ~make sure to set the language
+     to R~
+  4) Now download the files from the [[https://drive.google.com/drive/folders/1HCxTXMDnAN3JwnHHGSJkonqBeh5sPWtZ?usp=sharing][Google Drive]]
+  5) Upload the files into the workspace and wait for further
+     instructions
+     
+* References
+
+  Wickham H (2019). Advanced R (2e). CRC Press. [[https://www.google.com/books/edition/Advanced_R/G5PNBQAAQBAJ?hl=en&kptab=overview][URL: google.com]]
+
+* Footnotes
+
+[fn:1] In software development, a codebase (or code-base) is a
+collection of source code used to build a particular software system.
