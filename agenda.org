@@ -1381,8 +1381,8 @@
     #+caption: Wyatt hails from Oklahoma (Photo: R Sanner on Unsplash)
     [[./img/oklahoma.jpg]]
   
-* Data science on the command line (Ben) - w15s35 (29-Apr)
-* Last Rites (R and SQLite? Webscraping?) - w16
+* Data science on the command line (Ben) - w15s35 (2-May)
+* Last Rites (R and SQLite?) - w16s36 (4-May)
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].

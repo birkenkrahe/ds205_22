@@ -1,0 +1,16 @@
+#+TITLE:Data science on the command line 
+#+AUTHOR:Data science on the command line 
+#+SUBTITLE:Data science on the command line 
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* README
+* What is the command line?
+* Why data science at the command line?
+* csvkit  
+** Getting data
+** Examining data
+** Power tools
+* Beyond csvkit
+
+  * Before this term, I had not worked with csvkit myself. My work on
+    the command line was limited to 
