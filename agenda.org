@@ -1381,10 +1381,7 @@
      #+caption: Wyatt hails from Oklahoma (Photo: R Sanner on Unsplash)
      [[./img/oklahoma.jpg]]
 
-* Data science on the command line (Ben) - w15s35 (2-May)
-
-  * [ ] Only agenda item on Wednesday: final exam questions
-  * [ ] I will go through the individual questions with you
+* Data science on the command line - w15s35 (2-May)
 
 ** Data science on the command line
 
@@ -1392,7 +1389,7 @@
    * [ ] Why data science at the command line
    * [ ] How to get a command line that works for data science
    * [ ] Interactive demo: ~csvkit~
-   * [ ] Ben Grafton: Data processing with shell
+   * [ ] Ben Grafton: Data processing with shell (Wed)
    * [ ] Beyond: ~csvkit~
 
 * Last Rites / Final exam review - w16s36 (4-May)
@@ -1401,6 +1398,10 @@
   * [ ] Going through the exam questions
   * [ ] Last rites and outlook
   * [ ] *Any outstanding work must be finished by Monday May 9*
+
+  * [ ] *Please take 10 minutes to complete the course evaluation now*
+
+    [[./img/evaluation.jpg]]
 
 ** What's really going to be interesting in the next few years?
 
