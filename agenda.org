@@ -1170,13 +1170,13 @@
 
 * Scale and value transformations - w13s30 (11-Apr)
 ** Housekeeping
-   
-  * [X] Review: Tidyverse Sceptic essay reading + writing assignment
-    - RStudio is not evil, just mistaken
-    - Check out [[https://youtu.be/sD39WAZo99A][Programming Games with R Shiny]] (for DataViz? Here?)
-  * [X] Quiz 8 = DataCamp review + time series + faceting
-  * [X] Test 3 will be available for 24 hours (we need the time)
-  * [X] All quizzes are now randomized (don't learn the sequence)x
+
+   * [X] Review: Tidyverse Sceptic essay reading + writing assignment
+     - RStudio is not evil, just mistaken
+     - Check out [[https://youtu.be/sD39WAZo99A][Programming Games with R Shiny]] (for DataViz? Here?)
+   * [X] Quiz 8 = DataCamp review + time series + faceting
+   * [X] Test 3 will be available for 24 hours (we need the time)
+   * [X] All quizzes are now randomized (don't learn the sequence)x
 
 ** Emacs tips - keyboard macros
 
@@ -1293,19 +1293,19 @@
    #+attr_html: :width 500px
    #+caption: End of the *Packages* buffer
    [[./img/packages.png]]
-   
+
 ** Topics and resources
-   
-  * [ ] Topic: boxplots and ridge plots with ~gapminder~ 
-  * [ ] +~ggplot2~: practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]+
-  * [ ] ~Base-R~: [[https://www.r-bloggers.com/2022/04/how-to-make-a-boxplot-in-r/][How to make a boxplot in R]] (Negoita, April 2022)
-  * [ ] ~ggplot2~ and ~dplyr~ summary
 
-    #+attr_html: :width 500px
-    #+caption: How to make and modify boxplots (Source: R-blogger)
-    [[./img/boxplot.png]]
+   * [ ] Topic: boxplots and ridge plots with ~gapminder~
+   * [ ] +~ggplot2~: practice workbook ~gapminder5.org~ in [[https://drive.google.com/drive/folders/1GaE0iDWSoPexSrRUhZcKGyr8F2kSibWs?usp=sharing][GDrive]]+
+   * [ ] ~Base-R~: [[https://www.r-bloggers.com/2022/04/how-to-make-a-boxplot-in-r/][How to make a boxplot in R]] (Negoita, April 2022)
+   * [ ] ~ggplot2~ and ~dplyr~ summary
 
-  * [ ] Another resource: [[https://www.r-bloggers.com/2022/03/complete-tutorial-on-using-apply-functions-in-r/]['apply' functions in R]] (Cheng, 2022)
+     #+attr_html: :width 500px
+     #+caption: How to make and modify boxplots (Source: R-blogger)
+     [[./img/boxplot.png]]
+
+   * [ ] Another resource: [[https://www.r-bloggers.com/2022/03/complete-tutorial-on-using-apply-functions-in-r/]['apply' functions in R]] (Cheng, 2022)
 
 **  ~ggplot2~ and ~dplyr~ summary
 
@@ -1322,7 +1322,7 @@
     * Functional programming: analysis is done with functions, which
       can be nested
     * Layout is controlled via geometry and suitable ~geom_~ functions
-    
+
 *** Code
 
 * EDA with categorical data - w14s32 (20-Apr + 22-Apr)
@@ -1337,14 +1337,14 @@
     #+attr_html: :width 200px
     #+caption: Perennial classic: Pólya's HOW TO SOLVE IT
     [[./img/polya.jpg]]
-    
+
   * [X] Quiz 9 on EDA (last quiz!) online from Fri until Monday
 
   * [X] Exploring Categorical Data workbook ([[https://drive.google.com/drive/folders/1Qc2bDvV7oJH4mnBzqLdcCe5_n2uQvzKy?usp=sharing][eda_1.org in GDrive]]) -
     solutions in the pdf/ directory in GitHub
 
   * [X] Complete 2nd workbook on categorical variables, ~eda_2.org~.
-    
+
 * Review quiz 7-9  - w15s34 (25-Apr)
 
   * FREE PIZZA + ORGANIC CHEMISTRY!
@@ -1363,26 +1363,91 @@
     - You have 30 minutes for 15 questions
     - *You cannot resume an incomplete submission*
     - Let me know if there are any difficulties during that time!
-      
+
 * C++ and R (Wyatt) - w15s34 (27-Apr)
-** Evaluate 
-   
-  * [ ] Evaluate this course! Help Lyon decide if I stay or if I go!
+** Evaluate
+
+   * [ ] Evaluate this course! Help Lyon decide if I stay or if I go!
 
      *Extra credit* for evaluating! - Don't forget to click the box.
 
      [[./img/survey.png]]
 
 ** R and C++
-   
-  * [ ] The amazing ~Rcpp~ package - introduced by /Wyatt Frerichs/
 
-    #+attr_html: :width 500px
-    #+caption: Wyatt hails from Oklahoma (Photo: R Sanner on Unsplash)
-    [[./img/oklahoma.jpg]]
-  
+   * [ ] The amazing ~Rcpp~ package - introduced by /Wyatt Frerichs/
+
+     #+attr_html: :width 500px
+     #+caption: Wyatt hails from Oklahoma (Photo: R Sanner on Unsplash)
+     [[./img/oklahoma.jpg]]
+
 * Data science on the command line (Ben) - w15s35 (2-May)
-* Last Rites (R and SQLite?) - w16s36 (4-May)
+
+  * [ ] Only agenda item on Wednesday: final exam questions
+  * [ ] I will go through the individual questions with you
+
+** Data science on the command line
+
+   * [ ] What is the command line
+   * [ ] Why data science at the command line
+   * [ ] How to get a command line that works for data science
+   * [ ] Interactive demo: ~csvkit~
+   * [ ] Ben Grafton: Data processing with shell
+   * [ ] Beyond: ~csvkit~
+
+* Last Rites / Final exam review - w16s36 (4-May)
+
+  * [ ] Your final exam questions
+  * [ ] Going through the exam questions
+  * [ ] Last rites and outlook
+
+** What's really going to be interesting in the next few years?
+
+   In data science, I mean. Some things I became aware of via Twitter:
+
+   1) AUTOMATIC THEOREM PROVING (see [[https://gowers.wordpress.com/2022/04/28/announcing-an-automatic-theorem-proving-project/][Tim Gowers, April 29, 2022]])
+
+      Coincidentally, this was sent to me by Prof Barry Gehm over the
+      w/e:
+
+      #+caption: Gödel and data science (Source: xkcd)
+      [[./img/xkcd1.png]]
+
+      Hovertext: /"Gödel should do an article on which branches of math
+      have the lowest average theorem number./ ([[https://xkcd.com/2610/][Source: xkcd]])
+
+   2) FACE RECOGNITION APPLICATIONS OF DEEP LEARNING
+
+      Not much new happens technically but there are philosophical and
+      political implications that have powerful economical
+      consequences. 
+
+      #+begin_quote
+      "Tying the technology to accusations of racism has made the
+      technology toxic for large, responsible technology companies,
+      driving them out of the market. IBM has dropped its research
+      entirely. Facebook has eliminated its most prominent use of face
+      recognition. And Microsoft and Amazon have both suspended face
+      recognition sales to law enforcement.  These departures have
+      left the market mainly to Chinese and Russian companies. In
+      fact, on a 2019 NIST test for one-to-one searches, Chinese and
+      Russian companies scored higher than any Western competitors,
+      occupying the top six positions. In December 2021, NIST again
+      reported that Russian and Chinese companies dominated its
+      rankings. The top-ranked U.S. company is Clearview AI, whose
+      business practices have been widely sanctioned in Western
+      countries.
+
+      Given the network effects in this business, the United States
+      may have permanently ceded the face recognition market to
+      companies it can’t really trust. That’s a heavy price to pay for
+      indulging journalists and academics eager to prematurely impose
+      a moral framework on a developing technology" [[https://www.lawfareblog.com/flawed-claims-about-bias-facial-recognition?s=03][Baker (2022)]].
+      #+end_quote
+
+** What're you interested in? Did you put it in your evaluation?
+
+
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
     notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
@@ -1410,7 +1475,7 @@
 ** Image references
 
    * Oklahoma [[https://unsplash.com/@raychelsnr][Photo by Raychel Sanner on Unsplash]]
-   
+
 * Footnotes
 
 [fn:5]On my machine, R version 4.1.3 cannot open documentation in a
