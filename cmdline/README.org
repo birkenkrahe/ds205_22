@@ -4,13 +4,73 @@
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * README
-* What is the command line?
-* Why data science at the command line?
-* csvkit  
-** Getting data
-** Examining data
-** Power tools
-* Beyond csvkit
 
+  * Short introduction to doing data science on the command line
+
+  * Reminder of the data science pipeline
+
+    #+attr_html: :width 500px
+    #+caption: data science pipeline, esp. data wrangling (Source: Wickham, 2016)
+    [[./img/pipeline.png]]
+
+  * Never mind the "
+    
+* TODO What is the command line?
+* TODO Why data science at the command line?
+* How to get a command line that works for data science
+
+  * Install a Docker container as described [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-up-a-docker-container-for-command-line-work][in this FAQ]]
+  * Install the Ubuntu app as [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-linux-under-windows-10][described in this FAQ]]
+  * Get Linux as a dual boot or with VirtualBox (any distro)
+  * Get a Linux computer ([[https://vilros.com/products/raspberry-pi-400-kit][like this one for $99]]) or dump Windows for
+    Linux and install it over Windows
+
+  Online/cloud installations like Google cloud shell, or replit.com,
+  or the bundle of UNIX commands contained in ~cygwin~ do unfortunately
+  not allow you to install the ~csvkit~ library, and exclude some other
+  commands (like ~wget~).
+
+  * The Docker container already comes with ~cvskit~. Once you've got
+    another Linux variant, install ~cvskit~ from the command line,
+    e.g. in Debian-based systems (Raspberry Pi OS, Ubuntu) with the
+    command ~sudo apt install csvkit~.
+    
+* csvkit (interactive demo)
+
+  This demo is only interactive if you have access to a Linux
+  installation of some sort. I'm using the ~csvkit~ [[https://csvkit.readthedocs.io/en/latest/tutorial.html][online tutorial]].
+  
+** TODO Getting data
+** TODO Examining data
+** TODO Power tools
+* Beyond csvkit
+  
   * Before this term, I had not worked with csvkit myself. My work on
-    the command line was limited to 
+    the command line was limited to the UNIX commands that I know
+    (which by themselves are pretty powerful, at least for
+    non-descript text files).
+
+  * To go beyond ~csvkit~, you need to look beyond data scrubbing (which
+    is where ~csvkit~ excels), into the other parts of the data science
+    pipeline: visualization (on the command line with the R package
+    ~rush~), modeling, and presenting, managing projects with GNU ~make~
+    and UNIX ~cron~, R scripting and running scripts with ~littler~ and
+    GNU ~rush~.
+
+  * Of course, R has a console that is already tuned to interactive
+    explorative use - but it's slow, especially if you're interested
+    in routine big data processing, and if you don't want to write
+    your own programs (e.g. in C++ and import them into R with ~Rcpp~).
+
+  * The new edition of DSC 105 (Introduction to data science - tools
+    and methods) will feature a block on doing "data science on the
+    command line", and the new edition of DSC 205 (Introduction to
+    advanced data science) will hopefully deepen this topic further.
+
+  * Links:
+    - [[http://jeroenjanssens.github.io/rush/][R rush]] - run expressions, create plots etc. from the shell
+    - [[https://cran.r-project.org/web/packages/littler/index.html][R littler]] - command line script support
+    - [[https://puszcza.gnu.org.ua/software/rush/][GNU rush]] - reduced shell for parallel execution
+    - [[https://www.gnu.org/software/make/][GNU make]] - generate executables from source
+    - [[https://swcarpentry.github.io/r-novice-inflammation/05-cmdline/index.html][R on the command line]] - tutorial (30 min)
+    - [[https://app.datacamp.com/learn/courses/data-processing-in-shell][Data processing in shell]] - DataCamp course (4 hrs)
