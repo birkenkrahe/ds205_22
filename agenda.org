@@ -1383,15 +1383,52 @@
 
 * Data science on the command line - w15s35 (2-May)
 
-   * [X] What is the command line
-   * [X] Why data science at the command line
-   * [X] How to get a command line that works for data science
-   * [X] Interactive demo: ~csvkit~ Python library
-   * [ ] Ben Grafton: Data processing with shell (Wed)
-   * [ ] Beyond: ~csvkit~
+  * [X] What is the command line
+  * [X] Why data science at the command line
+  * [X] How to get a command line that works for data science
+  * [X] Interactive demo: ~csvkit~ Python library (YouTube video)
+  * [ ] Ben Grafton: Data processing with shell (Wed)
+  * [ ] Beyond: ~csvkit~
+
+** Final exam ([[https://lyon.schoology.com/event/5916453087/profile][Schoology update]])
+
+   | COURSE NO | MEETS     | TOPIC        | TIME                    | ROOM     |
+   |-----------+-----------+--------------+-------------------------+----------|
+   | DSC 205   | MWF 3.00p | Data science | *Sun 8-May 3.30p - 5.30p* | Lyon 104 |
+
+   The final exam will be *in room 104 of the Lyon building* (our usual
+   classroom) on *Sunday, May 8 from 3.30 pm to 5.30 pm* ([[https://assets.speakcdn.com/assets/2433/sp22_final_exam_schedule_final-2022042203012665.pdf][see exam
+   schedule]]).
+
+   The exam will consist of 40 questions drawn at random from the
+   pool of quiz and test questions. Completing the various quizzes
+   and tests until you've reached 100%, and revisiting your past
+   tests should enable you to pass this exam with flying colors!
+
+   [[./img/surfing.gif]]
+
+** ~cvskit~ demonstration (video)
+
+   Here is the 2nd part of "data science on the command line", the demo
+   of the csvkit library, [[https://www.youtube.com/watch?v=XhShmvBYNmw][as a video on YouTube (14 min)]]. The left hand
+   side of the screen shows the Docker container (see FAQ), the right
+   hand side shows the script ([[https://github.com/birkenkrahe/ds205/tree/main/cmdline][GitHub]]).
+
+   [[./img/csvkit.png]]
 
 * Last Rites / Final exam review - w16s36 (4-May)
+** ~cvskit~ demonstration (video)
 
+   Here is the 2nd part of "data science on the command line", the demo
+   of the csvkit library, [[https://www.youtube.com/watch?v=XhShmvBYNmw][as a video on YouTube (14 min)]]. The left hand
+   side of the screen shows the Docker container (see FAQ), the right
+   hand side shows the script ([[https://github.com/birkenkrahe/ds205/tree/main/cmdline][GitHub]]).
+
+   [[./img/csvkit.png]]
+
+** Agenda
+   
+  * [ ] Ben Grafton - Data processing with the shell
   * [ ] Your final exam questions
   * [ ] Going through the exam questions
   * [ ] Last rites and outlook
@@ -1420,7 +1457,7 @@
 
       Not much new happens technically but there are philosophical and
       political implications that have powerful economical
-      consequences. 
+      consequences.
 
       #+begin_quote
       "Tying the technology to accusations of racism has made the
