@@ -14,8 +14,6 @@
     #+caption: data science pipeline, esp. data wrangling (Source: Wickham, 2016)
     [[./img/pipeline.png]]
 
-  * Never mind the "
-
 * What is the command line?
 
   * Shell
@@ -46,7 +44,7 @@
   1. Program to interact with the operating system (kernel)
   2. Sophisticated script language
   3. REPL (Read-Eval-Print-Loop)
-  4. Agile and exploratoray
+  4. Agile and exploratory
   5. Augmenting technology (glue to other applications)
      - Run pipeline (e.g. ~ls -a | wc -w~)
      - Run from inside your R program
@@ -55,7 +53,6 @@
      - it's fast
      - used to automate tasks
      - repeatable and parallelizable
-
   7. Extensibility:
      - language agnostic
      - been in use a long time
@@ -66,7 +63,6 @@
 
   All of these are especially valuable in an exploratory environment
   with highly distributed, unstructured, or "dirty" data sources.
-
 
 * How to get a command line that works for data science
 
@@ -122,7 +118,7 @@
 
      #+begin_example bash
      mkdir -v csvkit_tutorial
-     cd -v csvkit_tutorial
+     cd csvkit_tutorial
      pwd
      #+end_example
 
@@ -149,63 +145,66 @@
      curl https://lyon.edu | tee fetched | head
      file fetched
      #+end_example
+** Look at the data
+*** ~in2csv~ to re-write an Excel file as CSV file
 
-** ~in2csv~ - the Excel killer
+    * Excel is a binary format - you cannot look at it (without paying
+      Microsoft).
 
-   * Excel is a binary format - you cannot look at it (without paying
-     Microsoft).
+    * ~in2csv~ rewrites the Excel file into CSV. Btw, long file names can
+      be expanded using the <TAB> key.
 
-   * ~in2csv~ rewrites the Excel file into CSV. Btw, long file names can
-     be expanded using the <TAB> key.
+      #+begin_example bash
+      in2csv ne_1033_data.xlsx > data.csv 2&>/dev/null
+      head -5 data.csv
+      #+end_example
 
-     #+begin_example bash
-     in2csv ne_1033_data.xlsx > data.csv 2&>1
-     head -5 data.csv
-     #+end_example
+      - ~in2csv~ runs the conversion on the following file
+      - ~> data.csv~ redirects the result to a file ~data.csv~
+      - ~2&>/dev/null~ throws standard error msgs away
 
-     - ~in2csv~ runs the conversion on the following file
-     - ~> data.csv~ redirects the result to a file ~data.csv~
-     - ~2&>/dev/null~ throws standard error msgs away
+*** ~csvlook~ to get a table output of the CSV file       
+    * ~csvlook~ provides a tabular look at the data.
 
-   * ~csvlook~ provides a tabular look at the data.
+      #+begin_example bash
+       csvlook --max-rows 5 data.csv
+      #+end_example
 
-     #+begin_example bash
-      csvlook --max-rows 5 data.csv
-     #+end_example
+*** ~csvcut~ to cut out columns from a CSV file     
+    * ~csvcut~ is a version of ~cut~ for ~CSV~ files
+      - the ~-n~ option shows all columns
+      - the ~-c~ option shows specific columns
 
-   * ~csvcut~ is a version of ~cut~ for ~CSV~ files
-     - the ~-n~ option shows all columns
-     - the ~-c~ option shows specific columns
+      #+begin_example bash
+      csvcut -n data.csv
+      csvcut -c 2,5,6 | head -5
+      #+end_example
 
-     #+begin_example bash
-     csvcut -n data.csv
-     csvcut -c 2,5,6 | head -5
-     #+end_example
+      - output columns can be called by name, too
 
-     - output columns can be called by name, too
+      #+begin_example bash
+      csvcut -c county, item_name, quantity data.csv | csvlook | head -5
+      #+end_example
 
-     #+begin_example bash
-     csvcut -c county, item_name, quantity data.csv | csvlook | head -5
-     #+end_example
+      - the pipe prints the first 5 rows of the respective columns
+      - I want to use some of the output later so I put it into a file:
 
-     - the pipe prints the first 5 rows of the respective columns
-     - I want to use some of the output later so I put it into a file:
+      #+begin_example bash
+      csvcut -c county, item_name, quantity data.csv | tee data1.csv | csvlook | head -5
+      #+end_example
 
-     #+begin_example bash
-     csvcut -c county, item_name, quantity data.csv | tee data1.csv | csvlook | head -5
-     #+end_example
+    * All of the previous operations can be put together in one pipe:
 
-   * All of the previous operations can be put together in one pipe:
-
-     #+begin_example bash
-     in2csv ne_1033_data.xlsx 2&>/dev/null |
-     csvcut -c county,item_name,quantity |
-     csvlook |
-     head -5
-     #+end_example
+      #+begin_example bash
+      in2csv ne_1033_data.xlsx 2&>/dev/null |
+      csvcut -c county,item_name,quantity |
+      csvlook |
+      head -5
+      #+end_example
 
 ** Examining data
-
+*** ~csvstat~ for summary statistics
+    
    * ~csvstat~ is inspired by R's ~summary~ function
 
      #+begin_example bash
@@ -217,6 +216,8 @@
      #+begin_example bash
      cat data1.csv | csvstat
      #+end_example
+
+*** ~csvgrep~ for matching patterns in the file     
 
    * ~csvgrep~ is a pattern-matching search function.
      - run ~csvgrep~ on the ~data1.csv~ subset
@@ -233,6 +234,8 @@
      #+begin_example bash
      csvgrep -c county -m LANCASTER data1.csv | wc -l
      #+end_example
+
+*** ~csvsort~ to sort rows by column     
 
    * ~csvsort~ sorts the rows by any column (or combination of columns)
      in ascending or descending (reverse) order.
