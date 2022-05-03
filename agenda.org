@@ -1383,12 +1383,10 @@
 
 * Data science on the command line - w15s35 (2-May)
 
-** Data science on the command line
-
-   * [ ] What is the command line
-   * [ ] Why data science at the command line
-   * [ ] How to get a command line that works for data science
-   * [ ] Interactive demo: ~csvkit~
+   * [X] What is the command line
+   * [X] Why data science at the command line
+   * [X] How to get a command line that works for data science
+   * [X] Interactive demo: ~csvkit~ Python library
    * [ ] Ben Grafton: Data processing with shell (Wed)
    * [ ] Beyond: ~csvkit~
 
@@ -1448,7 +1446,6 @@
       #+end_quote
 
 ** What're you interested in? Did you put it in your evaluation?
-
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
