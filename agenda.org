@@ -1390,7 +1390,7 @@
   * [ ] Ben Grafton: Data processing with shell (Wed)
   * [ ] Beyond: ~csvkit~
 
-** Final exam ([[https://lyon.schoology.com/event/5916453087/profile][Schoology update]])
+** Final exam ([[https://lyon.schoology.com/event/5916453087/profile][Schoology update]]) - Sunday May 8, 3.30pm
 
    | COURSE NO | MEETS     | TOPIC        | TIME                    | ROOM     |
    |-----------+-----------+--------------+-------------------------+----------|
@@ -1436,53 +1436,116 @@
 
   * [ ] *Please take 10 minutes to complete the course evaluation now*
 
+  * [ ] *Please be specific: what did you like, what could be changed?*
+
     [[./img/evaluation.jpg]]
 
-** What's really going to be interesting in the next few years?
+** What I would (probably) change - (video proto script)
+*** What's going to be interesting in the next few years?
 
-   In data science, I mean. Some things I became aware of via Twitter:
+    In data science, I mean. Some things I became aware of via Twitter:
 
-   1) AUTOMATIC THEOREM PROVING (see [[https://gowers.wordpress.com/2022/04/28/announcing-an-automatic-theorem-proving-project/][Tim Gowers, April 29, 2022]])
+    1) AUTOMATIC THEOREM PROVING (see [[https://gowers.wordpress.com/2022/04/28/announcing-an-automatic-theorem-proving-project/][Tim Gowers, April 29, 2022]])
 
-      Coincidentally, this was sent to me by Prof Barry Gehm over the
-      w/e:
+       Coincidentally, this was sent to me by Prof Barry Gehm over the
+       w/e:
 
-      #+caption: Gödel and data science (Source: xkcd)
-      [[./img/xkcd1.png]]
+       #+caption: Gödel and data science (Source: xkcd)
+       [[./img/xkcd1.png]]
 
-      Hovertext: /"Gödel should do an article on which branches of math
-      have the lowest average theorem number./ ([[https://xkcd.com/2610/][Source: xkcd]])
+       Hovertext: /"Gödel should do an article on which branches of math
+       have the lowest average theorem number./ ([[https://xkcd.com/2610/][Source: xkcd]])
 
-   2) FACE RECOGNITION APPLICATIONS OF DEEP LEARNING
+    2) FACE RECOGNITION APPLICATIONS OF DEEP LEARNING
 
-      Not much new happens technically but there are philosophical and
-      political implications that have powerful economical
-      consequences.
+       Not much new happens technically but there are philosophical and
+       political implications that have powerful economical
+       consequences.
 
-      #+begin_quote
-      "Tying the technology to accusations of racism has made the
-      technology toxic for large, responsible technology companies,
-      driving them out of the market. IBM has dropped its research
-      entirely. Facebook has eliminated its most prominent use of face
-      recognition. And Microsoft and Amazon have both suspended face
-      recognition sales to law enforcement.  These departures have
-      left the market mainly to Chinese and Russian companies. In
-      fact, on a 2019 NIST test for one-to-one searches, Chinese and
-      Russian companies scored higher than any Western competitors,
-      occupying the top six positions. In December 2021, NIST again
-      reported that Russian and Chinese companies dominated its
-      rankings. The top-ranked U.S. company is Clearview AI, whose
-      business practices have been widely sanctioned in Western
-      countries.
+       #+begin_quote
+       "Tying the technology to accusations of racism has made the
+       technology toxic for large, responsible technology companies,
+       driving them out of the market. IBM has dropped its research
+       entirely. Facebook has eliminated its most prominent use of face
+       recognition. And Microsoft and Amazon have both suspended face
+       recognition sales to law enforcement.  These departures have
+       left the market mainly to Chinese and Russian companies. In
+       fact, on a 2019 NIST test for one-to-one searches, Chinese and
+       Russian companies scored higher than any Western competitors,
+       occupying the top six positions. In December 2021, NIST again
+       reported that Russian and Chinese companies dominated its
+       rankings. The top-ranked U.S. company is Clearview AI, whose
+       business practices have been widely sanctioned in Western
+       countries.
 
-      Given the network effects in this business, the United States
-      may have permanently ceded the face recognition market to
-      companies it can’t really trust. That’s a heavy price to pay for
-      indulging journalists and academics eager to prematurely impose
-      a moral framework on a developing technology" [[https://www.lawfareblog.com/flawed-claims-about-bias-facial-recognition?s=03][Baker (2022)]].
-      #+end_quote
+       Given the network effects in this business, the United States
+       may have permanently ceded the face recognition market to
+       companies it can’t really trust. That’s a heavy price to pay for
+       indulging journalists and academics eager to prematurely impose
+       a moral framework on a developing technology" [[https://www.lawfareblog.com/flawed-claims-about-bias-facial-recognition?s=03][Baker (2022)]].
+       #+end_quote
 
-** What're you interested in? Did you put it in your evaluation?
+*** What I would change about this course
+
+    * I wouldn't spend as much time on ~ggplot2~ and ~dplyr~. After
+      teaching it for the second term in a row, I am more, not less
+      convinced that beginner courses should stay as far away from the
+      "Tidyverse" as possible. I knew this, you see, but after the
+      talk by Matthew Stewart, I decided to respond directly to his
+      request for "More Tidyverse, more ggplot2". I'll be smarter next
+      time.
+
+    * I really, really missed projects in this class. I think you'd
+      have been great at completing an analysis by yourself (it worked
+      out very well last term). I was reluctant to try this because so
+      many course participants had not completed DSC 105, and I knew
+      that DataCamp would not be a proper substitute.
+
+    * I'd spend more time doing work on the command line. Getting back
+      to the command line interface (~CLI~) after many years was one of
+      my personal re-discoveries in this term - not just in this
+      course. I'd also look more closely at packages like and
+      ~Rcpp~. Fortunately, Wyatt covered ~Rcpp~ and Ben motivated me to at
+      least present the ~CLI~. Other packages are just as important, for
+      example ~RSQLite~ and ~data.table~. Spending a week or two on all of
+      these would have been good.
+
+    * I would force everyone to complete the (1 hr) Emacs tutorial *in
+      class*. To the very end, I had the impression that 1/2 the class
+      was not really mastering this tool and spent too much time
+      trying to do simple things (like changing buffers, opening,
+      saving and writing files, finding directories, etc.)
+
+    * My learning: I need to spend more effort trying to get you to
+      take your *tools* seriously. Without mastery of your tools you are
+      nothing in any discipline but this is especially true for
+      programming, and even more for statistical programming and data
+      science. Many tools (like Emacs, liked editors, compilers, IDEs)
+      don't look like tools because clever software engineers have
+      created an environment for you where the food falls from the
+      tree straight into your mouth most of the time. But that's not
+      the real world!  In the real world you have to *learn* to use a
+      hammer to drive a nail into wood without hurting yourself!
+
+    * To improve the test results: more, not less drills. More
+      assignments not from DataCamp. 
+
+    * I cannot decide if I should rather have assigned book chapters
+      or sections of one or more books to you to read from week to
+      week. What do you think? I don't work with one, but with many
+      books all the time, and I really like learning this way.
+
+    * Having said all that, I really, really enjoyed the course - if
+      only because it was a constant challenge for me to challenge
+      myself in many different ways: to structure the sessions, to
+      come up with interesting notebooks, to work out quizzes and
+      drills, to complement the DataCamp assignments, etc.
+
+    * At the end, I am still inspired by your presence and your
+      willingness to learn, and I am dying to get to teach this 2nd
+      introductory course again so that I can make it better!
+
+    * And for the seniors: I'd really like to hear from you!
 
 * References
   * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
