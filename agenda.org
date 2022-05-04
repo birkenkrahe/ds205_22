@@ -1425,13 +1425,12 @@
    hand side shows the script ([[https://github.com/birkenkrahe/ds205/tree/main/cmdline][GitHub]]).
 
    [[./img/csvkit.png]]
-
 ** Agenda
    
   * [ ] Ben Grafton - Data processing with the shell
   * [ ] Your final exam questions
   * [ ] Going through the exam questions
-  * [ ] Last rites and outlook
+  * [ ] Last rites and outlook - exciting data science trends
   * [ ] *Any outstanding work must be finished by Monday May 9*
 
   * [ ] *Please take 10 minutes to complete the course evaluation now*
