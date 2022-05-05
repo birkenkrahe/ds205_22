@@ -1425,12 +1425,20 @@
    hand side shows the script ([[https://github.com/birkenkrahe/ds205/tree/main/cmdline][GitHub]]).
 
    [[./img/csvkit.png]]
+
 ** Agenda
    
+<<<<<<< HEAD
   * [X] Ben Grafton - Data processing with the shell
   * [X] Your final exam questions
   * [X] Going through the exam questions
   * [X] Last rites and outlook - exciting data science trends
+=======
+  * [X] Ben Grafton - Data processing with the shell (offline)
+  * [ ] Your final exam questions
+  * [ ] Going through the exam questions
+  * [ ] Last rites and outlook - exciting data science trends
+>>>>>>> cbd8275 (post archive)
   * [X] *Any outstanding work must be finished by Monday May 9*
 
   * [X] *Please take 10 minutes to complete the course evaluation now*
@@ -1438,6 +1446,7 @@
   * [X] *Please be specific: what did you like, what could be changed?*
 
     [[./img/evaluation.jpg]]
+
 
 ** What I would (probably) change - (video proto script)
 *** What's going to be interesting in the next few years?
