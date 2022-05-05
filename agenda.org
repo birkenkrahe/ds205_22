@@ -1427,15 +1427,15 @@
    [[./img/csvkit.png]]
 ** Agenda
    
-  * [ ] Ben Grafton - Data processing with the shell
-  * [ ] Your final exam questions
-  * [ ] Going through the exam questions
-  * [ ] Last rites and outlook - exciting data science trends
-  * [ ] *Any outstanding work must be finished by Monday May 9*
+  * [X] Ben Grafton - Data processing with the shell
+  * [X] Your final exam questions
+  * [X] Going through the exam questions
+  * [X] Last rites and outlook - exciting data science trends
+  * [X] *Any outstanding work must be finished by Monday May 9*
 
-  * [ ] *Please take 10 minutes to complete the course evaluation now*
+  * [X] *Please take 10 minutes to complete the course evaluation now*
 
-  * [ ] *Please be specific: what did you like, what could be changed?*
+  * [X] *Please be specific: what did you like, what could be changed?*
 
     [[./img/evaluation.jpg]]
 
